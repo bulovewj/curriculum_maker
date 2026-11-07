@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env*
+!.env.example
+.vercel/
+.DS_Store
+reference/
+fixtures/**/원본/
+Claude outputs/
+.Rhistory

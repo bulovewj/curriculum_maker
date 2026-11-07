@@ -1,0 +1,15 @@
+/* 디자인 토큰. 실제 값은 M20에서 정한다. */
+:root {
+  --color-text: #1f2933;
+  --color-background: #ffffff;
+  --font-body: system-ui, sans-serif;
+  --space-page: 24px;
+}
+
+body {
+  margin: 0;
+  padding: var(--space-page);
+  color: var(--color-text);
+  background: var(--color-background);
+  font-family: var(--font-body);
+}
