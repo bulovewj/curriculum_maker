@@ -42,7 +42,7 @@ src/ model engine import export storage state ai lib screens components dev
 | 1 | 빈 앱 | ✅ | 12 | 재구성·행사·태그 편집 | ⬜ |
 | 2 | 모델·저장소·화면 뼈대 | ✅ | 13 | 기준 데이터·규정 검사 | ⬜ |
 | 3 | xlsx 읽기·NEIS형 진도 | ✅ | 14 | NEIS 엑셀·점검표 출력 | ⬜ |
-| 4 | hwpx 읽기 | ⬜ | 15 | hwpx 쓰기·진도표 출력 | ⬜ |
+| 4 | hwpx 읽기 | ✅ | 15 | hwpx 쓰기·진도표 출력 | ⬜ |
 | 5 | 학사일정·시간표 매퍼 | ⬜ | 16 | 운영계획·증감계획 hwpx → 관문 | ⬜ |
 | 6 | 편제·진도표·자율시간·운영계획 매퍼 | ⬜ | 17 | AI 서버 함수·재구성 후보 | ⬜ |
 | 7 | 정답지 기대값 JSON | ⬜ | 18 | AI 문장·활동명 | ⬜ |
@@ -53,7 +53,8 @@ src/ model engine import export storage state ai lib screens components dev
 
 ### 다음 세션 메모
 - 개발 서버는 5173번 고정(`strictPort`). 이미 켜져 있으면 `npm run dev`가 오류로 멈춘다. 켜진 서버를 쓰거나 끄고 다시 실행
-- M4 전에 형이 (c)(d)(e) hwp 3개를 hwpx로 저장해야 함(`fixtures/2026-g6/README.md`)
+- `?dev` 화면 = 진도 xlsx·hwpx 읽기 결과 확인용(개발 전용). hwpx 원본 안내 표(안건 표)에 교사 이름이 있으니 테스트·기대값에 옮기지 말 것
+- `@types/node` 없음 → 테스트용 Node 함수는 `tests/node.d.ts`에 직접 선언
 - 2026-11-08 협업 교사 검토 반영: 준비물은 학사일정·전담 시간표·작년·올해 편제(학년군 편제표)·진도. 기초 시간표는 자동 생성(M11b), 학교자율시간 운영(안)은 받지 않음(작업지시서 1장·2.8·12장)
 - 학기 중 행사로 주별 값이 바뀌는 것이 정상. 시점이 다른 문서끼리 주별 일치를 가정하지 말 것(작업지시서 2.7)
 
