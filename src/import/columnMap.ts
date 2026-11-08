@@ -33,12 +33,12 @@ export function mappingFromAi(output: unknown, columnCount: number): { mapping: 
   if (!Array.isArray(output)) return { mapping, warnings: ['AI 답이 목록 모양이 아니어서 버렸습니다.'] };
   const list = (output as Partial<ColumnOut>[]).filter((o): o is ColumnOut => {
     const ok = !!o && Number.isInteger(o.column) && o.column! >= 0 && o.column! < columnCount && (o.target === '' || TARGETS.includes(o.target as Target));
-    if (!ok) warnings.push('목록 밖의 열이나 이름이 섞여 있어 그 부분은 버렸습니다.');
+    if (!ok && !warnings.length) warnings.push('목록 밖의 열이나 이름이 섞여 있어 그 부분은 버렸습니다.');
     return ok;
   }).sort((a, b) => (Number(b.confidence) || 0) - (Number(a.confidence) || 0));
   const used = new Set<string>();
   for (const o of list) {
-    if (!o.target || used.has(o.target)) continue;
+    if (!o.target || used.has(o.target) || mapping[o.column].target) continue; // 같은 목표·같은 열이 겹치면 자신감 큰 쪽만
     used.add(o.target);
     mapping[o.column] = { target: o.target as Target, confidence: Math.min(1, Math.max(0, Number(o.confidence) || 0)) };
   }

@@ -78,3 +78,12 @@ describe.skipIf(!ext)('PDF 추출 2학기 국어', () => {
 
 const SCI_ROWS = 48; // 단원 전체차시 합 11+10+14+13
 const SOC_ROWS = 45; // 15+17+13
+
+describe('성취기준 칸 읽기', () => {
+  it('대괄호가 있어도 없어도 코드를 읽는다', async () => {
+    const { standardsOf } = await import('./neisLessons');
+    expect(standardsOf('[6실02-03] 설명 [6실02-11] 설명')).toEqual(['6실02-03', '6실02-11']);
+    expect(standardsOf('6국01-01, 6국01-02')).toEqual(['6국01-01', '6국01-02']);
+    expect(standardsOf('')).toEqual([]);
+  });
+});

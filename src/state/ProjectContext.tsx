@@ -20,7 +20,7 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
   const [saveError, setSaveError] = useState(false);
   const first = useRef(true);
   const pending = useRef<Project | null>(null); // 아직 저장 안 된 최신 프로젝트
-  // 되돌리기: 고치기 직전 프로젝트를 최대 30개 쌓는다. 0.8초 안에 이어진 고침(글자 입력 등)은 한 번으로 친다.
+  // 되돌리기: 고치기 직전 프로젝트를 최대 30개 쌓는다. 0.6초 안에 이어진 고침(글자 입력 등)은 한 번으로 친다.
   const history = useRef<Project[]>([]);
   const last = useRef<Project | null>(null);
   const lastPush = useRef(0);
@@ -31,7 +31,7 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
     const prev = last.current;
     if (prev && project && prev !== project && prev.id === project.id && !undoing.current) {
       const now = Date.now();
-      if (now - lastPush.current > 800) history.current = [...history.current, prev].slice(-30);
+      if (now - lastPush.current > 600) history.current = [...history.current, prev].slice(-30);
       lastPush.current = now;
     }
     undoing.current = false;

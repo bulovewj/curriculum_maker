@@ -38,3 +38,10 @@ describe.skipIf(!file)('실과 진도표(모르는 양식) → 열 맞추기 →
     expect(prac[0].standards).toEqual(['6실02-03']);
   });
 });
+
+describe('리뷰 보완', () => {
+  it('같은 열이 두 번 나오면 자신감 큰 쪽만 남고 단원 열이 빠지지 않는다', () => {
+    const r = mappingFromAi([{ column: 2, target: '단원', confidence: 0.9 }, { column: 2, target: '소단원', confidence: 0.8 }, { column: 3, target: '소단원', confidence: 0.7 }], 4);
+    expect([r.mapping[2].target, r.mapping[3].target]).toEqual(['단원', '소단원']);
+  });
+});

@@ -58,7 +58,9 @@ export function generateTimetable(inp: TimetableInput): TimetableResult {
   const full = Object.keys(specCount).filter((id) => !inp.partialSpecialist.includes(id));
 
   // 1) 전부 전담은 전담 칸 수, 2) 남은 칸은 나머지에 연간 시수 비율로
-  const rest = total - full.reduce((a, id) => a + specCount[id], 0);
+  const fullCells = full.reduce((a, id) => a + specCount[id], 0);
+  if (fullCells > total) warnings.push(`시간표 틀의 칸(${total})보다 전부 전담 칸(${fullCells})이 많습니다. 틀의 교시 수를 확인하세요.`);
+  const rest = Math.max(0, total - fullCells);
   const eligible = inp.subjects.filter((s) => !full.includes(s.id) && !inp.exclude.includes(s.id) && (inp.schoolAnnual[s.id] ?? 0) > 0).sort((a, b) => a.order - b.order);
   const quota = share(rest, eligible.map((s) => [s.id, inp.schoolAnnual[s.id]]));
   const perWeek: Record<SubjectId, number> = { ...quota, ...Object.fromEntries(full.map((id) => [id, specCount[id]])) };

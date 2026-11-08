@@ -23,6 +23,12 @@ export function subjectByName(subjects: Subject[], name: string): SubjectId | un
   return subjects.find((s) => [s.name, s.neisName ?? '', ...s.aliases].some((n) => n && norm(n) === key))?.id;
 }
 
+/** 성취기준 칸 → 코드 목록. '[6실02-03] 설명'처럼 대괄호가 있으면 그것, 없으면 '6국01-01, 6국01-02' 꼴 코드를 찾는다. */
+export function standardsOf(text: string): string[] {
+  const bracket = [...text.matchAll(/\[([^\]]+)\]/g)].map((m) => m[1]);
+  return bracket.length ? bracket : (text.match(/\d+[가-힣]+\d+-\d+/g) ?? []);
+}
+
 /** 학습내용 끝 【태그, 태그】 떼기 */
 export function splitTags(text: string): { topic: string; tags: string[] } {
   const m = text.match(/^(.*?)\s*【([^】]*)】\s*$/);
@@ -101,7 +107,7 @@ export function readNeisLessons(files: LessonFile[], subjects: Subject[], includ
         subPages: get(r, '보조쪽수') || undefined,
         materials: get(r, '준비물') || undefined,
         rawNote: get(r, '소단원') ? `소단원: ${get(r, '소단원')}` : undefined,
-        standards: [...get(r, '성취기준').matchAll(/\[([^\]]+)\]/g)].map((m) => m[1]),
+        standards: standardsOf(get(r, '성취기준')),
         tags,
         source: { file: fileName, row: line },
       };

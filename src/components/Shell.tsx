@@ -35,7 +35,7 @@ export function Shell() {
     has('scheduleP04') && has('timetableP02') && (has('curriculumHwpx') || has('planAdjustHwpx')),
     project.calendar.length > 0 && project.baseTimetable.length > 0,
     Object.keys(project.curriculumPlan.schoolAnnual).length > 0,
-    Object.keys(project.slotOverrides).length > 0 || project.baseTimetable.length > 0,
+    Object.keys(project.slotOverrides).length > 0,
     Object.values(project.lessonPlans).some((rows) => rows.length > 0),
     false,
   ];

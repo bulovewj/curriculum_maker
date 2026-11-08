@@ -20,13 +20,15 @@ export function ColumnMapper({ buffer, subjects, aiEnabled, onDone }: Props) {
   const [busy, setBusy] = useState(false);
   const [notes, setNotes] = useState<string[]>([]);
   const at = sheet ? findHeaderRow(sheet) : 0;
-  const headers = sheet?.rows[at] ?? [];
+  // 머리글보다 오른쪽에 데이터 열이 있어도 맞출 수 있게 가장 넓은 줄 기준으로 센다
+  const width = Math.max(sheet?.rows[at]?.length ?? 0, ...(sheet?.rows.slice(at + 1, at + 30) ?? []).map((r) => r.length));
+  const headers = Array.from({ length: width }, (_, i) => sheet?.rows[at]?.[i] ?? '');
 
   useEffect(() => {
     void readWorkbook(buffer).then((sheets) => {
       const s = sheets.find((x) => x.rows.length > 1) ?? sheets[0];
       setSheet(s);
-      if (s) setMapping(guessColumns(s.rows[findHeaderRow(s)]));
+      if (s) setMapping(guessColumns(Array.from({ length: Math.max(...s.rows.slice(findHeaderRow(s)).slice(0, 30).map((r) => r.length)) }, (_, i) => s.rows[findHeaderRow(s)][i] ?? '')));
     }).catch(() => setNotes(['파일을 읽지 못했습니다.']));
   }, [buffer]);
   if (!sheet) return <p className="muted">열을 읽는 중…</p>;
@@ -78,7 +80,7 @@ export function ColumnMapper({ buffer, subjects, aiEnabled, onDone }: Props) {
         </select></label>
       )}
       {missing.length > 0 && <p className="yellow-cell">{missing.join('·')} 열을 골라야 읽을 수 있습니다.</p>}
-      {notes.map((n) => <p key={n} className="yellow-cell">{n}</p>)}
+      {notes.map((n, i) => <p key={i} className="yellow-cell">{n}</p>)}
       <div className="row">
         {aiEnabled && <button disabled={busy} onClick={() => void askAi()}>{busy ? '맞추는 중…' : 'AI로 열 맞추기'}</button>}
         <button disabled={missing.length > 0 || (!hasSubjectCol && !subject)} onClick={() => void done()}>이 열 맞추기로 읽기</button>

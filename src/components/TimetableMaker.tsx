@@ -3,7 +3,7 @@ import { defaultShape, generateTimetable, type TimetableResult } from '../engine
 import type { Project, TimetableCell } from '../model/types';
 
 const DAYS = ['월', '화', '수', '목', '금'];
-const same = (a: TimetableCell, b: TimetableCell) => a.weekday === b.weekday && a.period === b.period && a.subjectId === b.subjectId;
+const same = (a: TimetableCell, b: TimetableCell) => a.weekday === b.weekday && a.period === b.period && a.subjectId === b.subjectId && a.specialist === b.specialist;
 
 /** S3 [기초 시간표 자동 만들기]: 시간표 틀(요일별 교시 수), 전담 요약(전부/일부 전담), 만들기 */
 export function TimetableMaker({ project: p, update }: { project: Project; update: (f: (q: Project) => Project) => void }) {

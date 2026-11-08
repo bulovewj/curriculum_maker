@@ -35,9 +35,11 @@ export function AiTextPanel({ project: p, subject, update }: { project: Project;
   function apply() {
     if (!pending) return;
     const { task, items } = pending;
+    // 받는 동안 사람이 고친 칸은 덮어쓰지 않는다(지금 값이 미리 보기 때의 값과 같은 것만 적용)
+    const same = (id: string, now: string) => pending.old[id] === now;
     update((q) => task === 'adjustText'
-      ? { ...q, adjustments: applyAdjustTexts(q.adjustments, items) }
-      : { ...q, lessonPlans: { ...q.lessonPlans, [subject.id]: applyActivityNames(q.lessonPlans[subject.id] ?? [], items) } });
+      ? { ...q, adjustments: applyAdjustTexts(q.adjustments, items.filter((t) => same(t.id, q.adjustments.find((a) => a.id === t.id)?.content ?? ''))) }
+      : { ...q, lessonPlans: { ...q.lessonPlans, [subject.id]: applyActivityNames(q.lessonPlans[subject.id] ?? [], items.filter((t) => same(t.id, (q.lessonPlans[subject.id] ?? []).find((r) => r.id === t.id)?.topic ?? ''))) } });
     setPending(null);
   }
 

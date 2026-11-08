@@ -45,8 +45,8 @@ function itemsError(x: unknown, fields: string[]): string | null {
 
 const TASKS: Partial<Record<AiTask, TaskDef>> = {
   adjustCandidates: { check: adjustInputError, system: adjust.system, user: adjust.user as TaskDef['user'] },
-  adjustText: { check: (x) => itemsError(x, ['id', 'content']), system: texts.adjustTextSystem, user: texts.adjustTextUser as TaskDef['user'] },
-  activityNames: { check: (x) => (shortStr(isObj(x) ? x.subject : 0) ? itemsError(x, ['id', 'topic']) : '보낸 정보의 모양이 올바르지 않습니다.'), system: texts.activityNamesSystem, user: texts.activityNamesUser as TaskDef['user'] },
+  adjustText: { check: (x) => itemsError(x, ['id', 'content', 'subject', 'area', 'unit']), system: texts.adjustTextSystem, user: texts.adjustTextUser as TaskDef['user'] },
+  activityNames: { check: (x) => (shortStr(isObj(x) ? x.subject : 0) ? itemsError(x, ['id', 'unit', 'topic']) : '보낸 정보의 모양이 올바르지 않습니다.'), system: texts.activityNamesSystem, user: texts.activityNamesUser as TaskDef['user'] },
   mapColumns: {
     check: (x) => {
       const i = x as MapColumnsInput;

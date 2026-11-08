@@ -76,8 +76,8 @@ export function Progress() {
             <b className={need === 0 ? 'ok' : 'need'}>{need === 0 ? '필요량 0' : need > 0 ? `감축 필요 ${need}` : `증배 필요 ${-need}`}</b>
           </p>
           {err && <p className="error">{err}</p>}
-          <AiPanel project={p} subject={subject} needs={needs} onApply={applyMany} />
-          <AiTextPanel project={p} subject={subject} update={update} />
+          <AiPanel key={subject.id} project={p} subject={subject} needs={needs} onApply={applyMany} />
+          <AiTextPanel key={subject.id} project={p} subject={subject} update={update} />
           <PlanOpsBar subjectId={subject.id} row={row} semester={(row?.semester ?? 1) as Semester} onOp={run}
             onMove={(dir) => { const i = shown.findIndex((r) => r.id === sel); const mate = shown[i + dir]; if (row && mate) run((s) => swapRows(s, subject.id, row.id, mate.id)); }} />
           <div className="row">
