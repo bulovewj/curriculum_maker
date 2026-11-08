@@ -57,7 +57,7 @@ export function readSpecialistCells(sheets: Sheet[], grade: number, classNo: num
           if (subject) cells.push({ weekday: (k + 1) as SchoolWeekday, period, subjectId: subject.id });
           else lost = true;
         });
-        if (r - h > 12) break;
+        if (r - h > 20) { warnings.push(`전담시간표 ${h + 1}행 블록이 20줄을 넘어 뒤를 읽지 않았습니다.`); break; }
       }
       if (lost) warnings.push(`전담시간표 ${h + 1}행 블록: 교과를 알 수 없어 대표 학급 칸을 건너뜀`);
     });

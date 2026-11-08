@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { ORIGINAL, findFile, readBuffer } from '../../../tests/files';
 import { defaultSubjects } from '../../model/subjects';
 import type { SubjectId } from '../../model/types';
-import { readWorkbook } from '../xlsx/readWorkbook';
+import { readWorkbook, type Sheet } from '../xlsx/readWorkbook';
 import { classCode, periodOf, readSpecialistCells } from './specialistP02';
 import { readClassTimetable, readSpecialistHours, specialistStatus } from './timetableP02';
 
@@ -70,5 +70,16 @@ describe.skipIf(!file)('P02 2026 6학년 7반', () => {
     expect(hours).toEqual({ eng: 3, pe: 2, sci: 2 });
     const tt = readClassTimetable(sheets, 6, 7, defaultSubjects);
     expect(specialistStatus(tt.cells, hours)).toEqual({ eng: 'all', pe: 'all', sci: 'partial' });
+  });
+});
+
+describe('반별 시간표: 빈 줄', () => {
+  it('빈 줄이 끼어도 뒤 요일을 읽고, 글자 줄에서 끝낸다', () => {
+    const sheet: Sheet = {
+      name: '5~6학년 반별 시간표', merges: [],
+      rows: [['6학년', '', ''], ['요일', '교시', '1반'], ['월', '1', '국'], ['', '', ''], ['화', '1', '수'], ['', '국', '=COUNTIF()']],
+    };
+    const r = readClassTimetable([sheet], 6, 1, defaultSubjects);
+    expect(r.cells.map((c) => [c.weekday, c.period, c.subjectId])).toEqual([[1, 1, 'kor'], [2, 1, 'math']]);
   });
 });

@@ -77,10 +77,11 @@ export function readTimePlan(blocks: HwpxBlock[], subjects: Subject[]): TimePlan
       const label = norm(cellText(t, r, 0));
       if (label.endsWith('계') || label.startsWith('본교편제') || label.startsWith('증감현황')) {
         const s = summary(t, r, cols);
-        if (label === `${semester}학기계`) out.semesterTotal = s;
+        if (label === `${semester}학기계` || label === '학기계') out.semesterTotal = s;
         else if (label === '연간계') out.annual = s;
         else if (label.startsWith('본교편제')) out.plan = s;
         else if (label.startsWith('증감')) out.diff = s;
+        else if (!/^[12]학기계$/.test(label)) warnings.push(`시간 운영계획 ${semester}학기 표 ${r + 1}행 '${label}'은(는) 계 줄로 읽지 못해 건너뜀`);
         continue; // 다른 학기 계 줄은 쓰지 않음
       }
       const week = num(cellText(t, r, 1));

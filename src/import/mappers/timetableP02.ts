@@ -37,7 +37,9 @@ export function readClassTimetable(
   const unknown = new Set<string>();
   let day = 0;
   for (const r of body) {
-    const period = Number(r[1] ?? '');
+    const label = (r[1] ?? '').trim();
+    if (label === '') continue; // 빈 줄은 건너뜀(뒤 요일이 이어질 수 있다)
+    const period = Number(label);
     if (!Number.isInteger(period) || period < 1) break; // 교시 칸이 글자인 줄부터는 요약 표
     if (DAYS.includes(r[0] ?? '')) day = DAYS.indexOf(r[0]) + 1;
     const code = r[col] ?? '';

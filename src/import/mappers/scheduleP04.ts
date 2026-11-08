@@ -153,7 +153,7 @@ function fillYear(year: number, known: Map<DateStr, CalendarDay>): CalendarDay[]
 }
 
 /** '2026행사목록': 대상에 해당 학년·전학년이 든 행. '예시'·'취소' 행은 뺀다. */
-function readEvents(sheets: Sheet[], grade: number, warnings: string[]): SchoolEvent[] {
+export function readEvents(sheets: Sheet[], grade: number, warnings: string[]): SchoolEvent[] {
   const sh = find(sheets, '행사목록');
   if (!sh) return [];
   const events: SchoolEvent[] = [];
@@ -166,7 +166,10 @@ function readEvents(sheets: Sheet[], grade: number, warnings: string[]): SchoolE
     const start = `${s[1]}-${s[2].padStart(2, '0')}-${s[3].padStart(2, '0')}`;
     const tail = when.slice(when.indexOf('~') + 1);
     const e = when.includes('~') ? tail.match(/^\s*(?:(\d{1,2})\.\s*)?(\d{1,2})/) : null;
-    const end = e ? `${s[1]}-${(e[1] ?? s[2]).padStart(2, '0')}-${e[2].padStart(2, '0')}` : start;
+    // 끝 달이 시작 달보다 작으면 해를 넘긴 행사(12.30~1.2)
+    const endMonth = e ? Number(e[1] ?? s[2]) : 0;
+    const endYear = endMonth && endMonth < Number(s[2]) ? Number(s[1]) + 1 : s[1];
+    const end = e ? `${endYear}-${String(endMonth).padStart(2, '0')}-${e[2].padStart(2, '0')}` : start;
     events.push({ id: `event-${no}`, name: what.trim(), start, end, showInPlanNote: false, source: 'import' });
   }
   return events;

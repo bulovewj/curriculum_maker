@@ -7,6 +7,7 @@ import { readCurriculum } from '../src/import/mappers/curriculumHwpx';
 import { readPlanAdjust } from '../src/import/mappers/planAdjustHwpx';
 import { readProgressHwpx, type ProgressResult } from '../src/import/mappers/progressHwpx';
 import { readTimePlan } from '../src/import/mappers/timePlanHwpx';
+import { weekday } from '../src/lib/dates';
 import { readHwpx } from '../src/import/hwpx/readHwpx';
 import { readWorkbook } from '../src/import/xlsx/readWorkbook';
 import { defaultSubjects, renameAutonomy } from '../src/model/subjects';
@@ -107,7 +108,7 @@ async function main() {
   for (const [k, sem, t] of [['s1', 1, w1], ['s2', 2, w2]] as const) {
     check(`요일별 교시 ${k}(시간 운영계획)`, totals.dayPeriods[k], t.semesterTotal?.dayPeriods.slice(0, 5));
     // 학기 중 변경 2건(2026-09-29·2027-02-02, 7.2)은 화요일에서 서로 상쇄되어 요일별 합은 같다
-    check(`요일별 교시 ${k}(P04)`, totals.dayPeriods[k], [1, 2, 3, 4, 5].map((w) => sum(day(sem).filter((c) => new Date(c.date).getUTCDay() === w).map((c) => c.periods))));
+    check(`요일별 교시 ${k}(P04)`, totals.dayPeriods[k], [1, 2, 3, 4, 5].map((w) => sum(day(sem).filter((c) => weekday(c.date) === w).map((c) => c.periods))));
   }
   check('주 수', [totals.weeks.s1, totals.weeks.s2], [w1.rows.length, w2.rows.length]);
 

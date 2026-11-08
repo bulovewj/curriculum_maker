@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { ORIGINAL, findFile, readBuffer } from '../../../tests/files';
 import type { CalendarDay } from '../../model/types';
 import { readWorkbook } from '../xlsx/readWorkbook';
-import { circledNumber, readScheduleP04 } from './scheduleP04';
+import { circledNumber, readEvents, readScheduleP04 } from './scheduleP04';
 
 describe('원문자', () => {
   it('① ⑳ ㉑ ㉟ ㊱ ㊿ → 숫자', () => {
@@ -50,5 +50,17 @@ describe.skipIf(!file)('P04 학사일정 2026 6학년', () => {
     expect(events.some((e) => e.name.includes('취소'))).toBe(false);
     expect(events.every((e) => e.start <= e.end)).toBe(true);
     console.log('행사', events.length, events.slice(0, 3).map((e) => `${e.start}~${e.end} ${e.name}`));
+  });
+});
+
+describe('행사 날짜', () => {
+  const sheet = (rows: string[][]) => [{ name: '2026행사목록', rows: [['연번', '일정', '대상', '내용'], ...rows], merges: [] }];
+  it('해를 넘긴 행사는 끝나는 해가 다음 해', () => {
+    const e = readEvents(sheet([['1', '2026. 12. 30. ~ 1. 2.', '6학년', '겨울 캠프']]), 6, []);
+    expect([e[0].start, e[0].end]).toEqual(['2026-12-30', '2027-01-02']);
+  });
+  it('같은 달 범위·하루', () => {
+    const e = readEvents(sheet([['1', '2026.10.28.(수)~29.(목)', '6학년', 'a'], ['2', '2026.9.29.(화)', '전학년', 'b']]), 6, []);
+    expect(e.map((x) => [x.start, x.end])).toEqual([['2026-10-28', '2026-10-29'], ['2026-09-29', '2026-09-29']]);
   });
 });

@@ -49,7 +49,9 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
     store: indexedDbStore,
     project,
     open: (p) => {
-      flush();
+      // 같은 프로젝트를 새로 열 때(불러오기 직후)는 밀린 옛 저장이 새 값을 덮지 않게 버린다
+      if (pending.current && pending.current.id === p?.id) pending.current = null;
+      else flush();
       first.current = true; // 연 직후에는 저장하지 않는다
       setProject(p);
     },
