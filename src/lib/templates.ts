@@ -7,5 +7,7 @@ export type TemplateName = 'progress' | 'timeplan';
 export async function loadTemplate(name: TemplateName): Promise<ArrayBuffer> {
   const url = Object.entries(urls).find(([k]) => k.endsWith(`/${name}.hwpx`))?.[1];
   if (!url) throw new Error(`templates/${name}.hwpx가 필요합니다(CODING_PLAN 3장).`);
-  return (await fetch(url)).arrayBuffer();
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`templates/${name}.hwpx를 읽지 못했습니다(${res.status}).`);
+  return res.arrayBuffer();
 }

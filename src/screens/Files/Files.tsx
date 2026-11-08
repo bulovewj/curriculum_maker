@@ -2,6 +2,8 @@ import { useState, type DragEvent } from 'react';
 import { FileCard, type Item } from '../../components/FileCard';
 import { detectFile } from '../../import/detect';
 import { interpret, mapUnknown, type Unknown } from '../../import/interpret';
+import { shiftSemesters } from '../../model/newProject';
+import { renameAutonomy } from '../../model/subjects';
 import type { ImportKind, Project } from '../../model/types';
 import { useProject } from '../../state/ProjectContext';
 
@@ -30,14 +32,14 @@ export function Files() {
     }
   }
 
-  async function add(files: FileList | File[]) {
+  async function add(files: FileList | File[], proj: Project = p) {
     for (const f of Array.from(files)) {
       const buf = await f.arrayBuffer();
       const id = `${f.name}#${data.size}`;
       data.set(id, buf);
       const det = await detectFile(f.name, buf);
       setItems((xs) => [...xs, { id, name: f.name.normalize('NFC'), kind: det.kind, notice: det.notice, confirmed: false }]);
-      await read(id, f.name.normalize('NFC'), det.kind, p);
+      await read(id, f.name.normalize('NFC'), det.kind, proj);
     }
   }
 
@@ -53,6 +55,16 @@ export function Files() {
     update((q) => apply(q, new Date().toISOString()));
     patch(item.id, { confirmed: true });
   }
+
+  /** 개발용: 내 컴퓨터의 2026 정답지 파일을 한 번에 넣고 학년도·자율시간 이름을 맞춘다 */
+  async function loadSample() {
+    const names = (await (await fetch('/dev-sample')).json()) as string[];
+    const files = await Promise.all(names.map(async (n) => new File([await (await fetch(`/dev-sample/${encodeURIComponent(n)}`)).arrayBuffer()], n)));
+    const next = { ...p, year: 2026, semesters: shiftSemesters(p.semesters, 2026), subjects: renameAutonomy(p.subjects, '신명똑디') };
+    update((q) => ({ ...q, year: next.year, semesters: next.semesters, subjects: next.subjects }));
+    await add(files, next);
+  }
+  const pending = items.filter((x) => x.interp && !x.confirmed);
 
   const onDrop = (e: DragEvent) => { e.preventDefault(); void add(e.dataTransfer.files); };
   const got = (...kinds: ImportKind[]) => p.imports.some((r) => kinds.includes(r.kind));
@@ -71,6 +83,8 @@ export function Files() {
         파일을 여기로 끌어다 놓거나 눌러서 고르세요 (xlsx, hwpx)
         <input type="file" multiple accept=".xlsx,.hwpx,.hwp,.pdf" hidden onChange={(e) => e.target.files && add(e.target.files)} />
       </label>
+      {import.meta.env.DEV && <div className="row"><button onClick={() => void loadSample()}>2026 샘플 넣기(개발용)</button></div>}
+      {pending.length > 1 && <div className="row"><button onClick={() => pending.forEach(confirm)}>읽은 파일 모두 확정({pending.length})</button></div>}
       <ul className="cards-list">
         {items.map((item) => (
           <FileCard key={item.id} item={item} subjects={p.subjects}

@@ -1,8 +1,9 @@
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vitest/config';
+import { devApi } from './scripts/devApi';
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), devApi()],
   // localhost와 127.0.0.1 어느 주소로도 열리게 하고, 브라우저를 자동으로 띄운다
   server: { host: '127.0.0.1', port: 5173, strictPort: true, open: true },
   test: {

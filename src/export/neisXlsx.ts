@@ -34,11 +34,15 @@ export const neisFileName = (p: Project, s: Subject, semester: Semester) => `${p
 /** 교과·학교자율시간마다·학기마다 xlsx 한 개, 전부 zip으로 묶는다. 창체 양식은 1차에 없다. */
 export async function neisZip(p: Project): Promise<ArrayBuffer> {
   const zip = new JSZip();
+  const used = new Set<string>();
   for (const s of p.subjects.filter((x) => x.kind !== 'creative')) {
     for (const sem of [1, 2] as const) {
       const ordered = orderedLessons(p, s.id, sem);
       if (ordered.length === 0) continue;
-      zip.file(neisFileName(p, s, sem), await writeXlsx({ empty0: neisRows(ordered, s, p.grade, sem) }));
+      let name = neisFileName(p, s, sem);
+      for (let k = 2; used.has(name); k++) name = neisFileName(p, s, sem).replace(/\.xlsx$/, `(${k}).xlsx`); // 이름이 같은 교과가 있어도 덮어쓰지 않는다
+      used.add(name);
+      zip.file(name, await writeXlsx({ empty0: neisRows(ordered, s, p.grade, sem) }));
     }
   }
   return zip.generateAsync({ type: 'arraybuffer' });

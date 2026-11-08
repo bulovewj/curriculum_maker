@@ -10,7 +10,7 @@ export function maskText(text: string, names: string[] = []): string {
   let out = text;
   for (const n of names.filter((x) => x.length >= 2)) out = out.split(n).join('담당 교사');
   // '홍길동 선생님' 꼴: 이름 3글자 + 직함
-  out = out.replace(/([가-힣]{3})(\s*)(선생님|교사|강사|교장|교감|담임)/g, (m, name: string, _sp: string, title: string) =>
+  out = out.replace(/(?<![가-힣])([가-힣]{3})(\s*)(선생님|교사|강사|교장|교감|담임)/g, (m, name: string, _sp: string, title: string) =>
     NOT_NAME.has(name) || NOT_NAME.has(name.slice(0, 2)) ? m : ROLE[title]);
   // '교사: 홍길동' 꼴
   out = out.replace(/(교사|강사|담당|작성자|제안자)(\s*[:：]\s*)([가-힣]{2,4})/g, (_m, label: string, sep: string) => `${label}${sep}${ROLE[label] ?? '담당자'}`);
