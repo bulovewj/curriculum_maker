@@ -7,6 +7,7 @@ export default defineConfig({
   // localhost와 127.0.0.1 어느 주소로도 열리게 하고, 브라우저를 자동으로 띄운다
   server: { host: '127.0.0.1', port: 5173, strictPort: true, open: true },
   test: {
+    testTimeout: 30000, // 정답지 테스트는 원본 파일을 읽어서 컴퓨터가 바쁘면 5초를 넘길 수 있다
     include: ['src/**/*.test.{ts,tsx}', 'tests/**/*.test.ts', 'api/**/*.test.ts'],
   },
 });
