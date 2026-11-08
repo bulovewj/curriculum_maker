@@ -32,7 +32,7 @@ export function table1(p: Project, id: number): string {
   colW[totalCol] = WIDTH - sum(colW.slice(0, totalCol));
   const width = (c: number, span = 1) => sum(colW.slice(c, c + span));
   const cell = (row: number, col: number, text: string, o: Partial<CellSpec> = {}, span = 1): CellSpec =>
-    ({ row, col, colSpan: span, rowSpan: 1, width: width(col, span), height: 2275, text, ...BODY, ...o } as CellSpec);
+    ({ row, col, colSpan: span, rowSpan: 1, width: width(col, span), height: 3400, text, ...BODY, ...o } as CellSpec);
   const head = (row: number, col: number, text: string, span = 1, rowSpan = 1): CellSpec => ({ ...cell(row, col, text, HEAD, span), rowSpan });
   const autonomy = subj.find((s) => s.kind === 'autonomy');
   const rows: CellSpec[][] = [
@@ -54,8 +54,8 @@ export function table1(p: Project, id: number): string {
     cs.push(cell(row, creativeCol, t(c)), cell(row, totalCol, kind === 'diff' ? signed(total) : comma(total)));
     return cs;
   };
-  rows.push(line(2, '교육부 기준 시수', 'std'), line(3, '본교 운영 시수', 'ann'), line(4, '증감 시수(교과+학교자율시간)', 'diff'));
-  return tableXml({ id, rows, colCnt: totalCol + 1, width: WIDTH, height: 5 * 2275 });
+  rows.push(line(2, '교육부\n기준 시수', 'std'), line(3, '본교\n운영 시수', 'ann'), line(4, '증감 시수\n(교과+학교자율시간)', 'diff'));
+  return tableXml({ id, rows, colCnt: totalCol + 1, width: WIDTH, height: 5 * 3400 });
 }
 
 /** 표2: 증감 기록(한 시간에 한 행). 창체는 3칸 병합 칸 하나가 주요 내용. 쪽이 넘어가면 머리 줄이 반복된다. */
