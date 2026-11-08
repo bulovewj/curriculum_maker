@@ -2,6 +2,8 @@ import { describe, expect, it } from 'vitest';
 import { AI_OFF, aiAvailable, callAi } from './client';
 import { filterCandidates } from './filterOutput';
 import { maskNames, maskText } from './maskNames';
+import type { Adjustment } from '../model/types';
+import { adjustTextInput, applyAdjustTexts, filterTexts } from './textTasks';
 
 describe('maskNames', () => {
   it('이름+직함을 역할명으로, 이름 목록은 어디서든', () => {
@@ -73,5 +75,26 @@ describe('후보 방향', () => {
   });
   it('줄여야 하면(need>0) 더하기는 버린다', () => {
     expect(filterCandidates(out, { ...rows, need: 3 }).candidates.map((c) => c.kind)).toEqual(['remove']);
+  });
+});
+
+describe('문장·활동명', () => {
+  const adj: Adjustment = { id: 'a1', semester: 1, subjectId: 'kor', area: '', standards: [], unit: 'U', content: '홍길동 선생님 소개, 읽기', hours: -1, planRowIds: [] };
+  it('입력은 시수 부호로 줄이기·늘리기를 나누고, 보내기 전 이름이 가려진다', async () => {
+    const input = adjustTextInput([{ ...adj }, { ...adj, id: 'a2', hours: 1 }], [{ id: 'kor', name: '국어' } as never]);
+    expect(input.items.map((i) => i.kind)).toEqual(['reduce', 'increase']);
+    let sent = '';
+    await callAi('adjustText', input, [], (async (_u: string, o?: RequestInit) => { sent = String(o?.body); return Response.json({ ok: true, output: [], usage: { inputTokens: 0, outputTokens: 0 } }); }) as typeof fetch);
+    expect(sent).not.toContain('홍길동');
+    expect(sent).toContain('담당 교사');
+  });
+  it('목록 밖 id·빈 글은 버리고, 적용하면 AI 초안 표시, 입력은 그대로', () => {
+    const f = filterTexts([{ id: 'a1', text: ' 유사 내용을 통합함 ' }, { id: 'zz', text: 'x' }, { id: 'a2', text: '' }], ['a1', 'a2']);
+    expect(f.items).toEqual([{ id: 'a1', text: '유사 내용을 통합함' }]);
+    expect(f.warnings).toHaveLength(2);
+    const before = [{ ...adj }];
+    const after = applyAdjustTexts(before, f.items);
+    expect(after[0]).toMatchObject({ content: '유사 내용을 통합함', aiDraft: true });
+    expect(before[0].aiDraft).toBeUndefined();
   });
 });

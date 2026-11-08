@@ -28,7 +28,7 @@ describe('서버 함수(가짜 모델)', () => {
     const f = fake('[]');
     const msg = async (body: unknown, e = env, c: CallModel = f.call) => ((await (await handleAi(post(body), e, c)).json()) as { error: string }).error;
     expect(await msg({ task: 'hack', input })).toContain('알 수 없는');
-    expect(await msg({ task: 'mapColumns', input })).toContain('아직 지원');
+    expect(await msg({ task: 'mapColumns', input })).toContain('올바르지');
     expect(await msg({ task: 'adjustCandidates', input }, { ...env, ANTHROPIC_API_KEY: '' })).toContain('AI 키');
     expect(await msg({ task: 'adjustCandidates', input: { rows: 3 } })).toContain('올바르지');
     expect(await msg('not json')).toContain('요청 형식');
@@ -66,5 +66,17 @@ describe('리뷰 보완', () => {
     const big = { ...input, standards: Array.from({ length: 401 }, (_, k) => `c${k}`) };
     const res = await handleAi(new Request('http://x/api/ai', { method: 'POST', body: JSON.stringify({ task: 'adjustCandidates', input: big }) }), env, async () => ({ text: '[]', usage: { inputTokens: 0, outputTokens: 0 } }));
     expect(((await res.json()) as { error: string }).error).toContain('성취기준');
+  });
+});
+
+describe('새 작업(문장·활동명·열 맞추기) 검사', () => {
+  const f = () => fake('[{"id":"a","text":"x"}]');
+  const run = async (task: string, i: unknown) => { const m = f(); const r = await handleAi(post({ task, input: i }), env, m.call); return { status: r.status, seen: m.seen.length }; };
+  it('올바른 입력은 모델까지 가고, 이상한 입력은 거절', async () => {
+    expect(await run('adjustText', { items: [{ id: 'a', content: '합침', subject: '국어', semester: 1, kind: 'reduce', area: '', unit: '' }] })).toEqual({ status: 200, seen: 1 });
+    expect(await run('adjustText', { items: 3 })).toEqual({ status: 400, seen: 0 });
+    expect(await run('activityNames', { subject: '자율·자치', items: [{ id: 'a', unit: 'u', topic: 't' }] })).toEqual({ status: 200, seen: 1 });
+    expect(await run('mapColumns', { headers: ['a'], sample: [['1']], targets: ['단원'] })).toEqual({ status: 200, seen: 1 });
+    expect(await run('mapColumns', { headers: 'a', sample: [], targets: [] })).toEqual({ status: 400, seen: 0 });
   });
 });

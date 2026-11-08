@@ -4,6 +4,7 @@ import { needOf, placeAll } from '../../engine/placeLessons';
 import { AdjustmentList } from '../../components/AdjustmentList';
 import { applyPicked, type Picked } from '../../ai/applyCandidates';
 import { AiPanel } from '../../components/AiPanel';
+import { AiTextPanel } from '../../components/AiTextPanel';
 import { PlanOpsBar } from '../../components/PlanOpsBar';
 import { swapRows, undoAdjustment, type OpState } from '../../engine/planOps';
 import type { Semester } from '../../model/types';
@@ -76,6 +77,7 @@ export function Progress() {
           </p>
           {err && <p className="error">{err}</p>}
           <AiPanel project={p} subject={subject} needs={needs} onApply={applyMany} />
+          <AiTextPanel project={p} subject={subject} update={update} />
           <PlanOpsBar subjectId={subject.id} row={row} semester={(row?.semester ?? 1) as Semester} onOp={run}
             onMove={(dir) => { const i = shown.findIndex((r) => r.id === sel); const mate = shown[i + dir]; if (row && mate) run((s) => swapRows(s, subject.id, row.id, mate.id)); }} />
           <div className="row">
@@ -95,7 +97,7 @@ export function Progress() {
                   <tr key={r.id} onClick={() => setSel(r.id)} style={r.id === sel ? { background: '#cfe3ff' } : r.kind === 'memo' || !s ? { background: '#fff3b0' } : undefined}>
                     <td>{s ? s.week : '—'}</td>
                     <td>{s ? calc.period.get(`${s.semester}#${s.week}`) : r.kind === 'memo' ? '메모' : '칸 없음'}</td>
-                    <td>{r.unit}</td><td>{r.topic}</td><td>{r.n ? `${r.n}/${r.total ?? ''}` : ''}</td><td>{r.pages ?? ''}</td><td>{r.rawNote ?? ''}</td>
+                    <td>{r.unit}</td><td style={r.aiDraft ? { background: '#fff3b0' } : undefined}>{r.topic}</td><td>{r.n ? `${r.n}/${r.total ?? ''}` : ''}</td><td>{r.pages ?? ''}</td><td>{r.rawNote ?? ''}</td>
                   </tr>
                 );
               })}

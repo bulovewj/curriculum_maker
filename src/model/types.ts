@@ -157,6 +157,8 @@ export interface PlanRow {
   rawNote?: string;
   area?: string;
   fixedWeek?: { semester: Semester; week: number };
+  /** AI가 지은 활동 이름(교사가 확인하기 전까지 노란 칸) */
+  aiDraft?: boolean;
   source: { file: string; row: number };
 }
 
@@ -170,6 +172,8 @@ export interface Adjustment {
   content: string;
   hours: number;
   planRowIds: string[];
+  /** AI가 쓴 초안(교사가 확인하기 전까지 노란 칸) */
+  aiDraft?: boolean;
   /** 작업 취소용: 작업 전 행과 작업 뒤 행 id (증감 기록을 지우면 되돌린다) */
   undo?: { subjectId: SubjectId; beforeRows: PlanRow[]; afterIds: string[]; numbers: Record<string, { n?: number; total?: number }>; at: number; prevId: string | null };
 }

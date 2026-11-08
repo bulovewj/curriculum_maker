@@ -34,3 +34,21 @@ export interface Candidate {
   reason: string;
   standards: string[];
 }
+
+/** adjustText: 증감 기록마다 '주요 내용' 한 문장 */
+export interface AdjustTextInput {
+  items: { id: string; subject: string; semester: number; kind: 'reduce' | 'increase'; area: string; unit: string; content: string }[];
+}
+/** activityNames: 자율·자치·동아리 활동 이름 */
+export interface ActivityNamesInput {
+  subject: string;
+  items: { id: string; unit: string; topic: string }[];
+}
+/** mapColumns: 모르는 양식의 열 → 목표 열 */
+export interface MapColumnsInput {
+  headers: string[];
+  sample: string[][]; // 머리글 아래 몇 줄
+  targets: string[]; // 목표 열 이름
+}
+export interface TextOut { id: string; text: string }
+export interface ColumnOut { column: number; target: string; confidence: number }
