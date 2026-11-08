@@ -1,3 +1,4 @@
+import { TimetableMaker } from '../../components/TimetableMaker';
 import { TimetableGrid } from '../../components/TimetableGrid';
 import { schoolDaysByMonth } from '../../engine/calendar';
 import { weekMonday } from '../../lib/dates';
@@ -54,6 +55,7 @@ export function Calendar() {
         );
       })}
       <h3>기초 시간표</h3>
+      <TimetableMaker project={p} update={update} />
       <TimetableGrid project={p} onChange={(cells) => update((q) => ({ ...q, baseTimetable: cells }))} />
     </section>
   );
