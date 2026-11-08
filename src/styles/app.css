@@ -20,3 +20,5 @@ button, .button { font: inherit; padding: 6px 12px; border: 1px solid #999; back
 .form { display: grid; gap: 8px; max-width: 360px; }
 .form label { display: grid; gap: 2px; }
 fieldset { display: grid; gap: 8px; }
+.dev-table { border-collapse: collapse; font-size: 13px; }
+.dev-table th, .dev-table td { border: 1px solid #ccc; padding: 2px 6px; text-align: left; }

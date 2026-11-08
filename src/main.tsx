@@ -1,6 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { App } from './App';
+import { DevPreview } from './dev/DevPreview';
 import './styles/tokens.css';
 import './styles/app.css';
 
@@ -11,6 +12,6 @@ if (!root) {
 
 createRoot(root).render(
   <StrictMode>
-    <App />
+    {new URLSearchParams(location.search).has('dev') ? <DevPreview /> : <App />}
   </StrictMode>,
 );
