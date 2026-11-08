@@ -40,7 +40,7 @@ export function FileCard({ item, subjects, onKind, onFix, onConfirm }: Props) {
         </select>
         <span className={yellow ? 'yellow' : 'muted'}>{status}</span>
         <span className="spacer" />
-        <button onClick={onConfirm} disabled={!interp || item.confirmed || yellow > 0}>확정</button>
+        <button className="primary" onClick={onConfirm} disabled={!interp || item.confirmed || yellow > 0}>확정</button>
       </div>
       {item.notice && <p className="notice">{item.notice}</p>}
       {item.error && <p className="error">{item.error}</p>}

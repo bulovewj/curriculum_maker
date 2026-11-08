@@ -18,7 +18,7 @@ export function PlanOpsBar({ subjectId, row, semester, onOp, onMove }: Props) {
   const [hours, setHours] = useState(1);
   const need = (f: (s: OpState, r: PlanRow) => OpState) => () => row && onOp((s) => f(s, row));
   return (
-    <div className="move-form">
+    <div className="ops-bar">
       <b>{row ? `고른 행: ${row.topic}` : '행을 눌러 고르세요'}</b>{' '}
       <button disabled={!row} onClick={need((s, r) => mergeRows(s, subjectId, r.id))}>합치기(+다음 행)</button>
       <button disabled={!row} onClick={need((s, r) => removeRow(s, subjectId, r.id))}>빼기</button>

@@ -42,7 +42,7 @@ export function Start() {
       <h1>내 손 안의 교육과정</h1>
       {error && <p className="error-bar">{error}</p>}
       <div className="row">
-        <button onClick={create}>새로 만들기</button>
+        <button className="primary" onClick={create}>새로 만들기</button>
         <label className="button">
           파일에서 불러오기
           <input type="file" accept=".json" hidden onChange={(e) => e.target.files?.[0] && importFile(e.target.files[0])} />

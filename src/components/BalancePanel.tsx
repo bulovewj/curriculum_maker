@@ -34,7 +34,7 @@ export function BalancePanel({ project: p, update }: { project: Project; update:
               <ul>{res.result.specialistWarnings.map((w) => <li key={w}>{w}</li>)}</ul></details>
           )}
           {res.result.warnings.map((w) => <p key={w} className="error">{named(w)}</p>)}
-          <button onClick={() => { update((q) => ({ ...q, slotOverrides: { ...res.keep, ...res.result.overrides } })); setRes(null); }}>적용</button>{' '}
+          <button className="primary" onClick={() => { update((q) => ({ ...q, slotOverrides: { ...res.keep, ...res.result.overrides } })); setRes(null); }}>적용</button>{' '}
           <button onClick={() => setRes(null)}>취소</button>
         </div>
       )}

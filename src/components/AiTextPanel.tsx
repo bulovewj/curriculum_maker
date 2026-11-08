@@ -64,7 +64,7 @@ export function AiTextPanel({ project: p, subject, update }: { project: Project;
             {pending.items.slice(0, 30).map((t) => <li key={t.id}><span className="muted">{pending.old[t.id]}</span> → <b>{t.text}</b></li>)}
           </ul>
           {pending.items.length > 30 && <p className="muted">… 외 {pending.items.length - 30}개</p>}
-          <button onClick={apply}>{pending.items.length}개 적용(노란 칸으로 표시)</button>{' '}
+          <button className="primary" onClick={apply}>{pending.items.length}개 적용(노란 칸으로 표시)</button>{' '}
           <button className="link" onClick={() => setPending(null)}>버리기</button>
         </>
       )}

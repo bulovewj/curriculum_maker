@@ -95,12 +95,12 @@ export function AiPanel({ project: p, subject, needs, onApply }: Props) {
             <label><input type="checkbox" checked={auto} onChange={(e) => setAuto(e.target.checked)} /> 받자마자 모두 적용</label>
           </div>
           <p className="muted">{jobs.length === 0 ? '필요량이 0이라 받을 후보가 없습니다.' : `AI ${jobs.length}번 호출 · ${total}시간 ${jobs.map((j) => `${name(j.subjectId)}${j.semester}${j.need > 0 ? '−' : '+'}${Math.abs(j.need)}`).slice(0, 8).join(' ')}${jobs.length > 8 ? ' …' : ''}`}</p>
-          <button disabled={!!busy || jobs.length === 0} onClick={ask}>{busy ? `묻는 중… ${busy}` : 'AI 후보 받기'}</button>
+          <button className="primary" disabled={!!busy || jobs.length === 0} onClick={ask}>{busy ? `묻는 중… ${busy}` : 'AI 후보 받기'}</button>
         </>
       )}
       <span className="muted"> 사용량: 입력 {usage.inputTokens} · 출력 {usage.outputTokens} 토큰</span>
       {notes.map((n) => <p key={n} className="yellow-cell">{n}</p>)}
-      {cands.length > 0 && <p><button onClick={() => { apply(cands); setCands([]); }}>후보 {cands.length}개 모두 적용(필요량까지만)</button></p>}
+      {cands.length > 0 && <p><button className="primary" onClick={() => { apply(cands); setCands([]); }}>후보 {cands.length}개 모두 적용(필요량까지만)</button></p>}
       <ul className="cards-list">
         {cands.map((c, i) => (
           <li key={i} className="file-card">

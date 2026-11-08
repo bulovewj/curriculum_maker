@@ -10,7 +10,8 @@ import { useProject } from '../../state/ProjectContext';
 
 // 규칙 → 고칠 화면(왼쪽 단계 번호 0부터: S3=2, S4=3, S5=4, S6=5)
 const GO: Record<string, number> = { R1: 2, R2: 3, R3: 3, R4: 3, R5: 5, R6: 3, R7: 3, R8: 5, R9: 4, R10: 5, R11: 5 };
-const MARK: Record<Level, string> = { fail: '🔴', warn: '🟡', pass: '🟢' };
+const LABEL: Record<Level, string> = { fail: '빨강', warn: '노랑', pass: '통과' };
+const Badge = ({ level }: { level: Level }) => <span className={`badge ${level}`}>{LABEL[level]}</span>;
 
 /** S7 위쪽: 규정 검사 결과와 점검표 미리 보기 */
 export function Review({ onGo }: { onGo: (step: number) => void }) {
@@ -31,12 +32,15 @@ export function Review({ onGo }: { onGo: (step: number) => void }) {
   return (
     <section>
       <h2>점검·출력</h2>
-      <p>{MARK.fail} 빨강 {count('fail')} · {MARK.warn} 노랑 {count('warn')} · {MARK.pass} 통과 {count('pass')} (기준 데이터 {p.standardsVersion})</p>
+      <p className="summary">
+        {order.map((l) => <span key={l}><Badge level={l} /> {count(l)}</span>)}
+        <span className="muted">기준 데이터 {p.standardsVersion}</span>
+      </p>
       <ExportButtons project={p} fails={count('fail')} />
       <ul className="cards-list">
         {sorted.map((r, i) => (
-          <li key={i} className="file-card">
-            {MARK[r.level]} <b>{r.ruleId}</b> {r.message}{' '}
+          <li key={i} className={`file-card result ${r.level}`}>
+            <Badge level={r.level} /> <b>{r.ruleId}</b> {r.message}{' '}
             <button className="link" onClick={() => onGo(GO[r.ruleId] ?? 6)}>해당 화면으로</button>
             <div className="muted">근거: {r.source}</div>
           </li>

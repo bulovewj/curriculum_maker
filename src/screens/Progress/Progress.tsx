@@ -56,7 +56,7 @@ export function Progress() {
   return (
     <section>
       <h2>진도</h2>
-      <div className="row">
+      <div className="row tabs">
         {p.subjects.map((s) => {
           const n = needOf(calc.placed[s.id]);
           const has = (p.lessonPlans[s.id] ?? []).length > 0;

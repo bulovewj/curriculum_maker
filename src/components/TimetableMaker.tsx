@@ -44,7 +44,7 @@ export function TimetableMaker({ project: p, update }: { project: Project; updat
           ))}
         </div>
       )}
-      <button onClick={run} disabled={!hasPlan}>기초 시간표 자동 만들기</button>
+      <button className="primary" onClick={run} disabled={!hasPlan}>기초 시간표 자동 만들기</button>
       {!hasPlan && <span className="muted"> 편제가 필요합니다(S2에서 편제 파일을 넣으세요).</span>}
       {res && (
         <>

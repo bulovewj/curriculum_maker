@@ -83,7 +83,7 @@ export function ColumnMapper({ buffer, subjects, aiEnabled, onDone }: Props) {
       {notes.map((n, i) => <p key={i} className="yellow-cell">{n}</p>)}
       <div className="row">
         {aiEnabled && <button disabled={busy} onClick={() => void askAi()}>{busy ? '맞추는 중…' : 'AI로 열 맞추기'}</button>}
-        <button disabled={missing.length > 0 || (!hasSubjectCol && !subject)} onClick={() => void done()}>이 열 맞추기로 읽기</button>
+        <button className="primary" disabled={missing.length > 0 || (!hasSubjectCol && !subject)} onClick={() => void done()}>이 열 맞추기로 읽기</button>
       </div>
     </div>
   );
