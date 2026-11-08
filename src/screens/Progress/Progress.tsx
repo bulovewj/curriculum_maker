@@ -2,8 +2,9 @@ import { useMemo, useState } from 'react';
 import { computeGrid } from '../../engine/grid';
 import { needOf, placeAll } from '../../engine/placeLessons';
 import { AdjustmentList } from '../../components/AdjustmentList';
+import { AiPanel } from '../../components/AiPanel';
 import { PlanOpsBar } from '../../components/PlanOpsBar';
-import { swapRows, undoAdjustment, type OpState } from '../../engine/planOps';
+import { addRow, mergeRows, removeRow, splitRow, swapRows, undoAdjustment, type OpState } from '../../engine/planOps';
 import type { Semester } from '../../model/types';
 import { useProject } from '../../state/ProjectContext';
 
@@ -63,6 +64,10 @@ export function Progress() {
             <b style={{ color: need === 0 ? 'green' : '#b60' }}>{need === 0 ? '필요량 0' : need > 0 ? `감축 필요 ${need}` : `증배 필요 ${-need}`}</b>
           </p>
           {err && <p className="error">{err}</p>}
+          <AiPanel project={p} subject={subject} rows={rows}
+            needBySem={Object.fromEntries([1, 2].map((n) => [n, res.surplusRows.filter((x) => x.semester === n).length - res.freeSlots.filter((x) => x.semester === n).length]))}
+            onApply={(c, sem) => run((s) => (c.kind === 'merge' ? mergeRows(s, subject.id, c.rowId) : c.kind === 'remove' ? removeRow(s, subject.id, c.rowId)
+              : c.kind === 'split' ? splitRow(s, subject.id, c.rowId) : addRow(s, subject.id, c.rowId, c.topic ?? '', sem)))} />
           <PlanOpsBar subjectId={subject.id} row={row} semester={(row?.semester ?? 1) as Semester} onOp={run}
             onMove={(dir) => { const i = ordered.findIndex((r) => r.id === sel); const mate = ordered[i + dir]; if (row && mate) run((s) => swapRows(s, subject.id, row.id, mate.id)); }} />
           <table className="dev-table">

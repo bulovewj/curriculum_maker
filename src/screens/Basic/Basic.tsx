@@ -35,6 +35,10 @@ export function Basic() {
           학교자율시간 이름
           <input value={autonomyName} onChange={(e) => set({ subjects: renameAutonomy(p.subjects, e.target.value) })} />
         </label>
+        <label>
+          <input type="checkbox" checked={p.settings.aiEnabled} onChange={(e) => set({ settings: { ...p.settings, aiEnabled: e.target.checked } })} />
+          {' '}AI 도우미 사용(서버가 연결돼 있을 때만 동작. 꺼도 계산·출력은 모두 됩니다)
+        </label>
         {p.semesters.map((s, i) => (
           <fieldset key={s.no}>
             <legend>{s.no}학기</legend>

@@ -44,7 +44,7 @@ src/ model engine import export storage state ai lib screens components dev
 | 3 | xlsx 읽기·NEIS형 진도 | ✅ | 14 | NEIS 엑셀·점검표 출력 | ✅ |
 | 4 | hwpx 읽기 | ✅ | 15 | hwpx 쓰기·진도표 출력 | ✅ |
 | 5 | 학사일정·시간표 매퍼 | ✅ | 16 | 운영계획·증감계획 hwpx → 관문 | 🔄 |
-| 6 | 편제·진도표·자율시간·운영계획 매퍼 | ✅ | 17 | AI 서버 함수·재구성 후보 | ⬜ |
+| 6 | 편제·진도표·자율시간·운영계획 매퍼 | ✅ | 17 | AI 서버 함수·재구성 후보 | ✅ |
 | 7 | 정답지 기대값 JSON | ✅ | 18 | AI 문장·활동명 | ⬜ |
 | 8 | 파일 넣기·해석 확인 화면 | ✅ | 19 | AI 모르는 양식 열 맞추기 | ⬜ |
 | 9 | 칸 표·주별 시수표(정답지 A) | ✅ | 20 | 화면 다듬기 | ⬜ |
@@ -56,6 +56,7 @@ src/ model engine import export storage state ai lib screens components dev
 - `?dev` 화면 = 진도 xlsx·hwpx 읽기 결과 확인용(개발 전용). hwpx 원본 안내 표(안건 표)에 교사 이름이 있으니 테스트·기대값에 옮기지 말 것
 - `npm run expected`(tsx) = 정답지 기대값 JSON 다시 만들기 + totals.json 대조. 기대값 JSON은 손으로 고치지 말 것. `curriculum.json`은 계획에 없던 추가 파일(CUR 읽은 값)
 - M16 관문(`v0.9-gate`)은 아직 안 찍음: 형이 ① 한글(맥)에서 `templates/*.hwpx`와 S7에서 받은 hwpx 5종이 열리는지(긴 표 쪽 이어짐·머리 줄 반복·시간 운영계획 학기마다 한 쪽) ② 2026 원본과 나란히 눈으로 비교 ③ AI 끈 채 S0→S7 처음부터 끝까지 확인해야 함. `templates/*.hwpx`는 `npm run templates`가 정답지(d)(c)에서 본문만 지워 만든 것(형이 한글에서 직접 만든 양식으로 바꿔도 됨)
+- M17 AI: `api/ai.ts`는 SDK 없이 fetch로 Anthropic API를 부른다(새 라이브러리 없음). 실제 호출은 형이 `.env.local`에 키를 넣고 `vercel dev`로 확인해야 함(테스트는 전부 가짜 모델). `npm run dev`만 켜면 S6에 'AI 꺼짐(서버 연결 안 됨)'
 - `@types/node` 없음 → 테스트용 Node 함수는 `tests/node.d.ts`에 직접 선언
 - 2026-11-08 협업 교사 검토 반영: 준비물은 학사일정·전담 시간표·작년·올해 편제(학년군 편제표)·진도. 기초 시간표는 자동 생성(M11b), 학교자율시간 운영(안)은 받지 않음(작업지시서 1장·2.8·12장)
 - 학기 중 행사로 주별 값이 바뀌는 것이 정상. 시점이 다른 문서끼리 주별 일치를 가정하지 말 것(작업지시서 2.7)

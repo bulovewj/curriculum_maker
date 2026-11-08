@@ -1,0 +1,52 @@
+import { describe, expect, it } from 'vitest';
+import { handleAi, parseJson } from './handler';
+import type { CallModel, ModelCall } from './types';
+
+const input = { subject: { id: 'kor', name: '국어' }, semester: 1, need: 2, rows: [{ id: 'a', unit: 'U', topic: 'T', standards: [] }], standards: [] };
+const post = (body: unknown) => new Request('http://x/api/ai', { method: 'POST', body: typeof body === 'string' ? body : JSON.stringify(body) });
+const env = { ANTHROPIC_API_KEY: 'test-key', AI_MODEL_FAST: 'fast-model', AI_MODEL_SMART: 'smart-model' };
+const usage = { inputTokens: 10, outputTokens: 5 };
+
+/** 실제 Claude를 부르지 않는 가짜 */
+function fake(text: string): { call: CallModel; seen: ModelCall[] } {
+  const seen: ModelCall[] = [];
+  return { seen, call: async (c) => { seen.push(c); return { text, usage }; } };
+}
+
+describe('서버 함수(가짜 모델)', () => {
+  it('재구성 후보: 모델을 SMART로 부르고 JSON을 돌려준다(코드 블록 허용)', async () => {
+    const f = fake('```json\n[{"kind":"merge","rowId":"a","reason":"겹침","standards":[]}]\n```');
+    const res = await handleAi(post({ task: 'adjustCandidates', input }), env, f.call);
+    expect(await res.json()).toEqual({ ok: true, output: [{ kind: 'merge', rowId: 'a', reason: '겹침', standards: [] }], usage });
+    expect(f.seen).toHaveLength(1);
+    expect(f.seen[0].model).toBe('smart-model');
+    expect(f.seen[0].system).toContain('JSON 배열만');
+    expect(JSON.parse(f.seen[0].user).rows[0].id).toBe('a');
+  });
+
+  it('오류 문장은 한국어: 알 수 없는 작업·키 없음·깨진 입력·깨진 답·모델 오류', async () => {
+    const f = fake('[]');
+    const msg = async (body: unknown, e = env, c: CallModel = f.call) => ((await (await handleAi(post(body), e, c)).json()) as { error: string }).error;
+    expect(await msg({ task: 'hack', input })).toContain('알 수 없는');
+    expect(await msg({ task: 'mapColumns', input })).toContain('아직 지원');
+    expect(await msg({ task: 'adjustCandidates', input }, { ...env, ANTHROPIC_API_KEY: '' })).toContain('AI 키');
+    expect(await msg({ task: 'adjustCandidates', input: { rows: 3 } })).toContain('올바르지');
+    expect(await msg('not json')).toContain('요청 형식');
+    expect(await msg({ task: 'adjustCandidates', input }, env, fake('설명만').call)).toContain('읽지 못했습니다');
+    expect(await msg({ task: 'adjustCandidates', input }, env, async () => { throw new Error('AI 사용 한도를 넘었습니다.'); })).toContain('한도');
+    expect(f.seen).toHaveLength(0); // 검사에서 걸린 요청은 모델을 부르지 않는다
+  });
+
+  it('행이 너무 많으면 거절', async () => {
+    const big = { ...input, rows: Array.from({ length: 401 }, (_, i) => ({ id: `r${i}`, unit: '', topic: '', standards: [] })) };
+    const f = fake('[]');
+    const res = await handleAi(post({ task: 'adjustCandidates', input: big }), env, f.call);
+    expect(res.status).toBe(400);
+    expect(f.seen).toHaveLength(0);
+  });
+
+  it('parseJson', () => {
+    expect(parseJson('[1]')).toEqual([1]);
+    expect(() => parseJson('x')).toThrow('읽지 못했습니다');
+  });
+});
