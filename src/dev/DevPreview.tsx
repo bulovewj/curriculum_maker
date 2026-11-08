@@ -3,6 +3,7 @@ import { readNeisLessons, type LessonResult } from '../import/lessons/neisLesson
 import { readWorkbook } from '../import/xlsx/readWorkbook';
 import { defaultSubjects, renameAutonomy } from '../model/subjects';
 import { HwpxView } from './HwpxView';
+import { ScheduleView } from './ScheduleView';
 
 /** ?dev 전용: 파일을 넣어 읽기 결과를 표·JSON으로 본다. 개발 확인용. */
 export function DevPreview() {
@@ -53,6 +54,7 @@ export function DevPreview() {
           <details><summary>JSON</summary><pre>{JSON.stringify(result, null, 2)}</pre></details>
         </>
       )}
+      <ScheduleView />
       <HwpxView />
     </main>
   );
