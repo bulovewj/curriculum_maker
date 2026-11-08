@@ -17,11 +17,17 @@ const callClaude: CallModel = async ({ model, system, user }) => {
 
 /** 실제 GPT 호출(OpenAI Chat Completions). 키는 서버 환경변수에만 있다. */
 const callGpt: CallModel = async ({ model, system, user }) => {
-  const res = await fetch('https://api.openai.com/v1/chat/completions', {
+  const send = () => fetch('https://api.openai.com/v1/chat/completions', {
     method: 'POST',
     headers: { 'content-type': 'application/json', authorization: `Bearer ${process.env.OPENAI_API_KEY ?? ''}` },
     body: JSON.stringify({ model, max_completion_tokens: 4000, messages: [{ role: 'system', content: system }, { role: 'user', content: user }] }),
   });
+  let res = await send();
+  // 권한을 막 바꾸면 OpenAI 서버마다 반영이 달라 403이 섞여 나온다. 두 번까지 다시 시도한다.
+  for (let k = 0; k < 2 && res.status === 403; k++) {
+    await new Promise((r) => setTimeout(r, 1500));
+    res = await send();
+  }
   if (!res.ok) {
     const detail = ((await res.json().catch(() => ({}))) as { error?: { message?: string } }).error?.message ?? '';
     throw new Error(res.status === 401 ? 'AI 키가 올바르지 않습니다.' : res.status === 429 ? 'AI 사용 한도를 넘었습니다. 잠시 뒤 다시 시도하세요.' : `AI 서버 오류(${res.status}) ${detail}`.trim());
