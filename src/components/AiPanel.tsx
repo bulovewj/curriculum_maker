@@ -41,7 +41,7 @@ export function AiPanel({ project: p, subject, rows, needBySem, onApply }: Props
     setBusy(false);
     if (!res.ok) return setNotes([res.error]);
     setUsage((u) => ({ inputTokens: u.inputTokens + res.usage.inputTokens, outputTokens: u.outputTokens + res.usage.outputTokens }));
-    const f = filterCandidates(res.output, { rowIds: mine.map((r) => r.id), standards });
+    const f = filterCandidates(res.output, { rowIds: mine.map((r) => r.id), standards, need });
     setCands(f.candidates);
     setNotes(f.warnings);
   }

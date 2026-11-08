@@ -50,3 +50,10 @@ describe('서버 함수(가짜 모델)', () => {
     expect(() => parseJson('x')).toThrow('읽지 못했습니다');
   });
 });
+
+describe('parseJson 너그럽게 읽기', () => {
+  it('객체로 감싼 목록·설명이 붙은 목록도 읽는다', () => {
+    expect(parseJson('{"candidates":[{"kind":"add"}]}')).toEqual([{ kind: 'add' }]);
+    expect(parseJson('다음과 같습니다:\n[{"kind":"add"}]\n끝')).toEqual([{ kind: 'add' }]);
+  });
+});

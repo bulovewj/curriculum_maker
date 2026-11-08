@@ -62,3 +62,16 @@ describe('client', () => {
     expect(sent).not.toContain('홍길동');
   });
 });
+
+describe('후보 방향', () => {
+  const rows = { rowIds: ['a'], standards: [] as string[] };
+  const out = [{ kind: 'remove', rowId: 'a', reason: '', standards: [] }, { kind: 'add', rowId: 'a', topic: '새 주제', reason: '', standards: [] }];
+  it('늘려야 하면(need<0) 빼기는 버린다', () => {
+    const f = filterCandidates(out, { ...rows, need: -3 });
+    expect(f.candidates.map((c) => c.kind)).toEqual(['add']);
+    expect(f.warnings.join()).toContain('반대');
+  });
+  it('줄여야 하면(need>0) 더하기는 버린다', () => {
+    expect(filterCandidates(out, { ...rows, need: 3 }).candidates.map((c) => c.kind)).toEqual(['remove']);
+  });
+});

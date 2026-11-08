@@ -53,8 +53,12 @@ export async function handleAi(request: Request, env: Env, callModel: CallModel)
 export function parseJson(text: string): unknown {
   const t = text.trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '');
   try {
-    return JSON.parse(t);
+    const v: unknown = JSON.parse(t);
+    // {"candidates":[...]} 처럼 감싸서 답해도 목록을 꺼낸다
+    return !Array.isArray(v) && v && typeof v === 'object' ? (Object.values(v).find(Array.isArray) ?? v) : v;
   } catch {
+    const m = t.match(/\[[\s\S]*\]/); // 앞뒤에 설명이 붙어도 첫 목록을 찾는다
+    if (m) try { return JSON.parse(m[0]); } catch { /* 아래에서 오류 */ }
     throw new Error('AI 답을 읽지 못했습니다. 다시 시도해 주세요.');
   }
 }
