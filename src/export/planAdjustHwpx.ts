@@ -22,19 +22,21 @@ export function table1(p: Project, id: number): string {
   const creativeSchool = crea.some((s) => cp.schoolAnnual[s.id] !== undefined) ? sum(crea.map((s) => ann(s.id))) : cp.creative.school;
   const stdTotal = sum(subj.map((s) => std(s.id) ?? 0)) + cp.creative.standard;
   const schoolTotal = sum(subj.map((s) => ann(s.id))) + creativeSchool;
-  const first = 4000;
-  const w = Math.floor((WIDTH - first - 6000) / 11);
-  const colW = [first, 3000, 3000, ...Array(11).fill(w)];
-  colW[13] = WIDTH - sum(colW.slice(0, 13));
-  const width = (c: number, span = 1) => sum(colW.slice(c, c + span));
-  // 열 순서: 0 라벨 | 1·2 국어(국어, 학교자율시간) | 3.. 사회 도덕 수학 과학 실과 체육 음악 미술 영어 | 12 창체 | 13 계
   const others = subj.filter((s) => s.kind === 'subject' && s.id !== 'kor');
+  // 열 순서: 0 라벨 | 1·2 국어(국어, 학교자율시간) | 3.. 나머지 교과 | 창체 | 계. 교과 수가 달라도 열 수가 맞게 센다.
+  const creativeCol = 3 + others.length;
+  const totalCol = creativeCol + 1;
+  const first = 4000;
+  const w = Math.floor((WIDTH - first - 6000) / (others.length + 2));
+  const colW = [first, 3000, 3000, ...Array(others.length + 2).fill(w)];
+  colW[totalCol] = WIDTH - sum(colW.slice(0, totalCol));
+  const width = (c: number, span = 1) => sum(colW.slice(c, c + span));
   const cell = (row: number, col: number, text: string, o: Partial<CellSpec> = {}, span = 1): CellSpec =>
     ({ row, col, colSpan: span, rowSpan: 1, width: width(col, span), height: 2275, text, ...BODY, ...o } as CellSpec);
   const head = (row: number, col: number, text: string, span = 1, rowSpan = 1): CellSpec => ({ ...cell(row, col, text, HEAD, span), rowSpan });
   const autonomy = subj.find((s) => s.kind === 'autonomy');
   const rows: CellSpec[][] = [
-    [head(0, 0, '교과 구분', 1, 2), head(0, 1, '국어', 2), ...others.map((s, i) => head(0, 3 + i, s.name, 1, 2)), head(0, 12, '창체', 1, 2), head(0, 13, '계', 1, 2)],
+    [head(0, 0, '교과 구분', 1, 2), head(0, 1, '국어', 2), ...others.map((s, i) => head(0, 3 + i, s.name, 1, 2)), head(0, creativeCol, '창체', 1, 2), head(0, totalCol, '계', 1, 2)],
     [head(1, 1, '국어'), head(1, 2, autonomy?.name ?? '학교자율시간')],
   ];
   const line = (row: number, label: string, kind: 'std' | 'ann' | 'diff') => {
@@ -49,11 +51,11 @@ export function table1(p: Project, id: number): string {
     others.forEach((s, i) => cs.push(cell(row, 3 + i, t(v(s.id)))));
     const c = kind === 'std' ? cp.creative.standard : kind === 'ann' ? creativeSchool : creativeSchool - cp.creative.standard;
     const total = kind === 'std' ? stdTotal : kind === 'ann' ? schoolTotal : schoolTotal - stdTotal;
-    cs.push(cell(row, 12, t(c)), cell(row, 13, kind === 'diff' ? signed(total) : comma(total)));
+    cs.push(cell(row, creativeCol, t(c)), cell(row, totalCol, kind === 'diff' ? signed(total) : comma(total)));
     return cs;
   };
   rows.push(line(2, '교육부 기준 시수', 'std'), line(3, '본교 운영 시수', 'ann'), line(4, '증감 시수(교과+학교자율시간)', 'diff'));
-  return tableXml({ id, rows, colCnt: 14, width: WIDTH, height: 5 * 2275 });
+  return tableXml({ id, rows, colCnt: totalCol + 1, width: WIDTH, height: 5 * 2275 });
 }
 
 /** 표2: 증감 기록(한 시간에 한 행). 창체는 3칸 병합 칸 하나가 주요 내용. 쪽이 넘어가면 머리 줄이 반복된다. */

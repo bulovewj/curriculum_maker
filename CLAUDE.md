@@ -59,7 +59,7 @@ src/ model engine import export storage state ai lib screens components dev
 - M17 AI: `api/ai.ts`는 SDK 없이 fetch로 Anthropic API를 부른다(새 라이브러리 없음). 실제 호출은 형이 `.env.local`에 키를 넣고 `vercel dev`로 확인해야 함(테스트는 전부 가짜 모델). `npm run dev`만 켜면 S6에 'AI 꺼짐(서버 연결 안 됨)'
 - S2 [2026 샘플 넣기(개발용)] = `scripts/devApi.ts`가 fixtures·reference의 2026 파일을 개발 서버에서만 내준다(빌드·git 제외). 파일이 다 읽힌 뒤 [읽은 파일 모두 확정]
 - AI는 GPT 키도 가능(`api/ai.ts` callGpt, 기본 gpt-4o-mini). 실제 호출은 아직 한 번도 검증 안 됨
-- 지난 리뷰(9eca4bc..) 중 미수정: 연간 행 중복, undo 위치 계산 정리, ↑↓ 동작, 시간 운영계획 열 수 검증, 시수증감 표1 열 고정
+- R9 빨강(편제 학기 배분 ≠ 주별 시수표)은 교육과정 담당자와 같이 확인할 때까지 그대로 둔다(S4가 학기 배분을 추정으로 나누는 것이 원인으로 의심)
 - `@types/node` 없음 → 테스트용 Node 함수는 `tests/node.d.ts`에 직접 선언
 - 2026-11-08 협업 교사 검토 반영: 준비물은 학사일정·전담 시간표·작년·올해 편제(학년군 편제표)·진도. 기초 시간표는 자동 생성(M11b), 학교자율시간 운영(안)은 받지 않음(작업지시서 1장·2.8·12장)
 - 학기 중 행사로 주별 값이 바뀌는 것이 정상. 시점이 다른 문서끼리 주별 일치를 가정하지 말 것(작업지시서 2.7)

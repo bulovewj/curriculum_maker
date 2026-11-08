@@ -41,11 +41,14 @@ function apply(s: OpState, subjectId: SubjectId, beforeIds: string[], after: Pla
     if (now && (now.n !== r.n || now.total !== r.total)) numbers[r.id] = { n: r.n, total: r.total };
   }
   const first = before[0] ?? after[0];
+  // 작업이 일어난 자리: 바뀐 첫 행의 위치, 없으면(더하기·행 없는 빼기) insertAt, 그것도 없으면 맨 끝
+  const firstAt = list.findIndex((r) => beforeIds.includes(r.id));
+  const pos = firstAt >= 0 ? firstAt : (insertAt ?? list.length);
   const adj: Adjustment[] = hours === 0 ? [] : [{
     id: `op-adj-${nextNo(s.adjustments.map((a) => a.id), /^op-adj-(\d+)$/)}`,
     semester: (first.semester ?? 1) as Semester, subjectId, area: first.area ?? '', standards: first.standards, unit: first.unit,
     content, hours, planRowIds: afterRows.map((r) => r.id),
-    undo: { subjectId, beforeRows: before, afterIds: after.map((r) => r.id), numbers, prevId: (() => { const k = list.findIndex((r) => beforeIds.includes(r.id)); const i = k < 0 ? (insertAt ?? list.length) : k; return i > 0 ? list[i - 1].id : null; })(), at: Math.max(0, list.findIndex((r) => beforeIds.includes(r.id)) < 0 ? (insertAt ?? list.length) : list.findIndex((r) => beforeIds.includes(r.id))) },
+    undo: { subjectId, beforeRows: before, afterIds: after.map((r) => r.id), numbers, prevId: pos > 0 ? list[pos - 1].id : null, at: pos },
   }];
   return { lessonPlans: { ...s.lessonPlans, [subjectId]: rows }, adjustments: [...s.adjustments, ...adj] };
 }
@@ -138,9 +141,10 @@ export function undoAdjustment(s: OpState, adjustmentId: string): OpState {
   if (afterIds.some((id) => !list.some((r) => r.id === id))) {
     throw new Error('이 작업으로 바뀐 행을 그 뒤 작업이 다시 바꿨습니다. 나중에 한 작업부터 차례로 취소하세요.');
   }
-  // 되돌릴 자리: 작업 전에 바로 앞에 있던 행 뒤(그 행이 없으면 맨 앞)
-  const prevAt = prevId === null ? 0 : list.findIndex((r) => r.id === prevId) + 1;
-  const rows = replaceRows(list, afterIds, beforeRows, prevAt > 0 || prevId === null ? prevAt : a.undo.at).map((r) => (numbers[r.id] ? { ...r, ...numbers[r.id] } : r));
+  // 되돌릴 자리(작업 뒤 행이 없을 때만 쓰임): 작업 전에 바로 앞에 있던 행 뒤. 그 행이 사라졌으면 기록해 둔 위치
+  const prevIdx = prevId === null ? -1 : list.findIndex((r) => r.id === prevId);
+  const insertAt = prevId === null ? 0 : prevIdx >= 0 ? prevIdx + 1 : a.undo.at;
+  const rows = replaceRows(list, afterIds, beforeRows, insertAt).map((r) => (numbers[r.id] ? { ...r, ...numbers[r.id] } : r));
   return { lessonPlans: { ...s.lessonPlans, [subjectId]: rows }, adjustments };
 }
 

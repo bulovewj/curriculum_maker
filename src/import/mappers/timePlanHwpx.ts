@@ -35,14 +35,17 @@ function columnSubjects(t: HwpxTable, subjects: Subject[], warnings: string[]): 
   const out = new Map<number, SubjectId>();
   if (head === undefined) { warnings.push('시간 운영계획 표에서 교과 머리 줄을 찾지 못했습니다.'); return out; }
   let prev: SubjectId | undefined;
+  let totalAt = -1;
   for (let c = 10; c < t.cols; c++) {
     const label = norm(cellText(t, head, c));
-    if (label === '총계') break;
+    if (label === '총계') { totalAt = c; break; }
     if (label === '소계') continue; // 교과 소계·창체 소계 열은 건너뜀
     const id = CREATIVE.find(([k]) => label.includes(k))?.[1] ?? subjectByName(subjects, label)
       ?? (prev === 'kor' ? subjects.find((s) => s.kind === 'autonomy')?.id : undefined);
     if (id && !out.has(c) && ![...out.values()].includes(id)) { out.set(c, id); prev = id; }
   }
+  // 총계 열은 오른쪽에서 두 번째(비고 앞)라고 보고 읽는다. 다르면 양식이 다른 것이므로 알린다.
+  if (totalAt !== t.cols - 2) warnings.push(`시간 운영계획 표의 '총계' 열 위치가 예상과 다릅니다(${totalAt < 0 ? '없음' : `${totalAt + 1}열`}, 전체 ${t.cols}열). 양식이 다르면 값이 어긋날 수 있습니다.`);
   return out;
 }
 

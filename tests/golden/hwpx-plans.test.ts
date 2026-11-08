@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
-import { planAdjustHwpx } from '../../src/export/planAdjustHwpx';
+import { planAdjustHwpx, table1 } from '../../src/export/planAdjustHwpx';
 import { timePlanHwpx } from '../../src/export/timePlanHwpx';
 import { readHwpx } from '../../src/import/hwpx/readHwpx';
 import { readPlanAdjust } from '../../src/import/mappers/planAdjustHwpx';
@@ -59,5 +59,15 @@ describe.skipIf(!need2026 || !progress)('시수증감 운영계획 hwpx = PLAN',
     const strip = (a: { semester: number; subjectId: string; area: string; standards: string[]; unit: string; content: string; hours: number }) =>
       ({ semester: a.semester, subjectId: a.subjectId, area: a.area.replace(/\s+/g, ' '), standards: a.standards, unit: a.unit, content: a.content, hours: a.hours });
     expect(back.adjustments.map(strip)).toEqual(want.adjustments.map(strip));
+  });
+});
+
+describe.skipIf(!need2026)('시수증감 표1 열 수', () => {
+  it('교과 수가 달라도 열 수가 교과 수에 맞는다', async () => {
+    const p = await project2026();
+    const full = table1(p, 1);
+    const fewer = table1({ ...p, subjects: p.subjects.filter((s) => s.id !== 'eng') }, 1);
+    expect(full).toContain('colCnt="14"');
+    expect(fewer).toContain('colCnt="13"');
   });
 });

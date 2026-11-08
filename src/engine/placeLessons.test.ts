@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { PlanRow, Slot } from '../model/types';
-import { needOf, placeLessons } from './placeLessons';
+import { lessonOrder, needOf, placeLessons } from './placeLessons';
 
 const slot = (date: string, period: number, semester: 1 | 2, week: number, subjectId = 'kor'): Slot =>
   ({ date, period, semester, week, subjectId, specialist: false, origin: 'base', locked: false });
@@ -52,5 +52,17 @@ describe('placeLessons', () => {
     const rows = [row('a'), row('b')];
     expect(placeLessons(slots, rows, 'kor')).toEqual(placeLessons(slots, rows, 'kor'));
     expect(JSON.stringify(slots)).toBe(copy);
+  });
+});
+
+describe('연간 행(학기 없음)은 두 학기에 겹치지 않는다', () => {
+  it('칸이 모자라 못 놓은 연간 행·메모 행이 한 학기에만 나온다', () => {
+    const mk = (date: string, semester: 1 | 2): Slot => slot(date, 1, semester, 1);
+    const row = (id: string, kind: 'lesson' | 'memo'): PlanRow => ({ id, subjectId: 'kor', kind, unit: 'U', topic: id, standards: [], tags: [], source: { file: 'f', row: 1 } });
+    const slots = [mk('2026-03-03', 1)]; // 칸 1개
+    const rows = [row('a', 'lesson'), row('b', 'lesson'), row('m', 'memo')];
+    const ids = (sem: 1 | 2) => lessonOrder(slots, rows, 'kor', sem).map((x) => x.row.id);
+    expect(ids(1)).toEqual(['a', 'm']);
+    expect(ids(2)).toEqual(['b']);
   });
 });
