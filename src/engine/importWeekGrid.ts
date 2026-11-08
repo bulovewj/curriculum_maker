@@ -1,3 +1,4 @@
+import { bySlot } from './slots';
 import type { Slot, SlotOverride, SubjectId, WeekGridRow } from '../model/types';
 
 export interface ImportGridResult {
@@ -20,8 +21,9 @@ export function importWeekGrid(slots: Slot[], want: WeekGridRow[], subjectOrder:
     // 넘치는 칸 목록: 교과마다 늦은 칸부터 넘치는 수만큼
     const spare: Slot[] = ids.flatMap((id) => {
       const extra = count(id) - (w.hours[id] ?? 0);
-      return extra > 0 ? inWeek.filter((s) => s.subjectId === id).sort((a, b) => (a.date + a.period < b.date + b.period ? 1 : -1)).slice(0, extra) : [];
-    }).sort((a, b) => (a.date + a.period < b.date + b.period ? 1 : -1)); // 가장 늦은 칸부터 쓴다
+      // 잠긴 칸(직접 고친 칸)은 넘기지 않는다
+      return extra > 0 ? inWeek.filter((s) => s.subjectId === id && !s.locked).sort(bySlot).reverse().slice(0, extra) : [];
+    }).sort(bySlot).reverse(); // 가장 늦은 칸부터 쓴다
     for (const id of ids) {
       for (let need = (w.hours[id] ?? 0) - count(id); need > 0; need--) {
         const s = spare.shift();

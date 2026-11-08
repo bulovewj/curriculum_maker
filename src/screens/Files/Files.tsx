@@ -5,7 +5,10 @@ import { interpret, mapUnknown, type Unknown } from '../../import/interpret';
 import type { ImportKind, Project } from '../../model/types';
 import { useProject } from '../../state/ProjectContext';
 
-const NO_READ: ImportKind[] = ['unknown', 'autonomyHwpx'];
+const NO_READ: ImportKind[] = ['unknown', 'autonomyHwpx', 'timePlanHwpx'];
+const KIND_NOTICE: Partial<Record<ImportKind, string>> = {
+  timePlanHwpx: '시간 운영계획은 S5 [작년 시수표 가져오기]에서 넣어 주세요.',
+};
 
 /** S2 파일 넣기·해석 확인 */
 export function Files() {
@@ -19,7 +22,7 @@ export function Files() {
 
   async function read(id: string, name: string, kind: ImportKind, proj: Project) {
     const buf = data.get(id);
-    if (!buf || NO_READ.includes(kind)) return patch(id, { interp: undefined, error: undefined });
+    if (!buf || NO_READ.includes(kind)) return patch(id, { interp: undefined, error: undefined, ...(KIND_NOTICE[kind] ? { notice: KIND_NOTICE[kind] } : {}) });
     try {
       patch(id, { interp: await interpret(kind, name, buf, proj), error: undefined });
     } catch (e) {

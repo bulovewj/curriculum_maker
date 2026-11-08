@@ -1,6 +1,10 @@
 import type { CalendarDay, ProjectSettings, Slot, SlotOverride, TimetableCell } from '../model/types';
 import { weekNo } from './calendar';
 
+/** 칸 정렬: 날짜, 같으면 교시(숫자) 순 */
+export const bySlot = (a: { date: string; period: number }, b: { date: string; period: number }): number =>
+  a.date < b.date ? -1 : a.date > b.date ? 1 : a.period - b.period;
+
 /** 요일(1~5)별 시간표 교시 수 = 그 요일의 가장 늦은 칸 */
 function shapeOf(base: TimetableCell[]): number[] {
   return [1, 2, 3, 4, 5].map((w) => Math.max(0, ...base.filter((c) => c.weekday === w).map((c) => c.period)));

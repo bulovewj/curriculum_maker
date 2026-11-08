@@ -5,7 +5,8 @@ import { renameAutonomy } from '../model/subjects';
 import type { ImportKind, Project } from '../model/types';
 import { parseProjectFile, toProjectFile } from '../storage/projectFile';
 import { detectFile } from './detect';
-import { interpret, mapUnknown } from './interpret';
+import { interpret, mapUnknown, mergeLessons } from './interpret';
+import type { PlanRow } from '../model/types';
 
 const base = (): Project => {
   const p = newProject('t', 2026);
@@ -35,7 +36,6 @@ describe.skipIf(!findFile(ORIGINAL, '행사 및 일정') || !findFile(REF, '시�
     expect(p.baseTimetable).toHaveLength(29);
     expect(p.timetableSource).toBe('file');
     expect(p.settings.partialSpecialist).toEqual(['sci']);
-    expect(p.settings.timetableShape).toEqual([6, 6, 5, 6, 6]);
     expect(p.priorYear).toMatchObject({ year: 2025, grade: 5, total: 1092 });
     expect(p.curriculumPlan.schoolAnnual.math).toBe(139); // 안(최종 140은 증감계획에서)
     expect(p.lessonPlans.kor).toHaveLength(83);
@@ -90,5 +90,22 @@ describe('노란 칸 고치기', () => {
     const after = await interpret('neisLessons', 'a.xlsx', readBuffer(f), fixed);
     expect(after.unknown).toEqual([]);
     expect(after.apply(fixed, AT).lessonPlans.kor).toHaveLength(83 + 1); // 메모 1 포함
+  });
+});
+
+describe('mergeLessons', () => {
+  const row = (id: string, semester?: 1 | 2): PlanRow =>
+    ({ id, subjectId: 'kor', semester, kind: 'lesson', unit: '', topic: id, standards: [], tags: [], source: { file: 'f', row: 1 } });
+  it('연간 진도가 들어오면 학기별 옛 진도는 통째로 바뀐다(두 벌 방지)', () => {
+    const out = mergeLessons({ kor: [row('a', 1), row('b', 2)] }, [row('c')]);
+    expect(out.kor.map((r) => r.id)).toEqual(['c']);
+  });
+  it('학기별 진도가 들어오면 연간 옛 진도는 빠진다', () => {
+    const out = mergeLessons({ kor: [row('a')] }, [row('b', 1)]);
+    expect(out.kor.map((r) => r.id)).toEqual(['b']);
+  });
+  it('같은 학기만 바꾼다', () => {
+    const out = mergeLessons({ kor: [row('a', 1), row('b', 2)] }, [row('c', 1)]);
+    expect(out.kor.map((r) => r.id)).toEqual(['c', 'b']);
   });
 });

@@ -29,6 +29,13 @@ describe('importWeekGrid', () => {
     expect(out.filter((s) => s.subjectId === 'pe')).toHaveLength(1);
   });
 
+  it('잠긴 칸은 넘기지 않는다', () => {
+    const locked = slots.map((x) => (x.date === '2026-03-04' && x.period === 1 ? { ...x, locked: true } : x));
+    const r = importWeekGrid(locked, [want({ kor: 2, math: 3, soc: 1 })], ['kor', 'math', 'soc']);
+    expect(r.overrides['2026-03-04#1']).toBeUndefined();
+    expect(r.overrides['2026-03-03#2']).toMatchObject({ subjectId: 'soc' });
+  });
+
   it('채울 칸이 없으면 경고', () => {
     const r = importWeekGrid(slots, [want({ kor: 4, math: 3 })], ['kor', 'math']);
     expect(r.warnings.length).toBeGreaterThan(0);

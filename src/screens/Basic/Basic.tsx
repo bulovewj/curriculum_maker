@@ -21,6 +21,9 @@ export function Basic() {
         <NumField label="학년" value={p.grade} min={1} max={6} onChange={(grade) => set({ grade })} />
         <NumField label="학급 수" value={p.classCount} min={1} max={60} onChange={(classCount) => set({ classCount })} />
         <NumField label="대표 학급" value={p.representativeClass} min={1} max={60} onChange={(representativeClass) => set({ representativeClass })} />
+        {p.calendar.length > 0 && Number(p.calendar[0].date.slice(0, 4)) !== p.year && (
+          <p className="error">학사력이 {p.calendar[0].date.slice(0, 4)}학년도 것입니다. S2에서 학사일정을 다시 넣으세요.</p>
+        )}
         {p.representativeClass > p.classCount && <p className="error">대표 학급이 학급 수보다 큽니다.</p>}
         <label>
           기준 데이터 판본

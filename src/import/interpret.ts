@@ -41,7 +41,9 @@ export function mergeLessons(old: Project['lessonPlans'], rows: PlanRow[]): Proj
   for (const id of new Set(rows.map((r) => r.subjectId))) {
     const mine = rows.filter((r) => r.subjectId === id);
     const sems = new Set(mine.map((r) => r.semester ?? 0));
-    const kept = (old[id] ?? []).filter((r) => !sems.has(r.semester ?? 0));
+    // 연간(학기 없음) 진도와 학기별 진도가 섞이면 행이 두 벌이 되므로, 종류가 바뀌면 그 교과는 통째로 바꾼다
+    const annual = sems.has(0);
+    const kept = (old[id] ?? []).filter((r) => !annual && r.semester !== undefined && !sems.has(r.semester));
     out[id] = [...kept, ...mine].sort((a, b) => (a.semester ?? 0) - (b.semester ?? 0));
   }
   return out;
@@ -51,7 +53,8 @@ export function mergeLessons(old: Project['lessonPlans'], rows: PlanRow[]): Proj
 export function mapUnknown(subjects: Subject[], u: Unknown, id: SubjectId): Subject[] {
   return subjects.map((s) => {
     if (s.id !== id) return s;
-    return u.type === 'name' ? { ...s, aliases: [...s.aliases, u.value] } : { ...s, timetableCodes: [...s.timetableCodes, u.value] };
+    if (u.type === 'name') return s.aliases.includes(u.value) ? s : { ...s, aliases: [...s.aliases, u.value] };
+    return s.timetableCodes.includes(u.value) ? s : { ...s, timetableCodes: [...s.timetableCodes, u.value] };
   });
 }
 
@@ -85,16 +88,21 @@ export async function interpret(kind: ImportKind, fileName: string, data: ArrayB
     case 'timetableP02': {
       const sp = readSpecialistCells(sheets, p.grade, p.representativeClass, p.subjects);
       let tt: TimetableResult | undefined;
-      try { tt = readClassTimetable(sheets, p.grade, p.representativeClass, p.subjects, sp.cells); } catch { tt = undefined; }
+      const extra: string[] = [];
+      try {
+        tt = readClassTimetable(sheets, p.grade, p.representativeClass, p.subjects, sp.cells);
+      } catch (e) {
+        extra.push(`학급 시간표를 읽지 못했습니다(${e instanceof Error ? e.message : '알 수 없음'}). 기존 시간표를 그대로 둡니다.`);
+      }
       const { hours, warnings: hw } = readSpecialistHours(sheets, p.grade, p.subjects);
       const partial = tt ? Object.entries(specialistStatus(tt.cells, hours)).filter(([, v]) => v === 'partial').map(([id]) => id) : [];
       const spCount = countBy(sp.cells.map((c) => c.subjectId));
       const summary = Object.entries(spCount).map(([id, n]) => `${nameOf(p.subjects, id)} 전담 ${n}칸${partial.includes(id) ? ' (일부 전담: 확인 필요)' : ''}`);
       if (tt) summary.push(`학급 시간표 ${tt.cells.length}칸`);
-      return done(summary, [...sp.warnings, ...hw, ...(tt?.warnings ?? [])], (tt?.unknownCodes ?? []).map((value) => ({ type: 'code', value })), (q) => ({
+      return done(summary, [...sp.warnings, ...hw, ...extra, ...(tt?.warnings ?? [])], (tt?.unknownCodes ?? []).map((value) => ({ type: 'code', value })), (q) => ({
         ...q, specialistCells: sp.cells,
         ...(tt ? { baseTimetable: tt.cells, timetableSource: 'file' as const } : {}),
-        settings: { ...q.settings, partialSpecialist: partial, ...(tt ? { timetableShape: [1, 2, 3, 4, 5].map((w) => Math.max(0, ...tt.cells.filter((c) => c.weekday === w).map((c) => c.period))) } : {}) },
+        settings: { ...q.settings, partialSpecialist: partial},
       }));
     }
     case 'curriculumHwpx': {

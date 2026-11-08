@@ -1,4 +1,5 @@
 import type { PlanRow, Slot, Subject, SubjectId } from '../model/types';
+import { bySlot } from './slots';
 
 export interface Placed {
   row: PlanRow;
@@ -19,7 +20,7 @@ const key = (s: Slot) => `${s.date}#${s.period}`;
  * 학기가 정해진 행은 그 학기 칸에만, 학기가 없는 행(연간 교과서)은 1년 칸을 이어서 쓴다. 메모 행은 뺀다.
  */
 export function placeLessons(slots: Slot[], rows: PlanRow[], subjectId: SubjectId): PlaceResult {
-  const mine = slots.filter((s) => s.subjectId === subjectId).sort((a, b) => (a.date + a.period < b.date + b.period ? -1 : 1));
+  const mine = slots.filter((s) => s.subjectId === subjectId).sort(bySlot);
   const lessons = rows.filter((r) => r.subjectId === subjectId && r.kind !== 'memo');
   const used = new Set<string>();
   const at = new Map<PlanRow, Slot>();
