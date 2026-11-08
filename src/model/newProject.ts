@@ -4,6 +4,16 @@ import type { Project } from './types';
 
 export const SCHEMA_VERSION = 1;
 
+/** 학년도를 바꾸면 학기 날짜도 그 해로 옮긴다. 1~2월은 다음 해, 2월 끝은 그 해의 말일. */
+export function shiftSemesters(semesters: Project['semesters'], year: number): Project['semesters'] {
+  const move = (d: string) => {
+    const m = Number(d.slice(5, 7));
+    const y = m <= 2 ? year + 1 : year;
+    return m === 2 && Number(d.slice(8)) >= 28 ? lastDayOfFebruary(year + 1) : `${y}-${d.slice(5)}`;
+  };
+  return semesters.map((s) => ({ ...s, start: move(s.start), end: move(s.end) }));
+}
+
 /** 빈 프로젝트. id는 부르는 쪽이 만든다(이 함수는 같은 입력 → 같은 결과). */
 export function newProject(id: string, year: number): Project {
   const timetableCodes = Object.fromEntries(

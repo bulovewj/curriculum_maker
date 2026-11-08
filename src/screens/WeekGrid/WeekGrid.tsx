@@ -1,14 +1,37 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { schoolDaysByMonth } from '../../engine/calendar';
 import { computeGrid } from '../../engine/grid';
+import { importWeekGrid } from '../../engine/importWeekGrid';
+import { generateSlots } from '../../engine/slots';
 import { semesterTotals } from '../../engine/weekGrid';
+import { readHwpx } from '../../import/hwpx/readHwpx';
+import { readTimePlan } from '../../import/mappers/timePlanHwpx';
 import { useProject } from '../../state/ProjectContext';
 
 /** S5 주별 시수표(읽기 전용): 시간 운영계획(c)과 같은 열 순서 + 학기 계·편제·차이 */
 export function WeekGrid() {
-  const { project: p } = useProject();
+  const { project: p, update } = useProject();
+  const [msg, setMsg] = useState<string[]>([]);
   const grid = useMemo(() => (p ? computeGrid(p) : null), [p]);
   if (!p || !grid) return null;
+
+  /** 작년 시수표 가져오기: (c) 시간 운영계획 hwpx의 주별 값으로 칸을 맞춘다('imported' 덮어쓰기) */
+  async function importPlan(file: File | undefined) {
+    if (!file || !p) return;
+    try {
+      const plan = readTimePlan(await readHwpx(await file.arrayBuffer()), p.subjects);
+      const base = generateSlots(p.calendar, p.baseTimetable, p.settings);
+      const r = importWeekGrid(base, plan.tables.flatMap((t) => t.rows), p.subjects.map((s) => s.id));
+      update((q) => ({
+        ...q,
+        slotOverrides: { ...Object.fromEntries(Object.entries(q.slotOverrides).filter(([, o]) => o.kind !== 'imported')), ...r.overrides },
+      }));
+      setMsg([`가져온 칸 ${Object.keys(r.overrides).length}개`, ...plan.warnings, ...r.warnings]);
+    } catch (e) {
+      setMsg([e instanceof Error ? e.message : '파일을 읽지 못했습니다.']);
+    }
+  }
+
   if (grid.rows.length === 0) return <p className="muted">S3을 먼저 채우세요(학사력과 기초 시간표).</p>;
 
   const subj = p.subjects.filter((s) => s.kind !== 'creative');
@@ -32,6 +55,11 @@ export function WeekGrid() {
   return (
     <section>
       <h2>주별 시수표</h2>
+      <label className="button">
+        작년 시수표 가져오기(시간 운영계획 hwpx)
+        <input type="file" accept=".hwpx" hidden onChange={(e) => importPlan(e.target.files?.[0])} />
+      </label>
+      {msg.map((m) => <p key={m} className="muted">{m}</p>)}
       <table className="dev-table">
         <thead>
           <tr>
