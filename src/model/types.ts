@@ -112,6 +112,18 @@ export interface SlotOverride {
   locked: boolean;
 }
 
+/** 칸 하나(계산 결과, 저장 안 함) */
+export interface Slot {
+  date: DateStr;
+  period: number;
+  semester: Semester;
+  week: number;
+  subjectId: SubjectId;
+  specialist: boolean;
+  origin: 'base' | 'extra' | 'edited' | 'auto' | 'imported';
+  locked: boolean;
+}
+
 /** 시간 운영계획 한 줄(계산 결과, 저장 안 함) */
 export interface WeekGridRow {
   semester: Semester;
