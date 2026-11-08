@@ -5,6 +5,9 @@ import { effectiveSchool } from '../../engine/plan';
 import { semesterTotals } from '../../engine/weekGrid';
 import { standardsOf } from '../../lib/standards';
 import type { Level } from '../../model/standards';
+import { checkXlsx } from '../../export/checkXlsx';
+import { neisZip } from '../../export/neisXlsx';
+import { download } from '../../lib/download';
 import { useProject } from '../../state/ProjectContext';
 
 // 규칙 → 고칠 화면(왼쪽 단계 번호 0부터: S3=2, S4=3, S5=4, S6=5)
@@ -24,6 +27,9 @@ export function Review({ onGo }: { onGo: (step: number) => void }) {
   const count = (l: Level) => results.filter((r) => r.level === l).length;
   const order: Level[] = ['fail', 'warn', 'pass'];
   const sorted = [...results].sort((a, b) => order.indexOf(a.level) - order.indexOf(b.level));
+  const XLSX = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+  /** 빨간 항목이 있으면 만들기 전에 한 번 묻는다 */
+  const sure = () => count('fail') === 0 || window.confirm(`빨간 항목 ${count('fail')}개가 있습니다. 그래도 만들까요?`);
   const t1 = semesterTotals(grid.rows, 1);
   const t2 = semesterTotals(grid.rows, 2);
 
@@ -31,6 +37,10 @@ export function Review({ onGo }: { onGo: (step: number) => void }) {
     <section>
       <h2>점검·출력</h2>
       <p>{MARK.fail} 빨강 {count('fail')} · {MARK.warn} 노랑 {count('warn')} · {MARK.pass} 통과 {count('pass')} (기준 데이터 {p.standardsVersion})</p>
+      <div className="row">
+        <button onClick={async () => sure() && download(`${p.year}학년도 ${p.grade}학년 NEIS 교과진도.zip`, await neisZip(p), 'application/zip')}>NEIS 엑셀(zip) 받기</button>
+        <button onClick={async () => sure() && download(`${p.year}학년도 ${p.grade}학년 시수 점검표.xlsx`, await checkXlsx(p, standardsOf(p.standardsVersion)), XLSX)}>시수 점검표(xlsx) 받기</button>
+      </div>
       <ul className="cards-list">
         {sorted.map((r, i) => (
           <li key={i} className="file-card">
