@@ -3,7 +3,7 @@ import { computeGrid } from '../../engine/grid';
 import { needOf, placeAll } from '../../engine/placeLessons';
 import { AdjustmentList } from '../../components/AdjustmentList';
 import { PlanOpsBar } from '../../components/PlanOpsBar';
-import { undoAdjustment, type OpState } from '../../engine/planOps';
+import { swapRows, undoAdjustment, type OpState } from '../../engine/planOps';
 import type { Semester } from '../../model/types';
 import { useProject } from '../../state/ProjectContext';
 
@@ -29,7 +29,8 @@ export function Progress() {
   const run = (f: (s: OpState) => OpState) => {
     try {
       setErr('');
-      update((q) => ({ ...q, ...f({ lessonPlans: q.lessonPlans, adjustments: q.adjustments }) }));
+      const next = f({ lessonPlans: p.lessonPlans, adjustments: p.adjustments }); // 오류는 여기서 잡는다(저장 갱신 함수 안에서 던지면 화면이 꺼진다)
+      update((q) => ({ ...q, ...next }));
     } catch (e) {
       setErr(e instanceof Error ? e.message : '작업을 하지 못했습니다.');
     }
@@ -62,7 +63,8 @@ export function Progress() {
             <b style={{ color: need === 0 ? 'green' : '#b60' }}>{need === 0 ? '필요량 0' : need > 0 ? `감축 필요 ${need}` : `증배 필요 ${-need}`}</b>
           </p>
           {err && <p className="error">{err}</p>}
-          <PlanOpsBar subjectId={subject.id} row={row} semester={(row?.semester ?? 1) as Semester} onOp={run} />
+          <PlanOpsBar subjectId={subject.id} row={row} semester={(row?.semester ?? 1) as Semester} onOp={run}
+            onMove={(dir) => { const i = ordered.findIndex((r) => r.id === sel); const mate = ordered[i + dir]; if (row && mate) run((s) => swapRows(s, subject.id, row.id, mate.id)); }} />
           <table className="dev-table">
             <thead><tr><th>주</th><th>기간</th><th>단원명</th><th>학습 주제</th><th>차시</th><th>쪽수</th><th>비고</th></tr></thead>
             <tbody>

@@ -19,7 +19,7 @@ export function Plan() {
   const name = (id: SubjectId) => p.subjects.find((s) => s.id === id)?.name ?? id;
   const setPlan = (change: (c: Project['curriculumPlan']) => Project['curriculumPlan']) => update((q) => ({ ...q, curriculumPlan: change(q.curriculumPlan) }));
   const setSem = (id: SubjectId, s1: number, s2: number) =>
-    setPlan((c) => ({ ...c, school: { ...effectiveSchool(p, slots), ...c.school, [id]: { s1, s2 } }, schoolAnnual: { ...c.schoolAnnual, [id]: s1 + s2 } }));
+    setPlan((c) => ({ ...c, school: { ...c.school, [id]: { s1, s2 } }, schoolAnnual: { ...c.schoolAnnual, [id]: s1 + s2 } }));
   const fill = (inFirst: boolean) => {
     const auto = p.subjects.filter((s) => s.kind === 'autonomy').map((s) => s.id);
     setPlan((c) => {

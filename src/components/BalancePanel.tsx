@@ -11,7 +11,7 @@ export function BalancePanel({ project: p, update }: { project: Project; update:
 
   function preview() {
     // 이전 자동 맞추기 결과는 빼고 다시 계산한다
-    const keep = Object.fromEntries(Object.entries(p.slotOverrides).filter(([, o]) => o.kind !== 'auto'));
+    const keep = Object.fromEntries(Object.entries(p.slotOverrides).filter(([, o]) => o.kind !== 'auto' || o.locked));
     const slots = applyOverrides(generateSlots(p.calendar, p.baseTimetable, p.settings), keep);
     const school = effectiveSchool(p, slots);
     setRes({ result: autoBalance(slots, school, p.subjects.map((s) => s.id), { ...defaultDonors(p.subjects), ...p.curriculumPlan.donors }), keep });

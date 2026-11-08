@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { OpState } from '../engine/planOps';
-import { addRow, insertEvent, mergeRows, moveRow, removeRow, setFixedWeek, setTags, splitRow } from '../engine/planOps';
+import { addRow, insertEvent, mergeRows, removeRow, setFixedWeek, setTags, splitRow } from '../engine/planOps';
 import type { PlanRow, Semester, SubjectId } from '../model/types';
 
 interface Props {
@@ -8,10 +8,11 @@ interface Props {
   row: PlanRow | undefined; // 고른 행
   semester: Semester;
   onOp: (f: (s: OpState) => OpState) => void;
+  onMove: (dir: -1 | 1) => void; // 화면에 보이는 위·아래 이웃과 자리 바꾸기
 }
 
 /** S6 작업 단추: 합치기·빼기·나누기·더하기·행사·태그·주 고정·순서 */
-export function PlanOpsBar({ subjectId, row, semester, onOp }: Props) {
+export function PlanOpsBar({ subjectId, row, semester, onOp, onMove }: Props) {
   const [text, setText] = useState('');
   const [week, setWeek] = useState(1);
   const [hours, setHours] = useState(1);
@@ -22,8 +23,8 @@ export function PlanOpsBar({ subjectId, row, semester, onOp }: Props) {
       <button disabled={!row} onClick={need((s, r) => mergeRows(s, subjectId, r.id))}>합치기(+다음 행)</button>
       <button disabled={!row} onClick={need((s, r) => removeRow(s, subjectId, r.id))}>빼기</button>
       <button disabled={!row} onClick={need((s, r) => splitRow(s, subjectId, r.id))}>나누기</button>
-      <button disabled={!row} onClick={need((s, r) => moveRow(s, subjectId, r.id, -1))}>↑</button>
-      <button disabled={!row} onClick={need((s, r) => moveRow(s, subjectId, r.id, 1))}>↓</button>
+      <button disabled={!row} onClick={() => onMove(-1)}>↑</button>
+      <button disabled={!row} onClick={() => onMove(1)}>↓</button>
       <br />
       <input placeholder="학습 주제·행사명·태그(쉼표)" value={text} onChange={(e) => setText(e.target.value)} />{' '}
       <button disabled={!text} onClick={() => onOp((s) => addRow(s, subjectId, row?.id ?? null, text, semester))}>더하기</button>

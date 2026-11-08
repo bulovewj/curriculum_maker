@@ -127,7 +127,7 @@ export async function interpret(kind: ImportKind, fileName: string, data: ArrayB
       const r = readPlanAdjust(blocks, p.subjects);
       return done([`본교 운영 합 ${r.total.school}(기준 ${r.total.standard})`, `증감 기록 ${r.adjustments.length}행`], r.warnings, [], (q) => ({
         ...q, adjustments: r.adjustments,
-        curriculumPlan: { ...q.curriculumPlan, standard: r.standard, creative: { standard: r.creative.standard, school: r.creative.school }, schoolAnnual: { ...q.curriculumPlan.schoolAnnual, ...r.annual } },
+        curriculumPlan: { ...q.curriculumPlan, standard: r.standard, creative: { standard: r.creative.standard, school: r.creative.school }, schoolAnnual: { ...Object.fromEntries(q.subjects.filter((s) => s.kind === 'creative' && q.curriculumPlan.schoolAnnual[s.id] !== undefined).map((s) => [s.id, q.curriculumPlan.schoolAnnual[s.id]])), ...r.annual } },
       }));
     }
     case 'progressHwpx': {

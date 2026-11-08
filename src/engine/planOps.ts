@@ -45,7 +45,7 @@ function apply(s: OpState, subjectId: SubjectId, beforeIds: string[], after: Pla
     id: `op-adj-${nextNo(s.adjustments.map((a) => a.id), /^op-adj-(\d+)$/)}`,
     semester: (first.semester ?? 1) as Semester, subjectId, area: first.area ?? '', standards: first.standards, unit: first.unit,
     content, hours, planRowIds: afterRows.map((r) => r.id),
-    undo: { subjectId, beforeRows: before, afterIds: after.map((r) => r.id), numbers },
+    undo: { subjectId, beforeRows: before, afterIds: after.map((r) => r.id), numbers, prevId: (() => { const k = list.findIndex((r) => beforeIds.includes(r.id)); const i = k < 0 ? (insertAt ?? list.length) : k; return i > 0 ? list[i - 1].id : null; })(), at: Math.max(0, list.findIndex((r) => beforeIds.includes(r.id)) < 0 ? (insertAt ?? list.length) : list.findIndex((r) => beforeIds.includes(r.id))) },
   }];
   return { lessonPlans: { ...s.lessonPlans, [subjectId]: rows }, adjustments: [...s.adjustments, ...adj] };
 }
@@ -133,8 +133,23 @@ export function undoAdjustment(s: OpState, adjustmentId: string): OpState {
   const a = s.adjustments.find((x) => x.id === adjustmentId);
   const adjustments = s.adjustments.filter((x) => x.id !== adjustmentId);
   if (!a?.undo) return { ...s, adjustments };
-  const { subjectId, beforeRows, afterIds, numbers } = a.undo;
+  const { subjectId, beforeRows, afterIds, numbers, prevId } = a.undo;
   const list = s.lessonPlans[subjectId] ?? [];
-  const rows = replaceRows(list, afterIds, beforeRows).map((r) => (numbers[r.id] ? { ...r, ...numbers[r.id] } : r));
+  if (afterIds.some((id) => !list.some((r) => r.id === id))) {
+    throw new Error('이 작업으로 바뀐 행을 그 뒤 작업이 다시 바꿨습니다. 나중에 한 작업부터 차례로 취소하세요.');
+  }
+  // 되돌릴 자리: 작업 전에 바로 앞에 있던 행 뒤(그 행이 없으면 맨 앞)
+  const prevAt = prevId === null ? 0 : list.findIndex((r) => r.id === prevId) + 1;
+  const rows = replaceRows(list, afterIds, beforeRows, prevAt > 0 || prevId === null ? prevAt : a.undo.at).map((r) => (numbers[r.id] ? { ...r, ...numbers[r.id] } : r));
   return { lessonPlans: { ...s.lessonPlans, [subjectId]: rows }, adjustments };
+}
+
+/** 두 행 자리 바꾸기(화면에 보이는 이웃과). 증감 기록 없음 */
+export function swapRows(s: OpState, subjectId: SubjectId, idA: string, idB: string): OpState {
+  const list = [...(s.lessonPlans[subjectId] ?? [])];
+  const i = list.findIndex((r) => r.id === idA);
+  const j = list.findIndex((r) => r.id === idB);
+  if (i < 0 || j < 0) return s;
+  [list[i], list[j]] = [list[j], list[i]];
+  return { ...s, lessonPlans: { ...s.lessonPlans, [subjectId]: list } };
 }

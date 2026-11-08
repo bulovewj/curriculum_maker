@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { PlanRow } from '../model/types';
-import { addRow, insertEvent, mergeRows, moveRow, removeRow, setFixedWeek, setTags, splitRow, undoAdjustment, type OpState } from './planOps';
+import { addRow, insertEvent, mergeRows, moveRow, removeRow, setFixedWeek, setTags, splitRow, swapRows, undoAdjustment, type OpState } from './planOps';
 import { needOf, placeLessons } from './placeLessons';
 import type { Slot } from '../model/types';
 
@@ -104,6 +104,29 @@ describe('작업마다 행 수·표시·증감 기록·취소', () => {
     const r = placeLessons(slots, s1.lessonPlans.kor, 'kor');
     const ev = r.placed.filter((p) => p.row.kind === 'event').map((p) => p.slot.week);
     expect(ev).toEqual([3, 3]); // 그 주의 빈 칸에 먼저 놓인다
+  });
+
+  it('이웃 행이 없는 행을 뺀 뒤 취소하면 원래 자리로', () => {
+    const s0 = start(); // d는 U2의 하나뿐인 행
+    const s1 = removeRow(s0, 'kor', 'd');
+    const s2 = removeRow(s1, 'kor', 'a');
+    expect(() => undoAdjustment(s2, s1.adjustments[0].id)).not.toThrow();
+    const back = undoAdjustment(s1, s1.adjustments[0].id);
+    expect(back).toEqual(s0);
+    const mid = removeRow(s0, 'kor', 'b'); // 가운데 행(앞 행이 이웃)
+    expect(undoAdjustment(mid, mid.adjustments[0].id)).toEqual(s0);
+  });
+
+  it('뒤 작업이 바꾼 행을 먼저 한 작업은 취소할 수 없다(차례로 취소)', () => {
+    const s1 = mergeRows(start(), 'kor', 'a');
+    const s2 = splitRow(s1, 'kor', 'a'); // 합친 행을 다시 나눔
+    expect(() => undoAdjustment(s2, s1.adjustments[0].id)).toThrow('차례로');
+    expect(undoAdjustment(undoAdjustment(s2, s2.adjustments[1].id), s1.adjustments[0].id)).toEqual(start());
+  });
+
+  it('자리 바꾸기', () => {
+    expect(ids(swapRows(start(), 'kor', 'a', 'c'))).toEqual(['c', 'b', 'a', 'd']);
+    expect(ids(swapRows(start(), 'kor', 'a', '없음'))).toEqual(['a', 'b', 'c', 'd']);
   });
 
   it('입력을 바꾸지 않는다', () => {

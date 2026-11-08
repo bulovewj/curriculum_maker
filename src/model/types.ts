@@ -171,7 +171,7 @@ export interface Adjustment {
   hours: number;
   planRowIds: string[];
   /** 작업 취소용: 작업 전 행과 작업 뒤 행 id (증감 기록을 지우면 되돌린다) */
-  undo?: { subjectId: SubjectId; beforeRows: PlanRow[]; afterIds: string[]; numbers: Record<string, { n?: number; total?: number }> };
+  undo?: { subjectId: SubjectId; beforeRows: PlanRow[]; afterIds: string[]; numbers: Record<string, { n?: number; total?: number }>; at: number; prevId: string | null };
 }
 
 export interface ImportRecord {
