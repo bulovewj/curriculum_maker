@@ -12,7 +12,7 @@ export interface LessonResult {
   unknownNames: string[]; // 모르는 편제 이름(화면에서 노란 칸)
 }
 
-const COLS = ['학기', '편제', '단원', '소단원', '학습내용', '쪽수', '보조쪽수', '해당차시', '전체차시', '준비물'] as const;
+const COLS = ['학기', '편제', '단원', '소단원', '학습내용', '쪽수', '보조쪽수', '해당차시', '전체차시', '준비물', '성취기준'] as const;
 type Col = (typeof COLS)[number];
 
 const norm = (s: string) => s.normalize('NFC').replace(/\s/g, '');
@@ -101,7 +101,7 @@ export function readNeisLessons(files: LessonFile[], subjects: Subject[], includ
         subPages: get(r, '보조쪽수') || undefined,
         materials: get(r, '준비물') || undefined,
         rawNote: get(r, '소단원') ? `소단원: ${get(r, '소단원')}` : undefined,
-        standards: [],
+        standards: [...get(r, '성취기준').matchAll(/\[([^\]]+)\]/g)].map((m) => m[1]),
         tags,
         source: { file: fileName, row: line },
       };

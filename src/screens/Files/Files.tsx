@@ -1,4 +1,5 @@
 import { useState, type DragEvent } from 'react';
+import { ColumnMapper } from '../../components/ColumnMapper';
 import { FileCard, type Item } from '../../components/FileCard';
 import { detectFile } from '../../import/detect';
 import { interpret, mapUnknown, type Unknown } from '../../import/interpret';
@@ -88,9 +89,15 @@ export function Files() {
       {pending.length > 1 && <div className="row"><button onClick={() => pending.forEach(confirm)}>읽은 파일 모두 확정({pending.length})</button></div>}
       <ul className="cards-list">
         {items.map((item) => (
-          <FileCard key={item.id} item={item} subjects={p.subjects}
-            onKind={(k) => { patch(item.id, { kind: k }); void read(item.id, item.name, k, p); }}
-            onFix={(u, id) => fix(item, u, id)} onConfirm={() => confirm(item)} />
+          <div key={item.id}>
+            <FileCard item={item} subjects={p.subjects}
+              onKind={(k) => { patch(item.id, { kind: k }); void read(item.id, item.name, k, p); }}
+              onFix={(u, id) => fix(item, u, id)} onConfirm={() => confirm(item)} />
+            {item.kind === 'unknown' && /\.xlsx$/i.test(item.name) && data.get(item.id) && (
+              <ColumnMapper buffer={data.get(item.id)!} subjects={p.subjects} aiEnabled={p.settings.aiEnabled}
+                onDone={(buf) => { data.set(item.id, buf); patch(item.id, { kind: 'neisLessons' }); void read(item.id, item.name, 'neisLessons', p); }} />
+            )}
+          </div>
         ))}
       </ul>
     </section>
