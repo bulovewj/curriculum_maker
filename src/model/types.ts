@@ -111,6 +111,18 @@ export interface SlotOverride {
   locked: boolean;
 }
 
+/** 시간 운영계획 한 줄(계산 결과, 저장 안 함) */
+export interface WeekGridRow {
+  semester: Semester;
+  week: number;
+  period: string; // '3.2~3.7'
+  month: number; // 월 묶음
+  schoolDays: number;
+  dayPeriods: number[]; // 월~토 6칸
+  hours: Record<SubjectId, number>;
+  note: string; // 비고(휴일·행사)
+}
+
 export interface PlanRow {
   id: string;
   subjectId: SubjectId;
