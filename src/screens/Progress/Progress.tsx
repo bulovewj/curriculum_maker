@@ -15,6 +15,7 @@ export function Progress() {
   const [tab, setTab] = useState('kor');
   const [sel, setSel] = useState<string | null>(null);
   const [err, setErr] = useState('');
+  const [view, setView] = useState<'all' | 1 | 2>('all'); // 표에 보일 학기
   const calc = useMemo(() => {
     if (!p) return null;
     const grid = computeGrid(p);
@@ -47,6 +48,8 @@ export function Progress() {
   const row = rows.find((r) => r.id === sel);
   const slotKey = (r: (typeof rows)[number]) => { const s = at.get(r); return s ? `${s.date}#${s.period}` : '~'; };
   const ordered = [...rows].sort((a, b) => (slotKey(a) < slotKey(b) ? -1 : slotKey(a) > slotKey(b) ? 1 : 0)); // 칸 순서(주 고정 행도 제 주에)
+  const semOf = (r: (typeof rows)[number]) => at.get(r)?.semester ?? r.semester;
+  const shown = view === 'all' ? ordered : ordered.filter((r) => semOf(r) === view);
   const slotCount = res.placed.length + res.freeSlots.length;
 
   return (
@@ -75,10 +78,18 @@ export function Progress() {
           <AiPanel project={p} subject={subject} needs={needs} onApply={applyMany} />
           <PlanOpsBar subjectId={subject.id} row={row} semester={(row?.semester ?? 1) as Semester} onOp={run}
             onMove={(dir) => { const i = ordered.findIndex((r) => r.id === sel); const mate = ordered[i + dir]; if (row && mate) run((s) => swapRows(s, subject.id, row.id, mate.id)); }} />
+          <div className="row">
+            보기:{' '}
+            {([['all', '전체'], [1, '1학기'], [2, '2학기']] as const).map(([v, label]) => (
+              <button key={v} className={v === view ? 'step on' : 'step'} onClick={() => setView(v)}>
+                {label} {(v === 'all' ? ordered : ordered.filter((r) => semOf(r) === v)).length}행
+              </button>
+            ))}
+          </div>
           <table className="dev-table">
             <thead><tr><th>주</th><th>기간</th><th>단원명</th><th>학습 주제</th><th>차시</th><th>쪽수</th><th>비고</th></tr></thead>
             <tbody>
-              {ordered.map((r) => {
+              {shown.map((r) => {
                 const s = at.get(r);
                 return (
                   <tr key={r.id} onClick={() => setSel(r.id)} style={r.id === sel ? { background: '#cfe3ff' } : r.kind === 'memo' || !s ? { background: '#fff3b0' } : undefined}>
