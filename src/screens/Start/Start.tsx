@@ -49,7 +49,7 @@ export function Start() {
         </label>
       </div>
       {list.length === 0 ? (
-        <p className="muted">프로젝트가 없습니다.</p>
+        <p className="empty">아직 프로젝트가 없습니다. [새로 만들기]를 눌러 시작하세요.</p>
       ) : (
         <ul className="cards">
           {list.map((s) => (

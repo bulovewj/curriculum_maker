@@ -14,7 +14,7 @@ const steps = ['기본 정보', '파일 넣기', '학사력·시간표', '편제
 
 /** 공통 틀: 위쪽 막대 + 왼쪽 단계 목록 + 본문 */
 export function Shell() {
-  const { project, open, saveError } = useProject();
+  const { project, open, saveError, undo, canUndo } = useProject();
   const [step, setStep] = useState(0);
   if (!project) return null;
 
@@ -28,19 +28,32 @@ export function Shell() {
     URL.revokeObjectURL(a.href);
   }
 
+  // 단계 목록의 상태 점: 초록 = 할 일을 마침, 노랑 = 아직
+  const has = (kind: string) => project.imports.some((r) => r.confirmed && r.kind === kind);
+  const done = [
+    Boolean(project.school.name),
+    has('scheduleP04') && has('timetableP02') && (has('curriculumHwpx') || has('planAdjustHwpx')),
+    project.calendar.length > 0 && project.baseTimetable.length > 0,
+    Object.keys(project.curriculumPlan.schoolAnnual).length > 0,
+    Object.keys(project.slotOverrides).length > 0 || project.baseTimetable.length > 0,
+    Object.values(project.lessonPlans).some((rows) => rows.length > 0),
+    false,
+  ];
+
   return (
     <div className="shell">
       <header className="topbar">
         <button className="link" onClick={() => open(null)}>← 목록</button>
         <strong>{project.school.name || '학교명 없음'} · {projectTitle(project)}</strong>
         <span className="spacer" />
+        <button onClick={undo} disabled={!canUndo} title="방금 한 작업을 취소합니다(최근 30개까지)">↶ 되돌리기</button>
         <button onClick={exportFile}>내보내기</button>
       </header>
       {saveError && <p className="error-bar">저장이 안 됩니다. 내보내기로 파일을 보관하세요.</p>}
       <nav className="steps">
         {steps.map((name, i) => (
           <button key={name} className={i === step ? 'step on' : 'step'} onClick={() => setStep(i)}>
-            <span className="dot" /> S{i + 1} {name}
+            <span className={`dot ${done[i] ? 'done' : i === 6 ? '' : 'todo'}`} /> S{i + 1} {name}
           </button>
         ))}
       </nav>

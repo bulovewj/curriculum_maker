@@ -23,7 +23,7 @@ export function AdjustmentList({ subjectId, adjustments, onUndo, onEdit }: Props
               <input value={a.area} placeholder="영역" onChange={(e) => onEdit(a.id, { area: e.target.value })} />{' '}
               <input key={a.id + a.standards.join()} defaultValue={a.standards.join(', ')} placeholder="성취기준(쉼표로 구분)" onBlur={(e) => onEdit(a.id, { standards: e.target.value.split(',').map((x) => x.trim()).filter(Boolean) })} />
             </div>
-            <input style={{ width: '100%', ...(a.aiDraft ? { background: '#fff3b0' } : {}) }} value={a.content} placeholder="주요 내용" onChange={(e) => onEdit(a.id, { content: e.target.value, aiDraft: false })} />
+            <input style={{ width: '100%' }} className={a.aiDraft ? 'is-warn' : undefined} value={a.content} placeholder="주요 내용" onChange={(e) => onEdit(a.id, { content: e.target.value, aiDraft: false })} />
             {a.aiDraft && <button className="link" onClick={() => onEdit(a.id, { aiDraft: false })}>AI 초안 — 확인</button>}
           </li>
         ))}

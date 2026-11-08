@@ -10,7 +10,7 @@ export function Calendar() {
   const { project, update } = useProject();
   if (!project) return null;
   const p = project;
-  if (p.calendar.length === 0) return <p className="muted">학사력이 없습니다. S2에서 학사일정을 넣으세요.</p>;
+  if (p.calendar.length === 0) return <p className="empty">아직 학사력이 없습니다. S2 [파일 넣기]에서 학사일정 xlsx를 넣으세요.</p>;
 
   const setPeriods = (date: string, periods: number) =>
     update((q) => ({ ...q, calendar: q.calendar.map((d) => (d.date === date ? { ...d, periods, schoolDay: periods > 0 && !d.holiday } : d)) }));
@@ -20,7 +20,7 @@ export function Calendar() {
   const cell = (d: CalendarDay | undefined) => {
     if (!d) return <td />;
     return (
-      <td key={d.date} style={d.schoolDay ? undefined : { background: '#eee' }} title={d.notes.join('\n')}>
+      <td key={d.date} className={d.schoolDay ? undefined : 'is-off'} title={d.notes.join('\n')}>
         <small>{Number(d.date.slice(8))}</small>{' '}
         {d.holiday ? <small className="muted">{d.holiday}</small> : (
           <input type="number" min={0} max={9} value={d.periods} style={{ width: 40 }} onChange={(e) => setPeriods(d.date, Math.max(0, Number(e.target.value) || 0))} />

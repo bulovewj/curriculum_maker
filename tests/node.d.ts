@@ -4,6 +4,7 @@ declare module 'node:fs' {
   export function readdirSync(path: string): string[];
   export function readFileSync(path: string): Uint8Array;
   export function writeFileSync(path: string, data: string | Uint8Array, encoding?: string): void;
+  export function statSync(path: string): { isDirectory(): boolean };
   export function mkdirSync(path: string, options?: { recursive?: boolean }): void;
 }
 declare module 'node:path' {

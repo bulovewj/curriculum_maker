@@ -48,9 +48,9 @@ export function WeekGrid() {
   const heads = [...subj, ...crea];
   const cols = (h: Record<string, number>, bold = false, at?: { semester: 1 | 2; week: number }) => (
     <>
-      {subj.map((s) => <td key={s.id} onClick={at ? () => setTarget({ ...at, from: s.id }) : undefined} style={at ? { cursor: 'pointer' } : undefined}>{bold ? <b>{h[s.id] ?? 0}</b> : h[s.id] ?? 0}</td>)}
+      {subj.map((s) => <td key={s.id} onClick={at ? () => setTarget({ ...at, from: s.id }) : undefined} className={at ? 'clickable' : undefined}>{bold ? <b>{h[s.id] ?? 0}</b> : h[s.id] ?? 0}</td>)}
       <td>{sum(h, subj)}</td>
-      {crea.map((s) => <td key={s.id} onClick={at ? () => setTarget({ ...at, from: s.id }) : undefined} style={at ? { cursor: 'pointer' } : undefined}>{h[s.id] ?? 0}</td>)}
+      {crea.map((s) => <td key={s.id} onClick={at ? () => setTarget({ ...at, from: s.id }) : undefined} className={at ? 'clickable' : undefined}>{h[s.id] ?? 0}</td>)}
       <td>{sum(h, crea)}</td>
       <td>{sum(h, subj) + sum(h, crea)}</td>
     </>
@@ -73,6 +73,7 @@ export function WeekGrid() {
           setTarget(null);
         }} />
       )}
+      <div className="table-wrap">
       <table className="dev-table">
         <thead>
           <tr>
@@ -110,6 +111,7 @@ export function WeekGrid() {
           )}
         </tbody>
       </table>
+      </div>
     </section>
   );
 }

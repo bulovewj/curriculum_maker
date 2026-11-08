@@ -16,7 +16,7 @@ export function TimetableGrid({ project: p, onChange }: Props) {
     const old = find(w, k);
     onChange(change === null ? rest : [...rest, { weekday: w as SchoolWeekday, period: k, subjectId: old?.subjectId ?? '', specialist: false, ...old, ...change }].filter((c) => c.subjectId));
   };
-  if (periods === 0) return <p className="muted">기초 시간표가 없습니다. S2에서 전담·학급 시간표를 넣으세요.</p>;
+  if (periods === 0) return <p className="empty">아직 기초 시간표가 없습니다. 위 [기초 시간표 자동 만들기]를 누르거나 S2에서 전담·학급 시간표를 넣으세요.</p>;
   return (
     <table className="dev-table">
       <thead><tr><th>교시</th>{DAYS.map((d) => <th key={d}>{d}</th>)}</tr></thead>
@@ -27,7 +27,7 @@ export function TimetableGrid({ project: p, onChange }: Props) {
             {[1, 2, 3, 4, 5].map((w) => {
               const c = find(w, k);
               return (
-                <td key={w} style={c?.specialist ? { background: '#ffe9a8' } : undefined}>
+                <td key={w} className={c?.specialist ? 'is-specialist' : undefined}>
                   <select value={c?.subjectId ?? ''} onChange={(e) => put(w, k, e.target.value ? { subjectId: e.target.value } : null)}>
                     <option value="">(비움)</option>
                     {p.subjects.map((s) => <option key={s.id} value={s.id}>{s.name}</option>)}

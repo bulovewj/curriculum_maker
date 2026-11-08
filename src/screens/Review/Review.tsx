@@ -50,7 +50,7 @@ export function Review({ onGo }: { onGo: (step: number) => void }) {
             const a = t1[s.id] ?? 0;
             const b = t2[s.id] ?? 0;
             const plan = (school[s.id]?.s1 ?? 0) + (school[s.id]?.s2 ?? 0);
-            return <tr key={s.id}><td>{s.name}</td><td>{a}</td><td>{b}</td><td>{a + b}</td><td>{plan}</td><td style={{ color: a + b === plan ? undefined : '#c00' }}>{a + b - plan}</td></tr>;
+            return <tr key={s.id}><td>{s.name}</td><td>{a}</td><td>{b}</td><td>{a + b}</td><td>{plan}</td><td className={a + b === plan ? undefined : 'is-bad'}>{a + b - plan}</td></tr>;
           })}
         </tbody>
       </table>

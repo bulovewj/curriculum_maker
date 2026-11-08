@@ -11,7 +11,7 @@ export function Plan() {
   const slots = useMemo(() => (p ? computeGrid(p).slots : []), [p]);
   if (!p) return null;
   const annual = p.curriculumPlan.schoolAnnual;
-  if (Object.keys(annual).length === 0) return <p className="muted">편제가 없습니다. S2에서 학년군 편제(hwpx) 또는 시수증감 운영계획을 넣으세요.</p>;
+  if (Object.keys(annual).length === 0) return <p className="empty">아직 편제가 없습니다. S2 [파일 넣기]에서 학년군 편제(hwpx) 또는 시수증감 운영계획을 넣으세요.</p>;
 
   const school = effectiveSchool(p, slots);
   const std = p.curriculumPlan.standard;

@@ -1,9 +1,30 @@
-/* 디자인 토큰. 실제 값은 M20에서 정한다. */
+/* 디자인 토큰: 색·글꼴·간격은 여기서만 정한다(화면 코드에는 색 코드를 쓰지 않는다). 파스텔 초록 계열. */
 :root {
   --color-text: #1f2933;
+  --color-muted: #6b7785;
   --color-background: #ffffff;
-  --font-body: system-ui, sans-serif;
+  --color-surface: #f6f8f7;
+  --color-border: #cfd8d3;
+  --color-border-strong: #99a8a0;
+  --color-accent: #3f7d58;
+  --color-accent-soft: #dff0e5;
+  --color-select: #d6e8ff; /* 고른 줄 */
+  --color-warn: #fff3b0; /* 노란 칸: 확인이 필요한 값 */
+  --color-warn-strong: #ffe9a8; /* 전담 칸 */
+  --color-danger: #c0392b;
+  --color-danger-soft: #fde2e2;
+  --color-ok: #2f7d3b;
+  --color-need: #b8620b; /* 시수가 모자라거나 남음 */
+  --color-off: #eceeed; /* 수업 없는 날 */
+  --color-info-soft: #e8f0ff;
+  --color-code: #f6f6f6;
+  --font-body: system-ui, -apple-system, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
   --space-page: 24px;
+  --radius: 4px;
 }
 
 body {

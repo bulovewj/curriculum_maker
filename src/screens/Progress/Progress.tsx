@@ -68,12 +68,12 @@ export function Progress() {
         })}
       </div>
       {rows.length === 0 ? (
-        <p className="muted">진도 파일 없음, 칸 {slotCount}개 빈칸</p>
+        <p className="empty">이 교과는 아직 진도가 없습니다(칸 {slotCount}개가 비어 있음). S2 [파일 넣기]에서 진도 파일을 넣으세요.</p>
       ) : (
         <>
           <p>
             칸 {slotCount} · 행 {res.placed.length + res.surplusRows.length} ·{' '}
-            <b style={{ color: need === 0 ? 'green' : '#b60' }}>{need === 0 ? '필요량 0' : need > 0 ? `감축 필요 ${need}` : `증배 필요 ${-need}`}</b>
+            <b className={need === 0 ? 'ok' : 'need'}>{need === 0 ? '필요량 0' : need > 0 ? `감축 필요 ${need}` : `증배 필요 ${-need}`}</b>
           </p>
           {err && <p className="error">{err}</p>}
           <AiPanel project={p} subject={subject} needs={needs} onApply={applyMany} />
@@ -88,21 +88,23 @@ export function Progress() {
               </button>
             ))}
           </div>
+          <div className="table-wrap">
           <table className="dev-table">
             <thead><tr><th>주</th><th>기간</th><th>단원명</th><th>학습 주제</th><th>차시</th><th>쪽수</th><th>비고</th></tr></thead>
             <tbody>
               {shown.map((r) => {
                 const s = at.get(r);
                 return (
-                  <tr key={r.id} onClick={() => setSel(r.id)} style={r.id === sel ? { background: '#cfe3ff' } : r.kind === 'memo' || !s ? { background: '#fff3b0' } : undefined}>
+                  <tr key={r.id} className={r.id === sel ? 'is-selected' : r.kind === 'memo' || !s ? 'is-warn' : undefined} onClick={() => setSel(r.id)}>
                     <td>{s ? s.week : '—'}</td>
                     <td>{s ? calc.period.get(`${s.semester}#${s.week}`) : r.kind === 'memo' ? '메모' : '칸 없음'}</td>
-                    <td>{r.unit}</td><td style={r.aiDraft ? { background: '#fff3b0' } : undefined}>{r.topic}</td><td>{r.n ? `${r.n}/${r.total ?? ''}` : ''}</td><td>{r.pages ?? ''}</td><td>{r.rawNote ?? ''}</td>
+                    <td>{r.unit}</td><td className={r.aiDraft ? 'is-warn' : undefined}>{r.topic}</td><td>{r.n ? `${r.n}/${r.total ?? ''}` : ''}</td><td>{r.pages ?? ''}</td><td>{r.rawNote ?? ''}</td>
                   </tr>
                 );
               })}
             </tbody>
           </table>
+          </div>
           <AdjustmentList subjectId={subject.id} adjustments={p.adjustments} onUndo={(id) => run((s) => undoAdjustment(s, id))}
             onEdit={(id, change) => update((q) => ({ ...q, adjustments: q.adjustments.map((a) => (a.id === id ? { ...a, ...change } : a)) }))} />
         </>

@@ -67,7 +67,7 @@ export function ColumnMapper({ buffer, subjects, aiEnabled, onDone }: Props) {
               <td><select value={mapping[i]?.target ?? ''} onChange={(e) => pick(i, e.target.value as Target | '')}>
                 <option value="">(안 씀)</option>{TARGETS.map((t) => <option key={t} value={t}>{t}</option>)}
               </select></td>
-              <td style={mapping[i]?.target && mapping[i].confidence < 0.7 ? { background: '#fff3b0' } : undefined}>{mapping[i]?.target ? mapping[i].confidence.toFixed(1) : ''}</td>
+              <td className={mapping[i]?.target && mapping[i].confidence < 0.7 ? 'is-warn' : undefined}>{mapping[i]?.target ? mapping[i].confidence.toFixed(1) : ''}</td>
             </tr>
           ))}
         </tbody>
