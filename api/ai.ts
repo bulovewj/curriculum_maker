@@ -21,13 +21,19 @@ const callGpt: CallModel = async ({ model, system, user }) => {
     method: 'POST',
     headers: { 'content-type': 'application/json', authorization: `Bearer ${process.env.OPENAI_API_KEY ?? ''}` },
     body: JSON.stringify({ model, max_completion_tokens: 4000, messages: [{ role: 'system', content: system }, { role: 'user', content: user }] }),
+    signal: AbortSignal.timeout(25000), // 가끔 답이 안 오고 멈추는 요청이 있어서 25초에서 끊고 다시 보낸다
   });
-  let res = await send();
-  // 권한을 막 바꾸면 OpenAI 서버마다 반영이 달라 403이 섞여 나온다. 네 번까지 다시 시도한다.
-  for (let k = 0; k < 4 && res.status === 403; k++) {
-    await new Promise((r) => setTimeout(r, 1500));
-    res = await send();
+  // 권한을 막 바꾸면 OpenAI 서버마다 반영이 달라 403이 섞여 나오고, 가끔 답이 안 오고 멈춘다. 네 번까지 다시 시도한다.
+  let res: Response | undefined;
+  for (let k = 0; k < 5 && !(res && res.status !== 403); k++) {
+    if (k > 0) await new Promise((r) => setTimeout(r, 1000));
+    try {
+      res = await send();
+    } catch {
+      res = undefined; // 시간 초과·연결 끊김
+    }
   }
+  if (!res) throw new Error('AI가 오래 답하지 않습니다. 잠시 뒤 다시 시도해 주세요.');
   if (!res.ok) {
     const detail = ((await res.json().catch(() => ({}))) as { error?: { message?: string } }).error?.message ?? '';
     throw new Error(res.status === 401 ? 'AI 키가 올바르지 않습니다.' : res.status === 429 ? 'AI 사용 한도를 넘었습니다. 잠시 뒤 다시 시도하세요.' : `AI 서버 오류(${res.status}) ${detail}`.trim());

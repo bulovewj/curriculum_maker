@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import type { Candidate } from '../../api/_lib/types';
-import type { Job, Picked } from '../ai/applyCandidates';
+import { applyPicked, describeCandidate, type Job, type Picked } from '../ai/applyCandidates';
 import { AI_OFF, aiAvailable, callAi } from '../ai/client';
+import type { OpState } from '../engine/planOps';
 import { filterCandidates } from '../ai/filterOutput';
 import type { Project, Semester, Subject } from '../model/types';
 
@@ -50,16 +51,27 @@ export function AiPanel({ project: p, subject, needs, onApply }: Props) {
     if (jobs.length > 3 && !window.confirm(`AI를 ${jobs.length}번 부릅니다(총 ${total}시간). 계속할까요?`)) return;
     const got: Picked[] = [];
     const msgs: string[] = [];
+    // 받은 후보를 미리 적용해 보며 모자라면 남은 만큼 다시 묻는다(겹치거나 못 쓰는 후보가 있어서). 최종 적용은 같은 순서로 한다.
+    let sim: OpState = { lessonPlans: p.lessonPlans, adjustments: p.adjustments };
     for (const [i, j] of jobs.entries()) {
-      setBusy(`${i + 1}/${jobs.length} ${name(j.subjectId)} ${j.semester}학기`);
-      const mine = (p.lessonPlans[j.subjectId] ?? []).filter((r) => r.semester === j.semester && r.kind !== 'memo');
-      const input = { subject: { id: j.subjectId, name: name(j.subjectId) }, semester: j.semester, need: j.need, standards, rows: mine.map((r) => ({ id: r.id, unit: r.unit, topic: r.topic, n: r.n, total: r.total, standards: r.standards })) };
-      const res = await callAi('adjustCandidates', input);
-      if (!res.ok) { msgs.push(`${name(j.subjectId)} ${j.semester}학기: ${res.error}`); break; }
-      setUsage((u) => ({ inputTokens: u.inputTokens + res.usage.inputTokens, outputTokens: u.outputTokens + res.usage.outputTokens }));
-      const f = filterCandidates(res.output, { rowIds: mine.map((r) => r.id), standards, need: j.need });
-      got.push(...f.candidates.map((c) => ({ subjectId: j.subjectId, semester: j.semester, c, limit: Math.abs(j.need) })));
-      msgs.push(...f.warnings.map((w) => `${name(j.subjectId)} ${j.semester}학기 ${w}`));
+      let left = Math.abs(j.need);
+      for (let round = 1; round <= 3 && left > 0; round++) {
+        setBusy(`${i + 1}/${jobs.length} ${name(j.subjectId)} ${j.semester}학기${round > 1 ? ` (${round}번째, ${left}시간 남음)` : ''}`);
+        const mine = (sim.lessonPlans[j.subjectId] ?? []).filter((r) => r.semester === j.semester && r.kind !== 'memo');
+        const input = { subject: { id: j.subjectId, name: name(j.subjectId) }, semester: j.semester, need: Math.sign(j.need) * left, standards, rows: mine.map((r) => ({ id: r.id, unit: r.unit, topic: r.topic, n: r.n, total: r.total, standards: r.standards })) };
+        const res = await callAi('adjustCandidates', input);
+        if (!res.ok) { msgs.push(`${name(j.subjectId)} ${j.semester}학기: ${res.error}`); left = -1; break; }
+        setUsage((u) => ({ inputTokens: u.inputTokens + res.usage.inputTokens, outputTokens: u.outputTokens + res.usage.outputTokens }));
+        const f = filterCandidates(res.output, { rowIds: mine.map((r) => r.id), standards, need: input.need });
+        msgs.push(...f.warnings.map((w) => `${name(j.subjectId)} ${j.semester}학기 ${w}`));
+        const r = applyPicked(sim, f.candidates.map((c) => ({ subjectId: j.subjectId, semester: j.semester, c, limit: left, label: describeCandidate(c, mine) })));
+        sim = r.state;
+        got.push(...r.appliedPicks.map((x) => ({ ...x, limit: Math.abs(j.need) })));
+        left -= r.applied;
+        if (r.applied === 0) break;
+      }
+      if (left > 0) msgs.push(`${name(j.subjectId)} ${j.semester}학기: ${left}시간은 쓸 만한 후보를 못 받았습니다. 다시 받아 보세요.`);
+      if (left < 0) break;
     }
     setBusy('');
     setNotes(msgs);
@@ -88,7 +100,7 @@ export function AiPanel({ project: p, subject, needs, onApply }: Props) {
       <ul className="cards-list">
         {cands.map((c, i) => (
           <li key={i} className="file-card">
-            <b>{KIND[c.c.kind]}</b> — {scope === 'all' ? `${name(c.subjectId)} ${c.semester}학기 · ` : ''}{topic(c)}{c.c.topic ? ` → ${c.c.topic}` : ''}
+            <b>{KIND[c.c.kind]}</b> — {scope === 'all' ? `${name(c.subjectId)} ${c.semester}학기 · ` : ''}{c.label ?? topic(c)}
             <div className="muted">{c.c.reason} {c.c.standards.join(', ')}</div>
             <button onClick={() => { apply([{ ...c, limit: 1 }]); drop(c); }}>적용</button>{' '}
             <button className="link" onClick={() => drop(c)}>버리기</button>
