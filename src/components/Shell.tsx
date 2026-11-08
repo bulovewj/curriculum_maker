@@ -47,7 +47,7 @@ export function Shell() {
       <div className="content">
         {/* ponytail: S2~S7은 해당 마일스톤에서 화면 폴더를 만든다 */}
         {/* S2는 화면을 옮겨도 넣은 파일 카드가 남도록 계속 켜 둔다(숨기기만) */}
-        <div hidden={step !== 1}><Files /></div>
+        <div hidden={step !== 1}><Files key={project.id} /></div>
         {step === 0 ? <Basic /> : step === 1 ? null : step === 2 ? <Calendar /> : step === 3 ? <Plan /> : step === 4 ? <WeekGrid /> : step === 5 ? <Progress /> : step === 6 ? <Review onGo={setStep} /> : <div className="placeholder">S{step + 1} {steps[step]} — 준비 중</div>}
       </div>
     </div>

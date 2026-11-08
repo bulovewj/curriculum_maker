@@ -21,19 +21,21 @@ const callGpt: CallModel = async ({ model, system, user }) => {
     method: 'POST',
     headers: { 'content-type': 'application/json', authorization: `Bearer ${process.env.OPENAI_API_KEY ?? ''}` },
     body: JSON.stringify({ model, max_completion_tokens: 4000, messages: [{ role: 'system', content: system }, { role: 'user', content: user }] }),
-    signal: AbortSignal.timeout(25000), // 가끔 답이 안 오고 멈추는 요청이 있어서 25초에서 끊고 다시 보낸다
+    signal: AbortSignal.timeout(18000), // 가끔 답이 안 오고 멈추는 요청이 있어서 18초에서 끊고 다시 보낸다
   });
-  // 권한을 막 바꾸면 OpenAI 서버마다 반영이 달라 403이 섞여 나오고, 가끔 답이 안 오고 멈춘다. 네 번까지 다시 시도한다.
+  // 권한을 막 바꾸면 OpenAI 서버마다 반영이 달라 403이 섞여 나오고, 가끔 답이 안 오고 멈춘다. 세 번까지 시도한다(전체 약 1분 안, Vercel 함수 한도 60초 가정).
   let res: Response | undefined;
-  for (let k = 0; k < 5 && !(res && res.status !== 403); k++) {
+  let last = '';
+  for (let k = 0; k < 3 && !(res && res.status !== 403); k++) {
     if (k > 0) await new Promise((r) => setTimeout(r, 1000));
     try {
       res = await send();
-    } catch {
+    } catch (e) {
       res = undefined; // 시간 초과·연결 끊김
+      last = e instanceof Error && e.name !== 'TimeoutError' ? e.message : '';
     }
   }
-  if (!res) throw new Error('AI가 오래 답하지 않습니다. 잠시 뒤 다시 시도해 주세요.');
+  if (!res) throw new Error(last ? `AI에 연결하지 못했습니다(${last}).` : 'AI가 오래 답하지 않습니다. 잠시 뒤 다시 시도해 주세요.');
   if (!res.ok) {
     const detail = ((await res.json().catch(() => ({}))) as { error?: { message?: string } }).error?.message ?? '';
     throw new Error(res.status === 401 ? 'AI 키가 올바르지 않습니다.' : res.status === 429 ? 'AI 사용 한도를 넘었습니다. 잠시 뒤 다시 시도하세요.' : `AI 서버 오류(${res.status}) ${detail}`.trim());
@@ -41,6 +43,8 @@ const callGpt: CallModel = async ({ model, system, user }) => {
   const data = (await res.json()) as { choices: { message: { content: string | null } }[]; usage: { prompt_tokens: number; completion_tokens: number } };
   return { text: data.choices[0]?.message.content ?? '', usage: { inputTokens: data.usage.prompt_tokens, outputTokens: data.usage.completion_tokens } };
 };
+
+export const maxDuration = 60; // Vercel 함수 최대 실행 시간(초)
 
 export async function POST(request: Request): Promise<Response> {
   return handleAi(request, process.env, providerOf(process.env) === 'openai' ? callGpt : callClaude);

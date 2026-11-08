@@ -58,6 +58,7 @@ export function Files() {
 
   /** 개발용: 내 컴퓨터의 2026 정답지 파일을 한 번에 넣고 학년도·자율시간 이름을 맞춘다 */
   async function loadSample() {
+    if (!window.confirm('학년도를 2026, 학교자율시간 이름을 신명똑디로 바꾸고 샘플 파일을 넣습니다. 계속할까요?')) return;
     const names = (await (await fetch('/dev-sample')).json()) as string[];
     const files = await Promise.all(names.map(async (n) => new File([await (await fetch(`/dev-sample/${encodeURIComponent(n)}`)).arrayBuffer()], n)));
     const next = { ...p, year: 2026, semesters: shiftSemesters(p.semesters, 2026), subjects: renameAutonomy(p.subjects, '신명똑디') };

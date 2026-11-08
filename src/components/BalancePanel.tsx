@@ -9,7 +9,7 @@ export function BalancePanel({ project: p, update }: { project: Project; update:
   const [res, setRes] = useState<{ result: BalanceResult; keep: Record<string, SlotOverride> } | null>(null);
   const name = (id: string) => p.subjects.find((s) => s.id === id)?.name ?? id;
   // 경고 문장 속 교과 id를 교과 이름으로 바꿔 보여 준다
-  const named = (w: string) => [...p.subjects].sort((a, b) => b.id.length - a.id.length).reduce((t, s) => t.replace(new RegExp(`(?<![\\w-])${s.id}(?![\\w-])`, 'g'), s.name), w);
+  const named = (w: string) => [...p.subjects].sort((a, b) => b.id.length - a.id.length).reduce((t, s) => t.replace(new RegExp(`(?<![\\w-])${s.id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\w-])`, 'g'), s.name), w);
 
   function preview() {
     // 이전 자동 맞추기 결과는 빼고 다시 계산한다

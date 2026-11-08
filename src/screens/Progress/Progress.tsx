@@ -77,7 +77,7 @@ export function Progress() {
           {err && <p className="error">{err}</p>}
           <AiPanel project={p} subject={subject} needs={needs} onApply={applyMany} />
           <PlanOpsBar subjectId={subject.id} row={row} semester={(row?.semester ?? 1) as Semester} onOp={run}
-            onMove={(dir) => { const i = ordered.findIndex((r) => r.id === sel); const mate = ordered[i + dir]; if (row && mate) run((s) => swapRows(s, subject.id, row.id, mate.id)); }} />
+            onMove={(dir) => { const i = shown.findIndex((r) => r.id === sel); const mate = shown[i + dir]; if (row && mate) run((s) => swapRows(s, subject.id, row.id, mate.id)); }} />
           <div className="row">
             보기:{' '}
             {([['all', '전체'], [1, '1학기'], [2, '2학기']] as const).map(([v, label]) => (

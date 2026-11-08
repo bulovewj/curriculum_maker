@@ -45,6 +45,7 @@ export function AiPanel({ project: p, subject, needs, onApply }: Props) {
   function apply(picks: Picked[]) {
     const r = onApply(picks);
     setNotes([`${r.applied}개 적용${r.skipped ? `, ${r.skipped}개는 앞 후보와 겹치거나 필요량을 넘어 건너뜀` : ''}`]);
+    return r;
   }
 
   async function ask() {
@@ -53,14 +54,16 @@ export function AiPanel({ project: p, subject, needs, onApply }: Props) {
     const msgs: string[] = [];
     // 받은 후보를 미리 적용해 보며 모자라면 남은 만큼 다시 묻는다(겹치거나 못 쓰는 후보가 있어서). 최종 적용은 같은 순서로 한다.
     let sim: OpState = { lessonPlans: p.lessonPlans, adjustments: p.adjustments };
+    let failed = 0; // 연달아 실패한 작업 수. 두 번 연달아 실패하면 멈춘다(키·한도 문제일 가능성)
     for (const [i, j] of jobs.entries()) {
       let left = Math.abs(j.need);
+      let broke = false;
       for (let round = 1; round <= 3 && left > 0; round++) {
         setBusy(`${i + 1}/${jobs.length} ${name(j.subjectId)} ${j.semester}학기${round > 1 ? ` (${round}번째, ${left}시간 남음)` : ''}`);
         const mine = (sim.lessonPlans[j.subjectId] ?? []).filter((r) => r.semester === j.semester && r.kind !== 'memo');
-        const input = { subject: { id: j.subjectId, name: name(j.subjectId) }, semester: j.semester, need: Math.sign(j.need) * left, standards, rows: mine.map((r) => ({ id: r.id, unit: r.unit, topic: r.topic, n: r.n, total: r.total, standards: r.standards })) };
+        const input = { subject: { id: j.subjectId, name: name(j.subjectId) }, semester: j.semester, need: Math.sign(j.need) * left, standards: [...new Set(mine.flatMap((r) => r.standards))], rows: mine.map((r) => ({ id: r.id, unit: r.unit, topic: r.topic, n: r.n, total: r.total, standards: r.standards })) };
         const res = await callAi('adjustCandidates', input);
-        if (!res.ok) { msgs.push(`${name(j.subjectId)} ${j.semester}학기: ${res.error}`); left = -1; break; }
+        if (!res.ok) { msgs.push(`${name(j.subjectId)} ${j.semester}학기: ${res.error}`); broke = true; break; }
         setUsage((u) => ({ inputTokens: u.inputTokens + res.usage.inputTokens, outputTokens: u.outputTokens + res.usage.outputTokens }));
         const f = filterCandidates(res.output, { rowIds: mine.map((r) => r.id), standards, need: input.need });
         msgs.push(...f.warnings.map((w) => `${name(j.subjectId)} ${j.semester}학기 ${w}`));
@@ -70,8 +73,9 @@ export function AiPanel({ project: p, subject, needs, onApply }: Props) {
         left -= r.applied;
         if (r.applied === 0) break;
       }
-      if (left > 0) msgs.push(`${name(j.subjectId)} ${j.semester}학기: ${left}시간은 쓸 만한 후보를 못 받았습니다. 다시 받아 보세요.`);
-      if (left < 0) break;
+      failed = broke ? failed + 1 : 0;
+      if (failed >= 2) { msgs.push('연달아 실패해서 멈췄습니다.'); break; }
+      if (left > 0 && !broke) msgs.push(`${name(j.subjectId)} ${j.semester}학기: ${left}시간은 쓸 만한 후보를 못 받았습니다. 다시 받아 보세요.`);
     }
     setBusy('');
     setNotes(msgs);
@@ -102,7 +106,7 @@ export function AiPanel({ project: p, subject, needs, onApply }: Props) {
           <li key={i} className="file-card">
             <b>{KIND[c.c.kind]}</b> — {scope === 'all' ? `${name(c.subjectId)} ${c.semester}학기 · ` : ''}{c.label ?? topic(c)}
             <div className="muted">{c.c.reason} {c.c.standards.join(', ')}</div>
-            <button onClick={() => { apply([{ ...c, limit: 1 }]); drop(c); }}>적용</button>{' '}
+            <button onClick={() => { if (apply([{ ...c, limit: 1 }]).applied > 0) drop(c); }}>적용</button>{' '}
             <button className="link" onClick={() => drop(c)}>버리기</button>
           </li>
         ))}

@@ -57,3 +57,14 @@ describe('parseJson 너그럽게 읽기', () => {
     expect(parseJson('다음과 같습니다:\n[{"kind":"add"}]\n끝')).toEqual([{ kind: 'add' }]);
   });
 });
+
+describe('리뷰 보완', () => {
+  it('candidates 키가 있으면 다른 목록보다 그걸 쓴다', () => {
+    expect(parseJson('{"warnings":["x"],"candidates":[{"kind":"add"}]}')).toEqual([{ kind: 'add' }]);
+  });
+  it('한도를 넘으면 어느 한도인지 말해 준다', async () => {
+    const big = { ...input, standards: Array.from({ length: 401 }, (_, k) => `c${k}`) };
+    const res = await handleAi(new Request('http://x/api/ai', { method: 'POST', body: JSON.stringify({ task: 'adjustCandidates', input: big }) }), env, async () => ({ text: '[]', usage: { inputTokens: 0, outputTokens: 0 } }));
+    expect(((await res.json()) as { error: string }).error).toContain('성취기준');
+  });
+});
