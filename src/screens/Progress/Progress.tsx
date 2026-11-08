@@ -2,9 +2,10 @@ import { useMemo, useState } from 'react';
 import { computeGrid } from '../../engine/grid';
 import { needOf, placeAll } from '../../engine/placeLessons';
 import { AdjustmentList } from '../../components/AdjustmentList';
+import { applyPicked, type Picked } from '../../ai/applyCandidates';
 import { AiPanel } from '../../components/AiPanel';
 import { PlanOpsBar } from '../../components/PlanOpsBar';
-import { addRow, mergeRows, removeRow, splitRow, swapRows, undoAdjustment, type OpState } from '../../engine/planOps';
+import { swapRows, undoAdjustment, type OpState } from '../../engine/planOps';
 import type { Semester } from '../../model/types';
 import { useProject } from '../../state/ProjectContext';
 
@@ -36,6 +37,13 @@ export function Progress() {
       setErr(e instanceof Error ? e.message : '작업을 하지 못했습니다.');
     }
   };
+  // 교과·학기별 필요량(+ 감축, − 증배): AI 패널이 쓴다
+  const needs = Object.fromEntries(p.subjects.map((s) => [s.id, Object.fromEntries([1, 2].map((n) => [n, calc.placed[s.id].surplusRows.filter((x) => x.semester === n).length - calc.placed[s.id].freeSlots.filter((x) => x.semester === n).length]))]));
+  const applyMany = (picks: Picked[]) => {
+    const r = applyPicked({ lessonPlans: p.lessonPlans, adjustments: p.adjustments }, picks);
+    update((q) => ({ ...q, ...r.state }));
+    return { applied: r.applied, skipped: r.skipped };
+  };
   const row = rows.find((r) => r.id === sel);
   const slotKey = (r: (typeof rows)[number]) => { const s = at.get(r); return s ? `${s.date}#${s.period}` : '~'; };
   const ordered = [...rows].sort((a, b) => (slotKey(a) < slotKey(b) ? -1 : slotKey(a) > slotKey(b) ? 1 : 0)); // 칸 순서(주 고정 행도 제 주에)
@@ -64,10 +72,7 @@ export function Progress() {
             <b style={{ color: need === 0 ? 'green' : '#b60' }}>{need === 0 ? '필요량 0' : need > 0 ? `감축 필요 ${need}` : `증배 필요 ${-need}`}</b>
           </p>
           {err && <p className="error">{err}</p>}
-          <AiPanel project={p} subject={subject} rows={rows}
-            needBySem={Object.fromEntries([1, 2].map((n) => [n, res.surplusRows.filter((x) => x.semester === n).length - res.freeSlots.filter((x) => x.semester === n).length]))}
-            onApply={(c, sem) => run((s) => (c.kind === 'merge' ? mergeRows(s, subject.id, c.rowId) : c.kind === 'remove' ? removeRow(s, subject.id, c.rowId)
-              : c.kind === 'split' ? splitRow(s, subject.id, c.rowId) : addRow(s, subject.id, c.rowId, c.topic ?? '', sem)))} />
+          <AiPanel project={p} subject={subject} needs={needs} onApply={applyMany} />
           <PlanOpsBar subjectId={subject.id} row={row} semester={(row?.semester ?? 1) as Semester} onOp={run}
             onMove={(dir) => { const i = ordered.findIndex((r) => r.id === sel); const mate = ordered[i + dir]; if (row && mate) run((s) => swapRows(s, subject.id, row.id, mate.id)); }} />
           <table className="dev-table">
