@@ -7,6 +7,7 @@ import { Plan } from '../screens/Plan/Plan';
 import { Progress } from '../screens/Progress/Progress';
 import { Review } from '../screens/Review/Review';
 import { WeekGrid } from '../screens/WeekGrid/WeekGrid';
+import { download } from '../lib/download';
 import { useProject } from '../state/ProjectContext';
 import { projectFileName, toProjectFile } from '../storage/projectFile';
 
@@ -21,11 +22,7 @@ export function Shell() {
   function exportFile() {
     if (!project) return;
     const savedAt = new Date().toISOString();
-    const a = document.createElement('a');
-    a.href = URL.createObjectURL(new Blob([toProjectFile(project, savedAt)], { type: 'application/json' }));
-    a.download = projectFileName(project, savedAt);
-    a.click();
-    URL.revokeObjectURL(a.href);
+    download(projectFileName(project, savedAt), toProjectFile(project, savedAt), 'application/json');
   }
 
   // 단계 목록의 상태 점: 초록 = 할 일을 마침, 노랑 = 아직

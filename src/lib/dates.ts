@@ -12,11 +12,6 @@ export function fromUtc(t: number): DateStr {
   return new Date(t).toISOString().slice(0, 10);
 }
 
-/** 있는 날짜인지(2027-02-29 같은 것은 false). */
-export function isValidDate(d: DateStr): boolean {
-  return /^\d{4}-\d{2}-\d{2}$/.test(d) && fromUtc(toUtc(d)) === d;
-}
-
 export const addDays = (d: DateStr, n: number): DateStr => fromUtc(toUtc(d) + n * DAY);
 
 export function weekday(d: DateStr): Weekday {

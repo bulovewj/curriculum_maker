@@ -68,12 +68,3 @@ export function semesterWeeks(
   });
 }
 
-/** 요일별 가장 흔한 교시 수(S3 시간표 틀 기본값). 키 = 1(월)~5(금) */
-export function commonPeriods(calendar: CalendarDay[]): number[] {
-  return [1, 2, 3, 4, 5].map((wd) => {
-    const count = new Map<number, number>();
-    for (const d of calendar) if (d.schoolDay && d.weekday === wd) count.set(d.periods, (count.get(d.periods) ?? 0) + 1);
-    // 같은 횟수면 교시가 많은 쪽
-    return [...count].sort((a, b) => b[1] - a[1] || b[0] - a[0])[0]?.[0] ?? 0;
-  });
-}

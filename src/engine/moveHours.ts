@@ -25,20 +25,6 @@ export function moveHours(
   return { overrides: next, moved, warnings };
 }
 
-/** 칸 잠금 켜고 끄기. 덮어쓰기가 없던 칸은 같은 교과로 'edited' 덮어쓰기를 만들어 잠근다. 끄면 직접 고친 칸은 풀리기만 한다. */
-export function setLock(slots: Slot[], overrides: Record<string, SlotOverride>, date: string, period: number, locked: boolean): Record<string, SlotOverride> {
-  const key = `${date}#${period}`;
-  const slot = slots.find((s) => s.date === date && s.period === period);
-  if (!slot) return overrides;
-  const old = overrides[key];
-  if (!locked && old && old.kind === 'edited' && old.subjectId === slot.subjectId && old.locked) {
-    const rest = { ...overrides }; // 같은 교과로 잠가 둔 것뿐이면 덮어쓰기를 없앤다
-    delete rest[key];
-    return rest;
-  }
-  return { ...overrides, [key]: { subjectId: slot.subjectId, kind: old?.kind ?? 'edited', locked } };
-}
-
 /** 그 주의 잠금 풀기. 값은 그대로 두고 잠금만 푼다. */
 export function unlockWeek(slots: Slot[], overrides: Record<string, SlotOverride>, semester: 1 | 2, week: number): Record<string, SlotOverride> {
   const next = { ...overrides };

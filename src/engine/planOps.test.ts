@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { PlanRow } from '../model/types';
-import { addRow, insertEvent, mergeRows, moveRow, removeRow, setFixedWeek, setTags, splitRow, swapRows, undoAdjustment, type OpState } from './planOps';
+import { addRow, insertEvent, mergeRows, removeRow, setFixedWeek, setTags, splitRow, swapRows, undoAdjustment, type OpState } from './planOps';
 import { needOf, placeLessons } from './placeLessons';
 import type { Slot } from '../model/types';
 
@@ -80,8 +80,6 @@ describe('작업마다 행 수·표시·증감 기록·취소', () => {
     s = setFixedWeek(s, 'kor', 'a', { semester: 1, week: 5 });
     expect(s.lessonPlans.kor[0].fixedWeek).toEqual({ semester: 1, week: 5 });
     expect(setFixedWeek(s, 'kor', 'a', null).lessonPlans.kor[0].fixedWeek).toBeUndefined();
-    expect(ids(moveRow(s, 'kor', 'a', 1))).toEqual(['b', 'a', 'c', 'd']);
-    expect(ids(moveRow(s, 'kor', 'a', -1))).toEqual(ids(s));
     expect(s.adjustments).toEqual([]);
   });
 

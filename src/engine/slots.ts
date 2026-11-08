@@ -41,8 +41,3 @@ export function applyOverrides(slots: Slot[], overrides: Record<string, SlotOver
   });
 }
 
-/** 날짜가 없어져서 쓸 데가 없어진 덮어쓰기 키 */
-export function orphanOverrides(slots: Slot[], overrides: Record<string, SlotOverride>): string[] {
-  const keys = new Set(slots.map((s) => `${s.date}#${s.period}`));
-  return Object.keys(overrides).filter((k) => !keys.has(k));
-}

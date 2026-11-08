@@ -3,7 +3,8 @@ import { ORIGINAL, findFile, readBuffer } from '../../tests/files';
 import { readScheduleP04 } from '../import/mappers/scheduleP04';
 import { readWorkbook } from '../import/xlsx/readWorkbook';
 import type { CalendarDay } from '../model/types';
-import { commonPeriods, monthOfWeek, schoolDaysByMonth, semesterWeeks, weekNo, weekPeriod } from './calendar';
+import { defaultShape } from './generateTimetable';
+import { monthOfWeek, schoolDaysByMonth, semesterWeeks, weekNo, weekPeriod } from './calendar';
 
 describe('기간 글자·월 묶음 (달력 없이)', () => {
   it('기간 글자', () => {
@@ -57,6 +58,6 @@ describe.skipIf(!file)('2026 학사력으로', () => {
   });
 
   it('요일별 가장 흔한 교시 수 = 월6 화6 수5 목6 금6', async () => {
-    expect(commonPeriods(await load())).toEqual([6, 6, 5, 6, 6]);
+    expect(defaultShape(await load())).toEqual([6, 6, 5, 6, 6]);
   });
 });

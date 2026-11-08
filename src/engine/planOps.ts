@@ -121,16 +121,6 @@ export const setTags = (s: OpState, subjectId: SubjectId, rowId: string, tags: s
 export const setFixedWeek = (s: OpState, subjectId: SubjectId, rowId: string, fixed: PlanRow['fixedWeek'] | null): OpState =>
   patchRow(s, subjectId, rowId, { fixedWeek: fixed ?? undefined });
 
-/** 순서 옮기기(위/아래). 증감 기록 없음 */
-export function moveRow(s: OpState, subjectId: SubjectId, rowId: string, dir: -1 | 1): OpState {
-  const { list, i } = find(s, subjectId, rowId);
-  const j = i + dir;
-  if (j < 0 || j >= list.length) return s;
-  const rows = [...list];
-  [rows[i], rows[j]] = [rows[j], rows[i]];
-  return { ...s, lessonPlans: { ...s.lessonPlans, [subjectId]: rows } };
-}
-
 /** 증감 기록 삭제 = 작업 취소. 작업 전 행으로 되돌린다(불러온 기록처럼 undo가 없으면 기록만 지운다). */
 export function undoAdjustment(s: OpState, adjustmentId: string): OpState {
   const a = s.adjustments.find((x) => x.id === adjustmentId);

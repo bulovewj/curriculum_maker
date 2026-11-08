@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { addDays, isValidDate, lastDayOfFebruary, weekday, weekMonday, weekSaturday } from './dates';
+import { addDays, lastDayOfFebruary, weekday, weekMonday, weekSaturday } from './dates';
 
 describe('dates', () => {
   it('요일: 2026-03-02는 월요일, 2026-03-08은 일요일', () => {
@@ -12,9 +12,7 @@ describe('dates', () => {
     expect(weekMonday('2027-01-02')).toBe('2026-12-28');
   });
 
-  it('윤년: 2028-02-29는 있고 2027-02-29는 없다', () => {
-    expect(isValidDate('2028-02-29')).toBe(true);
-    expect(isValidDate('2027-02-29')).toBe(false);
+  it('윤년: 2월 마지막 날', () => {
     expect(lastDayOfFebruary(2028)).toBe('2028-02-29');
     expect(lastDayOfFebruary(2027)).toBe('2027-02-28');
   });
