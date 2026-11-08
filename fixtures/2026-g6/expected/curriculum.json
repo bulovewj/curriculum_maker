@@ -1,0 +1,60 @@
+{
+ "priorYear": {
+  "year": 2025,
+  "grade": 5,
+  "school": {
+   "kor": 202,
+   "soc": 106,
+   "mor": 34,
+   "math": 138,
+   "sci": 102,
+   "prac": 68,
+   "pe": 102,
+   "music": 68,
+   "art": 68,
+   "eng": 102
+  },
+  "creativeTotal": 102,
+  "total": 1092
+ },
+ "standard": {
+  "kor": 204,
+  "soc": 102,
+  "mor": 34,
+  "math": 136,
+  "sci": 102,
+  "prac": 68,
+  "pe": 102,
+  "music": 68,
+  "art": 68,
+  "eng": 102
+ },
+ "school": {
+  "kor": 192,
+  "autonomy": 32,
+  "soc": 96,
+  "mor": 32,
+  "math": 139,
+  "sci": 98,
+  "prac": 64,
+  "pe": 102,
+  "music": 68,
+  "art": 68,
+  "eng": 102
+ },
+ "creative": {
+  "standard": 102,
+  "school": 98
+ },
+ "total": {
+  "standard": 1088,
+  "school": 1091
+ },
+ "creativeAreas": {
+  "자율·자치활동": 72,
+  "동아리활동": 18,
+  "진로활동": 8,
+  "계": 98
+ },
+ "warnings": []
+}

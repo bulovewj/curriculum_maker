@@ -1,0 +1,7607 @@
+[
+ {
+  "subjectId": "kor",
+  "semester": 2,
+  "footer": {
+   "total": 109,
+   "annual": 192
+  },
+  "rows": [
+   {
+    "week": 1,
+    "period": "9.1~9.5",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -1-",
+    "n": 1,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 1,
+    "period": "9.1~9.5",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -2-",
+    "n": 2,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 1,
+    "period": "9.1~9.5",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -3-",
+    "n": 3,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 1,
+    "period": "9.1~9.5",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -4-",
+    "n": 4,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 1,
+    "period": "9.1~9.5",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -5-",
+    "n": 5,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -6-",
+    "n": 6,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -7-",
+    "n": 7,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -8-",
+    "n": 8,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -9-",
+    "n": 9,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -10-",
+    "n": 10,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -11-",
+    "n": 11,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -12-",
+    "n": 12,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -13-",
+    "n": 13,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -14-",
+    "n": 14,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -15-",
+    "n": 15,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 4,
+    "period": "9.21~9.26",
+    "subjectId": "kor",
+    "kind": "event",
+    "unit": "◈독서축제",
+    "topic": "《 독서축제 》",
+    "n": 1,
+    "total": 4,
+    "eventName": "독서축제",
+    "tags": [],
+    "rawNote": "◈독서축제"
+   },
+   {
+    "week": 4,
+    "period": "9.21~9.26",
+    "subjectId": "kor",
+    "kind": "event",
+    "unit": "◈독서축제",
+    "topic": "《 독서축제 》",
+    "n": 2,
+    "total": 4,
+    "eventName": "독서축제",
+    "tags": [],
+    "rawNote": "◈독서축제"
+   },
+   {
+    "week": 4,
+    "period": "9.21~9.26",
+    "subjectId": "kor",
+    "kind": "event",
+    "unit": "◈독서축제",
+    "topic": "《 독서축제 》",
+    "n": 3,
+    "total": 4,
+    "eventName": "독서축제",
+    "tags": [],
+    "rawNote": "◈독서축제"
+   },
+   {
+    "week": 4,
+    "period": "9.21~9.26",
+    "subjectId": "kor",
+    "kind": "event",
+    "unit": "◈독서축제",
+    "topic": "《 독서축제 》",
+    "n": 4,
+    "total": 4,
+    "eventName": "독서축제",
+    "tags": [],
+    "rawNote": "◈독서축제"
+   },
+   {
+    "week": 4,
+    "period": "9.21~9.26",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -16-",
+    "n": 16,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 4,
+    "period": "9.21~9.26",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -17-",
+    "n": 17,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 5,
+    "period": "9.28~10.3",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -18-",
+    "n": 18,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 5,
+    "period": "9.28~10.3",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -19-",
+    "n": 19,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 5,
+    "period": "9.28~10.3",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -20-",
+    "n": 20,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 5,
+    "period": "9.28~10.3",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -21-",
+    "n": 21,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 6,
+    "period": "10.5~10.10",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -22-",
+    "n": 22,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 6,
+    "period": "10.5~10.10",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -23-",
+    "n": 23,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -24-",
+    "n": 24,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -25-",
+    "n": 25,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -26-",
+    "n": 26,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -27-",
+    "n": 27,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -28-",
+    "n": 28,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -29-",
+    "n": 29,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -30-",
+    "n": 30,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -31-",
+    "n": 31,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -32-",
+    "n": 32,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -33-",
+    "n": 33,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -34-",
+    "n": 34,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -35-",
+    "n": 35,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -36-",
+    "n": 36,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -37-",
+    "n": 37,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -38-",
+    "n": 38,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -39-",
+    "n": 39,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -40-",
+    "n": 40,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -41-",
+    "n": 41,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -42-",
+    "n": 42,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -43-",
+    "n": 43,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -44-",
+    "n": 44,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -45-",
+    "n": 45,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -46-",
+    "n": 46,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -47-",
+    "n": 47,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -48-",
+    "n": 48,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -49-",
+    "n": 49,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -50-",
+    "n": 50,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -51-",
+    "n": 51,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -52-",
+    "n": 52,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -53-",
+    "n": 53,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -54-",
+    "n": 54,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -55-",
+    "n": 55,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -56-",
+    "n": 56,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -57-",
+    "n": 57,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -58-",
+    "n": 58,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -59-",
+    "n": 59,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -60-",
+    "n": 60,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -61-",
+    "n": 61,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -62-",
+    "n": 62,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -63-",
+    "n": 63,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -64-",
+    "n": 64,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -65-",
+    "n": 65,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -66-",
+    "n": 66,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -67-",
+    "n": 67,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -68-",
+    "n": 68,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -69-",
+    "n": 69,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -70-",
+    "n": 70,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -71-",
+    "n": 71,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 17,
+    "period": "12.21~12.26",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -72-",
+    "n": 72,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 17,
+    "period": "12.21~12.26",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -73-",
+    "n": 73,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 17,
+    "period": "12.21~12.26",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -74-",
+    "n": 74,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 17,
+    "period": "12.21~12.26",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -75-",
+    "n": 75,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 17,
+    "period": "12.21~12.26",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -76-",
+    "n": 76,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 18,
+    "period": "12.28~1.2",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -77-",
+    "n": 77,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 18,
+    "period": "12.28~1.2",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -78-",
+    "n": 78,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 18,
+    "period": "12.28~1.2",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -79-",
+    "n": 79,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 18,
+    "period": "12.28~1.2",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -80-",
+    "n": 80,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -81-",
+    "n": 81,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -82-",
+    "n": 82,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -83-",
+    "n": 83,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -84-",
+    "n": 84,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -85-",
+    "n": 85,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -86-",
+    "n": 86,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -87-",
+    "n": 87,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -88-",
+    "n": 88,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -89-",
+    "n": 89,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -90-",
+    "n": 90,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -91-",
+    "n": 91,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -92-",
+    "n": 92,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -93-",
+    "n": 93,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -94-",
+    "n": 94,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -95-",
+    "n": 95,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -96-",
+    "n": 96,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -97-",
+    "n": 97,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -98-",
+    "n": 98,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 24,
+    "period": "2.8~2.13",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -99-",
+    "n": 99,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 24,
+    "period": "2.8~2.13",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -100-",
+    "n": 100,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 24,
+    "period": "2.8~2.13",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -101-",
+    "n": 101,
+    "total": 103,
+    "mark": {
+     "type": "increase"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(증배)"
+   },
+   {
+    "week": 24,
+    "period": "2.8~2.13",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -102-",
+    "n": 102,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 24,
+    "period": "2.8~2.13",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "=====",
+    "topic": "7월~8월경 업데이트될 예정입니다. -103-",
+    "n": 103,
+    "total": 103,
+    "tags": []
+   },
+   {
+    "week": 24,
+    "period": "2.8~2.13",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "학기말 총정리",
+    "topic": "한 학기 동안 배운 내용 총정리하기 -1-",
+    "n": 1,
+    "total": 2,
+    "tags": []
+   },
+   {
+    "week": 24,
+    "period": "2.8~2.13",
+    "subjectId": "kor",
+    "kind": "lesson",
+    "unit": "학기말 총정리",
+    "topic": "한 학기 동안 배운 내용 총정리하기 -2-",
+    "n": 2,
+    "total": 2,
+    "tags": []
+   }
+  ]
+ },
+ {
+  "subjectId": "soc",
+  "semester": 2,
+  "footer": {
+   "total": 47,
+   "annual": 96
+  },
+  "rows": [
+   {
+    "week": 1,
+    "period": "9.1~9.5",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "1. 세계의 자연환경",
+    "topic": "단원 도입",
+    "n": 1,
+    "total": 14,
+    "pages": "6~9",
+    "tags": []
+   },
+   {
+    "week": 1,
+    "period": "9.1~9.5",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "1. 세계의 자연환경",
+    "topic": "세계의 다양한 지형을 알아볼까요",
+    "n": 2,
+    "total": 14,
+    "pages": "10~11",
+    "tags": []
+   },
+   {
+    "week": 1,
+    "period": "9.1~9.5",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "1. 세계의 자연환경",
+    "topic": "세계의 다양한 산지 지역과 사람들의 생활 모습을 살펴볼까요",
+    "n": 3,
+    "total": 14,
+    "pages": "12~15",
+    "tags": []
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "1. 세계의 자연환경",
+    "topic": "세계의 다양한 하천 지역과 사람들의 생활 모습을 살펴볼까요",
+    "n": 4,
+    "total": 14,
+    "pages": "16~19",
+    "tags": []
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "1. 세계의 자연환경",
+    "topic": "세계의 다양한 해안 지역과 사람들의 생활 모습을 살펴볼까요",
+    "n": 5,
+    "total": 14,
+    "pages": "20~23",
+    "tags": []
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "1. 세계의 자연환경",
+    "topic": "세계의 지형 관광지를 여행해 볼까요",
+    "n": 6,
+    "total": 14,
+    "pages": "24~29",
+    "mark": {
+     "type": "reduce"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(감축)"
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "1. 세계의 자연환경",
+    "topic": "세계의 다양한 기후를 알아볼까요 -1-",
+    "n": 7,
+    "total": 14,
+    "pages": "30~35",
+    "tags": []
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "1. 세계의 자연환경",
+    "topic": "세계의 다양한 기후를 알아볼까요 -2-",
+    "n": 8,
+    "total": 14,
+    "pages": "30~35",
+    "tags": []
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "1. 세계의 자연환경",
+    "topic": "열대 기후와 건조 기후 지역 사람들의 생활 모습을 살펴볼까요",
+    "n": 9,
+    "total": 14,
+    "pages": "36~39",
+    "tags": []
+   },
+   {
+    "week": 4,
+    "period": "9.21~9.26",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "1. 세계의 자연환경",
+    "topic": "온대 기후와 냉대 기후 지역 사람들의 생활 모습을 살펴볼까요",
+    "n": 10,
+    "total": 14,
+    "pages": "40~43",
+    "tags": []
+   },
+   {
+    "week": 4,
+    "period": "9.21~9.26",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "1. 세계의 자연환경",
+    "topic": "한대 기후와 고산 기후 지역 사람들의 생활 모습을 살펴볼까요",
+    "n": 11,
+    "total": 14,
+    "pages": "44~46",
+    "tags": []
+   },
+   {
+    "week": 5,
+    "period": "9.28~10.3",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "1. 세계의 자연환경",
+    "topic": "기후는 인간 생활과 어떤 관계가 있을까요 -1-",
+    "n": 12,
+    "total": 14,
+    "pages": "47~49",
+    "tags": []
+   },
+   {
+    "week": 5,
+    "period": "9.28~10.3",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "1. 세계의 자연환경",
+    "topic": "기후는 인간 생활과 어떤 관계가 있을까요 -2-",
+    "n": 13,
+    "total": 14,
+    "pages": "47~49",
+    "tags": []
+   },
+   {
+    "week": 5,
+    "period": "9.28~10.3",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "1. 세계의 자연환경",
+    "topic": "단원의 학습 내용 정리하기",
+    "n": 14,
+    "total": 14,
+    "pages": "50~53",
+    "tags": []
+   },
+   {
+    "week": 6,
+    "period": "10.5~10.10",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "2. 시장경제와 국가 간 거래",
+    "topic": "단원 도입",
+    "n": 1,
+    "total": 17,
+    "pages": "54~57",
+    "tags": []
+   },
+   {
+    "week": 6,
+    "period": "10.5~10.10",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "2. 시장경제와 국가 간 거래",
+    "topic": "시장경제의 특징은 무엇일까요",
+    "n": 2,
+    "total": 17,
+    "pages": "58~60",
+    "tags": []
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "2. 시장경제와 국가 간 거래",
+    "topic": "가계와 기업의 역할은 무엇일까요 -1-",
+    "n": 3,
+    "total": 17,
+    "pages": "61~65",
+    "tags": []
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "2. 시장경제와 국가 간 거래",
+    "topic": "가계와 기업의 역할은 무엇일까요 -2-",
+    "n": 4,
+    "total": 17,
+    "pages": "61~65",
+    "tags": []
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "2. 시장경제와 국가 간 거래",
+    "topic": "근로자의 권리를 알아볼까요",
+    "n": 5,
+    "total": 17,
+    "pages": "66~68",
+    "tags": []
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "2. 시장경제와 국가 간 거래",
+    "topic": "기업에는 어떤 자유와 사회적 책임이 있을까요",
+    "n": 6,
+    "total": 17,
+    "pages": "69~73",
+    "tags": []
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "2. 시장경제와 국가 간 거래",
+    "topic": "경제 성장으로 우리 생활은 어떻게 달라졌을까요 -1-",
+    "n": 7,
+    "total": 17,
+    "pages": "74~80",
+    "tags": []
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "2. 시장경제와 국가 간 거래",
+    "topic": "경제 성장으로 우리 생활은 어떻게 달라졌을까요 -2-",
+    "n": 8,
+    "total": 17,
+    "pages": "74~80",
+    "tags": []
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "2. 시장경제와 국가 간 거래",
+    "topic": "빠른 경제 성장으로 발생한 문제와 해결하려는 노력을 알아볼까요 -1-",
+    "n": 9,
+    "total": 17,
+    "pages": "81~86",
+    "tags": []
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "2. 시장경제와 국가 간 거래",
+    "topic": "빠른 경제 성장으로 발생한 문제와 해결하려는 노력을 알아볼까요 -2-",
+    "n": 10,
+    "total": 17,
+    "pages": "81~86",
+    "tags": []
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "2. 시장경제와 국가 간 거래",
+    "topic": "빠른 경제 성장으로 발생한 문제의 해결 방안을 찾아볼까요",
+    "n": 11,
+    "total": 17,
+    "pages": "87~91",
+    "tags": []
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "2. 시장경제와 국가 간 거래",
+    "topic": "무역이란 무엇일까요",
+    "n": 12,
+    "total": 17,
+    "pages": "92~95",
+    "tags": [
+     "교통안전"
+    ],
+    "rawNote": "【교통안전】"
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "2. 시장경제와 국가 간 거래",
+    "topic": "나라와 나라 사이에 무역이 발생하는 이유를 알아볼까요",
+    "n": 13,
+    "total": 17,
+    "pages": "96~98",
+    "tags": []
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "2. 시장경제와 국가 간 거래",
+    "topic": "세계 여러 나라의 무역 모습을 살펴볼까요",
+    "n": 14,
+    "total": 17,
+    "pages": "99~101",
+    "tags": []
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "2. 시장경제와 국가 간 거래",
+    "topic": "세계 여러 나라는 무역을 하며 어떤 관계를 맺을까요 -1-",
+    "n": 15,
+    "total": 17,
+    "pages": "102~107",
+    "tags": []
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "2. 시장경제와 국가 간 거래",
+    "topic": "세계 여러 나라는 무역을 하며 어떤 관계를 맺을까요 -2-",
+    "n": 16,
+    "total": 17,
+    "pages": "102~107",
+    "tags": []
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "2. 시장경제와 국가 간 거래",
+    "topic": "단원의 학습 내용 정리하기",
+    "n": 17,
+    "total": 17,
+    "pages": "108~111",
+    "tags": []
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "3. 지구촌 사람들",
+    "topic": "단원 도입",
+    "n": 1,
+    "total": 13,
+    "pages": "112~115",
+    "tags": []
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "3. 지구촌 사람들",
+    "topic": "전 세계 사람들은 어디에 모여 살고 있을까요",
+    "n": 2,
+    "total": 13,
+    "pages": "116~119",
+    "tags": []
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "3. 지구촌 사람들",
+    "topic": "세계의 인구는 어떻게 성장해 왔고, 어떻게 변화할까요",
+    "n": 3,
+    "total": 13,
+    "pages": "120~123",
+    "tags": [
+     "양성평등교육",
+     "성교육"
+    ],
+    "rawNote": "【양성평등교육, 성교육】"
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "3. 지구촌 사람들",
+    "topic": "세계의 인구 구조를 알아볼까요",
+    "n": 4,
+    "total": 13,
+    "pages": "124~126",
+    "tags": [
+     "양성평등교육",
+     "성교육"
+    ],
+    "rawNote": "【양성평등교육, 성교육】"
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "3. 지구촌 사람들",
+    "topic": "세계 여러 나라의 인구 특징을 조사해 볼까요 -1-",
+    "n": 5,
+    "total": 13,
+    "pages": "127~129",
+    "tags": [
+     "양성평등교육",
+     "성교육"
+    ],
+    "rawNote": "【양성평등교육, 성교육】"
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "3. 지구촌 사람들",
+    "topic": "세계 여러 나라의 인구 특징을 조사해 볼까요 -2-",
+    "n": 6,
+    "total": 13,
+    "pages": "127~129",
+    "tags": [
+     "양성평등교육",
+     "성교육"
+    ],
+    "rawNote": "【양성평등교육, 성교육】"
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "3. 지구촌 사람들",
+    "topic": "지구촌의 평화와 발전을 위협하는 문제를 알아볼까요 -1-",
+    "n": 7,
+    "total": 13,
+    "pages": "130~135",
+    "tags": [
+     "독도교육"
+    ],
+    "rawNote": "【독도교육】"
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "3. 지구촌 사람들",
+    "topic": "지구촌의 평화와 발전을 위협하는 문제를 알아볼까요 -2-",
+    "n": 8,
+    "total": 13,
+    "pages": "130~135",
+    "tags": [
+     "독도교육"
+    ],
+    "rawNote": "【독도교육】"
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "3. 지구촌 사람들",
+    "topic": "지구촌 문제를 해결하기 위한 다양한 노력을 살펴볼까요 -1-",
+    "n": 9,
+    "total": 13,
+    "pages": "136~141",
+    "tags": []
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "3. 지구촌 사람들",
+    "topic": "지구촌 문제를 해결하기 위한 다양한 노력을 살펴볼까요 -2-",
+    "n": 10,
+    "total": 13,
+    "pages": "136~141",
+    "tags": []
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "3. 지구촌 사람들",
+    "topic": "지속가능한 미래를 위한 방안에는 무엇이 있을까요",
+    "n": 11,
+    "total": 13,
+    "pages": "142~144",
+    "tags": []
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "3. 지구촌 사람들",
+    "topic": "세계시민으로서 우리가 할 수 있는 일을 실천해 볼까요",
+    "n": 12,
+    "total": 13,
+    "pages": "145~147",
+    "program": "어울림프로그램(학교폭력예방)",
+    "tags": [
+     "폭력예방 및 신변보호-학교폭력",
+     "아동학대및가정폭력예방교육"
+    ],
+    "rawNote": "어울림프로그램(학교폭력예방)【폭력예방 및 신변보호-학교폭력, 아동학대및가정폭력예방교육】"
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "3. 지구촌 사람들",
+    "topic": "단원의 학습 내용 정리하기",
+    "n": 13,
+    "total": 13,
+    "pages": "148~151",
+    "tags": []
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "범교과주제(안전교육)",
+    "topic": "전자담배 포함 마약류 등 유해약물 오남용 예방교육 -1-",
+    "n": 1,
+    "total": 3,
+    "tags": [
+     "약물 및 사이버 중독 예방-약물중독"
+    ],
+    "rawNote": "【약물 및 사이버 중독 예방-약물중독】"
+   },
+   {
+    "week": 17,
+    "period": "12.21~12.26",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "범교과주제(안전교육)",
+    "topic": "전자담배 포함 마약류 등 유해약물 오남용 예방교육 -2-",
+    "n": 2,
+    "total": 3,
+    "tags": [
+     "약물 및 사이버 중독 예방-약물중독"
+    ],
+    "rawNote": "【약물 및 사이버 중독 예방-약물중독】"
+   },
+   {
+    "week": 18,
+    "period": "12.28~1.2",
+    "subjectId": "soc",
+    "kind": "lesson",
+    "unit": "범교과주제(안전교육)",
+    "topic": "전자담배 포함 마약류 등 유해약물 오남용 예방교육 -3-",
+    "n": 3,
+    "total": 3,
+    "tags": [
+     "약물 및 사이버 중독 예방-약물중독"
+    ],
+    "rawNote": "【약물 및 사이버 중독 예방-약물중독】"
+   }
+  ]
+ },
+ {
+  "subjectId": "mor",
+  "semester": 2,
+  "footer": {
+   "total": 16,
+   "annual": 32
+  },
+  "rows": [
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "mor",
+    "kind": "lesson",
+    "unit": "5. 통일 한반도의 어느 날",
+    "topic": "타임머신을 타고 통일 한반도로",
+    "n": 1,
+    "total": 4,
+    "pages": "70~73",
+    "tags": [
+     "통일교육"
+    ],
+    "rawNote": "【통일교육】"
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "mor",
+    "kind": "lesson",
+    "unit": "5. 통일 한반도의 어느 날",
+    "topic": "통일 한반도에서 생긴 일",
+    "n": 2,
+    "total": 4,
+    "pages": "74~77",
+    "tags": [
+     "통일교육"
+    ],
+    "rawNote": "【통일교육】"
+   },
+   {
+    "week": 5,
+    "period": "9.28~10.3",
+    "subjectId": "mor",
+    "kind": "lesson",
+    "unit": "5. 통일 한반도의 어느 날",
+    "topic": "우리가 그리는 통일 한반도의 미래",
+    "n": 3,
+    "total": 4,
+    "pages": "78~81",
+    "tags": [
+     "통일교육"
+    ],
+    "rawNote": "【통일교육】"
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "mor",
+    "kind": "lesson",
+    "unit": "5. 통일 한반도의 어느 날",
+    "topic": "통일을 꿈꾸는 따뜻한 마음",
+    "n": 4,
+    "total": 4,
+    "pages": "82~85",
+    "tags": [
+     "통일교육"
+    ],
+    "rawNote": "【통일교육】"
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "mor",
+    "kind": "lesson",
+    "unit": "6. 사랑, 우리를 넘어 세계로",
+    "topic": "우리는 함께 살아가고 있어요",
+    "n": 1,
+    "total": 4,
+    "pages": "86~91",
+    "tags": [
+     "독도교육"
+    ],
+    "rawNote": "【독도교육】"
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "mor",
+    "kind": "lesson",
+    "unit": "6. 사랑, 우리를 넘어 세계로",
+    "topic": "다른 나라 문제에 관심을 가져요",
+    "n": 2,
+    "total": 4,
+    "pages": "92~93",
+    "tags": [
+     "독도교육"
+    ],
+    "rawNote": "【독도교육】"
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "mor",
+    "kind": "lesson",
+    "unit": "6. 사랑, 우리를 넘어 세계로",
+    "topic": "다른 나라 어린이들을 위해 무엇을 할 수 있을까?",
+    "n": 3,
+    "total": 4,
+    "pages": "94~97",
+    "tags": []
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "mor",
+    "kind": "lesson",
+    "unit": "6. 사랑, 우리를 넘어 세계로",
+    "topic": "인류애를 향한 한 걸음",
+    "n": 4,
+    "total": 4,
+    "pages": "98~101",
+    "tags": []
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "mor",
+    "kind": "lesson",
+    "unit": "7. 우리 모두의 미래를 위한 선택",
+    "topic": "지속가능한 삶이란 무엇일까?",
+    "n": 1,
+    "total": 4,
+    "pages": "102~105",
+    "tags": []
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "mor",
+    "kind": "lesson",
+    "unit": "7. 우리 모두의 미래를 위한 선택",
+    "topic": "미래 세대에 대한 책임이 나에게 있을까?",
+    "n": 2,
+    "total": 4,
+    "pages": "106~109",
+    "tags": []
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "mor",
+    "kind": "lesson",
+    "unit": "7. 우리 모두의 미래를 위한 선택",
+    "topic": "미래 세대 지킴이로서 내가 할 수 있는 일은 무엇일까?",
+    "n": 3,
+    "total": 4,
+    "pages": "110~113",
+    "tags": []
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "mor",
+    "kind": "lesson",
+    "unit": "7. 우리 모두의 미래를 위한 선택",
+    "topic": "지속가능한 삶을 위해서 어떤 자세를 지녀야 할까?",
+    "n": 4,
+    "total": 4,
+    "pages": "114~117",
+    "tags": []
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "mor",
+    "kind": "lesson",
+    "unit": "8. 우리가 꿈꾸는 세상을 위하여",
+    "topic": "평화 전시회를 열어 봐요",
+    "n": 1,
+    "total": 4,
+    "pages": "118~123",
+    "tags": []
+   },
+   {
+    "week": 17,
+    "period": "12.21~12.26",
+    "subjectId": "mor",
+    "kind": "lesson",
+    "unit": "8. 우리가 꿈꾸는 세상을 위하여",
+    "topic": "평화 전시회 작품 제작을 준비해요",
+    "n": 2,
+    "total": 4,
+    "pages": "124~127",
+    "tags": []
+   },
+   {
+    "week": 18,
+    "period": "12.28~1.2",
+    "subjectId": "mor",
+    "kind": "lesson",
+    "unit": "8. 우리가 꿈꾸는 세상을 위하여",
+    "topic": "평화 전시회 작품을 만들어요",
+    "n": 3,
+    "total": 4,
+    "pages": "128~129",
+    "tags": []
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "mor",
+    "kind": "lesson",
+    "unit": "8. 우리가 꿈꾸는 세상을 위하여",
+    "topic": "작품을 감상하고 소감을 나누어요",
+    "n": 4,
+    "total": 4,
+    "pages": "130~133",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "subjectId": "math",
+  "semester": 2,
+  "footer": {
+   "total": 67,
+   "annual": 140
+  },
+  "rows": [
+   {
+    "week": 1,
+    "period": "9.1~9.5",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "1. 분수의 나눗셈",
+    "topic": "단원 도입",
+    "n": 1,
+    "total": 11,
+    "pages": "7~9",
+    "tags": []
+   },
+   {
+    "week": 1,
+    "period": "9.1~9.5",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "1. 분수의 나눗셈",
+    "topic": "(분수)÷(분수)를 계산해요(1)",
+    "n": 2,
+    "total": 11,
+    "pages": "10~11",
+    "tags": []
+   },
+   {
+    "week": 1,
+    "period": "9.1~9.5",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "1. 분수의 나눗셈",
+    "topic": "(분수)÷(분수)를 계산해요(2)",
+    "n": 3,
+    "total": 11,
+    "pages": "12~13",
+    "tags": []
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "1. 분수의 나눗셈",
+    "topic": "(분수)÷(분수)를 계산해요(3)",
+    "n": 4,
+    "total": 11,
+    "pages": "14~15",
+    "tags": []
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "1. 분수의 나눗셈",
+    "topic": "(자연수)÷(분수)를 계산해요(1)",
+    "n": 5,
+    "total": 11,
+    "pages": "16~17",
+    "tags": []
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "1. 분수의 나눗셈",
+    "topic": "(자연수)÷(분수)를 계산해요(2)",
+    "n": 6,
+    "total": 11,
+    "pages": "18~19",
+    "tags": []
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "1. 분수의 나눗셈",
+    "topic": "(분수)÷(분수)를 분수의 곱셈으로 나타내어 계산해요",
+    "n": 7,
+    "total": 11,
+    "pages": "20~21",
+    "tags": []
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "1. 분수의 나눗셈",
+    "topic": "대분수의 나눗셈을 해요",
+    "n": 8,
+    "total": 11,
+    "pages": "22~23",
+    "tags": []
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "1. 분수의 나눗셈",
+    "topic": "알쏭달쏭 가로세로 나눗셈",
+    "n": 9,
+    "total": 11,
+    "pages": "24~25",
+    "tags": []
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "1. 분수의 나눗셈",
+    "topic": "조각조각 타일로 학교 꾸미기",
+    "n": 10,
+    "total": 11,
+    "pages": "26~27",
+    "tags": []
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "1. 분수의 나눗셈",
+    "topic": "문제로 마무리",
+    "n": 11,
+    "total": 11,
+    "pages": "28~30",
+    "tags": []
+   },
+   {
+    "week": 4,
+    "period": "9.21~9.26",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "2. 공간과 입체",
+    "topic": "단원 도입",
+    "n": 1,
+    "total": 12,
+    "pages": "31~33",
+    "tags": []
+   },
+   {
+    "week": 5,
+    "period": "9.28~10.3",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "2. 공간과 입체",
+    "topic": "여러 방향에서 보고 모양을 알아봐요",
+    "n": 2,
+    "total": 12,
+    "pages": "34~35",
+    "tags": []
+   },
+   {
+    "week": 5,
+    "period": "9.28~10.3",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "2. 공간과 입체",
+    "topic": "여러 방향에서 본 모양을 그려요",
+    "n": 3,
+    "total": 12,
+    "pages": "36~37",
+    "tags": []
+   },
+   {
+    "week": 5,
+    "period": "9.28~10.3",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "2. 공간과 입체",
+    "topic": "쌓기나무 개수를 구해요(1)",
+    "n": 4,
+    "total": 12,
+    "pages": "38~39",
+    "tags": []
+   },
+   {
+    "week": 6,
+    "period": "10.5~10.10",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "2. 공간과 입체",
+    "topic": "쌓기나무 개수를 구해요(2) -1-",
+    "n": 5,
+    "total": 12,
+    "pages": "40~42",
+    "tags": []
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "2. 공간과 입체",
+    "topic": "쌓기나무 개수를 구해요(2) -2-",
+    "n": 6,
+    "total": 12,
+    "pages": "40~42",
+    "tags": []
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "2. 공간과 입체",
+    "topic": "쌓은 모양을 알아봐요 -1-",
+    "n": 7,
+    "total": 12,
+    "pages": "43~45",
+    "tags": []
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "2. 공간과 입체",
+    "topic": "쌓은 모양을 알아봐요 -2-",
+    "n": 8,
+    "total": 12,
+    "pages": "43~45",
+    "tags": []
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "2. 공간과 입체",
+    "topic": "여러 가지 모양을 만들어요",
+    "n": 9,
+    "total": 12,
+    "pages": "46~47",
+    "tags": []
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "2. 공간과 입체",
+    "topic": "차곡차곡 건물 만들기",
+    "n": 10,
+    "total": 12,
+    "pages": "48~49",
+    "tags": []
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "2. 공간과 입체",
+    "topic": "아리송아리송 쌓기나무 쌓기",
+    "n": 11,
+    "total": 12,
+    "pages": "50~51",
+    "tags": []
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "2. 공간과 입체",
+    "topic": "문제로 마무리",
+    "n": 12,
+    "total": 12,
+    "pages": "52~54",
+    "tags": []
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "3. 소수의 나눗셈",
+    "topic": "단원 도입",
+    "n": 1,
+    "total": 10,
+    "pages": "55~57",
+    "tags": []
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "3. 소수의 나눗셈",
+    "topic": "(소수)÷(소수)를 알아봐요(1) -1-",
+    "n": 2,
+    "total": 10,
+    "pages": "58~60",
+    "tags": []
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "3. 소수의 나눗셈",
+    "topic": "(소수)÷(소수)를 알아봐요(1) -2-",
+    "n": 3,
+    "total": 10,
+    "pages": "58~60",
+    "tags": []
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "3. 소수의 나눗셈",
+    "topic": "(소수)÷(소수)를 알아봐요(2)",
+    "n": 4,
+    "total": 10,
+    "pages": "61~63",
+    "tags": []
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "3. 소수의 나눗셈",
+    "topic": "(소수)÷(소수)를 알아봐요(3)",
+    "n": 5,
+    "total": 10,
+    "pages": "64~65",
+    "tags": []
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "3. 소수의 나눗셈",
+    "topic": "(자연수)÷(소수)를 알아봐요",
+    "n": 6,
+    "total": 10,
+    "pages": "66~67",
+    "tags": []
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "3. 소수의 나눗셈",
+    "topic": "몫을 반올림하여 나타내요",
+    "n": 7,
+    "total": 10,
+    "pages": "68~69",
+    "tags": []
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "3. 소수의 나눗셈",
+    "topic": "바삭바삭 과자 집 찾아가기",
+    "n": 8,
+    "total": 10,
+    "pages": "70~71",
+    "tags": []
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "3. 소수의 나눗셈",
+    "topic": "쪼르륵! 남는 주스의 양",
+    "n": 9,
+    "total": 10,
+    "pages": "72~73",
+    "tags": []
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "3. 소수의 나눗셈",
+    "topic": "문제로 마무리",
+    "n": 10,
+    "total": 10,
+    "pages": "74~76",
+    "tags": []
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "4. 비례식과 비례배분",
+    "topic": "단원 도입",
+    "n": 1,
+    "total": 10,
+    "pages": "77~79",
+    "tags": []
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "4. 비례식과 비례배분",
+    "topic": "비의 성질을 알아봐요",
+    "n": 2,
+    "total": 10,
+    "pages": "80~81",
+    "tags": []
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "4. 비례식과 비례배분",
+    "topic": "비의 성질을 이용해요",
+    "n": 3,
+    "total": 10,
+    "pages": "82~83",
+    "tags": []
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "4. 비례식과 비례배분",
+    "topic": "비례식을 알아봐요",
+    "n": 4,
+    "total": 10,
+    "pages": "84~85",
+    "tags": []
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "4. 비례식과 비례배분",
+    "topic": "비례식의 성질을 알아봐요",
+    "n": 5,
+    "total": 10,
+    "pages": "86~87",
+    "tags": []
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "4. 비례식과 비례배분",
+    "topic": "비례식을 활용해요",
+    "n": 6,
+    "total": 10,
+    "pages": "88~89",
+    "tags": []
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "4. 비례식과 비례배분",
+    "topic": "비례배분을 해요",
+    "n": 7,
+    "total": 10,
+    "pages": "90~91",
+    "tags": []
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "4. 비례식과 비례배분",
+    "topic": "영차영차 길 만들기",
+    "n": 8,
+    "total": 10,
+    "pages": "92~93",
+    "tags": []
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "4. 비례식과 비례배분",
+    "topic": "알쏭달쏭 수익 나누기",
+    "n": 9,
+    "total": 10,
+    "pages": "94~95",
+    "tags": []
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "4. 비례식과 비례배분",
+    "topic": "문제로 마무리",
+    "n": 10,
+    "total": 10,
+    "pages": "96~98",
+    "tags": []
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "5. 원의 둘레와 넓이",
+    "topic": "단원 도입",
+    "n": 1,
+    "total": 10,
+    "pages": "99~101",
+    "tags": []
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "5. 원의 둘레와 넓이",
+    "topic": "원주와 원주율을 알아봐요 -1-",
+    "n": 2,
+    "total": 10,
+    "pages": "102~105",
+    "tags": []
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "5. 원의 둘레와 넓이",
+    "topic": "원주와 원주율을 알아봐요 -2-",
+    "n": 3,
+    "total": 10,
+    "pages": "102~105",
+    "tags": []
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "5. 원의 둘레와 넓이",
+    "topic": "원주와 지름을 구해요",
+    "n": 4,
+    "total": 10,
+    "pages": "106~107",
+    "tags": []
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "5. 원의 둘레와 넓이",
+    "topic": "원의 넓이를 어림해요",
+    "n": 5,
+    "total": 10,
+    "pages": "108~109",
+    "tags": []
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "5. 원의 둘레와 넓이",
+    "topic": "원의 넓이를 구해요",
+    "n": 6,
+    "total": 10,
+    "pages": "110~111",
+    "tags": []
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "5. 원의 둘레와 넓이",
+    "topic": "원의 넓이를 활용해요",
+    "n": 7,
+    "total": 10,
+    "pages": "112~113",
+    "tags": []
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "5. 원의 둘레와 넓이",
+    "topic": "딸깍딸깍 원주율 비교하기",
+    "n": 8,
+    "total": 10,
+    "pages": "114~115",
+    "tags": []
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "5. 원의 둘레와 넓이",
+    "topic": "토닥토닥 동물 보호소 자원봉사",
+    "n": 9,
+    "total": 10,
+    "pages": "116~117",
+    "tags": []
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "5. 원의 둘레와 넓이",
+    "topic": "문제로 마무리",
+    "n": 10,
+    "total": 10,
+    "pages": "118~120",
+    "tags": []
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "6. 원기둥, 원뿔, 구",
+    "topic": "단원 도입",
+    "n": 1,
+    "total": 11,
+    "pages": "121~123",
+    "tags": []
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "6. 원기둥, 원뿔, 구",
+    "topic": "원기둥을 알아봐요 -1-",
+    "n": 2,
+    "total": 11,
+    "pages": "124~126",
+    "tags": []
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "6. 원기둥, 원뿔, 구",
+    "topic": "원기둥을 알아봐요 -2-",
+    "n": 3,
+    "total": 11,
+    "pages": "124~126",
+    "tags": []
+   },
+   {
+    "week": 17,
+    "period": "12.21~12.26",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "6. 원기둥, 원뿔, 구",
+    "topic": "원기둥의 전개도를 알아봐요 -1-",
+    "n": 4,
+    "total": 11,
+    "pages": "127~130",
+    "tags": []
+   },
+   {
+    "week": 17,
+    "period": "12.21~12.26",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "6. 원기둥, 원뿔, 구",
+    "topic": "원기둥의 전개도를 알아봐요 -2-",
+    "n": 5,
+    "total": 11,
+    "pages": "127~130",
+    "tags": []
+   },
+   {
+    "week": 17,
+    "period": "12.21~12.26",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "6. 원기둥, 원뿔, 구",
+    "topic": "원뿔을 알아봐요 -1-",
+    "n": 6,
+    "total": 11,
+    "pages": "131~133",
+    "tags": []
+   },
+   {
+    "week": 18,
+    "period": "12.28~1.2",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "6. 원기둥, 원뿔, 구",
+    "topic": "원뿔을 알아봐요 -2-",
+    "n": 7,
+    "total": 11,
+    "pages": "131~133",
+    "tags": []
+   },
+   {
+    "week": 18,
+    "period": "12.28~1.2",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "6. 원기둥, 원뿔, 구",
+    "topic": "구를 알아봐요",
+    "n": 8,
+    "total": 11,
+    "pages": "134~135",
+    "tags": []
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "6. 원기둥, 원뿔, 구",
+    "topic": "씽씽 나만의 운송 수단",
+    "n": 9,
+    "total": 11,
+    "pages": "136~137",
+    "tags": []
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "6. 원기둥, 원뿔, 구",
+    "topic": "찰칵! 앞에서 본 원뿔과 원기둥",
+    "n": 10,
+    "total": 11,
+    "pages": "138~139",
+    "tags": []
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "6. 원기둥, 원뿔, 구",
+    "topic": "문제로 마무리",
+    "n": 11,
+    "total": 11,
+    "pages": "140~142",
+    "tags": []
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "학기말 총정리",
+    "topic": "한 학기 동안 배운 내용 총정리하기 -1-",
+    "n": 1,
+    "total": 3,
+    "tags": []
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "학기말 총정리",
+    "topic": "한 학기 동안 배운 내용 총정리하기 -2-",
+    "n": 2,
+    "total": 3,
+    "tags": []
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "math",
+    "kind": "lesson",
+    "unit": "학기말 총정리",
+    "topic": "한 학기 동안 배운 내용 총정리하기 -3-",
+    "n": 3,
+    "total": 3,
+    "tags": []
+   }
+  ]
+ },
+ {
+  "subjectId": "sci",
+  "semester": 2,
+  "footer": {
+   "total": 48,
+   "annual": 98
+  },
+  "rows": [
+   {
+    "week": 1,
+    "period": "9.1~9.5",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "1. 계절의 변화",
+    "topic": "단원 도입",
+    "n": 1,
+    "total": 8,
+    "pages": "12~15",
+    "tags": []
+   },
+   {
+    "week": 1,
+    "period": "9.1~9.5",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "1. 계절의 변화",
+    "topic": "태양 고도는 어떻게 측정할까요",
+    "n": 2,
+    "total": 8,
+    "pages": "16~17",
+    "mark": {
+     "type": "reduce"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(감축)"
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "1. 계절의 변화",
+    "topic": "하루 동안 태양 고도, 그림자 길이, 기온을 알아볼까요",
+    "n": 3,
+    "total": 8,
+    "pages": "18~21",
+    "mark": {
+     "type": "reduce"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(감축)"
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "1. 계절의 변화",
+    "topic": "계절에 따른 태양의 남중 고도와 낮의 길이를 알아볼까요, 계절에 따라 지표면이 받는 태양 에너지양을 알아볼까요",
+    "n": 4,
+    "total": 8,
+    "pages": "22~25",
+    "mark": {
+     "type": "reduce"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(감축)"
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "1. 계절의 변화",
+    "topic": "계절 변화의 원인은 무엇일까요",
+    "n": 5,
+    "total": 8,
+    "pages": "26~29",
+    "mark": {
+     "type": "reduce"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(감축)"
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "1. 계절의 변화",
+    "topic": "태양 고도의 변화와 관련된 예를 알아볼까요",
+    "n": 6,
+    "total": 8,
+    "pages": "30~31",
+    "tags": []
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "1. 계절의 변화",
+    "topic": "태양 고도의 변화와 관련된 발명품을 설계해 보자",
+    "n": 7,
+    "total": 8,
+    "pages": "32~33",
+    "mark": {
+     "type": "reduce"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(감축)"
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "1. 계절의 변화",
+    "topic": "단원 마무리",
+    "n": 8,
+    "total": 8,
+    "pages": "36~37",
+    "tags": []
+   },
+   {
+    "week": 4,
+    "period": "9.21~9.26",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "여러 가지 기체",
+    "topic": "온도에 따른 기체의 부피 변화를 관찰해 볼까요",
+    "n": 1,
+    "total": 3,
+    "pages": "72~73",
+    "tags": [
+     "안전교육"
+    ],
+    "note": "결손 보완",
+    "rawNote": "결손 보완【안전교육】"
+   },
+   {
+    "week": 4,
+    "period": "9.21~9.26",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "여러 가지 기체",
+    "topic": "압력에 따른 기체의 부피 변화를 관찰해 볼까요",
+    "n": 2,
+    "total": 3,
+    "pages": "74~75",
+    "tags": [
+     "안전교육"
+    ],
+    "note": "결손 보완",
+    "rawNote": "결손 보완【안전교육】"
+   },
+   {
+    "week": 5,
+    "period": "9.28~10.3",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "여러 가지 기체",
+    "topic": "기체의 부피가 달라지는 예를 찾아볼까요",
+    "n": 3,
+    "total": 3,
+    "pages": "76~77",
+    "tags": [
+     "안전교육"
+    ],
+    "note": "결손 보완",
+    "rawNote": "결손 보완【안전교육】"
+   },
+   {
+    "week": 5,
+    "period": "9.28~10.3",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "2. 물질의 연소",
+    "topic": "단원 도입",
+    "n": 1,
+    "total": 9,
+    "pages": "38~41",
+    "tags": []
+   },
+   {
+    "week": 5,
+    "period": "9.28~10.3",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "2. 물질의 연소",
+    "topic": "서로 다른 물질을 섞었을 때 물질의 성질은 어떻게 될까요",
+    "n": 2,
+    "total": 9,
+    "pages": "42~43",
+    "mark": {
+     "type": "reduce"
+    },
+    "tags": [
+     "안전교육"
+    ],
+    "rawNote": "◆재구성(감축)【안전교육】"
+   },
+   {
+    "week": 6,
+    "period": "10.5~10.10",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "2. 물질의 연소",
+    "topic": "물질이 탈 때 어떤 현상이 나타날까요",
+    "n": 3,
+    "total": 9,
+    "pages": "44~45",
+    "tags": [
+     "안전교육"
+    ],
+    "rawNote": "【안전교육】"
+   },
+   {
+    "week": 6,
+    "period": "10.5~10.10",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "2. 물질의 연소",
+    "topic": "물질이 타려면 어떤 조건이 필요할까요 (양초)",
+    "n": 4,
+    "total": 9,
+    "pages": "46~47",
+    "mark": {
+     "type": "reduce"
+    },
+    "tags": [
+     "안전교육"
+    ],
+    "rawNote": "◆재구성(감축)【안전교육】"
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "2. 물질의 연소",
+    "topic": "물질이 타려면 어떤 조건이 필요할까요 (물질)",
+    "n": 5,
+    "total": 9,
+    "pages": "48~49",
+    "tags": [
+     "안전교육"
+    ],
+    "rawNote": "【안전교육】"
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "2. 물질의 연소",
+    "topic": "연소 과정에서 물질의 성질은 어떻게 될까요",
+    "n": 6,
+    "total": 9,
+    "pages": "50~51",
+    "mark": {
+     "type": "reduce"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(감축)"
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "2. 물질의 연소",
+    "topic": "연소 생성물은 생태계에 어떤 피해를 줄까요",
+    "n": 7,
+    "total": 9,
+    "pages": "52~53",
+    "tags": []
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "2. 물질의 연소",
+    "topic": "연소 생성물이 생태계에 주는 피해의 해결책을 제안하고 공유해 보자",
+    "n": 8,
+    "total": 9,
+    "pages": "54~55",
+    "mark": {
+     "type": "reduce"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(감축)"
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "2. 물질의 연소",
+    "topic": "단원 마무리",
+    "n": 9,
+    "total": 9,
+    "pages": "58~59",
+    "tags": []
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "3. 전기의 이용",
+    "topic": "단원 도입, 전구에 불을 켜 볼까요",
+    "n": 1,
+    "total": 8,
+    "pages": "60~65",
+    "mark": {
+     "type": "reduce"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(감축)"
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "3. 전기의 이용",
+    "topic": "전구에 불이 켜지는 전기 회로는 어떤 특징이 있을까요, 전지의 개수에 따른 전기 회로의 특징을 비교해 볼까요",
+    "n": 2,
+    "total": 8,
+    "pages": "66~71",
+    "mark": {
+     "type": "reduce"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(감축)"
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "3. 전기의 이용",
+    "topic": "전자석은 무엇일까요",
+    "n": 3,
+    "total": 8,
+    "pages": "72~73",
+    "tags": []
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "3. 전기의 이용",
+    "topic": "전자석의 성질을 알아볼까요",
+    "n": 4,
+    "total": 8,
+    "pages": "74~75",
+    "mark": {
+     "type": "reduce"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(감축)"
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "3. 전기의 이용",
+    "topic": "전자석은 어디에 사용할까요",
+    "n": 5,
+    "total": 8,
+    "pages": "76~77",
+    "tags": []
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "3. 전기의 이용",
+    "topic": "전기를 효율적이고 안전하게 사용하는 방법을 알아볼까요",
+    "n": 6,
+    "total": 8,
+    "pages": "78~79",
+    "tags": [
+     "생활안전-제품 안전"
+    ],
+    "rawNote": "【생활안전-제품 안전】"
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "3. 전기의 이용",
+    "topic": "전기를 효율적이고 안전하게 사용하는 방법을 실천해 보자",
+    "n": 7,
+    "total": 8,
+    "pages": "80~81",
+    "mark": {
+     "type": "reduce"
+    },
+    "tags": [
+     "생활안전-제품 안전"
+    ],
+    "rawNote": "◆재구성(감축)【생활안전-제품 안전】"
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "3. 전기의 이용",
+    "topic": "단원 마무리",
+    "n": 8,
+    "total": 8,
+    "pages": "84~85",
+    "tags": []
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "기후변화와 우리 생활",
+    "topic": "기후변화 현상을 알아볼까요",
+    "n": 1,
+    "total": 7,
+    "pages": "94~95",
+    "tags": [
+     "재난안전-자연재난"
+    ],
+    "note": "결손 보완",
+    "rawNote": "결손 보완【재난안전-자연재난】"
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "기후변화와 우리 생활",
+    "topic": "기후변화는 인간 활동과 어떤 관련이 있을까요",
+    "n": 2,
+    "total": 7,
+    "pages": "96~97",
+    "mark": {
+     "type": "reduce",
+     "reason": "결손 보완"
+    },
+    "tags": [
+     "재난안전-자연재난"
+    ],
+    "rawNote": "◆재구성(감축), 결손 보완【재난안전-자연재난】"
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "기후변화와 우리 생활",
+    "topic": "기후변화는 얼마나 심각한 문제일까요",
+    "n": 3,
+    "total": 7,
+    "pages": "98~99",
+    "tags": [
+     "재난안전-자연재난",
+     "미세먼지피해예방교육"
+    ],
+    "note": "결손 보완",
+    "rawNote": "결손 보완【재난안전-자연재난, 미세먼지피해예방교육】"
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "기후변화와 우리 생활",
+    "topic": "기후변화는 우리 생활과 환경에 어떤 영향을 미칠까요",
+    "n": 4,
+    "total": 7,
+    "pages": "100~101",
+    "tags": [
+     "재난안전-자연재난"
+    ],
+    "note": "결손 보완",
+    "rawNote": "결손 보완【재난안전-자연재난】"
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "기후변화와 우리 생활",
+    "topic": "기후변화로 미래의 우리 생활과 환경은 어떻게 변할까요",
+    "n": 5,
+    "total": 7,
+    "pages": "102~103",
+    "mark": {
+     "type": "reduce",
+     "reason": "결손 보완"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(감축), 결손 보완"
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "기후변화와 우리 생활",
+    "topic": "기후변화에 어떻게 대응할 수 있을까요",
+    "n": 6,
+    "total": 7,
+    "pages": "104~105",
+    "tags": [],
+    "note": "결손 보완",
+    "rawNote": "결손 보완"
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "기후변화와 우리 생활",
+    "topic": "생활 속에 기후변화 대응 방법을 실천해 보자",
+    "n": 7,
+    "total": 7,
+    "pages": "106~107",
+    "mark": {
+     "type": "reduce",
+     "reason": "결손 보완"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(감축), 결손 보완"
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "자원과 에너지",
+    "topic": "우리는 생활에서 어떤 자원을 이용할까요",
+    "n": 1,
+    "total": 7,
+    "pages": "94~95",
+    "tags": [],
+    "note": "결손 보완",
+    "rawNote": "결손 보완"
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "자원과 에너지",
+    "topic": "자원을 계속 쓰면 어떻게 될까요",
+    "n": 2,
+    "total": 7,
+    "pages": "96~97",
+    "tags": [],
+    "note": "결손 보완",
+    "rawNote": "결손 보완"
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "자원과 에너지",
+    "topic": "재생에너지에는 어떤 것이 있을까요",
+    "n": 3,
+    "total": 7,
+    "pages": "98~101",
+    "mark": {
+     "type": "reduce",
+     "reason": "결손 보완"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(감축), 결손 보완"
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "자원과 에너지",
+    "topic": "에너지를 지속가능하게 이용하려면 어떻게 해야 할까요",
+    "n": 4,
+    "total": 7,
+    "pages": "102~103",
+    "tags": [],
+    "note": "결손 보완",
+    "rawNote": "결손 보완"
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "자원과 에너지",
+    "topic": "자원과 에너지를 효율적으로 이용하려면 어떻게 해야 할까요",
+    "n": 5,
+    "total": 7,
+    "pages": "104~107",
+    "mark": {
+     "type": "reduce",
+     "reason": "결손 보완"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(감축), 결손 보완"
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "자원과 에너지",
+    "topic": "자원과 에너지를 생활 속에서 어떻게 효율적으로 이용할까요",
+    "n": 6,
+    "total": 7,
+    "pages": "108~109",
+    "tags": [],
+    "note": "결손 보완",
+    "rawNote": "결손 보완"
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "자원과 에너지",
+    "topic": "자원과 에너지의 효율적 이용을 주제로 한 공익 광고를 만들어 공유해 보자",
+    "n": 7,
+    "total": 7,
+    "pages": "110~111",
+    "mark": {
+     "type": "reduce",
+     "reason": "결손 보완"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(감축), 결손 보완"
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "4. 과학과 나의 진로",
+    "topic": "대단원 도입, 미래 사회에 어떤 문제가 일어날 수 있을까요",
+    "n": 1,
+    "total": 6,
+    "pages": "86~91",
+    "mark": {
+     "type": "reduce"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(감축)"
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "4. 과학과 나의 진로",
+    "topic": "미래 사회의 문제 해결에 과학은 어떤 도움을 줄까요",
+    "n": 2,
+    "total": 6,
+    "pages": "92~93",
+    "mark": {
+     "type": "reduce"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(감축)"
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "4. 과학과 나의 진로",
+    "topic": "다양한 진로는 과학과 어떤 관련이 있을까요",
+    "n": 3,
+    "total": 6,
+    "pages": "94~97",
+    "mark": {
+     "type": "reduce"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(감축)"
+   },
+   {
+    "week": 17,
+    "period": "12.21~12.26",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "4. 과학과 나의 진로",
+    "topic": "나의 진로는 과학과 어떤 관련이 있을까요",
+    "n": 4,
+    "total": 6,
+    "pages": "98~99",
+    "tags": []
+   },
+   {
+    "week": 17,
+    "period": "12.21~12.26",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "4. 과학과 나의 진로",
+    "topic": "나의 진로 계획을 세우고 소개해 보자",
+    "n": 5,
+    "total": 6,
+    "pages": "100~101",
+    "mark": {
+     "type": "reduce"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(감축)"
+   },
+   {
+    "week": 17,
+    "period": "12.21~12.26",
+    "subjectId": "sci",
+    "kind": "lesson",
+    "unit": "4. 과학과 나의 진로",
+    "topic": "단원 마무리",
+    "n": 6,
+    "total": 6,
+    "pages": "104~105",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "subjectId": "prac",
+  "semester": 2,
+  "footer": {
+   "total": 32,
+   "annual": 64
+  },
+  "rows": [
+   {
+    "week": 1,
+    "period": "9.1~9.5",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "3. 데이터와 인공지능",
+    "topic": "아날로그와 디지털 데이터",
+    "n": 1,
+    "total": 7,
+    "pages": "54~57",
+    "tags": []
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "3. 데이터와 인공지능",
+    "topic": "데이터의 유형과 형태",
+    "n": 2,
+    "total": 7,
+    "pages": "58~59",
+    "tags": [
+     "정보윤리교육",
+     "지능정보서비스과의존예방교육"
+    ],
+    "rawNote": "【정보윤리교육, 지능정보서비스과의존예방교육】"
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "3. 데이터와 인공지능",
+    "topic": "인공지능이 만들어지는 과정 -1-",
+    "n": 3,
+    "total": 7,
+    "pages": "60~63",
+    "tags": [
+     "정보윤리교육"
+    ],
+    "rawNote": "【정보윤리교육】"
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "3. 데이터와 인공지능",
+    "topic": "인공지능이 만들어지는 과정 -2-",
+    "n": 4,
+    "total": 7,
+    "pages": "60~63",
+    "tags": [
+     "정보윤리교육"
+    ],
+    "rawNote": "【정보윤리교육】"
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "3. 데이터와 인공지능",
+    "topic": "인공지능이 사회에 미치는 영향 -1-",
+    "n": 5,
+    "total": 7,
+    "pages": "64~69",
+    "program": "어울림프로그램(학교폭력예방)",
+    "tags": [
+     "폭력예방 및 신변보호-학교폭력",
+     "딥페이크성범죄예방교육"
+    ],
+    "rawNote": "어울림프로그램(학교폭력예방)【폭력예방 및 신변보호-학교폭력, 딥페이크성범죄예방교육】"
+   },
+   {
+    "week": 5,
+    "period": "9.28~10.3",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "3. 데이터와 인공지능",
+    "topic": "인공지능이 사회에 미치는 영향 -2-",
+    "n": 6,
+    "total": 7,
+    "pages": "64~69",
+    "tags": [
+     "정보윤리교육",
+     "딥페이크성범죄예방교육"
+    ],
+    "rawNote": "【정보윤리교육, 딥페이크성범죄예방교육】"
+   },
+   {
+    "week": 5,
+    "period": "9.28~10.3",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "3. 데이터와 인공지능",
+    "topic": "인공지능이 사회에 미치는 영향 -3-",
+    "n": 7,
+    "total": 7,
+    "pages": "64~69",
+    "tags": [
+     "정보윤리교육",
+     "AI윤리교육"
+    ],
+    "rawNote": "【정보윤리교육, AI윤리교육】"
+   },
+   {
+    "week": 6,
+    "period": "10.5~10.10",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "4. 융합 기술과 지속가능",
+    "topic": "생활 속 로봇 -1-",
+    "n": 1,
+    "total": 17,
+    "pages": "70~73",
+    "tags": []
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "4. 융합 기술과 지속가능",
+    "topic": "생활 속 로봇 -2-",
+    "n": 2,
+    "total": 17,
+    "pages": "70~73",
+    "tags": []
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "4. 융합 기술과 지속가능",
+    "topic": "로봇의 종류와 활용",
+    "n": 3,
+    "total": 17,
+    "pages": "74~75",
+    "mark": {
+     "type": "reduce"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(감축)"
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "4. 융합 기술과 지속가능",
+    "topic": "로봇의 융합 기술 -1-",
+    "n": 4,
+    "total": 17,
+    "pages": "76~77",
+    "tags": [
+     "정보교육"
+    ],
+    "rawNote": "【정보교육】"
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "4. 융합 기술과 지속가능",
+    "topic": "로봇의 융합 기술 -2-",
+    "n": 5,
+    "total": 17,
+    "pages": "76~77",
+    "tags": [
+     "정보교육"
+    ],
+    "rawNote": "【정보교육】"
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "4. 융합 기술과 지속가능",
+    "topic": "인공지능 로봇 만들기 -1-",
+    "n": 6,
+    "total": 17,
+    "pages": "78~81",
+    "tags": [
+     "정보교육"
+    ],
+    "rawNote": "【정보교육】"
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "4. 융합 기술과 지속가능",
+    "topic": "인공지능 로봇 만들기 -2-",
+    "n": 7,
+    "total": 17,
+    "pages": "78~81",
+    "tags": [
+     "정보교육"
+    ],
+    "rawNote": "【정보교육】"
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "4. 융합 기술과 지속가능",
+    "topic": "인공지능 로봇 만들기 -3-",
+    "n": 8,
+    "total": 17,
+    "pages": "78~81",
+    "tags": [
+     "정보교육"
+    ],
+    "rawNote": "【정보교육】"
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "4. 융합 기술과 지속가능",
+    "topic": "인공지능 로봇 만들기 -4-",
+    "n": 9,
+    "total": 17,
+    "pages": "78~81",
+    "tags": []
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "4. 융합 기술과 지속가능",
+    "topic": "지속가능한 농업 -1-",
+    "n": 10,
+    "total": 17,
+    "pages": "82~85",
+    "tags": []
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "4. 융합 기술과 지속가능",
+    "topic": "지속가능한 농업 -2-",
+    "n": 11,
+    "total": 17,
+    "pages": "82~85",
+    "tags": []
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "4. 융합 기술과 지속가능",
+    "topic": "생활 속 농업 활동 체험하기 -1-",
+    "n": 12,
+    "total": 17,
+    "pages": "86~89",
+    "tags": []
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "4. 융합 기술과 지속가능",
+    "topic": "생활 속 농업 활동 체험하기 -2-",
+    "n": 13,
+    "total": 17,
+    "pages": "86~89",
+    "tags": []
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "4. 융합 기술과 지속가능",
+    "topic": "생활 속 농업 활동 체험하기 -3-",
+    "n": 14,
+    "total": 17,
+    "pages": "86~89",
+    "tags": []
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "4. 융합 기술과 지속가능",
+    "topic": "생활 속 농업 활동 체험하기 -4-",
+    "n": 15,
+    "total": 17,
+    "pages": "86~89",
+    "tags": []
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "4. 융합 기술과 지속가능",
+    "topic": "농업과 농촌의 역할과 직업 세계 -1-",
+    "n": 16,
+    "total": 17,
+    "pages": "90~95",
+    "tags": [
+     "직업안전"
+    ],
+    "rawNote": "【직업안전】"
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "4. 융합 기술과 지속가능",
+    "topic": "농업과 농촌의 역할과 직업 세계 -2-",
+    "n": 17,
+    "total": 17,
+    "pages": "90~95",
+    "mark": {
+     "type": "reduce"
+    },
+    "tags": [
+     "직업안전"
+    ],
+    "rawNote": "◆재구성(감축)【직업안전】"
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "5. 가정생활과 주도적 진로 탐색",
+    "topic": "건강한 가정생활 -1-",
+    "n": 1,
+    "total": 8,
+    "pages": "96~101",
+    "tags": [
+     "폭력예방 및 신변보호-생명존중(자살예방)",
+     "아동학대및가정폭력예방교육"
+    ],
+    "rawNote": "【폭력예방 및 신변보호-생명존중(자살예방), 아동학대및가정폭력예방교육】"
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "5. 가정생활과 주도적 진로 탐색",
+    "topic": "건강한 가정생활 -2-",
+    "n": 2,
+    "total": 8,
+    "pages": "96~101",
+    "tags": [
+     "폭력예방 및 신변보호-생명존중(자살예방)"
+    ],
+    "rawNote": "【폭력예방 및 신변보호-생명존중(자살예방)】"
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "5. 가정생활과 주도적 진로 탐색",
+    "topic": "가정일의 의미와 종류",
+    "n": 3,
+    "total": 8,
+    "pages": "102~105",
+    "tags": [
+     "양성평등교육"
+    ],
+    "rawNote": "【양성평등교육】"
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "5. 가정생활과 주도적 진로 탐색",
+    "topic": "직업의 필요성",
+    "n": 4,
+    "total": 8,
+    "pages": "106~107",
+    "tags": []
+   },
+   {
+    "week": 17,
+    "period": "12.21~12.26",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "5. 가정생활과 주도적 진로 탐색",
+    "topic": "나의 진로 발달 계획 세우기 -1-",
+    "n": 5,
+    "total": 8,
+    "pages": "108~115",
+    "tags": [
+     "양성평등교육"
+    ],
+    "rawNote": "【양성평등교육】"
+   },
+   {
+    "week": 17,
+    "period": "12.21~12.26",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "5. 가정생활과 주도적 진로 탐색",
+    "topic": "나의 진로 발달 계획 세우기 -2-",
+    "n": 6,
+    "total": 8,
+    "pages": "108~115",
+    "tags": [
+     "양성평등교육"
+    ],
+    "rawNote": "【양성평등교육】"
+   },
+   {
+    "week": 18,
+    "period": "12.28~1.2",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "5. 가정생활과 주도적 진로 탐색",
+    "topic": "나의 진로 발달 계획 세우기 -3-",
+    "n": 7,
+    "total": 8,
+    "pages": "108~115",
+    "tags": [
+     "양성평등교육"
+    ],
+    "rawNote": "【양성평등교육】"
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "prac",
+    "kind": "lesson",
+    "unit": "5. 가정생활과 주도적 진로 탐색",
+    "topic": "나의 진로 발달 계획 세우기 -4-",
+    "n": 8,
+    "total": 8,
+    "pages": "108~115",
+    "tags": [
+     "양성평등교육"
+    ],
+    "rawNote": "【양성평등교육】"
+   }
+  ]
+ },
+ {
+  "subjectId": "pe",
+  "semester": 2,
+  "footer": {
+   "total": 50,
+   "annual": 102
+  },
+  "rows": [
+   {
+    "week": 1,
+    "period": "9.1~9.5",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "1-2. 안전한 생활",
+    "topic": "안전하게 운동을 해요 -1-",
+    "n": 1,
+    "total": 8,
+    "pages": "22~25",
+    "tags": [
+     "생활안전-신체활동 안전"
+    ],
+    "rawNote": "【생활안전-신체활동 안전】"
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "1-2. 안전한 생활",
+    "topic": "안전하게 운동을 해요 -2-",
+    "n": 2,
+    "total": 8,
+    "pages": "22~25",
+    "tags": [
+     "생활안전-신체활동 안전"
+    ],
+    "rawNote": "【생활안전-신체활동 안전】"
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "1-2. 안전한 생활",
+    "topic": "안전하게 운동을 해요 -3-",
+    "n": 3,
+    "total": 8,
+    "pages": "22~25",
+    "tags": []
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "1. 단원 정리",
+    "topic": "체육이 만드는 세상, 단원 마무리",
+    "n": 1,
+    "total": 1,
+    "pages": "30~33",
+    "tags": []
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-1. 기술형 스포츠",
+    "topic": "스케이팅의 기본 기능을 익혀요 -1-",
+    "n": 1,
+    "total": 12,
+    "pages": "48~49",
+    "tags": []
+   },
+   {
+    "week": 4,
+    "period": "9.21~9.26",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-1. 기술형 스포츠",
+    "topic": "스케이팅의 기본 기능을 익혀요 -2-",
+    "n": 2,
+    "total": 12,
+    "pages": "48~49",
+    "tags": []
+   },
+   {
+    "week": 5,
+    "period": "9.28~10.3",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-1. 기술형 스포츠",
+    "topic": "케이팅 기록을 향상해요 -1-",
+    "n": 3,
+    "total": 12,
+    "pages": "50~51",
+    "tags": []
+   },
+   {
+    "week": 5,
+    "period": "9.28~10.3",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-1. 기술형 스포츠",
+    "topic": "케이팅 기록을 향상해요 -2-",
+    "n": 4,
+    "total": 12,
+    "pages": "50~51",
+    "tags": []
+   },
+   {
+    "week": 6,
+    "period": "10.5~10.10",
+    "subjectId": "pe",
+    "kind": "event",
+    "unit": "1-2. 안전한 생활",
+    "topic": "안전하게 일상생활을 해요 -1-",
+    "n": 4,
+    "total": 8,
+    "pages": "26~27",
+    "eventName": "글로벌빌리지",
+    "tags": [
+     "교통안전"
+    ],
+    "rawNote": "◈글로벌빌리지【교통안전】"
+   },
+   {
+    "week": 6,
+    "period": "10.5~10.10",
+    "subjectId": "pe",
+    "kind": "event",
+    "unit": "1-2. 안전한 생활",
+    "topic": "안전하게 일상생활을 해요 -2-",
+    "n": 5,
+    "total": 8,
+    "pages": "26~27",
+    "eventName": "글로벌빌리지",
+    "tags": [
+     "교통안전"
+    ],
+    "rawNote": "◈글로벌빌리지【교통안전】"
+   },
+   {
+    "week": 6,
+    "period": "10.5~10.10",
+    "subjectId": "pe",
+    "kind": "event",
+    "unit": "1-2. 안전한 생활",
+    "topic": "안전사고에 대처해요 -1-",
+    "n": 6,
+    "total": 8,
+    "pages": "28",
+    "eventName": "글로벌빌리지",
+    "tags": [
+     "응급처치"
+    ],
+    "rawNote": "◈글로벌빌리지【응급처치】"
+   },
+   {
+    "week": 6,
+    "period": "10.5~10.10",
+    "subjectId": "pe",
+    "kind": "event",
+    "unit": "1-2. 안전한 생활",
+    "topic": "안전사고에 대처해요 -2-",
+    "n": 7,
+    "total": 8,
+    "pages": "28",
+    "eventName": "글로벌빌리지",
+    "tags": [
+     "교통안전"
+    ],
+    "rawNote": "◈글로벌빌리지【교통안전】"
+   },
+   {
+    "week": 6,
+    "period": "10.5~10.10",
+    "subjectId": "pe",
+    "kind": "event",
+    "unit": "1-2. 안전한 생활",
+    "topic": "자연환경 변화에 대처해요",
+    "n": 8,
+    "total": 8,
+    "pages": "29",
+    "eventName": "글로벌빌리지",
+    "tags": [
+     "교통안전"
+    ],
+    "rawNote": "◈글로벌빌리지【교통안전】"
+   },
+   {
+    "week": 6,
+    "period": "10.5~10.10",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-1. 기술형 스포츠",
+    "topic": "뜀틀에서 다리 벌려 뛰어넘기를 해요 -1-",
+    "n": 5,
+    "total": 12,
+    "pages": "52~53",
+    "tags": []
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-1. 기술형 스포츠",
+    "topic": "뜀틀에서 다리 벌려 뛰어넘기를 해요 -2-",
+    "n": 6,
+    "total": 12,
+    "pages": "52~53",
+    "tags": []
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-1. 기술형 스포츠",
+    "topic": "뜀틀에서 손 짚고 앞구르기를 해요 -1-",
+    "n": 7,
+    "total": 12,
+    "pages": "54~55",
+    "tags": []
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-1. 기술형 스포츠",
+    "topic": "뜀틀에서 손 짚고 앞구르기를 해요 -2-",
+    "n": 8,
+    "total": 12,
+    "pages": "54~55",
+    "tags": []
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-1. 기술형 스포츠",
+    "topic": "씨름의 기본 기능을 익혀요 -1-",
+    "n": 9,
+    "total": 12,
+    "pages": "56~57",
+    "tags": []
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-1. 기술형 스포츠",
+    "topic": "씨름의 기본 기능을 익혀요 -2-",
+    "n": 10,
+    "total": 12,
+    "pages": "56~57",
+    "tags": []
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-1. 기술형 스포츠",
+    "topic": "씨름 경기를 해요 -1-",
+    "n": 11,
+    "total": 12,
+    "pages": "58~59",
+    "tags": []
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-1. 기술형 스포츠",
+    "topic": "씨름 경기를 해요 -2-",
+    "n": 12,
+    "total": 12,
+    "pages": "58~59",
+    "tags": []
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-2. 전략형 스포츠",
+    "topic": "야구형 게임의 기본 기능을 익혀요 -1-",
+    "n": 1,
+    "total": 13,
+    "pages": "70~71",
+    "tags": []
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-2. 전략형 스포츠",
+    "topic": "야구형 게임의 기본 기능을 익혀요 -2-",
+    "n": 2,
+    "total": 13,
+    "pages": "70~71",
+    "tags": []
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-2. 전략형 스포츠",
+    "topic": "야구형 게임의 기본 전략을 알아요",
+    "n": 3,
+    "total": 13,
+    "pages": "72~73",
+    "mark": {
+     "type": "reduce"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(감축)"
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-2. 전략형 스포츠",
+    "topic": "친구와 소통하며 야구형 게임을 해요 -1-",
+    "n": 4,
+    "total": 13,
+    "pages": "74~75",
+    "tags": []
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-2. 전략형 스포츠",
+    "topic": "친구와 소통하며 야구형 게임을 해요 -2-",
+    "n": 5,
+    "total": 13,
+    "pages": "74~75",
+    "tags": []
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-2. 전략형 스포츠",
+    "topic": "배구형 게임의 기본 기능을 익혀요 -1-",
+    "n": 6,
+    "total": 13,
+    "pages": "76~77",
+    "tags": []
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-2. 전략형 스포츠",
+    "topic": "배구형 게임의 기본 기능을 익혀요 -2-",
+    "n": 7,
+    "total": 13,
+    "pages": "76~77",
+    "tags": []
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "pe",
+    "kind": "event",
+    "unit": "3-2. 전통 표현",
+    "topic": "민속무용 영상 발표회를 열어요 -1-",
+    "n": 1,
+    "total": 4,
+    "pages": "118~119",
+    "eventName": "학예회",
+    "tags": [],
+    "rawNote": "◈학예회"
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "pe",
+    "kind": "event",
+    "unit": "3-2. 전통 표현",
+    "topic": "민속무용 영상 발표회를 열어요 -2-",
+    "n": 2,
+    "total": 4,
+    "pages": "118~119",
+    "eventName": "학예회",
+    "tags": [],
+    "rawNote": "◈학예회"
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "pe",
+    "kind": "event",
+    "unit": "3-3. 현대 표현",
+    "topic": "현대 표현 작품을 만들어 발표하고 감상해요 -1-",
+    "n": 1,
+    "total": 6,
+    "pages": "124~125",
+    "eventName": "학예회",
+    "tags": [],
+    "rawNote": "◈학예회"
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "pe",
+    "kind": "event",
+    "unit": "3-3. 현대 표현",
+    "topic": "현대 표현 작품을 만들어 발표하고 감상해요 -2-",
+    "n": 2,
+    "total": 6,
+    "pages": "124~125",
+    "eventName": "학예회",
+    "tags": [],
+    "rawNote": "◈학예회"
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-2. 전략형 스포츠",
+    "topic": "배구형 게임의 기본 전략을 알아요 -1-",
+    "n": 8,
+    "total": 13,
+    "pages": "78~79",
+    "tags": []
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-2. 전략형 스포츠",
+    "topic": "배구형 게임의 기본 전략을 알아요 -2-",
+    "n": 9,
+    "total": 13,
+    "pages": "78~79",
+    "tags": []
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-2. 전략형 스포츠",
+    "topic": "친구와 협력하며 배구형 게임을 해요 -1-",
+    "n": 10,
+    "total": 13,
+    "pages": "80~81",
+    "program": "어울림프로그램(학교폭력예방)",
+    "tags": [
+     "폭력예방 및 신변보호-학교폭력"
+    ],
+    "rawNote": "어울림프로그램(학교폭력예방)【폭력예방 및 신변보호-학교폭력】"
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-2. 전략형 스포츠",
+    "topic": "친구와 협력하며 배구형 게임을 해요 -2-",
+    "n": 11,
+    "total": 13,
+    "pages": "80~81",
+    "tags": []
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-2. 전략형 스포츠",
+    "topic": "족구형 게임을 해요 -1-",
+    "n": 12,
+    "total": 13,
+    "pages": "82~83",
+    "tags": []
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-2. 전략형 스포츠",
+    "topic": "족구형 게임을 해요 -2-",
+    "n": 13,
+    "total": 13,
+    "pages": "82~83",
+    "tags": []
+   },
+   {
+    "week": 17,
+    "period": "12.21~12.26",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-3. 생태형 스포츠",
+    "topic": "캠핑을 해요 -1-",
+    "n": 1,
+    "total": 4,
+    "pages": "92~93",
+    "tags": []
+   },
+   {
+    "week": 17,
+    "period": "12.21~12.26",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-3. 생태형 스포츠",
+    "topic": "캠핑을 해요 -2-",
+    "n": 2,
+    "total": 4,
+    "pages": "92~93",
+    "tags": []
+   },
+   {
+    "week": 17,
+    "period": "12.21~12.26",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-3. 생태형 스포츠",
+    "topic": "승마를 해요",
+    "n": 3,
+    "total": 4,
+    "pages": "94~95",
+    "tags": []
+   },
+   {
+    "week": 18,
+    "period": "12.28~1.2",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2-3. 생태형 스포츠",
+    "topic": "서핑을 해요",
+    "n": 4,
+    "total": 4,
+    "pages": "96~97",
+    "tags": []
+   },
+   {
+    "week": 18,
+    "period": "12.28~1.2",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "2. 단원 정리",
+    "topic": "체육이 만드는 세상, 단원 마무리",
+    "n": 1,
+    "total": 1,
+    "pages": "98~101",
+    "tags": []
+   },
+   {
+    "week": 18,
+    "period": "12.28~1.2",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "3-2. 전통 표현",
+    "topic": "티니클링을 추어요 -1-",
+    "n": 3,
+    "total": 4,
+    "pages": "116~117",
+    "tags": []
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "3-2. 전통 표현",
+    "topic": "티니클링을 추어요 -2-",
+    "n": 4,
+    "total": 4,
+    "pages": "116~117",
+    "tags": []
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "3-3. 현대 표현",
+    "topic": "댄스스포츠를 추어요 -1-",
+    "n": 3,
+    "total": 6,
+    "pages": "120~121",
+    "tags": []
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "3-3. 현대 표현",
+    "topic": "댄스스포츠를 추어요 -2-",
+    "n": 4,
+    "total": 6,
+    "pages": "120~121",
+    "tags": []
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "3-3. 현대 표현",
+    "topic": "스트리트댄스를 추어요 -1-",
+    "n": 5,
+    "total": 6,
+    "pages": "122~123",
+    "tags": []
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "3-3. 현대 표현",
+    "topic": "스트리트댄스를 추어요 -2-",
+    "n": 6,
+    "total": 6,
+    "pages": "122~123",
+    "tags": []
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "pe",
+    "kind": "lesson",
+    "unit": "3. 단원 정리",
+    "topic": "체육이 만드는 세상, 단원 마무리",
+    "n": 1,
+    "total": 1,
+    "pages": "126~129",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "subjectId": "music",
+  "semester": 2,
+  "footer": {
+   "total": 34,
+   "annual": 68
+  },
+  "rows": [
+   {
+    "week": 1,
+    "period": "9.1~9.5",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "3. 금다래타령",
+    "topic": "전문가의 노래를 들으며 수심가토리의 특징을 이해하고 설명하기",
+    "n": 1,
+    "total": 2,
+    "pages": "42~43",
+    "tags": []
+   },
+   {
+    "week": 1,
+    "period": "9.1~9.5",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "3. 금다래타령",
+    "topic": "수심가토리의 시김새를 살려 노래 부르기",
+    "n": 2,
+    "total": 2,
+    "pages": "42~43",
+    "tags": []
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "3. 우리나라 음악 국가유산",
+    "topic": "우리나라의 음악 국가유산을 찾아 감상하고 보고서 써서 발표하기",
+    "n": 1,
+    "total": 2,
+    "pages": "44~45",
+    "tags": []
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "3. 우리나라 음악 국가유산",
+    "topic": "음악 국가유산을 다양한 방법으로 소개하기",
+    "n": 2,
+    "total": 2,
+    "pages": "44~45",
+    "tags": []
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "3. 함께 걸어 좋은 길",
+    "topic": "리듬꼴에 유의하여 성부별 가락 익히기",
+    "n": 1,
+    "total": 2,
+    "pages": "46~47",
+    "tags": []
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "3. 함께 걸어 좋은 길",
+    "topic": "소리의 어울림을 느끼며 부분 2부 합창을 발표하고 과정 돌아보기",
+    "n": 2,
+    "total": 2,
+    "pages": "46~47",
+    "tags": []
+   },
+   {
+    "week": 4,
+    "period": "9.21~9.26",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "3. 소금 오름길 2",
+    "topic": "소금의 음역에 따른 소리와 주법의 차이를 이해하고 악곡 연주하기",
+    "n": 1,
+    "total": 2,
+    "pages": "48~49",
+    "tags": []
+   },
+   {
+    "week": 5,
+    "period": "9.28~10.3",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "3. 소금 오름길 2",
+    "topic": "경기 민요의 느낌을 담아 연주하기",
+    "n": 2,
+    "total": 2,
+    "pages": "48~49",
+    "tags": []
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "3. 어쩌다 발견한 음악",
+    "topic": "생활 속에서 다양한 음악 찾아보고 이야기하기",
+    "n": 1,
+    "total": 2,
+    "pages": "50~51",
+    "tags": []
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "3. 어쩌다 발견한 음악",
+    "topic": "음악의 느낌을 여러 가지 방법으로 표현하기",
+    "n": 2,
+    "total": 2,
+    "pages": "50~51",
+    "tags": []
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "3. 바닷가에서",
+    "topic": "노래의 특징을 살려 6박자 지휘하기",
+    "n": 1,
+    "total": 2,
+    "pages": "52~53",
+    "tags": []
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "3. 바닷가에서",
+    "topic": "가락의 흐름을 비교하며 AB 형식 파악하기",
+    "n": 2,
+    "total": 2,
+    "pages": "52~53",
+    "tags": []
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "3. 다양한 문화권의 음악",
+    "topic": "다양한 문화권의 음악을 감상하고, 음악적 특징 찾아 설명하기",
+    "n": 1,
+    "total": 2,
+    "pages": "54~55",
+    "tags": []
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "3. 다양한 문화권의 음악",
+    "topic": "다른 나라의 음악적·문화적 특징을 조사하여 미니 북 만들기",
+    "n": 2,
+    "total": 2,
+    "pages": "54~55",
+    "tags": []
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "3. 나도 작곡가",
+    "topic": "리듬꼴을 활용하여 노래의 리듬 만들기",
+    "n": 1,
+    "total": 2,
+    "pages": "56~57",
+    "tags": []
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "3. 나도 작곡가",
+    "topic": "화음에 어울리는 가락 만들기",
+    "n": 2,
+    "total": 2,
+    "pages": "56~57",
+    "tags": []
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "4. 칭칭이 소리",
+    "topic": "메기고 받으며 노래 부르기",
+    "n": 1,
+    "total": 2,
+    "pages": "58~59",
+    "tags": []
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "4. 칭칭이 소리",
+    "topic": "긴자진 형식을 이해하고, 한배의 변화를 살려 노래 부르기",
+    "n": 2,
+    "total": 2,
+    "pages": "58~59",
+    "tags": []
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "4. 나도 지휘자",
+    "topic": "박자별 지휘법 익히기",
+    "n": 1,
+    "total": 2,
+    "pages": "60~61",
+    "tags": []
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "4. 나도 지휘자",
+    "topic": "셈여림의 변화를 표현하며 지휘하기",
+    "n": 2,
+    "total": 2,
+    "pages": "60~61",
+    "tags": []
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "4. 종소리",
+    "topic": "라단조 계이름으로 노래 부르기",
+    "n": 1,
+    "total": 2,
+    "pages": "62~63",
+    "tags": []
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "4. 종소리",
+    "topic": "노래와 리코더 연주로 표현하기",
+    "n": 2,
+    "total": 2,
+    "pages": "62~63",
+    "tags": []
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "4. 겨울 노래 메들리",
+    "topic": "빠르기와 박자의 변화에 유의하여 성부별 가락 연습하기",
+    "n": 1,
+    "total": 2,
+    "pages": "64~65",
+    "tags": []
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "4. 겨울 노래 메들리",
+    "topic": "소리의 어울림을 느끼며 기악 합주하기",
+    "n": 2,
+    "total": 2,
+    "pages": "64~65",
+    "tags": []
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "4. \"현악 영산회상\"과 \"관악 영산회상\"",
+    "topic": "\"현악 영산회상\" 중 ‘타령’을 감상하며 현악기의 음색 구별하기",
+    "n": 1,
+    "total": 2,
+    "pages": "66~67",
+    "tags": []
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "4. \"현악 영산회상\"과 \"관악 영산회상\"",
+    "topic": "\"관악 영산회상\" 중 ‘타령’을 감상하며 관악기의 음색 구별하기",
+    "n": 2,
+    "total": 2,
+    "pages": "66~67",
+    "tags": []
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "4. 다른 나라 친구들 2",
+    "topic": "우리말과 원어로 노래 부르며 놀이하기",
+    "n": 1,
+    "total": 2,
+    "pages": "68~69",
+    "tags": []
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "4. 다른 나라 친구들 2",
+    "topic": "노랫말에 어울리는 신체표현 하기",
+    "n": 2,
+    "total": 2,
+    "pages": "68~69",
+    "tags": []
+   },
+   {
+    "week": 17,
+    "period": "12.21~12.26",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "4. 상모야 돌아라",
+    "topic": "말붙임새에 어울리는 장단꼴 치며 노래 부르기",
+    "n": 1,
+    "total": 2,
+    "pages": "70~71",
+    "tags": []
+   },
+   {
+    "week": 18,
+    "period": "12.28~1.2",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "4. 상모야 돌아라",
+    "topic": "노래를 부르며 흥겹게 소고춤 추기",
+    "n": 2,
+    "total": 2,
+    "pages": "70~71",
+    "tags": []
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "4. 우리 반 졸업 영상 만들기",
+    "topic": "우리 반 졸업 영상을 만들기 위한 계획 세우기",
+    "n": 1,
+    "total": 2,
+    "pages": "72~73",
+    "tags": []
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "4. 우리 반 졸업 영상 만들기",
+    "topic": "우리 반 졸업 영상을 완성하여 발표하고, 열린 태도로 감상하기",
+    "n": 2,
+    "total": 2,
+    "pages": "72~73",
+    "tags": []
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "음악으로 꿈을 찾아요",
+    "topic": "음악과 관련된 다양한 직업 알아보고 이야기하기",
+    "n": 1,
+    "total": 2,
+    "pages": "74~75",
+    "tags": []
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "music",
+    "kind": "lesson",
+    "unit": "음악으로 꿈을 찾아요",
+    "topic": "내가 되고 싶은 음악 직업인을 생각하고 음악 명함 만들기",
+    "n": 2,
+    "total": 2,
+    "pages": "74~75",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "subjectId": "art",
+  "semester": 2,
+  "footer": {
+   "total": 34,
+   "annual": 68
+  },
+  "rows": [
+   {
+    "week": 1,
+    "period": "9.1~9.5",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "7. 생각을 전하는 시각 이미지",
+    "topic": "시각 이미지로 지구촌 문제 알리기 -1-",
+    "n": 1,
+    "total": 4,
+    "pages": "36~38",
+    "tags": []
+   },
+   {
+    "week": 1,
+    "period": "9.1~9.5",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "7. 생각을 전하는 시각 이미지",
+    "topic": "시각 이미지로 지구촌 문제 알리기 -2-",
+    "n": 2,
+    "total": 4,
+    "pages": "36~38",
+    "tags": []
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "7. 생각을 전하는 시각 이미지",
+    "topic": "명화로 시각 이미지 만들기 -1-",
+    "n": 3,
+    "total": 4,
+    "pages": "39",
+    "tags": []
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "7. 생각을 전하는 시각 이미지",
+    "topic": "명화로 시각 이미지 만들기 -2-",
+    "n": 4,
+    "total": 4,
+    "pages": "39",
+    "tags": []
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "8. 그림으로 즐기는 풍경",
+    "topic": "주제가 잘 드러나는 풍경화 표현하기 -1-",
+    "n": 1,
+    "total": 4,
+    "pages": "40~42",
+    "tags": []
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "8. 그림으로 즐기는 풍경",
+    "topic": "주제가 잘 드러나는 풍경화 표현하기 -2-",
+    "n": 2,
+    "total": 4,
+    "pages": "40~42",
+    "tags": []
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "8. 그림으로 즐기는 풍경",
+    "topic": "창문 너머 풍경화 표현하기 -1-",
+    "n": 3,
+    "total": 4,
+    "pages": "43",
+    "tags": []
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "8. 그림으로 즐기는 풍경",
+    "topic": "창문 너머 풍경화 표현하기 -2-",
+    "n": 4,
+    "total": 4,
+    "pages": "43",
+    "tags": []
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "9. 찍어 만드는 작품, 판화",
+    "topic": "나를 알리는 도장을 새기고 찍기 -1-",
+    "n": 1,
+    "total": 6,
+    "pages": "44~46",
+    "tags": []
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "9. 찍어 만드는 작품, 판화",
+    "topic": "나를 알리는 도장을 새기고 찍기 -2-",
+    "n": 2,
+    "total": 6,
+    "pages": "44~46",
+    "tags": []
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "9. 찍어 만드는 작품, 판화",
+    "topic": "나를 알리는 도장을 새기고 찍기 -3-",
+    "n": 3,
+    "total": 6,
+    "pages": "46",
+    "tags": []
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "9. 찍어 만드는 작품, 판화",
+    "topic": "따로 또 같이 찍어 꾸미기 -1-",
+    "n": 4,
+    "total": 6,
+    "pages": "47",
+    "tags": []
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "9. 찍어 만드는 작품, 판화",
+    "topic": "따로 또 같이 찍어 꾸미기 -2-",
+    "n": 5,
+    "total": 6,
+    "pages": "47",
+    "tags": []
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "9. 찍어 만드는 작품, 판화",
+    "topic": "따로 또 같이 찍어 꾸미기 -3-",
+    "n": 6,
+    "total": 6,
+    "pages": "47",
+    "tags": []
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "10. 궁체로 쓰기",
+    "topic": "궁체로 '가을'과 '봄 햇살' 쓰기 -1-",
+    "n": 1,
+    "total": 5,
+    "pages": "50~51",
+    "tags": []
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "10. 궁체로 쓰기",
+    "topic": "궁체로 '가을'과 '봄 햇살' 쓰기 -2-",
+    "n": 2,
+    "total": 5,
+    "pages": "50~51",
+    "tags": []
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "10. 궁체로 쓰기",
+    "topic": "궁체로 '가을'과 '봄 햇살' 쓰기 -3-",
+    "n": 3,
+    "total": 5,
+    "pages": "52~53",
+    "mark": {
+     "type": "reduce"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(감축)"
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "10. 궁체로 쓰기",
+    "topic": "궁체로 '졸업장' 쓰기 -1-",
+    "n": 4,
+    "total": 5,
+    "pages": "54~55",
+    "tags": []
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "10. 궁체로 쓰기",
+    "topic": "궁체로 '졸업장' 쓰기 -2-",
+    "n": 5,
+    "total": 5,
+    "pages": "54~55",
+    "tags": []
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "11. 우리가 바라는 학교 건축",
+    "topic": "특색 있는 학교 건축물 만들기 -1-",
+    "n": 1,
+    "total": 5,
+    "pages": "56~59",
+    "tags": []
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "11. 우리가 바라는 학교 건축",
+    "topic": "특색 있는 학교 건축물 만들기 -2-",
+    "n": 2,
+    "total": 5,
+    "pages": "56~59",
+    "tags": []
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "11. 우리가 바라는 학교 건축",
+    "topic": "특색 있는 학교 건축물 만들기 -3-",
+    "n": 3,
+    "total": 5,
+    "pages": "56~59",
+    "tags": []
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "11. 우리가 바라는 학교 건축",
+    "topic": "특색 있는 학교 건축물 만들기 -4-",
+    "n": 4,
+    "total": 5,
+    "pages": "56~59",
+    "tags": []
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "11. 우리가 바라는 학교 건축",
+    "topic": "특색 있는 학교 건축물 만들기 -5-",
+    "n": 5,
+    "total": 5,
+    "pages": "56~59",
+    "mark": {
+     "type": "reduce"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(감축)"
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "12. 촉제 속 미술 만나기",
+    "topic": "축제 포토 프레임 만들기 -1-",
+    "n": 1,
+    "total": 6,
+    "pages": "60~62",
+    "tags": []
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "12. 촉제 속 미술 만나기",
+    "topic": "축제 포토 프레임 만들기 -2-",
+    "n": 2,
+    "total": 6,
+    "pages": "60~62",
+    "tags": []
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "12. 촉제 속 미술 만나기",
+    "topic": "축제 포토 프레임 만들기 -3-",
+    "n": 3,
+    "total": 6,
+    "pages": "60~62",
+    "tags": []
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "12. 촉제 속 미술 만나기",
+    "topic": "축제 포토 프레임 만들기 -4-",
+    "n": 4,
+    "total": 6,
+    "pages": "60~62",
+    "tags": []
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "12. 촉제 속 미술 만나기",
+    "topic": "축제 경험 공유하기 -1-",
+    "n": 5,
+    "total": 6,
+    "pages": "63",
+    "tags": []
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "12. 촉제 속 미술 만나기",
+    "topic": "축제 경험 공유하기 -2-",
+    "n": 6,
+    "total": 6,
+    "pages": "63",
+    "tags": []
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "(프로젝트) 나의 미술 탐구 보고서",
+    "topic": "타임라인으로 그리는 나의 미술 역사 -1-",
+    "n": 1,
+    "total": 4,
+    "pages": "66~67",
+    "tags": []
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "(프로젝트) 나의 미술 탐구 보고서",
+    "topic": "타임라인으로 그리는 나의 미술 역사 -2-",
+    "n": 2,
+    "total": 4,
+    "pages": "66~67",
+    "tags": []
+   },
+   {
+    "week": 24,
+    "period": "2.8~2.13",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "(프로젝트) 나의 미술 탐구 보고서",
+    "topic": "미술 시간 열 가지 질문과 답 -1-",
+    "n": 3,
+    "total": 4,
+    "pages": "68~69",
+    "tags": []
+   },
+   {
+    "week": 24,
+    "period": "2.8~2.13",
+    "subjectId": "art",
+    "kind": "lesson",
+    "unit": "(프로젝트) 나의 미술 탐구 보고서",
+    "topic": "미술 시간 열 가지 질문과 답 -2-",
+    "n": 4,
+    "total": 4,
+    "pages": "68~69",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "subjectId": "eng",
+  "semester": 2,
+  "footer": {
+   "total": 50,
+   "annual": 102
+  },
+  "rows": [
+   {
+    "week": 1,
+    "period": "9.1~9.5",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "7. Jua Is Faster Than Sora",
+    "topic": "두 대상을 비교하는 말로 묻고 답하는 표현 이해하기",
+    "n": 1,
+    "total": 7,
+    "pages": "98~101",
+    "tags": []
+   },
+   {
+    "week": 1,
+    "period": "9.1~9.5",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "7. Jua Is Faster Than Sora",
+    "topic": "두 대상을 비교하는 말로 묻고 답하는 내용 이해하여 말하기",
+    "n": 2,
+    "total": 7,
+    "pages": "102~103",
+    "tags": []
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "7. Jua Is Faster Than Sora",
+    "topic": "두 대상을 비교하는 말로 묻고 답하는 문장 읽고 쓰기",
+    "n": 3,
+    "total": 7,
+    "pages": "104~105",
+    "tags": []
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "7. Jua Is Faster Than Sora",
+    "topic": "높이와 길이를 비교하는 글을 읽고 이해하기 -1-",
+    "n": 4,
+    "total": 7,
+    "pages": "106~107",
+    "mark": {
+     "type": "increase"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(증배)"
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "7. Jua Is Faster Than Sora",
+    "topic": "높이와 길이를 비교하는 글을 읽고 이해하기 -2-",
+    "n": 5,
+    "total": 7,
+    "pages": "106~107",
+    "tags": []
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "7. Jua Is Faster Than Sora",
+    "topic": "자신의 상상 속 영웅을 소개하는 글 쓰고 발표하기",
+    "n": 6,
+    "total": 7,
+    "pages": "108~109",
+    "tags": []
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "7. Jua Is Faster Than Sora",
+    "topic": "문제를 풀며 학습한 내용 정리하기",
+    "n": 7,
+    "total": 7,
+    "pages": "110~111",
+    "tags": []
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "8. Who Drew This Painting?",
+    "topic": "누가 한 일인지 묻고 답하는 표현 이해하기",
+    "n": 1,
+    "total": 6,
+    "pages": "112~115",
+    "tags": []
+   },
+   {
+    "week": 4,
+    "period": "9.21~9.26",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "8. Who Drew This Painting?",
+    "topic": "누가 한 일인지 묻고 답하는 내용 이해하여 말하기",
+    "n": 2,
+    "total": 6,
+    "pages": "116~117",
+    "tags": []
+   },
+   {
+    "week": 5,
+    "period": "9.28~10.3",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "8. Who Drew This Painting?",
+    "topic": "누가 한 일인지 묻고 답하는 문장 읽고 쓰기",
+    "n": 3,
+    "total": 6,
+    "pages": "118~119",
+    "tags": []
+   },
+   {
+    "week": 5,
+    "period": "9.28~10.3",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "8. Who Drew This Painting?",
+    "topic": "누가 한 일인지 찾는 글을 읽고 내용 이해하기",
+    "n": 4,
+    "total": 6,
+    "pages": "120~121",
+    "tags": []
+   },
+   {
+    "week": 6,
+    "period": "10.5~10.10",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "8. Who Drew This Painting?",
+    "topic": "가장 좋아하는 위인을 소개하는 글 쓰고 발표하기",
+    "n": 5,
+    "total": 6,
+    "pages": "122~123",
+    "tags": []
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "8. Who Drew This Painting?",
+    "topic": "문제를 풀며 학습한 내용 정리하기",
+    "n": 6,
+    "total": 6,
+    "pages": "124~125",
+    "tags": []
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "9. What Season Do You Like?",
+    "topic": "좋아하는 계절을 묻고 답하는 표현 이해하기",
+    "n": 1,
+    "total": 7,
+    "pages": "126~129",
+    "tags": []
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "9. What Season Do You Like?",
+    "topic": "좋아하는 계절을 묻고 답하는 내용 이해하여 말하기 -1-",
+    "n": 2,
+    "total": 7,
+    "pages": "130~131",
+    "mark": {
+     "type": "increase"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(증배)"
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "9. What Season Do You Like?",
+    "topic": "좋아하는 계절을 묻고 답하는 내용 이해하여 말하기 -2-",
+    "n": 3,
+    "total": 7,
+    "pages": "130~131",
+    "tags": []
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "9. What Season Do You Like?",
+    "topic": "좋아하는 계절을 묻고 답하는 문장 읽고 쓰기",
+    "n": 4,
+    "total": 7,
+    "pages": "132~133",
+    "tags": []
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "9. What Season Do You Like?",
+    "topic": "동물들이 좋아하는 계절에 관한 글을 읽고 내용 이해하기",
+    "n": 5,
+    "total": 7,
+    "pages": "134~135",
+    "tags": []
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "9. What Season Do You Like?",
+    "topic": "좋아하는 계절을 소개하는 글 쓰고 발표하기",
+    "n": 6,
+    "total": 7,
+    "pages": "136~137",
+    "tags": []
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "9. What Season Do You Like?",
+    "topic": "문제를 풀며 학습한 내용 정리하기",
+    "n": 7,
+    "total": 7,
+    "pages": "138~139",
+    "tags": []
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "Culture Project 2",
+    "topic": "세계의 문화유산을 소개하는 전자책 만들기 -1-",
+    "n": 1,
+    "total": 3,
+    "pages": "140~141",
+    "tags": []
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "Culture Project 2",
+    "topic": "세계의 문화유산을 소개하는 전자책 만들기 -2-",
+    "n": 2,
+    "total": 3,
+    "pages": "140~141",
+    "mark": {
+     "type": "increase"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(증배)"
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "Culture Project 2",
+    "topic": "세계의 문화유산을 소개하는 전자책 만들기 -3-",
+    "n": 3,
+    "total": 3,
+    "pages": "140~141",
+    "tags": []
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "10. Do You Know Anything About Hanok?",
+    "topic": "어떤 것을 알고 있는지 묻고 답하는 표현 이해하기",
+    "n": 1,
+    "total": 7,
+    "pages": "142~145",
+    "tags": []
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "10. Do You Know Anything About Hanok?",
+    "topic": "어떤 것을 알고 있는지 묻고 답하는 내용 이해하여 말하기",
+    "n": 2,
+    "total": 7,
+    "pages": "146~147",
+    "tags": []
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "10. Do You Know Anything About Hanok?",
+    "topic": "어떤 것을 알고 있는지 묻고 답하는 문장 읽고 쓰기 -1-",
+    "n": 3,
+    "total": 7,
+    "pages": "148~149",
+    "mark": {
+     "type": "increase"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(증배)"
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "10. Do You Know Anything About Hanok?",
+    "topic": "어떤 것을 알고 있는지 묻고 답하는 문장 읽고 쓰기 -2-",
+    "n": 4,
+    "total": 7,
+    "pages": "148~149",
+    "tags": []
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "10. Do You Know Anything About Hanok?",
+    "topic": "독특한 집을 소개하는 글을 읽고 내용 이해하기",
+    "n": 5,
+    "total": 7,
+    "pages": "150~151",
+    "tags": []
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "10. Do You Know Anything About Hanok?",
+    "topic": "다른 나라의 문화를 소개하는 글 쓰고 발표하기",
+    "n": 6,
+    "total": 7,
+    "pages": "152~153",
+    "tags": []
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "10. Do You Know Anything About Hanok?",
+    "topic": "문제를 풀며 학습한 내용 정리하기",
+    "n": 7,
+    "total": 7,
+    "pages": "154~155",
+    "tags": []
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "11. We Should Save the Earth",
+    "topic": "의무를 나타내는 표현 이해하기",
+    "n": 1,
+    "total": 6,
+    "pages": "156~159",
+    "tags": []
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "11. We Should Save the Earth",
+    "topic": "의무를 나타내는 내용 이해하여 말하기",
+    "n": 2,
+    "total": 6,
+    "pages": "160~161",
+    "tags": []
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "11. We Should Save the Earth",
+    "topic": "의무를 나타내는 문장 읽고 쓰기",
+    "n": 3,
+    "total": 6,
+    "pages": "162~163",
+    "tags": []
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "11. We Should Save the Earth",
+    "topic": "환경 보호에 관한 글을 읽고 내용 이해하기",
+    "n": 4,
+    "total": 6,
+    "pages": "164~165",
+    "tags": []
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "11. We Should Save the Earth",
+    "topic": "환경 보호를 주제로 팸플릿 쓰고 발표하기",
+    "n": 5,
+    "total": 6,
+    "pages": "166~167",
+    "tags": []
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "11. We Should Save the Earth",
+    "topic": "문제를 풀며 학습한 내용 정리하기",
+    "n": 6,
+    "total": 6,
+    "pages": "168~169",
+    "tags": []
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "12. Will You Come to My Graduation?",
+    "topic": "초대하고 이에 답하는 표현 이해하기",
+    "n": 1,
+    "total": 6,
+    "pages": "170~173",
+    "tags": []
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "12. Will You Come to My Graduation?",
+    "topic": "초대하고 이에 답하는 내용 이해하여 말하기",
+    "n": 2,
+    "total": 6,
+    "pages": "174~175",
+    "tags": []
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "12. Will You Come to My Graduation?",
+    "topic": "초대하고 이에 답하는 문장 읽고 쓰기",
+    "n": 3,
+    "total": 6,
+    "pages": "176~177",
+    "tags": []
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "12. Will You Come to My Graduation?",
+    "topic": "초대하고 이에 답하는 글을 읽고 내용 이해하기",
+    "n": 4,
+    "total": 6,
+    "pages": "178~179",
+    "tags": []
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "12. Will You Come to My Graduation?",
+    "topic": "친구를 초대하는 글 쓰고 발표하기",
+    "n": 5,
+    "total": 6,
+    "pages": "180~181",
+    "tags": []
+   },
+   {
+    "week": 17,
+    "period": "12.21~12.26",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "12. Will You Come to My Graduation?",
+    "topic": "문제를 풀며 학습한 내용 정리하기",
+    "n": 6,
+    "total": 6,
+    "pages": "182~183",
+    "tags": []
+   },
+   {
+    "week": 17,
+    "period": "12.21~12.26",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "Into the Story 2",
+    "topic": "7~12단원에서 배운 표현 복습하기 -1-",
+    "n": 1,
+    "total": 3,
+    "pages": "184~185",
+    "tags": []
+   },
+   {
+    "week": 18,
+    "period": "12.28~1.2",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "Into the Story 2",
+    "topic": "7~12단원에서 배운 표현 복습하기 -2-",
+    "n": 2,
+    "total": 3,
+    "pages": "184~185",
+    "mark": {
+     "type": "increase"
+    },
+    "tags": [],
+    "rawNote": "◆재구성(증배)"
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "Into the Story 2",
+    "topic": "7~12단원에서 배운 표현 복습하기 -3-",
+    "n": 3,
+    "total": 3,
+    "pages": "184~185",
+    "tags": []
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "Jump Up 2",
+    "topic": "코딩 말판 놀이하며 배운 내용 정리하기",
+    "n": 1,
+    "total": 1,
+    "pages": "186~187",
+    "tags": []
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "학기말 총정리",
+    "topic": "한 학기 동안 배운 내용 총정리하기 -1-",
+    "n": 1,
+    "total": 4,
+    "tags": []
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "학기말 총정리",
+    "topic": "한 학기 동안 배운 내용 총정리하기 -2-",
+    "n": 2,
+    "total": 4,
+    "tags": []
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "학기말 총정리",
+    "topic": "한 학기 동안 배운 내용 총정리하기 -3-",
+    "n": 3,
+    "total": 4,
+    "tags": []
+   },
+   {
+    "week": 24,
+    "period": "2.8~2.13",
+    "subjectId": "eng",
+    "kind": "lesson",
+    "unit": "학기말 총정리",
+    "topic": "한 학기 동안 배운 내용 총정리하기 -4-",
+    "n": 4,
+    "total": 4,
+    "tags": []
+   }
+  ]
+ },
+ {
+  "subjectId": "autonomy",
+  "semester": 2,
+  "footer": {
+   "total": 0,
+   "annual": 0
+  },
+  "rows": []
+ },
+ {
+  "subjectId": "ca-self",
+  "semester": 2,
+  "footer": {
+   "total": 36,
+   "annual": 72
+  },
+  "rows": [
+   {
+    "week": 1,
+    "period": "9.1~9.5",
+    "subjectId": "ca-self",
+    "kind": "event",
+    "unit": "적응 및 개척 활동",
+    "topic": "여름개학식에 참여하기",
+    "n": 1,
+    "total": 4,
+    "eventName": "여름개학식",
+    "tags": [],
+    "rawNote": "◈여름개학식"
+   },
+   {
+    "week": 1,
+    "period": "9.1~9.5",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "자치활동",
+    "topic": "학급평화회의 -1-",
+    "n": 1,
+    "total": 4,
+    "tags": []
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "학년 및 학급특색교육",
+    "topic": "문화예술교육(국악) -1-",
+    "n": 1,
+    "total": 10,
+    "tags": []
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "학년 및 학급특색교육",
+    "topic": "문화예술교육(국악) -2-",
+    "n": 2,
+    "total": 10,
+    "tags": []
+   },
+   {
+    "week": 4,
+    "period": "9.21~9.26",
+    "subjectId": "ca-self",
+    "kind": "event",
+    "unit": "독서축제",
+    "topic": "독서축제의 날 참여하기 -1-",
+    "n": 1,
+    "total": 2,
+    "eventName": "독서축제",
+    "tags": [],
+    "rawNote": "◈독서축제"
+   },
+   {
+    "week": 4,
+    "period": "9.21~9.26",
+    "subjectId": "ca-self",
+    "kind": "event",
+    "unit": "독서축제",
+    "topic": "독서축제의 날 참여하기 -2-",
+    "n": 2,
+    "total": 2,
+    "eventName": "독서축제",
+    "tags": [],
+    "rawNote": "◈독서축제"
+   },
+   {
+    "week": 5,
+    "period": "9.28~10.3",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "자치활동",
+    "topic": "학급평화회의 -2-",
+    "n": 2,
+    "total": 4,
+    "tags": []
+   },
+   {
+    "week": 6,
+    "period": "10.5~10.10",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "범교과주제(다문화교육)",
+    "topic": "다른 나라의 문화 체험하기",
+    "n": 1,
+    "total": 1,
+    "tags": [
+     "다문화 이해교육"
+    ],
+    "note": "<행사> 글로벌빌리지",
+    "rawNote": "<행사> 글로벌빌리지【다문화 이해교육】"
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "지역 사회 봉사활동",
+    "topic": "친구 사랑 실천 및 언어 문화 개선 캠페인하기",
+    "n": 1,
+    "total": 1,
+    "tags": [],
+    "note": "언어문화개선주간(10월3주)연계",
+    "rawNote": "언어문화개선주간(10월3주)연계"
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "학년 및 학급특색교육",
+    "topic": "문화예술교육(국악) -3-",
+    "n": 3,
+    "total": 10,
+    "tags": []
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "범교과주제(독도교육)",
+    "topic": "독도가 우리 땅인 이유 및 독도의 가치 알기",
+    "n": 1,
+    "total": 2,
+    "tags": [
+     "독도교육"
+    ],
+    "note": "독도의날(10/25)연계",
+    "rawNote": "독도의날(10/25)연계【독도교육】"
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "범교과주제(독도교육)",
+    "topic": "독도 사랑 캠페인 활동하기",
+    "n": 2,
+    "total": 2,
+    "tags": [
+     "독도교육"
+    ],
+    "note": "독도의날(10/25)연계",
+    "rawNote": "독도의날(10/25)연계【독도교육】"
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "학년 및 학급특색교육",
+    "topic": "문화예술교육(국악) -4-",
+    "n": 4,
+    "total": 10,
+    "tags": []
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "학년 및 학급특색교육",
+    "topic": "문화예술교육(국악) -5-",
+    "n": 5,
+    "total": 10,
+    "tags": []
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "학년 및 학급특색교육",
+    "topic": "문화예술교육(국악) -6-",
+    "n": 6,
+    "total": 10,
+    "tags": []
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "학년 및 학급특색교육",
+    "topic": "문화예술교육(국악) -7-",
+    "n": 7,
+    "total": 10,
+    "tags": []
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "학년 및 학급특색교육",
+    "topic": "문화예술교육(국악) -8-",
+    "n": 8,
+    "total": 10,
+    "tags": []
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "학년 및 학급특색교육",
+    "topic": "문화예술교육(국악) -9-",
+    "n": 9,
+    "total": 10,
+    "tags": []
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "학년 및 학급특색교육",
+    "topic": "문화예술교육(국악) -10-",
+    "n": 10,
+    "total": 10,
+    "tags": []
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "범교과주제(식생활·영양교육)",
+    "topic": "식품 첨가물의 종류 조사하기",
+    "n": 1,
+    "total": 1,
+    "tags": [
+     "건강한 식생활 및 영양교육"
+    ],
+    "rawNote": "【건강한 식생활 및 영양교육】"
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "자치활동",
+    "topic": "학급평화회의 -3-",
+    "n": 3,
+    "total": 4,
+    "tags": []
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "어울림프로그램(학교폭력예방)",
+    "topic": "사이버 공간에서 지켜야 할 의사소통 예절 알아보기",
+    "n": 1,
+    "total": 2,
+    "tags": [
+     "폭력예방 및 신변보호-학교폭력"
+    ],
+    "rawNote": "【폭력예방 및 신변보호-학교폭력】"
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "어울림프로그램(학교폭력예방)",
+    "topic": "우리반 친구 칭찬 릴레이하기",
+    "n": 2,
+    "total": 2,
+    "tags": [
+     "폭력예방 및 신변보호-학교폭력"
+    ],
+    "rawNote": "【폭력예방 및 신변보호-학교폭력】"
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "범교과주제(생명존중(자살예방))",
+    "topic": "생명존중교육(우울, 불안) 및 내 마음 살피기",
+    "n": 1,
+    "total": 2,
+    "tags": [
+     "폭력예방 및 신변보호-생명존중(자살예방)",
+     "딥페이크성범죄예방교육"
+    ],
+    "rawNote": "【폭력예방 및 신변보호-생명존중(자살예방), 딥페이크성범죄예방교육】"
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "ca-self",
+    "kind": "event",
+    "unit": "자치활동",
+    "topic": "전교학생회선거에 참여하기",
+    "n": 4,
+    "total": 4,
+    "eventName": "전교학생회선거",
+    "tags": [],
+    "rawNote": "◈전교학생회선거"
+   },
+   {
+    "week": 17,
+    "period": "12.21~12.26",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "범교과주제(생명존중(자살예방))",
+    "topic": "생명의 소중함과 자살 예방 방법 알아보기",
+    "n": 2,
+    "total": 2,
+    "tags": [
+     "폭력예방 및 신변보호-생명존중(자살예방)"
+    ],
+    "rawNote": "【폭력예방 및 신변보호-생명존중(자살예방)】"
+   },
+   {
+    "week": 17,
+    "period": "12.21~12.26",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "범교과주제(양성평등교육)",
+    "topic": "이성 친구간의 예절에 대해 알아보기",
+    "n": 1,
+    "total": 3,
+    "tags": [
+     "양성평등교육",
+     "성폭력예방교육",
+     "딥페이크성범죄예방교육"
+    ],
+    "rawNote": "【양성평등교육, 성폭력예방교육, 딥페이크성범죄예방교육】"
+   },
+   {
+    "week": 18,
+    "period": "12.28~1.2",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "범교과주제(양성평등교육)",
+    "topic": "건강하게 발달하기 위한 조건 알아보기",
+    "n": 2,
+    "total": 3,
+    "tags": [
+     "양성평등교육",
+     "성폭력예방교육"
+    ],
+    "rawNote": "【양성평등교육, 성폭력예방교육】"
+   },
+   {
+    "week": 18,
+    "period": "12.28~1.2",
+    "subjectId": "ca-self",
+    "kind": "event",
+    "unit": "적응 및 개척 활동",
+    "topic": "겨울방학식에 참여하기",
+    "n": 2,
+    "total": 4,
+    "eventName": "겨울방학식",
+    "tags": [],
+    "rawNote": "◈겨울방학식"
+   },
+   {
+    "week": 18,
+    "period": "12.28~1.2",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "범교과주제(양성평등교육)",
+    "topic": "성적 발달과 자기 관리 방법 탐색하기",
+    "n": 3,
+    "total": 3,
+    "tags": [
+     "양성평등교육",
+     "성폭력예방교육",
+     "디지털성폭력예방교육"
+    ],
+    "rawNote": "【양성평등교육, 성폭력예방교육, 디지털성폭력예방교육】"
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "ca-self",
+    "kind": "event",
+    "unit": "적응 및 개척 활동",
+    "topic": "겨울개학식에 참여하기",
+    "n": 3,
+    "total": 4,
+    "eventName": "겨울개학식",
+    "tags": [],
+    "rawNote": "◈겨울개학식"
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "범교과주제(안전교육)",
+    "topic": "재난대피훈련(자연재난)에 참여하기",
+    "n": 1,
+    "total": 2,
+    "tags": [
+     "재난안전-자연재난",
+     "재난대피훈련"
+    ],
+    "rawNote": "【재난안전-자연재난, 재난대피훈련】"
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "범교과주제(안전교육)",
+    "topic": "학교 내 안전사고 예방하기",
+    "n": 2,
+    "total": 2,
+    "tags": [
+     "안전교육"
+    ],
+    "rawNote": "【안전교육】"
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "범교과주제(민주시민교육)",
+    "topic": "학생 인권의 보호방법 토의하기",
+    "n": 1,
+    "total": 1,
+    "tags": [
+     "민주시민교육"
+    ],
+    "note": "학기별1회",
+    "rawNote": "학기별1회【민주시민교육】"
+   },
+   {
+    "week": 24,
+    "period": "2.8~2.13",
+    "subjectId": "ca-self",
+    "kind": "event",
+    "unit": "적응 및 개척 활동",
+    "topic": "졸업식에 참여하기",
+    "n": 4,
+    "total": 4,
+    "eventName": "졸업식",
+    "tags": [],
+    "rawNote": "◈졸업식"
+   },
+   {
+    "week": 24,
+    "period": "2.8~2.13",
+    "subjectId": "ca-self",
+    "kind": "event",
+    "unit": "교내 봉사활동",
+    "topic": "교실 청소 및 정리정돈하기",
+    "n": 1,
+    "total": 1,
+    "eventName": "졸업식",
+    "tags": [],
+    "rawNote": "◈졸업식"
+   }
+  ]
+ },
+ {
+  "subjectId": "ca-club",
+  "semester": 2,
+  "footer": {
+   "total": 9,
+   "annual": 18
+  },
+  "rows": [
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "ca-club",
+    "kind": "event",
+    "unit": "학년(군)별 부서활동",
+    "topic": "각 부서별 동아리 활동 참여하기 -1-",
+    "n": 1,
+    "total": 9,
+    "eventName": "동아리활동",
+    "tags": [],
+    "rawNote": "◈동아리활동"
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "ca-club",
+    "kind": "event",
+    "unit": "학년(군)별 부서활동",
+    "topic": "각 부서별 동아리 활동 참여하기 -2-",
+    "n": 2,
+    "total": 9,
+    "eventName": "동아리활동",
+    "tags": [],
+    "rawNote": "◈동아리활동"
+   },
+   {
+    "week": 4,
+    "period": "9.21~9.26",
+    "subjectId": "ca-club",
+    "kind": "event",
+    "unit": "학년(군)별 부서활동",
+    "topic": "각 부서별 동아리 활동 참여하기 -3-",
+    "n": 3,
+    "total": 9,
+    "eventName": "동아리활동",
+    "tags": [],
+    "rawNote": "◈동아리활동"
+   },
+   {
+    "week": 5,
+    "period": "9.28~10.3",
+    "subjectId": "ca-club",
+    "kind": "event",
+    "unit": "학년(군)별 부서활동",
+    "topic": "각 부서별 동아리 활동 참여하기 -4-",
+    "n": 4,
+    "total": 9,
+    "eventName": "동아리활동",
+    "tags": [],
+    "rawNote": "◈동아리활동"
+   },
+   {
+    "week": 6,
+    "period": "10.5~10.10",
+    "subjectId": "ca-club",
+    "kind": "event",
+    "unit": "학년(군)별 부서활동",
+    "topic": "각 부서별 동아리 활동 참여하기 -5-",
+    "n": 5,
+    "total": 9,
+    "eventName": "동아리활동",
+    "tags": [],
+    "rawNote": "◈동아리활동"
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "ca-club",
+    "kind": "event",
+    "unit": "학년(군)별 부서활동",
+    "topic": "각 부서별 동아리 활동 참여하기 -6-",
+    "n": 6,
+    "total": 9,
+    "eventName": "동아리활동",
+    "tags": [],
+    "rawNote": "◈동아리활동"
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "ca-club",
+    "kind": "event",
+    "unit": "학년(군)별 부서활동",
+    "topic": "각 부서별 동아리 활동 참여하기 -7-",
+    "n": 7,
+    "total": 9,
+    "eventName": "동아리활동",
+    "tags": [],
+    "rawNote": "◈동아리활동"
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "ca-club",
+    "kind": "event",
+    "unit": "학년(군)별 부서활동",
+    "topic": "각 부서별 동아리 활동 참여하기 -8-",
+    "n": 8,
+    "total": 9,
+    "eventName": "동아리활동",
+    "tags": [],
+    "rawNote": "◈동아리활동"
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "ca-club",
+    "kind": "event",
+    "unit": "학년(군)별 부서활동",
+    "topic": "각 부서별 동아리 활동 참여하기 -9-",
+    "n": 9,
+    "total": 9,
+    "eventName": "동아리활동",
+    "tags": [],
+    "rawNote": "◈동아리활동"
+   }
+  ]
+ },
+ {
+  "subjectId": "ca-career",
+  "semester": 2,
+  "footer": {
+   "total": 5,
+   "annual": 8
+  },
+  "rows": [
+   {
+    "week": 6,
+    "period": "10.5~10.10",
+    "subjectId": "ca-career",
+    "kind": "event",
+    "unit": "진로 설계 및 실천 활동",
+    "topic": "주변의 사람들을 살펴보고 다양한 직업 알아보기",
+    "n": 1,
+    "total": 5,
+    "eventName": "글로벌빌리지",
+    "tags": [
+     "진로교육"
+    ],
+    "rawNote": "◈글로벌빌리지【진로교육】"
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "ca-career",
+    "kind": "lesson",
+    "unit": "진로 설계 및 실천 활동",
+    "topic": "자신의 강점과 적성, 소질을 바탕으로 미래의 내 모습 설계하기",
+    "n": 2,
+    "total": 5,
+    "tags": [
+     "진로교육"
+    ],
+    "rawNote": "【진로교육】"
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "ca-career",
+    "kind": "lesson",
+    "unit": "진로 설계 및 실천 활동",
+    "topic": "진로상담을 통해 자신의 진로 설계하기",
+    "n": 3,
+    "total": 5,
+    "tags": [
+     "진로교육"
+    ],
+    "rawNote": "【진로교육】"
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "ca-career",
+    "kind": "lesson",
+    "unit": "진로 설계 및 실천 활동",
+    "topic": "자신이 조사한 직업인에 대해 발표하기",
+    "n": 4,
+    "total": 5,
+    "tags": [
+     "진로교육"
+    ],
+    "rawNote": "【진로교육】"
+   },
+   {
+    "week": 24,
+    "period": "2.8~2.13",
+    "subjectId": "ca-career",
+    "kind": "lesson",
+    "unit": "진로 설계 및 실천 활동",
+    "topic": "중학교에서의 생활 탐구하기",
+    "n": 5,
+    "total": 5,
+    "tags": [
+     "진로교육"
+    ],
+    "rawNote": "【진로교육】"
+   }
+  ]
+ },
+ {
+  "subjectId": "creative-total",
+  "semester": 2,
+  "footer": {
+   "total": 50,
+   "annual": 98,
+   "parts": {
+    "자": 36,
+    "동": 9,
+    "진": 5
+   }
+  },
+  "rows": [
+   {
+    "week": 1,
+    "period": "9.1~9.5",
+    "subjectId": "ca-self",
+    "kind": "event",
+    "unit": "적응 및 개척 활동",
+    "topic": "여름개학식에 참여하기",
+    "n": 1,
+    "total": 4,
+    "area": "자율⋅자치",
+    "eventName": "여름개학식",
+    "tags": [],
+    "rawNote": "◈여름개학식"
+   },
+   {
+    "week": 1,
+    "period": "9.1~9.5",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "자치활동",
+    "topic": "학급평화회의 -1-",
+    "n": 1,
+    "total": 4,
+    "area": "자율⋅자치",
+    "tags": []
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "학년 및 학급특색교육",
+    "topic": "문화예술교육(국악) -1-",
+    "n": 1,
+    "total": 10,
+    "area": "자율⋅자치",
+    "tags": []
+   },
+   {
+    "week": 2,
+    "period": "9.7~9.12",
+    "subjectId": "ca-club",
+    "kind": "event",
+    "unit": "학년(군)별 부서활동",
+    "topic": "각 부서별 동아리 활동 참여하기 -1-",
+    "n": 1,
+    "total": 9,
+    "area": "동아리",
+    "eventName": "동아리활동",
+    "tags": [],
+    "rawNote": "◈동아리활동"
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "학년 및 학급특색교육",
+    "topic": "문화예술교육(국악) -2-",
+    "n": 2,
+    "total": 10,
+    "area": "자율⋅자치",
+    "tags": []
+   },
+   {
+    "week": 3,
+    "period": "9.14~9.19",
+    "subjectId": "ca-club",
+    "kind": "event",
+    "unit": "학년(군)별 부서활동",
+    "topic": "각 부서별 동아리 활동 참여하기 -2-",
+    "n": 2,
+    "total": 9,
+    "area": "동아리",
+    "eventName": "동아리활동",
+    "tags": [],
+    "rawNote": "◈동아리활동"
+   },
+   {
+    "week": 4,
+    "period": "9.21~9.26",
+    "subjectId": "ca-self",
+    "kind": "event",
+    "unit": "독서축제",
+    "topic": "독서축제의 날 참여하기 -1-",
+    "n": 1,
+    "total": 2,
+    "area": "자율⋅자치",
+    "eventName": "독서축제",
+    "tags": [],
+    "rawNote": "◈독서축제"
+   },
+   {
+    "week": 4,
+    "period": "9.21~9.26",
+    "subjectId": "ca-self",
+    "kind": "event",
+    "unit": "독서축제",
+    "topic": "독서축제의 날 참여하기 -2-",
+    "n": 2,
+    "total": 2,
+    "area": "자율⋅자치",
+    "eventName": "독서축제",
+    "tags": [],
+    "rawNote": "◈독서축제"
+   },
+   {
+    "week": 4,
+    "period": "9.21~9.26",
+    "subjectId": "ca-club",
+    "kind": "event",
+    "unit": "학년(군)별 부서활동",
+    "topic": "각 부서별 동아리 활동 참여하기 -3-",
+    "n": 3,
+    "total": 9,
+    "area": "동아리",
+    "eventName": "동아리활동",
+    "tags": [],
+    "rawNote": "◈동아리활동"
+   },
+   {
+    "week": 5,
+    "period": "9.28~10.3",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "자치활동",
+    "topic": "학급평화회의 -2-",
+    "n": 2,
+    "total": 4,
+    "area": "자율⋅자치",
+    "tags": []
+   },
+   {
+    "week": 5,
+    "period": "9.28~10.3",
+    "subjectId": "ca-club",
+    "kind": "event",
+    "unit": "학년(군)별 부서활동",
+    "topic": "각 부서별 동아리 활동 참여하기 -4-",
+    "n": 4,
+    "total": 9,
+    "area": "동아리",
+    "eventName": "동아리활동",
+    "tags": [],
+    "rawNote": "◈동아리활동"
+   },
+   {
+    "week": 6,
+    "period": "10.5~10.10",
+    "subjectId": "ca-career",
+    "kind": "event",
+    "unit": "진로 설계 및 실천 활동",
+    "topic": "주변의 사람들을 살펴보고 다양한 직업 알아보기",
+    "n": 1,
+    "total": 5,
+    "area": "진로",
+    "eventName": "글로벌빌리지",
+    "tags": [
+     "진로교육"
+    ],
+    "rawNote": "◈글로벌빌리지【진로교육】"
+   },
+   {
+    "week": 6,
+    "period": "10.5~10.10",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "범교과주제(다문화교육)",
+    "topic": "다른 나라의 문화 체험하기",
+    "n": 1,
+    "total": 1,
+    "area": "자율⋅자치",
+    "tags": [
+     "다문화 이해교육"
+    ],
+    "note": "<행사> 글로벌빌리지",
+    "rawNote": "<행사> 글로벌빌리지【다문화 이해교육】"
+   },
+   {
+    "week": 6,
+    "period": "10.5~10.10",
+    "subjectId": "ca-club",
+    "kind": "event",
+    "unit": "학년(군)별 부서활동",
+    "topic": "각 부서별 동아리 활동 참여하기 -5-",
+    "n": 5,
+    "total": 9,
+    "area": "동아리",
+    "eventName": "동아리활동",
+    "tags": [],
+    "rawNote": "◈동아리활동"
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "지역 사회 봉사활동",
+    "topic": "친구 사랑 실천 및 언어 문화 개선 캠페인하기",
+    "n": 1,
+    "total": 1,
+    "area": "자율⋅자치",
+    "tags": [],
+    "note": "언어문화개선주간(10월3주)연계",
+    "rawNote": "언어문화개선주간(10월3주)연계"
+   },
+   {
+    "week": 7,
+    "period": "10.12~10.17",
+    "subjectId": "ca-club",
+    "kind": "event",
+    "unit": "학년(군)별 부서활동",
+    "topic": "각 부서별 동아리 활동 참여하기 -6-",
+    "n": 6,
+    "total": 9,
+    "area": "동아리",
+    "eventName": "동아리활동",
+    "tags": [],
+    "rawNote": "◈동아리활동"
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "학년 및 학급특색교육",
+    "topic": "문화예술교육(국악) -3-",
+    "n": 3,
+    "total": 10,
+    "area": "자율⋅자치",
+    "tags": []
+   },
+   {
+    "week": 8,
+    "period": "10.19~10.24",
+    "subjectId": "ca-club",
+    "kind": "event",
+    "unit": "학년(군)별 부서활동",
+    "topic": "각 부서별 동아리 활동 참여하기 -7-",
+    "n": 7,
+    "total": 9,
+    "area": "동아리",
+    "eventName": "동아리활동",
+    "tags": [],
+    "rawNote": "◈동아리활동"
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "범교과주제(독도교육)",
+    "topic": "독도가 우리 땅인 이유 및 독도의 가치 알기",
+    "n": 1,
+    "total": 2,
+    "area": "자율⋅자치",
+    "tags": [
+     "독도교육"
+    ],
+    "note": "독도의날(10/25)연계",
+    "rawNote": "독도의날(10/25)연계【독도교육】"
+   },
+   {
+    "week": 9,
+    "period": "10.26~10.31",
+    "subjectId": "ca-club",
+    "kind": "event",
+    "unit": "학년(군)별 부서활동",
+    "topic": "각 부서별 동아리 활동 참여하기 -8-",
+    "n": 8,
+    "total": 9,
+    "area": "동아리",
+    "eventName": "동아리활동",
+    "tags": [],
+    "rawNote": "◈동아리활동"
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "범교과주제(독도교육)",
+    "topic": "독도 사랑 캠페인 활동하기",
+    "n": 2,
+    "total": 2,
+    "area": "자율⋅자치",
+    "tags": [
+     "독도교육"
+    ],
+    "note": "독도의날(10/25)연계",
+    "rawNote": "독도의날(10/25)연계【독도교육】"
+   },
+   {
+    "week": 10,
+    "period": "11.2~11.7",
+    "subjectId": "ca-club",
+    "kind": "event",
+    "unit": "학년(군)별 부서활동",
+    "topic": "각 부서별 동아리 활동 참여하기 -9-",
+    "n": 9,
+    "total": 9,
+    "area": "동아리",
+    "eventName": "동아리활동",
+    "tags": [],
+    "rawNote": "◈동아리활동"
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "학년 및 학급특색교육",
+    "topic": "문화예술교육(국악) -4-",
+    "n": 4,
+    "total": 10,
+    "area": "자율⋅자치",
+    "tags": []
+   },
+   {
+    "week": 11,
+    "period": "11.9~11.14",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "학년 및 학급특색교육",
+    "topic": "문화예술교육(국악) -5-",
+    "n": 5,
+    "total": 10,
+    "area": "자율⋅자치",
+    "tags": []
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "학년 및 학급특색교육",
+    "topic": "문화예술교육(국악) -6-",
+    "n": 6,
+    "total": 10,
+    "area": "자율⋅자치",
+    "tags": []
+   },
+   {
+    "week": 12,
+    "period": "11.16~11.21",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "학년 및 학급특색교육",
+    "topic": "문화예술교육(국악) -7-",
+    "n": 7,
+    "total": 10,
+    "area": "자율⋅자치",
+    "tags": []
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "학년 및 학급특색교육",
+    "topic": "문화예술교육(국악) -8-",
+    "n": 8,
+    "total": 10,
+    "area": "자율⋅자치",
+    "tags": []
+   },
+   {
+    "week": 13,
+    "period": "11.23~11.28",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "학년 및 학급특색교육",
+    "topic": "문화예술교육(국악) -9-",
+    "n": 9,
+    "total": 10,
+    "area": "자율⋅자치",
+    "tags": []
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "학년 및 학급특색교육",
+    "topic": "문화예술교육(국악) -10-",
+    "n": 10,
+    "total": 10,
+    "area": "자율⋅자치",
+    "tags": []
+   },
+   {
+    "week": 14,
+    "period": "11.30~12.5",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "범교과주제(식생활·영양교육)",
+    "topic": "식품 첨가물의 종류 조사하기",
+    "n": 1,
+    "total": 1,
+    "area": "자율⋅자치",
+    "tags": [
+     "건강한 식생활 및 영양교육"
+    ],
+    "rawNote": "【건강한 식생활 및 영양교육】"
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "자치활동",
+    "topic": "학급평화회의 -3-",
+    "n": 3,
+    "total": 4,
+    "area": "자율⋅자치",
+    "tags": []
+   },
+   {
+    "week": 15,
+    "period": "12.7~12.12",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "어울림프로그램(학교폭력예방)",
+    "topic": "사이버 공간에서 지켜야 할 의사소통 예절 알아보기",
+    "n": 1,
+    "total": 2,
+    "area": "자율⋅자치",
+    "tags": [
+     "폭력예방 및 신변보호-학교폭력"
+    ],
+    "rawNote": "【폭력예방 및 신변보호-학교폭력】"
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "어울림프로그램(학교폭력예방)",
+    "topic": "우리반 친구 칭찬 릴레이하기",
+    "n": 2,
+    "total": 2,
+    "area": "자율⋅자치",
+    "tags": [
+     "폭력예방 및 신변보호-학교폭력"
+    ],
+    "rawNote": "【폭력예방 및 신변보호-학교폭력】"
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "범교과주제(생명존중(자살예방))",
+    "topic": "생명존중교육(우울, 불안) 및 내 마음 살피기",
+    "n": 1,
+    "total": 2,
+    "area": "자율⋅자치",
+    "tags": [
+     "폭력예방 및 신변보호-생명존중(자살예방)",
+     "딥페이크성범죄예방교육"
+    ],
+    "rawNote": "【폭력예방 및 신변보호-생명존중(자살예방), 딥페이크성범죄예방교육】"
+   },
+   {
+    "week": 16,
+    "period": "12.14~12.19",
+    "subjectId": "ca-self",
+    "kind": "event",
+    "unit": "자치활동",
+    "topic": "전교학생회선거에 참여하기",
+    "n": 4,
+    "total": 4,
+    "area": "자율⋅자치",
+    "eventName": "전교학생회선거",
+    "tags": [],
+    "rawNote": "◈전교학생회선거"
+   },
+   {
+    "week": 17,
+    "period": "12.21~12.26",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "범교과주제(생명존중(자살예방))",
+    "topic": "생명의 소중함과 자살 예방 방법 알아보기",
+    "n": 2,
+    "total": 2,
+    "area": "자율⋅자치",
+    "tags": [
+     "폭력예방 및 신변보호-생명존중(자살예방)"
+    ],
+    "rawNote": "【폭력예방 및 신변보호-생명존중(자살예방)】"
+   },
+   {
+    "week": 17,
+    "period": "12.21~12.26",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "범교과주제(양성평등교육)",
+    "topic": "이성 친구간의 예절에 대해 알아보기",
+    "n": 1,
+    "total": 3,
+    "area": "자율⋅자치",
+    "tags": [
+     "양성평등교육",
+     "성폭력예방교육",
+     "딥페이크성범죄예방교육"
+    ],
+    "rawNote": "【양성평등교육, 성폭력예방교육, 딥페이크성범죄예방교육】"
+   },
+   {
+    "week": 18,
+    "period": "12.28~1.2",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "범교과주제(양성평등교육)",
+    "topic": "건강하게 발달하기 위한 조건 알아보기",
+    "n": 2,
+    "total": 3,
+    "area": "자율⋅자치",
+    "tags": [
+     "양성평등교육",
+     "성폭력예방교육"
+    ],
+    "rawNote": "【양성평등교육, 성폭력예방교육】"
+   },
+   {
+    "week": 18,
+    "period": "12.28~1.2",
+    "subjectId": "ca-self",
+    "kind": "event",
+    "unit": "적응 및 개척 활동",
+    "topic": "겨울방학식에 참여하기",
+    "n": 2,
+    "total": 4,
+    "area": "자율⋅자치",
+    "eventName": "겨울방학식",
+    "tags": [],
+    "rawNote": "◈겨울방학식"
+   },
+   {
+    "week": 18,
+    "period": "12.28~1.2",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "범교과주제(양성평등교육)",
+    "topic": "성적 발달과 자기 관리 방법 탐색하기",
+    "n": 3,
+    "total": 3,
+    "area": "자율⋅자치",
+    "tags": [
+     "양성평등교육",
+     "성폭력예방교육",
+     "디지털성폭력예방교육"
+    ],
+    "rawNote": "【양성평등교육, 성폭력예방교육, 디지털성폭력예방교육】"
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "ca-self",
+    "kind": "event",
+    "unit": "적응 및 개척 활동",
+    "topic": "겨울개학식에 참여하기",
+    "n": 3,
+    "total": 4,
+    "area": "자율⋅자치",
+    "eventName": "겨울개학식",
+    "tags": [],
+    "rawNote": "◈겨울개학식"
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "범교과주제(안전교육)",
+    "topic": "재난대피훈련(자연재난)에 참여하기",
+    "n": 1,
+    "total": 2,
+    "area": "자율⋅자치",
+    "tags": [
+     "재난안전-자연재난",
+     "재난대피훈련"
+    ],
+    "rawNote": "【재난안전-자연재난, 재난대피훈련】"
+   },
+   {
+    "week": 22,
+    "period": "1.25~1.30",
+    "subjectId": "ca-career",
+    "kind": "lesson",
+    "unit": "진로 설계 및 실천 활동",
+    "topic": "자신의 강점과 적성, 소질을 바탕으로 미래의 내 모습 설계하기",
+    "n": 2,
+    "total": 5,
+    "area": "진로",
+    "tags": [
+     "진로교육"
+    ],
+    "rawNote": "【진로교육】"
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "범교과주제(안전교육)",
+    "topic": "학교 내 안전사고 예방하기",
+    "n": 2,
+    "total": 2,
+    "area": "자율⋅자치",
+    "tags": [
+     "안전교육"
+    ],
+    "rawNote": "【안전교육】"
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "ca-career",
+    "kind": "lesson",
+    "unit": "진로 설계 및 실천 활동",
+    "topic": "진로상담을 통해 자신의 진로 설계하기",
+    "n": 3,
+    "total": 5,
+    "area": "진로",
+    "tags": [
+     "진로교육"
+    ],
+    "rawNote": "【진로교육】"
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "ca-career",
+    "kind": "lesson",
+    "unit": "진로 설계 및 실천 활동",
+    "topic": "자신이 조사한 직업인에 대해 발표하기",
+    "n": 4,
+    "total": 5,
+    "area": "진로",
+    "tags": [
+     "진로교육"
+    ],
+    "rawNote": "【진로교육】"
+   },
+   {
+    "week": 23,
+    "period": "2.1~2.6",
+    "subjectId": "ca-self",
+    "kind": "lesson",
+    "unit": "범교과주제(민주시민교육)",
+    "topic": "학생 인권의 보호방법 토의하기",
+    "n": 1,
+    "total": 1,
+    "area": "자율⋅자치",
+    "tags": [
+     "민주시민교육"
+    ],
+    "note": "학기별1회",
+    "rawNote": "학기별1회【민주시민교육】"
+   },
+   {
+    "week": 24,
+    "period": "2.8~2.13",
+    "subjectId": "ca-career",
+    "kind": "lesson",
+    "unit": "진로 설계 및 실천 활동",
+    "topic": "중학교에서의 생활 탐구하기",
+    "n": 5,
+    "total": 5,
+    "area": "진로",
+    "tags": [
+     "진로교육"
+    ],
+    "rawNote": "【진로교육】"
+   },
+   {
+    "week": 24,
+    "period": "2.8~2.13",
+    "subjectId": "ca-self",
+    "kind": "event",
+    "unit": "적응 및 개척 활동",
+    "topic": "졸업식에 참여하기",
+    "n": 4,
+    "total": 4,
+    "area": "자율⋅자치",
+    "eventName": "졸업식",
+    "tags": [],
+    "rawNote": "◈졸업식"
+   },
+   {
+    "week": 24,
+    "period": "2.8~2.13",
+    "subjectId": "ca-self",
+    "kind": "event",
+    "unit": "교내 봉사활동",
+    "topic": "교실 청소 및 정리정돈하기",
+    "n": 1,
+    "total": 1,
+    "area": "자율⋅자치",
+    "eventName": "졸업식",
+    "tags": [],
+    "rawNote": "◈졸업식"
+   }
+  ]
+ }
+]

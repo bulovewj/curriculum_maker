@@ -45,7 +45,7 @@ src/ model engine import export storage state ai lib screens components dev
 | 4 | hwpx 읽기 | ✅ | 15 | hwpx 쓰기·진도표 출력 | ⬜ |
 | 5 | 학사일정·시간표 매퍼 | ✅ | 16 | 운영계획·증감계획 hwpx → 관문 | ⬜ |
 | 6 | 편제·진도표·자율시간·운영계획 매퍼 | ✅ | 17 | AI 서버 함수·재구성 후보 | ⬜ |
-| 7 | 정답지 기대값 JSON | ⬜ | 18 | AI 문장·활동명 | ⬜ |
+| 7 | 정답지 기대값 JSON | ✅ | 18 | AI 문장·활동명 | ⬜ |
 | 8 | 파일 넣기·해석 확인 화면 | ⬜ | 19 | AI 모르는 양식 열 맞추기 | ⬜ |
 | 9 | 칸 표·주별 시수표(정답지 A) | ⬜ | 20 | 화면 다듬기 | ⬜ |
 | 10 | 진도 배치(정답지 B) | ⬜ | 21 | 1차 정리 | ⬜ |
@@ -54,6 +54,7 @@ src/ model engine import export storage state ai lib screens components dev
 ### 다음 세션 메모
 - 개발 서버는 5173번 고정(`strictPort`). 이미 켜져 있으면 `npm run dev`가 오류로 멈춘다. 켜진 서버를 쓰거나 끄고 다시 실행
 - `?dev` 화면 = 진도 xlsx·hwpx 읽기 결과 확인용(개발 전용). hwpx 원본 안내 표(안건 표)에 교사 이름이 있으니 테스트·기대값에 옮기지 말 것
+- `npm run expected`(tsx) = 정답지 기대값 JSON 다시 만들기 + totals.json 대조. 기대값 JSON은 손으로 고치지 말 것. `curriculum.json`은 계획에 없던 추가 파일(CUR 읽은 값)
 - `@types/node` 없음 → 테스트용 Node 함수는 `tests/node.d.ts`에 직접 선언
 - 2026-11-08 협업 교사 검토 반영: 준비물은 학사일정·전담 시간표·작년·올해 편제(학년군 편제표)·진도. 기초 시간표는 자동 생성(M11b), 학교자율시간 운영(안)은 받지 않음(작업지시서 1장·2.8·12장)
 - 학기 중 행사로 주별 값이 바뀌는 것이 정상. 시점이 다른 문서끼리 주별 일치를 가정하지 말 것(작업지시서 2.7)

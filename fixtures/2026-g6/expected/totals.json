@@ -1,0 +1,142 @@
+{
+  "출처": "작업지시서 7.3 표를 손으로 옮긴 것. 파서와 독립된 확인용이다. 고치지 말 것.",
+  "subjects": {
+    "kor": {
+      "s1": 83,
+      "s2": 109,
+      "year": 192,
+      "standard": 204,
+      "diff": -12
+    },
+    "autonomy": {
+      "s1": 32,
+      "s2": 0,
+      "year": 32,
+      "standard": null,
+      "diff": 32
+    },
+    "soc": {
+      "s1": 49,
+      "s2": 47,
+      "year": 96,
+      "standard": 102,
+      "diff": -6
+    },
+    "mor": {
+      "s1": 16,
+      "s2": 16,
+      "year": 32,
+      "standard": 34,
+      "diff": -2
+    },
+    "math": {
+      "s1": 73,
+      "s2": 67,
+      "year": 140,
+      "standard": 136,
+      "diff": 4
+    },
+    "sci": {
+      "s1": 50,
+      "s2": 48,
+      "year": 98,
+      "standard": 102,
+      "diff": -4
+    },
+    "prac": {
+      "s1": 32,
+      "s2": 32,
+      "year": 64,
+      "standard": 68,
+      "diff": -4
+    },
+    "pe": {
+      "s1": 52,
+      "s2": 50,
+      "year": 102,
+      "standard": 102,
+      "diff": 0
+    },
+    "music": {
+      "s1": 34,
+      "s2": 34,
+      "year": 68,
+      "standard": 68,
+      "diff": 0
+    },
+    "art": {
+      "s1": 34,
+      "s2": 34,
+      "year": 68,
+      "standard": 68,
+      "diff": 0
+    },
+    "eng": {
+      "s1": 52,
+      "s2": 50,
+      "year": 102,
+      "standard": 102,
+      "diff": 0
+    },
+    "ca-self": {
+      "s1": 36,
+      "s2": 36,
+      "year": 72,
+      "standard": null,
+      "diff": null
+    },
+    "ca-club": {
+      "s1": 9,
+      "s2": 9,
+      "year": 18,
+      "standard": null,
+      "diff": null
+    },
+    "ca-career": {
+      "s1": 3,
+      "s2": 5,
+      "year": 8,
+      "standard": null,
+      "diff": null
+    },
+    "creative": {
+      "s1": 48,
+      "s2": 50,
+      "year": 98,
+      "standard": 102,
+      "diff": -4
+    },
+    "total": {
+      "s1": 555,
+      "s2": 537,
+      "year": 1092,
+      "standard": 1088,
+      "diff": 4
+    }
+  },
+  "schoolDays": {
+    "s1": 96,
+    "s2": 94,
+    "year": 190
+  },
+  "dayPeriods": {
+    "s1": [
+      113,
+      119,
+      95,
+      120,
+      108
+    ],
+    "s2": [
+      108,
+      121,
+      105,
+      111,
+      92
+    ]
+  },
+  "weeks": {
+    "s1": 21,
+    "s2": 21
+  }
+}

@@ -7,6 +7,7 @@
     "dev": "vite",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
+    "expected": "tsx scripts/make-expected.ts",
     "build": "vite build"
   },
   "dependencies": {
@@ -21,6 +22,7 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.2.1",
+    "tsx": "^4.23.15",
     "typescript": "^7.0.2",
     "vite": "^8.3.6",
     "vitest": "^5.1.0"

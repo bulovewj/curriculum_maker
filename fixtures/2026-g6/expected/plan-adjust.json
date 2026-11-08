@@ -1,0 +1,513 @@
+{
+ "standard": {
+  "kor": 204,
+  "soc": 102,
+  "mor": 34,
+  "math": 136,
+  "sci": 102,
+  "prac": 68,
+  "pe": 102,
+  "music": 68,
+  "art": 68,
+  "eng": 102
+ },
+ "annual": {
+  "kor": 192,
+  "autonomy": 32,
+  "soc": 96,
+  "mor": 32,
+  "math": 140,
+  "sci": 98,
+  "prac": 64,
+  "pe": 102,
+  "music": 68,
+  "art": 68,
+  "eng": 102
+ },
+ "diff": {
+  "kor": -12,
+  "autonomy": 32,
+  "soc": -6,
+  "mor": -2,
+  "math": 4,
+  "sci": -4,
+  "prac": -4,
+  "pe": 0,
+  "music": 0,
+  "art": 0,
+  "eng": 0
+ },
+ "creative": {
+  "standard": 102,
+  "school": 98,
+  "diff": -4
+ },
+ "total": {
+  "standard": 1088,
+  "school": 1092,
+  "diff": 4
+ },
+ "adjustments": [
+  {
+   "id": "adjust-1",
+   "semester": 1,
+   "subjectId": "kor",
+   "area": "읽기",
+   "standards": [
+    "6국02-05"
+   ],
+   "unit": "<독서> 같은 주제에 대한 책을 읽고 생각을 나누어요",
+   "content": "주제를 정해 읽을 책 정하기",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-2",
+   "semester": 1,
+   "subjectId": "kor",
+   "area": "읽기",
+   "standards": [
+    "6국02-05"
+   ],
+   "unit": "<독서> 같은 주제에 대한 책을 읽고 생각을 나누어요",
+   "content": "주제 중심 독서 하기-1-",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-3",
+   "semester": 1,
+   "subjectId": "kor",
+   "area": "읽기",
+   "standards": [
+    "6국02-05"
+   ],
+   "unit": "<독서> 같은 주제에 대한 책을 읽고 생각을 나누어요",
+   "content": "주제 중심 독서 하기-2-",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-4",
+   "semester": 1,
+   "subjectId": "kor",
+   "area": "읽기",
+   "standards": [
+    "6국02-05"
+   ],
+   "unit": "<독서> 같은 주제에 대한 책을 읽고 생각을 나누어요",
+   "content": "주제 중심 독서 하기-3-",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-5",
+   "semester": 1,
+   "subjectId": "kor",
+   "area": "읽기",
+   "standards": [
+    "6국02-05"
+   ],
+   "unit": "<독서> 같은 주제에 대한 책을 읽고 생각을 나누어요",
+   "content": "주제 중심 독서 하기-4-",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-6",
+   "semester": 1,
+   "subjectId": "kor",
+   "area": "읽기",
+   "standards": [
+    "6국02-05"
+   ],
+   "unit": "<독서> 같은 주제에 대한 책을 읽고 생각을 나누어요",
+   "content": "주제 중심 독서 토의하기",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-7",
+   "semester": 1,
+   "subjectId": "kor",
+   "area": "매체",
+   "standards": [
+    "6국06-03"
+   ],
+   "unit": "<매체> 매체 자료를 만들어요",
+   "content": "다양한 양식의 매체 자료 살펴보기",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-8",
+   "semester": 1,
+   "subjectId": "kor",
+   "area": "매체",
+   "standards": [
+    "6국06-03"
+   ],
+   "unit": "<매체> 매체 자료를 만들어요",
+   "content": "카드 뉴스의 특성과 제작 방법 알기",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-9",
+   "semester": 1,
+   "subjectId": "kor",
+   "area": "매체",
+   "standards": [
+    "6국06-03"
+   ],
+   "unit": "<매체> 매체 자료를 만들어요",
+   "content": "동영상의 특성과 제작 방법 알기-1-",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-10",
+   "semester": 1,
+   "subjectId": "kor",
+   "area": "매체",
+   "standards": [
+    "6국06-03"
+   ],
+   "unit": "<매체> 매체 자료를 만들어요",
+   "content": "동영상의 특성과 제작 방법 알기-2-",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-11",
+   "semester": 1,
+   "subjectId": "kor",
+   "area": "매체",
+   "standards": [
+    "6국06-03"
+   ],
+   "unit": "<매체> 매체 자료를 만들어요",
+   "content": "의도를 생각하며 복합양식 매체 자료 만들기",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-12",
+   "semester": 1,
+   "subjectId": "kor",
+   "area": "매체",
+   "standards": [
+    "6국06-03"
+   ],
+   "unit": "<매체> 매체 자료를 만들어요",
+   "content": "온라인 전시회를 열어 복합양식 매체 자료 감상하기",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-13",
+   "semester": 2,
+   "subjectId": "soc",
+   "area": "자연환경과 인간생활",
+   "standards": [
+    "6사10-01"
+   ],
+   "unit": "1. 세계의 자연환경",
+   "content": "세계의 다양한 지형을 알아볼까요",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-14",
+   "semester": 2,
+   "subjectId": "soc",
+   "area": "자연환경과 인간생활",
+   "standards": [
+    "6사10-01"
+   ],
+   "unit": "1. 세계의 자연환경",
+   "content": "세계의 지형 관광지를 여행해 볼까요",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-15",
+   "semester": 2,
+   "subjectId": "soc",
+   "area": "경제",
+   "standards": [
+    "6사11-02"
+   ],
+   "unit": "2. 시장경제와 국가 간 거래",
+   "content": "가계와 기업의 역할은 무엇일까요",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-16",
+   "semester": 2,
+   "subjectId": "soc",
+   "area": "경제",
+   "standards": [
+    "6사11-02"
+   ],
+   "unit": "2. 시장경제와 국가 간 거래",
+   "content": "경제 성장으로 우리 생활은 어떻게 달라졌을까요",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-17",
+   "semester": 2,
+   "subjectId": "soc",
+   "area": "인문환경과 인간생활",
+   "standards": [
+    "6사12-02"
+   ],
+   "unit": "3. 지구촌 사람들",
+   "content": "세계 여러 나라의 인구 특징을 조사해 볼까요",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-18",
+   "semester": 2,
+   "subjectId": "soc",
+   "area": "인문환경과 인간생활",
+   "standards": [
+    "6사12-02"
+   ],
+   "unit": "3. 지구촌 사람들",
+   "content": "지구촌 문제를 해결하기 위한 다양한 노력을 살펴볼까요",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-19",
+   "semester": 2,
+   "subjectId": "mor",
+   "area": "사회·공동체와의 관계",
+   "standards": [
+    "6도03-03"
+   ],
+   "unit": "8. 우리가 꿈꾸는 세상을 위하여",
+   "content": "평화 전시회를 열어 봐요",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-20",
+   "semester": 2,
+   "subjectId": "mor",
+   "area": "사회·공동체와의 관계",
+   "standards": [
+    "6도03-03"
+   ],
+   "unit": "8. 우리가 꿈꾸는 세상을 위하여",
+   "content": "평화 전시회 작품을 만들어요",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-21",
+   "semester": 1,
+   "subjectId": "math",
+   "area": "자료와 가능성",
+   "standards": [
+    "6수04-02"
+   ],
+   "unit": "5. 여러 가지 그래프",
+   "content": "자료를 모아서 띠그래프나 원그래프로 나타내고 해석해요",
+   "hours": 1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-22",
+   "semester": 1,
+   "subjectId": "math",
+   "area": "자료와 가능성",
+   "standards": [
+    "6수04-02"
+   ],
+   "unit": "5. 여러 가지 그래프",
+   "content": "뚝딱 그래프 나타내기",
+   "hours": 1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-23",
+   "semester": 1,
+   "subjectId": "math",
+   "area": "도형과 측정",
+   "standards": [
+    "6수03-17"
+   ],
+   "unit": "6. 직육면체의 겉넓이와 부피",
+   "content": "직육면체의 겉넓이를 알아봐요",
+   "hours": 1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-24",
+   "semester": 1,
+   "subjectId": "math",
+   "area": "도형과 측정",
+   "standards": [
+    "6수03-17"
+   ],
+   "unit": "6. 직육면체의 겉넓이와 부피",
+   "content": "척척 직육면체 만들기",
+   "hours": 1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-25",
+   "semester": 1,
+   "subjectId": "sci",
+   "area": "운동과 에너지",
+   "standards": [
+    "4과01-04"
+   ],
+   "unit": "힘과 우리 생활",
+   "content": "도구가 일상생활에서 어떻게 쓰이는지 조사해 볼까요",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-26",
+   "semester": 1,
+   "subjectId": "sci",
+   "area": "운동과 에너지",
+   "standards": [
+    "4과01-04"
+   ],
+   "unit": "힘과 우리 생활",
+   "content": "도구가 어떻게 쓰이는지 조사한 내용을 공유해 보자",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-27",
+   "semester": 1,
+   "subjectId": "sci",
+   "area": "과학과 사회",
+   "standards": [
+    "4과08-02"
+   ],
+   "unit": "감염병과 건강한 생활",
+   "content": "감염병으로부터 안전한 사회는 어떤 모습일까요",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-28",
+   "semester": 1,
+   "subjectId": "sci",
+   "area": "과학과 사회",
+   "standards": [
+    "4과08-02"
+   ],
+   "unit": "감염병과 건강한 생활",
+   "content": "건강한 생활을 위해 감염병 예방 수칙을 공유하고 실천해 보자",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-29",
+   "semester": 1,
+   "subjectId": "prac",
+   "area": "생활환경과 지속가능한 선택",
+   "standards": [
+    "6실02-08"
+   ],
+   "unit": "지속가능한 생활과 실천",
+   "content": "밥상 차리기",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-30",
+   "semester": 1,
+   "subjectId": "prac",
+   "area": "생활환경과 지속가능한 선택",
+   "standards": [
+    "6실02-08"
+   ],
+   "unit": "지속가능한 생활과 실천",
+   "content": "간단한 생활용품 만들기",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-31",
+   "semester": 2,
+   "subjectId": "prac",
+   "area": "지속가능한 기술과 융합",
+   "standards": [
+    "6실04-05"
+   ],
+   "unit": "4. 융합 기술과 지속가능",
+   "content": "로봇의 종류와 활용",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-32",
+   "semester": 2,
+   "subjectId": "prac",
+   "area": "지속가능한 기술과 융합",
+   "standards": [
+    "6실04-05"
+   ],
+   "unit": "4. 융합 기술과 지속가능",
+   "content": "농업과 농촌의 역할과 직업 세계",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-33",
+   "semester": 1,
+   "subjectId": "ca-self",
+   "area": "자율",
+   "standards": [],
+   "unit": "",
+   "content": "화장실과 수도 바르게 이용하는 방법 알아보기",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-34",
+   "semester": 1,
+   "subjectId": "ca-self",
+   "area": "자율",
+   "standards": [],
+   "unit": "",
+   "content": "가족 구성원의 역할 알아보기",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-35",
+   "semester": 1,
+   "subjectId": "ca-self",
+   "area": "자율",
+   "standards": [],
+   "unit": "",
+   "content": "비만의 원인과 예방법 알아보기",
+   "hours": -1,
+   "planRowIds": []
+  },
+  {
+   "id": "adjust-36",
+   "semester": 1,
+   "subjectId": "ca-self",
+   "area": "자율",
+   "standards": [],
+   "unit": "",
+   "content": "친구를 초대하는 방법과 예절 알아보기",
+   "hours": -1,
+   "planRowIds": []
+  }
+ ],
+ "warnings": []
+}
