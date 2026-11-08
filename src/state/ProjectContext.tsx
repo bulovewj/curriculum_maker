@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useRef, useState, type ReactNode } from 'react';
+import { createContext, useCallback, useContext, useEffect, useRef, useState, type ReactNode } from 'react';
 import type { Project } from '../model/types';
 import { indexedDbStore } from '../storage/indexedDbStore';
 import type { ProjectStore } from '../storage/ProjectStore';
@@ -17,26 +17,39 @@ export function ProjectProvider({ children }: { children: ReactNode }) {
   const [project, setProject] = useState<Project | null>(null);
   const [saveError, setSaveError] = useState(false);
   const first = useRef(true);
+  const pending = useRef<Project | null>(null); // 아직 저장 안 된 최신 프로젝트
 
-  // 고칠 때마다 0.5초 몰아서 저장(작업지시서 F1)
+  const flush = useCallback(() => {
+    const p = pending.current;
+    if (!p) return;
+    pending.current = null;
+    indexedDbStore.save(p, new Date().toISOString()).then(
+      () => setSaveError(false),
+      () => setSaveError(true),
+    );
+  }, []);
+
+  // 고칠 때마다 0.5초 몰아서 저장(작업지시서 F1). 목록으로 나가거나 탭을 닫으면 바로 저장
   useEffect(() => {
     if (first.current || !project) {
       first.current = false;
       return;
     }
-    const t = setTimeout(() => {
-      indexedDbStore.save(project, new Date().toISOString()).then(
-        () => setSaveError(false),
-        () => setSaveError(true),
-      );
-    }, 500);
+    pending.current = project;
+    const t = setTimeout(flush, 500);
     return () => clearTimeout(t);
-  }, [project]);
+  }, [project, flush]);
+
+  useEffect(() => {
+    window.addEventListener('pagehide', flush);
+    return () => window.removeEventListener('pagehide', flush);
+  }, [flush]);
 
   const value: ProjectState = {
     store: indexedDbStore,
     project,
     open: (p) => {
+      flush();
       first.current = true; // 연 직후에는 저장하지 않는다
       setProject(p);
     },

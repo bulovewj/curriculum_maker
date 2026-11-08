@@ -19,3 +19,15 @@ describe('projectFile', () => {
     expect(() => parseProjectFile('{"app":"naesonan","schemaVersion":99,"project":{}}')).toThrow('새 판');
   });
 });
+
+describe('깨진 파일 거르기', () => {
+  it('project가 비었으면 어느 칸이 없는지 알려 준다', () => {
+    const text = JSON.stringify({ app: 'naesonan', schemaVersion: 1, project: {} });
+    expect(() => parseProjectFile(text)).toThrow('id 없음');
+  });
+  it('배열 칸이 빠지면 그 칸 이름을 알려 준다', () => {
+    const p = JSON.parse(toProjectFile(newProject('x', 2027), '2027-01-01T00:00:00Z'));
+    delete p.project.events;
+    expect(() => parseProjectFile(JSON.stringify(p))).toThrow('events 없음');
+  });
+});

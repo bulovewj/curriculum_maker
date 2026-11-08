@@ -27,8 +27,23 @@ export function parseProjectFile(text: string): Project {
   if (data.schemaVersion > SCHEMA_VERSION) {
     throw new Error('새 판 프로그램에서 만든 파일입니다. 프로그램을 새 판으로 바꾼 뒤 열어 주세요.');
   }
+  const bad = missingFields(data.project);
+  if (bad) throw new Error(`파일이 깨졌거나 일부가 빠졌습니다(${bad} 없음).`);
   // ponytail: 판 올림(마이그레이션)은 schemaVersion 2가 생길 때 여기에 넣는다.
   return data.project as unknown as Project;
 }
 
 const isRecord = (v: unknown): v is Record<string, unknown> => typeof v === 'object' && v !== null;
+
+const ARRAYS = ['semesters', 'subjects', 'calendar', 'baseTimetable', 'specialistCells', 'events', 'adjustments', 'imports'];
+const RECORDS = ['curriculumPlan', 'slotOverrides', 'lessonPlans', 'settings'];
+
+/** 앱이 바로 열 때 꼭 필요한 칸만 검사. 없는 칸 이름을 돌려준다. */
+function missingFields(p: Record<string, unknown>): string | undefined {
+  if (typeof p.id !== 'string' || !p.id) return 'id';
+  if (!isRecord(p.school) || typeof p.school.name !== 'string') return 'school';
+  for (const k of ['year', 'grade', 'classCount', 'representativeClass']) if (typeof p[k] !== 'number') return k;
+  for (const k of ARRAYS) if (!Array.isArray(p[k])) return k;
+  for (const k of RECORDS) if (!isRecord(p[k])) return k;
+  return undefined;
+}

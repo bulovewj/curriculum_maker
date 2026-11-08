@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { readHwpx, type HwpxBlock } from '../import/hwpx/readHwpx';
-import { isMerged } from '../import/hwpx/table';
+import { isMerged, type HwpxTable } from '../import/hwpx/table';
+
+// 교사 이름은 1차에서 읽지 않는다(CLAUDE.md). 표지·안건 표(작은 표 + 안건·제안 글자)는 화면에서 가린다.
+const isCover = (t: HwpxTable) => t.rows <= 3 && t.cells.some((c) => /안\s*건|제\s*안|심\s*의/.test(c.text));
 
 /** ?dev 전용: hwpx 문단·표를 순서대로 보여 준다. 병합은 rowSpan/colSpan으로. */
 export function HwpxView() {
@@ -27,6 +30,8 @@ export function HwpxView() {
       {blocks?.map((b, i) =>
         b.kind === 'para' ? (
           <p key={i} className="muted">{b.text}</p>
+        ) : isCover(b) ? (
+          <p key={i} className="muted">표 {++tableNo} (표지·안건 표 — 이름이 있어 가림)</p>
         ) : (
           <div key={i}>
             <strong>표 {++tableNo} ({b.rows}×{b.cols})</strong>

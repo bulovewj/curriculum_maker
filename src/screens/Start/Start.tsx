@@ -28,6 +28,8 @@ export function Start() {
   async function importFile(file: File) {
     try {
       const p = parseProjectFile(await file.text());
+      const same = list.find((x) => x.id === p.id);
+      if (same && !window.confirm(`이미 같은 프로젝트가 있습니다(마지막 저장 ${new Date(same.savedAt).toLocaleString('ko-KR')}). 파일 내용으로 덮어쓸까요?`)) return;
       await store.save(p, new Date().toISOString());
       open(p);
     } catch (e) {
