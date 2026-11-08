@@ -1,8 +1,15 @@
+import { Shell } from './components/Shell';
+import { Start } from './screens/Start/Start';
+import { ProjectProvider, useProject } from './state/ProjectContext';
+
+function Screen() {
+  return useProject().project ? <Shell /> : <Start />;
+}
+
 export function App() {
   return (
-    <main>
-      <h1>내 손 안의 교육과정</h1>
-      <p>1차 개발 중</p>
-    </main>
+    <ProjectProvider>
+      <Screen />
+    </ProjectProvider>
   );
 }
