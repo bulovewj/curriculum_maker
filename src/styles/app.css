@@ -22,3 +22,12 @@ button, .button { font: inherit; padding: 6px 12px; border: 1px solid #999; back
 fieldset { display: grid; gap: 8px; }
 .dev-table { border-collapse: collapse; font-size: 13px; }
 .dev-table th, .dev-table td { border: 1px solid #ccc; padding: 2px 6px; text-align: left; }
+
+.dropzone { display: block; border: 2px dashed #999; padding: 24px; text-align: center; cursor: pointer; margin: 12px 0; }
+.cards-list { list-style: none; padding: 0; display: grid; gap: 12px; }
+.file-card { border: 1px solid #ccc; padding: 8px 12px; }
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 13px; }
+.compare pre { max-height: 240px; overflow: auto; white-space: pre-wrap; background: #f6f6f6; padding: 6px; }
+.yellow, .yellow-cell { background: #fff3b0; padding: 2px 6px; }
+.notice { background: #e8f0ff; padding: 4px 8px; }
+.checklist { list-style: none; padding: 0; }

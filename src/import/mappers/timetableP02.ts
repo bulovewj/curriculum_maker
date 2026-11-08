@@ -5,6 +5,7 @@ import type { Sheet } from '../xlsx/readWorkbook';
 export interface TimetableResult {
   cells: TimetableCell[];
   warnings: string[];
+  unknownCodes: string[]; // 모르는 시간표 약자(화면에서 노란 칸)
 }
 
 const DAYS = ['월', '화', '수', '목', '금'];
@@ -56,7 +57,7 @@ export function readClassTimetable(
       specialist: specialist.some((x) => x.weekday === weekday && x.period === period && x.subjectId === subjectId),
     });
   }
-  return { cells, warnings };
+  return { cells, warnings, unknownCodes: [...unknown] };
 }
 
 /** '참고학년별 수업 시수 및 전담시간' 시트 `주간전담시수` 행 → 교과별 주당 전담 시수(예 영어3 체육2 과학2) */

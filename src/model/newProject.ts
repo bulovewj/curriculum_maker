@@ -28,7 +28,7 @@ export function newProject(id: string, year: number): Project {
     timetableSource: 'generated',
     specialistCells: [],
     events: [],
-    curriculumPlan: { standard: {}, creative: { standard: 0, school: 0 }, school: {}, donors: {} },
+    curriculumPlan: { standard: {}, creative: { standard: 0, school: 0 }, schoolAnnual: {}, school: {}, donors: {} },
     slotOverrides: {},
     lessonPlans: {},
     adjustments: [],

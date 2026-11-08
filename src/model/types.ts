@@ -101,6 +101,7 @@ export interface SchoolEvent {
 export interface CurriculumPlan {
   standard: Record<SubjectId, number>;
   creative: { standard: number; school: number };
+  schoolAnnual: Record<SubjectId, number>; // 본교 연간 시수(학기 나누기 전)
   school: Record<SubjectId, { s1: number; s2: number }>;
   donors: Record<SubjectId, SubjectId[]>;
 }

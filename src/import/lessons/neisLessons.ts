@@ -9,6 +9,7 @@ export interface LessonFile {
 export interface LessonResult {
   rows: PlanRow[];
   warnings: string[];
+  unknownNames: string[]; // 모르는 편제 이름(화면에서 노란 칸)
 }
 
 const COLS = ['학기', '편제', '단원', '소단원', '학습내용', '쪽수', '보조쪽수', '해당차시', '전체차시', '준비물'] as const;
@@ -121,5 +122,5 @@ export function readNeisLessons(files: LessonFile[], subjects: Subject[], includ
       });
     });
   }
-  return { rows, warnings };
+  return { rows, warnings, unknownNames: [...unknown] };
 }
