@@ -1,0 +1,115 @@
+import { describe, expect, it } from 'vitest';
+import type { PlanRow } from '../model/types';
+import { addRow, insertEvent, mergeRows, moveRow, removeRow, setFixedWeek, setTags, splitRow, undoAdjustment, type OpState } from './planOps';
+import { needOf, placeLessons } from './placeLessons';
+import type { Slot } from '../model/types';
+
+const row = (id: string, unit: string, topic: string, n: number, total: number): PlanRow => ({
+  id, subjectId: 'kor', semester: 1, kind: 'lesson', unit, topic, n, total, standards: ['6국01-01'], tags: [], source: { file: 'f', row: 1 },
+});
+const start = (): OpState => ({
+  adjustments: [],
+  lessonPlans: { kor: [row('a', 'U1', 'A', 1, 3), row('b', 'U1', 'B', 2, 3), row('c', 'U1', 'C', 3, 3), row('d', 'U2', 'D', 1, 1)] },
+});
+const ids = (s: OpState) => s.lessonPlans.kor.map((r) => r.id);
+
+describe('작업마다 행 수·표시·증감 기록·취소', () => {
+  it('합치기: −1, 남는 행에 ◆감축, 번호 다시 셈, 취소하면 그대로', () => {
+    const s0 = start();
+    const s1 = mergeRows(s0, 'kor', 'a');
+    expect(ids(s1)).toEqual(['a', 'c', 'd']);
+    expect(s1.lessonPlans.kor[0].mark).toEqual({ type: 'reduce' });
+    expect(s1.lessonPlans.kor.map((r) => `${r.n}/${r.total}`)).toEqual(['1/2', '2/2', '1/1']);
+    expect(s1.adjustments).toMatchObject([{ hours: -1, subjectId: 'kor', semester: 1, standards: ['6국01-01'] }]);
+    expect(undoAdjustment(s1, s1.adjustments[0].id)).toEqual(s0);
+  });
+
+  it('빼기: −1, 같은 단원 앞 행에 ◆감축(앞 행이 없으면 뒤 행)', () => {
+    const s1 = removeRow(start(), 'kor', 'c');
+    expect(ids(s1)).toEqual(['a', 'b', 'd']);
+    expect(s1.lessonPlans.kor[1].mark).toEqual({ type: 'reduce' });
+    expect(s1.adjustments[0].hours).toBe(-1);
+    const s2 = removeRow(start(), 'kor', 'a');
+    expect(s2.lessonPlans.kor[0]).toMatchObject({ id: 'b', mark: { type: 'reduce' } });
+    expect(undoAdjustment(s1, s1.adjustments[0].id)).toEqual(start());
+    expect(undoAdjustment(s2, s2.adjustments[0].id)).toEqual(start());
+  });
+
+  it('나누기: +1, 두 행에 ◆증배와 -1- -2-', () => {
+    const s0 = start();
+    const s1 = splitRow(s0, 'kor', 'b');
+    expect(s1.lessonPlans.kor.map((r) => r.topic)).toEqual(['A', 'B -1-', 'B -2-', 'C', 'D']);
+    expect(s1.lessonPlans.kor.filter((r) => r.mark?.type === 'increase')).toHaveLength(2);
+    expect(s1.lessonPlans.kor.filter((r) => r.unit === 'U1').map((r) => `${r.n}/${r.total}`)).toEqual(['1/4', '2/4', '3/4', '4/4']);
+    expect(s1.adjustments[0].hours).toBe(1);
+    expect(undoAdjustment(s1, s1.adjustments[0].id)).toEqual(s0);
+  });
+
+  it('더하기: +1, 새 행에 ◆증배', () => {
+    const s0 = start();
+    const s1 = addRow(s0, 'kor', 'b', '새 활동', 1);
+    expect(s1.lessonPlans.kor.map((r) => r.topic)).toEqual(['A', 'B', '새 활동', 'C', 'D']);
+    expect(s1.lessonPlans.kor[2]).toMatchObject({ mark: { type: 'increase' }, unit: 'U1' });
+    expect(s1.adjustments[0].hours).toBe(1);
+    expect(undoAdjustment(s1, s1.adjustments[0].id)).toEqual(s0);
+  });
+
+  it('작업을 겹쳐도 기록마다 취소할 수 있다', () => {
+    const s0 = start();
+    const s1 = splitRow(removeRow(s0, 'kor', 'd'), 'kor', 'a');
+    expect(s1.adjustments.map((a) => a.hours)).toEqual([-1, 1]);
+    const s2 = undoAdjustment(s1, s1.adjustments[0].id); // 먼저 한 '빼기'만 취소
+    expect(ids(s2)).toContain('d');
+    expect(s2.adjustments).toHaveLength(1);
+    const s3 = undoAdjustment(s2, s2.adjustments[0].id);
+    expect(s3).toEqual(s0);
+  });
+
+  it('행사 넣기: 주 고정 행 n개, 기록 없음', () => {
+    const s1 = insertEvent(start(), 'kor', { name: '기초학력진단평가', semester: 1, week: 2, hours: 3 });
+    const ev = s1.lessonPlans.kor.filter((r) => r.kind === 'event');
+    expect(ev).toHaveLength(3);
+    expect(ev.map((r) => `${r.n}/${r.total}`)).toEqual(['1/3', '2/3', '3/3']);
+    expect(ev.every((r) => r.fixedWeek?.week === 2)).toBe(true);
+    expect(s1.adjustments).toEqual([]);
+  });
+
+  it('태그·주 고정·순서 옮기기는 기록이 없다', () => {
+    let s = setTags(start(), 'kor', 'a', ['통일교육']);
+    expect(s.lessonPlans.kor[0].tags).toEqual(['통일교육']);
+    s = setFixedWeek(s, 'kor', 'a', { semester: 1, week: 5 });
+    expect(s.lessonPlans.kor[0].fixedWeek).toEqual({ semester: 1, week: 5 });
+    expect(setFixedWeek(s, 'kor', 'a', null).lessonPlans.kor[0].fixedWeek).toBeUndefined();
+    expect(ids(moveRow(s, 'kor', 'a', 1))).toEqual(['b', 'a', 'c', 'd']);
+    expect(ids(moveRow(s, 'kor', 'a', -1))).toEqual(ids(s));
+    expect(s.adjustments).toEqual([]);
+  });
+
+  it('감축 3번 → 필요량이 3 줄고 증감 기록이 3줄', () => {
+    const slot = (i: number): Slot => ({ date: `2026-03-${String(i + 1).padStart(2, '0')}`, period: 1, semester: 1, week: 1, subjectId: 'kor', specialist: false, origin: 'base', locked: false });
+    const slots = Array.from({ length: 2 }, (_, i) => slot(i));
+    const s0 = start(); // 행 4, 칸 2 → 감축 필요 2
+    expect(needOf(placeLessons(slots, s0.lessonPlans.kor, 'kor'))).toBe(2);
+    let s = removeRow(s0, 'kor', 'c');
+    s = mergeRows(s, 'kor', 'a');
+    s = removeRow(s, 'kor', 'd');
+    expect(s.adjustments).toHaveLength(3);
+    expect(needOf(placeLessons(slots, s.lessonPlans.kor, 'kor'))).toBe(2 - 3);
+  });
+
+  it('행사 행(주 고정)을 넣으면 그 주에 놓인다', () => {
+    const mk = (date: string, week: number, period = 1): Slot => ({ date, period, semester: 1, week, subjectId: 'kor', specialist: false, origin: 'base', locked: false });
+    const slots = [mk('2026-03-03', 1), mk('2026-03-10', 2), mk('2026-03-17', 3), mk('2026-03-17', 3, 2), mk('2026-03-24', 4), mk('2026-03-31', 5), mk('2026-04-07', 6)];
+    const s1 = insertEvent(start(), 'kor', { name: '평가', semester: 1, week: 3, hours: 2 });
+    const r = placeLessons(slots, s1.lessonPlans.kor, 'kor');
+    const ev = r.placed.filter((p) => p.row.kind === 'event').map((p) => p.slot.week);
+    expect(ev).toEqual([3, 3]); // 그 주의 빈 칸에 먼저 놓인다
+  });
+
+  it('입력을 바꾸지 않는다', () => {
+    const s0 = start();
+    const copy = JSON.stringify(s0);
+    splitRow(mergeRows(s0, 'kor', 'a'), 'kor', 'd');
+    expect(JSON.stringify(s0)).toBe(copy);
+  });
+});
