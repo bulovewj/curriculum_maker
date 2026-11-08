@@ -31,3 +31,4 @@ fieldset { display: grid; gap: 8px; }
 .yellow, .yellow-cell { background: #fff3b0; padding: 2px 6px; }
 .notice { background: #e8f0ff; padding: 4px 8px; }
 .checklist { list-style: none; padding: 0; }
+.move-form { background: #fff3b0; padding: 6px 10px; margin: 8px 0; }

@@ -3,6 +3,7 @@ import { projectTitle } from '../model/newProject';
 import { Basic } from '../screens/Basic/Basic';
 import { Calendar } from '../screens/Calendar/Calendar';
 import { Files } from '../screens/Files/Files';
+import { Plan } from '../screens/Plan/Plan';
 import { Progress } from '../screens/Progress/Progress';
 import { WeekGrid } from '../screens/WeekGrid/WeekGrid';
 import { useProject } from '../state/ProjectContext';
@@ -44,7 +45,7 @@ export function Shell() {
       </nav>
       <div className="content">
         {/* ponytail: S2~S7은 해당 마일스톤에서 화면 폴더를 만든다 */}
-        {step === 0 ? <Basic /> : step === 1 ? <Files /> : step === 2 ? <Calendar /> : step === 4 ? <WeekGrid /> : step === 5 ? <Progress /> : <div className="placeholder">S{step + 1} {steps[step]} — 준비 중</div>}
+        {step === 0 ? <Basic /> : step === 1 ? <Files /> : step === 2 ? <Calendar /> : step === 3 ? <Plan /> : step === 4 ? <WeekGrid /> : step === 5 ? <Progress /> : <div className="placeholder">S{step + 1} {steps[step]} — 준비 중</div>}
       </div>
     </div>
   );

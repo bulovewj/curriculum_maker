@@ -1,5 +1,5 @@
 import type { PlanRow, Project, ImportKind, Subject, SubjectId } from '../model/types';
-import { rowTexts } from './hwpx/cells';
+import { norm, rowTexts } from './hwpx/cells';
 import { readHwpx, type HwpxBlock } from './hwpx/readHwpx';
 import { readNeisLessons } from './lessons/neisLessons';
 import { readCurriculum } from './mappers/curriculumHwpx';
@@ -30,6 +30,16 @@ function previewOf(sheets: Sheet[], blocks: HwpxBlock[]): string[] {
   const fromSheets = sheets.flatMap((s) => [`[${s.name}]`, ...s.rows.slice(0, 12).map((r) => (r ?? []).join(' | '))]);
   const fromBlocks = blocks.slice(0, 12).map((b) => (b.kind === 'para' ? b.text : `[표 ${b.rows}×${b.cols}] ${rowTexts(b, 0).join(' | ')}`));
   return [...fromSheets, ...fromBlocks].map((l) => l.replace(/\s+/g, ' ').slice(0, 200));
+}
+
+/** 창체 영역별 시수: '자율·자치활동' → ca-self 처럼 교과 이름으로 시작하는 영역에 붙인다 */
+function areaHours(subjects: Subject[], areas: Record<string, number>): Record<SubjectId, number> {
+  const out: Record<SubjectId, number> = {};
+  for (const s of subjects.filter((x) => x.kind === 'creative')) {
+    const hit = Object.entries(areas).find(([k]) => norm(k).startsWith(norm(s.name)));
+    if (hit) out[s.id] = hit[1];
+  }
+  return out;
 }
 
 const nameOf = (subjects: Subject[], id: SubjectId) => subjects.find((s) => s.id === id)?.name ?? id;
@@ -110,7 +120,7 @@ export async function interpret(kind: ImportKind, fileName: string, data: ArrayB
       const total = Object.values(r.school).reduce((a, b) => a + b, 0);
       return done([`작년 ${r.priorYear.grade}학년 합 ${r.priorYear.total}`, `올해 ${p.grade}학년 본교 합 ${r.total.school}`, `교과 합 ${total}`], r.warnings, [], (q) => ({
         ...q, priorYear: r.priorYear,
-        curriculumPlan: { ...q.curriculumPlan, standard: r.standard, creative: r.creative, schoolAnnual: r.school },
+        curriculumPlan: { ...q.curriculumPlan, standard: r.standard, creative: r.creative, schoolAnnual: { ...r.school, ...areaHours(q.subjects, r.creativeAreas) } },
       }));
     }
     case 'planAdjustHwpx': {

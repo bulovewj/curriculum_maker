@@ -6,12 +6,16 @@ import { generateSlots } from '../../engine/slots';
 import { semesterTotals } from '../../engine/weekGrid';
 import { readHwpx } from '../../import/hwpx/readHwpx';
 import { readTimePlan } from '../../import/mappers/timePlanHwpx';
+import { BalancePanel } from '../../components/BalancePanel';
+import { MoveForm, type MoveTarget } from '../../components/MoveForm';
+import { moveHours, unlockWeek } from '../../engine/moveHours';
 import { useProject } from '../../state/ProjectContext';
 
 /** S5 주별 시수표(읽기 전용): 시간 운영계획(c)과 같은 열 순서 + 학기 계·편제·차이 */
 export function WeekGrid() {
   const { project: p, update } = useProject();
   const [msg, setMsg] = useState<string[]>([]);
+  const [target, setTarget] = useState<MoveTarget | null>(null);
   const grid = useMemo(() => (p ? computeGrid(p) : null), [p]);
   if (!p || !grid) return null;
 
@@ -42,11 +46,11 @@ export function WeekGrid() {
   const plan = p.curriculumPlan.schoolAnnual;
   const hasPlan = Object.keys(plan).length > 0;
   const heads = [...subj, ...crea];
-  const cols = (h: Record<string, number>, bold = false) => (
+  const cols = (h: Record<string, number>, bold = false, at?: { semester: 1 | 2; week: number }) => (
     <>
-      {subj.map((s) => <td key={s.id}>{bold ? <b>{h[s.id] ?? 0}</b> : h[s.id] ?? 0}</td>)}
+      {subj.map((s) => <td key={s.id} onClick={at ? () => setTarget({ ...at, from: s.id }) : undefined} style={at ? { cursor: 'pointer' } : undefined}>{bold ? <b>{h[s.id] ?? 0}</b> : h[s.id] ?? 0}</td>)}
       <td>{sum(h, subj)}</td>
-      {crea.map((s) => <td key={s.id}>{h[s.id] ?? 0}</td>)}
+      {crea.map((s) => <td key={s.id} onClick={at ? () => setTarget({ ...at, from: s.id }) : undefined} style={at ? { cursor: 'pointer' } : undefined}>{h[s.id] ?? 0}</td>)}
       <td>{sum(h, crea)}</td>
       <td>{sum(h, subj) + sum(h, crea)}</td>
     </>
@@ -60,6 +64,15 @@ export function WeekGrid() {
         <input type="file" accept=".hwpx" hidden onChange={(e) => importPlan(e.target.files?.[0])} />
       </label>
       {msg.map((m) => <p key={m} className="muted">{m}</p>)}
+      <BalancePanel project={p} update={update} />
+      {target && (
+        <MoveForm target={target} subjects={p.subjects} onCancel={() => setTarget(null)} onMove={(to, n) => {
+          const r = moveHours(grid.slots, p.slotOverrides, { ...target, to, n });
+          update((q) => ({ ...q, slotOverrides: r.overrides }));
+          setMsg(r.warnings);
+          setTarget(null);
+        }} />
+      )}
       <table className="dev-table">
         <thead>
           <tr>
@@ -78,8 +91,13 @@ export function WeekGrid() {
                   <td>{i === 0 || rows[i - 1].month !== r.month ? `${r.month}[${days[r.month] ?? 0}]` : ''}</td>
                   <td>{r.week}</td><td>{r.period}</td><td>{r.schoolDays}</td>
                   {r.dayPeriods.map((v, k) => <td key={k}>{v}</td>)}
-                  {cols(r.hours)}
-                  <td style={{ whiteSpace: 'pre-line' }}>{r.note}</td>
+                  {cols(r.hours, false, { semester: n as 1 | 2, week: r.week })}
+                  <td style={{ whiteSpace: 'pre-line' }}>
+                    {r.note}
+                    {grid.slots.some((s) => s.semester === n && s.week === r.week && s.locked) && (
+                      <> 🔒 <button className="link" onClick={() => update((q) => ({ ...q, slotOverrides: unlockWeek(grid.slots, q.slotOverrides, n as 1 | 2, r.week) }))}>잠금 풀기</button></>
+                    )}
+                  </td>
                 </tr>
               )),
               <tr key={`t${n}`}><td colSpan={4}><b>{n}학기 계</b></td><td colSpan={6} />{cols(total[n - 1], true)}<td /></tr>,
