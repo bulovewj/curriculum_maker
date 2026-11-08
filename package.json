@@ -8,6 +8,7 @@
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "expected": "tsx scripts/make-expected.ts",
+    "templates": "tsx scripts/make-templates.ts",
     "build": "vite build"
   },
   "dependencies": {

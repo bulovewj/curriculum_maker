@@ -1,0 +1,6372 @@
+[
+{
+"width": 51221,
+"head": [
+[
+{
+"col": 0,
+"colSpan": 29,
+"rowSpan": 1,
+"width": 51221,
+"height": 2166,
+"borderFill": 4,
+"header": true,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 4,
+"wrap": "SQUEEZE",
+"margin": [
+0,
+0,
+0,
+0
+],
+"text": "교과 및 창의적 체험활동 시수 책정표"
+}
+],
+[
+{
+"col": 0,
+"colSpan": 21,
+"rowSpan": 1,
+"width": 31786,
+"height": 1183,
+"borderFill": 5,
+"header": true,
+"hasMargin": true,
+"paraPr": 5,
+"charPr": 5,
+"wrap": "SQUEEZE",
+"margin": [
+0,
+0,
+0,
+0
+],
+"text": "2026학년도 1학기"
+},
+{
+"col": 21,
+"colSpan": 8,
+"rowSpan": 1,
+"width": 19435,
+"height": 1183,
+"borderFill": 5,
+"header": true,
+"hasMargin": true,
+"paraPr": 4,
+"charPr": 5,
+"wrap": "SQUEEZE",
+"margin": [
+0,
+0,
+0,
+0
+],
+"text": "6학년 7반"
+}
+],
+[
+{
+"col": 0,
+"colSpan": 1,
+"rowSpan": 2,
+"width": 1880,
+"height": 3849,
+"borderFill": 6,
+"header": true,
+"hasMargin": false,
+"paraPr": 2,
+"charPr": 13,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "월"
+},
+{
+"col": 1,
+"colSpan": 1,
+"rowSpan": 2,
+"width": 1214,
+"height": 3849,
+"borderFill": 6,
+"header": true,
+"hasMargin": false,
+"paraPr": 2,
+"charPr": 13,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "주"
+},
+{
+"col": 2,
+"colSpan": 1,
+"rowSpan": 2,
+"width": 4045,
+"height": 3849,
+"borderFill": 6,
+"header": true,
+"hasMargin": false,
+"paraPr": 2,
+"charPr": 13,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "기간"
+},
+{
+"col": 3,
+"colSpan": 1,
+"rowSpan": 2,
+"width": 1585,
+"height": 3849,
+"borderFill": 6,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 13,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "수업일"
+},
+{
+"col": 4,
+"colSpan": 6,
+"rowSpan": 1,
+"width": 6852,
+"height": 1466,
+"borderFill": 6,
+"header": true,
+"hasMargin": false,
+"paraPr": 2,
+"charPr": 14,
+"wrap": "SQUEEZE",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "요일별 수업시수"
+},
+{
+"col": 10,
+"colSpan": 13,
+"rowSpan": 1,
+"width": 19020,
+"height": 1466,
+"borderFill": 6,
+"header": true,
+"hasMargin": false,
+"paraPr": 2,
+"charPr": 13,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "교과"
+},
+{
+"col": 23,
+"colSpan": 4,
+"rowSpan": 1,
+"width": 6288,
+"height": 1466,
+"borderFill": 6,
+"header": true,
+"hasMargin": false,
+"paraPr": 2,
+"charPr": 13,
+"wrap": "SQUEEZE",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "창의적 체험활동"
+},
+{
+"col": 27,
+"colSpan": 1,
+"rowSpan": 2,
+"width": 2000,
+"height": 3849,
+"borderFill": 6,
+"header": true,
+"hasMargin": false,
+"paraPr": 2,
+"charPr": 13,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "총계"
+},
+{
+"col": 28,
+"colSpan": 1,
+"rowSpan": 2,
+"width": 8337,
+"height": 3849,
+"borderFill": 6,
+"header": true,
+"hasMargin": false,
+"paraPr": 2,
+"charPr": 13,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "비고"
+}
+],
+[
+{
+"col": 4,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2383,
+"borderFill": 13,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 12,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "월"
+},
+{
+"col": 5,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 12,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "화"
+},
+{
+"col": 6,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 12,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "수"
+},
+{
+"col": 7,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 12,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "목"
+},
+{
+"col": 8,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 12,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "금"
+},
+{
+"col": 9,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2383,
+"borderFill": 14,
+"header": true,
+"hasMargin": false,
+"paraPr": 2,
+"charPr": 12,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "토"
+},
+{
+"col": 10,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2383,
+"borderFill": 13,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "국어"
+},
+{
+"col": 11,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "신명똑디"
+},
+{
+"col": 12,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "사회"
+},
+{
+"col": 13,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "도덕"
+},
+{
+"col": 14,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "수학"
+},
+{
+"col": 15,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "과학"
+},
+{
+"col": 16,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "실과"
+},
+{
+"col": 17,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "체육"
+},
+{
+"col": 18,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "음악"
+},
+{
+"col": 19,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "미술"
+},
+{
+"col": 20,
+"colSpan": 2,
+"rowSpan": 1,
+"width": 1585,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "영어"
+},
+{
+"col": 22,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2383,
+"borderFill": 14,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "소계"
+},
+{
+"col": 23,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 2383,
+"borderFill": 13,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "자율자치"
+},
+{
+"col": 24,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "동아리"
+},
+{
+"col": 25,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "진로"
+},
+{
+"col": 26,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 2383,
+"borderFill": 14,
+"header": true,
+"hasMargin": false,
+"paraPr": 2,
+"charPr": 9,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "소계"
+}
+]
+],
+"first": [
+{
+"col": 0,
+"colSpan": 1,
+"rowSpan": 5,
+"width": 1880,
+"height": 2635,
+"borderFill": 11,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 1,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1214,
+"height": 2635,
+"borderFill": 11,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 2,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 4045,
+"height": 2635,
+"borderFill": 11,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 7,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 3,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2635,
+"borderFill": 3,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 4,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2635,
+"borderFill": 9,
+"header": false,
+"hasMargin": true,
+"paraPr": 9,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+283,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 5,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 9,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+283,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 6,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 9,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+283,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 7,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 9,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+283,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 8,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 9,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+283,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 9,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2635,
+"borderFill": 21,
+"header": false,
+"hasMargin": true,
+"paraPr": 9,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+283,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 10,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2635,
+"borderFill": 9,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 11,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 12,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 13,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 14,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 15,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 16,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 17,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 18,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 19,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 20,
+"colSpan": 2,
+"rowSpan": 1,
+"width": 1585,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 22,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2635,
+"borderFill": 12,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 23,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 2635,
+"borderFill": 9,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 24,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 25,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 26,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 2635,
+"borderFill": 12,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 27,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 2000,
+"height": 2635,
+"borderFill": 11,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 8,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 28,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 8337,
+"height": 2635,
+"borderFill": 3,
+"header": false,
+"hasMargin": true,
+"paraPr": 8,
+"charPr": 10,
+"wrap": "BREAK",
+"margin": [
+227,
+57,
+283,
+283
+],
+"text": ""
+}
+],
+"mid": [
+{
+"col": 1,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1214,
+"height": 2635,
+"borderFill": 11,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 2,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 4045,
+"height": 2635,
+"borderFill": 11,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 7,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 3,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2635,
+"borderFill": 3,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 4,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2635,
+"borderFill": 9,
+"header": false,
+"hasMargin": true,
+"paraPr": 9,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+283,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 5,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 9,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+283,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 6,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 9,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+283,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 7,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 9,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+283,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 8,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 9,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+283,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 9,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2635,
+"borderFill": 21,
+"header": false,
+"hasMargin": true,
+"paraPr": 9,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+283,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 10,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2635,
+"borderFill": 9,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 11,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 12,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 13,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 14,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 15,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 16,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 17,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 18,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 19,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 20,
+"colSpan": 2,
+"rowSpan": 1,
+"width": 1585,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 22,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2635,
+"borderFill": 12,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 23,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 2635,
+"borderFill": 9,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 24,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 25,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 2635,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 26,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 2635,
+"borderFill": 12,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 27,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 2000,
+"height": 2635,
+"borderFill": 11,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 8,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 28,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 8337,
+"height": 2635,
+"borderFill": 3,
+"header": false,
+"hasMargin": true,
+"paraPr": 8,
+"charPr": 10,
+"wrap": "BREAK",
+"margin": [
+227,
+57,
+283,
+283
+],
+"text": ""
+}
+],
+"footers": [
+[
+{
+"col": 0,
+"colSpan": 3,
+"rowSpan": 1,
+"width": 7139,
+"height": 1266,
+"borderFill": 16,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": "1학기 계"
+},
+{
+"col": 3,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 20,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 4,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 1266,
+"borderFill": 17,
+"header": false,
+"hasMargin": true,
+"paraPr": 5,
+"charPr": 11,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 5,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 5,
+"charPr": 11,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 6,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 5,
+"charPr": 11,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 7,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 5,
+"charPr": 11,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 8,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 5,
+"charPr": 11,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 9,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 1266,
+"borderFill": 22,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 11,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 10,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 17,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 11,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 12,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 13,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 14,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 15,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 16,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 17,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 18,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 19,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 20,
+"colSpan": 2,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 22,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 19,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 23,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 1266,
+"borderFill": 17,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 24,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 25,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 26,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 1266,
+"borderFill": 19,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 27,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 2000,
+"height": 1266,
+"borderFill": 16,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 8,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 28,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 8337,
+"height": 1266,
+"borderFill": 20,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 10,
+"wrap": "BREAK",
+"margin": [
+227,
+57,
+283,
+283
+],
+"text": ""
+}
+]
+]
+},
+{
+"width": 51221,
+"head": [
+[
+{
+"col": 0,
+"colSpan": 29,
+"rowSpan": 1,
+"width": 51221,
+"height": 2166,
+"borderFill": 4,
+"header": true,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 4,
+"wrap": "SQUEEZE",
+"margin": [
+0,
+0,
+0,
+0
+],
+"text": "교과 및 창의적 체험활동 시수 책정표"
+}
+],
+[
+{
+"col": 0,
+"colSpan": 21,
+"rowSpan": 1,
+"width": 31786,
+"height": 1183,
+"borderFill": 5,
+"header": true,
+"hasMargin": true,
+"paraPr": 5,
+"charPr": 5,
+"wrap": "SQUEEZE",
+"margin": [
+0,
+0,
+0,
+0
+],
+"text": "2026학년도 2학기"
+},
+{
+"col": 21,
+"colSpan": 8,
+"rowSpan": 1,
+"width": 19435,
+"height": 1183,
+"borderFill": 5,
+"header": true,
+"hasMargin": true,
+"paraPr": 4,
+"charPr": 5,
+"wrap": "SQUEEZE",
+"margin": [
+0,
+0,
+0,
+0
+],
+"text": "6학년 7반"
+}
+],
+[
+{
+"col": 0,
+"colSpan": 1,
+"rowSpan": 2,
+"width": 1880,
+"height": 3849,
+"borderFill": 6,
+"header": true,
+"hasMargin": false,
+"paraPr": 2,
+"charPr": 13,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "월"
+},
+{
+"col": 1,
+"colSpan": 1,
+"rowSpan": 2,
+"width": 1214,
+"height": 3849,
+"borderFill": 6,
+"header": true,
+"hasMargin": false,
+"paraPr": 2,
+"charPr": 13,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "주"
+},
+{
+"col": 2,
+"colSpan": 1,
+"rowSpan": 2,
+"width": 4045,
+"height": 3849,
+"borderFill": 6,
+"header": true,
+"hasMargin": false,
+"paraPr": 2,
+"charPr": 13,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "기간"
+},
+{
+"col": 3,
+"colSpan": 1,
+"rowSpan": 2,
+"width": 1585,
+"height": 3849,
+"borderFill": 6,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 13,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "수업일"
+},
+{
+"col": 4,
+"colSpan": 6,
+"rowSpan": 1,
+"width": 6852,
+"height": 1466,
+"borderFill": 6,
+"header": true,
+"hasMargin": false,
+"paraPr": 2,
+"charPr": 14,
+"wrap": "SQUEEZE",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "요일별 수업시수"
+},
+{
+"col": 10,
+"colSpan": 13,
+"rowSpan": 1,
+"width": 19020,
+"height": 1466,
+"borderFill": 6,
+"header": true,
+"hasMargin": false,
+"paraPr": 2,
+"charPr": 13,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "교과"
+},
+{
+"col": 23,
+"colSpan": 4,
+"rowSpan": 1,
+"width": 6288,
+"height": 1466,
+"borderFill": 6,
+"header": true,
+"hasMargin": false,
+"paraPr": 2,
+"charPr": 13,
+"wrap": "SQUEEZE",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "창의적 체험활동"
+},
+{
+"col": 27,
+"colSpan": 1,
+"rowSpan": 2,
+"width": 2000,
+"height": 3849,
+"borderFill": 6,
+"header": true,
+"hasMargin": false,
+"paraPr": 2,
+"charPr": 13,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "총계"
+},
+{
+"col": 28,
+"colSpan": 1,
+"rowSpan": 2,
+"width": 8337,
+"height": 3849,
+"borderFill": 6,
+"header": true,
+"hasMargin": false,
+"paraPr": 2,
+"charPr": 13,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "비고"
+}
+],
+[
+{
+"col": 4,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2383,
+"borderFill": 13,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 12,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "월"
+},
+{
+"col": 5,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 12,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "화"
+},
+{
+"col": 6,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 12,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "수"
+},
+{
+"col": 7,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 12,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "목"
+},
+{
+"col": 8,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 12,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "금"
+},
+{
+"col": 9,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2383,
+"borderFill": 14,
+"header": true,
+"hasMargin": false,
+"paraPr": 2,
+"charPr": 12,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "토"
+},
+{
+"col": 10,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2383,
+"borderFill": 13,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "국어"
+},
+{
+"col": 11,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "신명똑디"
+},
+{
+"col": 12,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "사회"
+},
+{
+"col": 13,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "도덕"
+},
+{
+"col": 14,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "수학"
+},
+{
+"col": 15,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "과학"
+},
+{
+"col": 16,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "실과"
+},
+{
+"col": 17,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "체육"
+},
+{
+"col": 18,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "음악"
+},
+{
+"col": 19,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "미술"
+},
+{
+"col": 20,
+"colSpan": 2,
+"rowSpan": 1,
+"width": 1585,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "영어"
+},
+{
+"col": 22,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2383,
+"borderFill": 14,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "소계"
+},
+{
+"col": 23,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 2383,
+"borderFill": 13,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "자율자치"
+},
+{
+"col": 24,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "동아리"
+},
+{
+"col": 25,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 2383,
+"borderFill": 15,
+"header": true,
+"hasMargin": false,
+"paraPr": 3,
+"charPr": 6,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "진로"
+},
+{
+"col": 26,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 2383,
+"borderFill": 14,
+"header": true,
+"hasMargin": false,
+"paraPr": 2,
+"charPr": 9,
+"wrap": "BREAK",
+"margin": [
+510,
+510,
+141,
+141
+],
+"text": "소계"
+}
+]
+],
+"first": [
+{
+"col": 0,
+"colSpan": 1,
+"rowSpan": 5,
+"width": 1880,
+"height": 2341,
+"borderFill": 11,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 1,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1214,
+"height": 2341,
+"borderFill": 11,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 2,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 4045,
+"height": 2341,
+"borderFill": 11,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 7,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 3,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2341,
+"borderFill": 3,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 4,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2341,
+"borderFill": 9,
+"header": false,
+"hasMargin": true,
+"paraPr": 9,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+283,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 5,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 9,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+283,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 6,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 9,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+283,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 7,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 9,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+283,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 8,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 9,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+283,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 9,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2341,
+"borderFill": 21,
+"header": false,
+"hasMargin": true,
+"paraPr": 9,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+283,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 10,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2341,
+"borderFill": 9,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 11,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 12,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 13,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 14,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 15,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 16,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 17,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 18,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 19,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 20,
+"colSpan": 2,
+"rowSpan": 1,
+"width": 1585,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 22,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2341,
+"borderFill": 12,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 23,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 2341,
+"borderFill": 9,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 24,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 25,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 26,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 2341,
+"borderFill": 12,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 27,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 2000,
+"height": 2341,
+"borderFill": 11,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 8,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 28,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 8337,
+"height": 2341,
+"borderFill": 3,
+"header": false,
+"hasMargin": true,
+"paraPr": 8,
+"charPr": 10,
+"wrap": "BREAK",
+"margin": [
+227,
+57,
+283,
+283
+],
+"text": ""
+}
+],
+"mid": [
+{
+"col": 1,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1214,
+"height": 2341,
+"borderFill": 11,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 2,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 4045,
+"height": 2341,
+"borderFill": 11,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 7,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 3,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2341,
+"borderFill": 3,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 4,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2341,
+"borderFill": 9,
+"header": false,
+"hasMargin": true,
+"paraPr": 9,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+283,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 5,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 9,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+283,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 6,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 9,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+283,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 7,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 9,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+283,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 8,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 9,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+283,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 9,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 2341,
+"borderFill": 21,
+"header": false,
+"hasMargin": true,
+"paraPr": 9,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+283,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 10,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2341,
+"borderFill": 9,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 11,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 12,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 13,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 14,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 15,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 16,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 17,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 18,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 19,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 20,
+"colSpan": 2,
+"rowSpan": 1,
+"width": 1585,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 22,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 2341,
+"borderFill": 12,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 23,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 2341,
+"borderFill": 9,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 24,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 25,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 2341,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 26,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 2341,
+"borderFill": 12,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 27,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 2000,
+"height": 2341,
+"borderFill": 11,
+"header": false,
+"hasMargin": true,
+"paraPr": 7,
+"charPr": 8,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 28,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 8337,
+"height": 2341,
+"borderFill": 3,
+"header": false,
+"hasMargin": true,
+"paraPr": 8,
+"charPr": 10,
+"wrap": "BREAK",
+"margin": [
+227,
+57,
+283,
+283
+],
+"text": ""
+}
+],
+"footers": [
+[
+{
+"col": 0,
+"colSpan": 3,
+"rowSpan": 1,
+"width": 7139,
+"height": 1266,
+"borderFill": 16,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": "2학기 계"
+},
+{
+"col": 3,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 20,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 4,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 1266,
+"borderFill": 17,
+"header": false,
+"hasMargin": true,
+"paraPr": 5,
+"charPr": 11,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 5,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 5,
+"charPr": 11,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 6,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 5,
+"charPr": 11,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 7,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 5,
+"charPr": 11,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 8,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 5,
+"charPr": 11,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 9,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 1266,
+"borderFill": 22,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 11,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 10,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 17,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 11,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 12,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 13,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 14,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 15,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 16,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 17,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 18,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 19,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 20,
+"colSpan": 2,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 22,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 19,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 23,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 1266,
+"borderFill": 17,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 24,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 25,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 1266,
+"borderFill": 18,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 26,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 1266,
+"borderFill": 19,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 27,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 2000,
+"height": 1266,
+"borderFill": 16,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 8,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 28,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 8337,
+"height": 1266,
+"borderFill": 20,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 10,
+"wrap": "BREAK",
+"margin": [
+227,
+57,
+283,
+283
+],
+"text": ""
+}
+],
+[
+{
+"col": 0,
+"colSpan": 3,
+"rowSpan": 1,
+"width": 7139,
+"height": 1266,
+"borderFill": 11,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": "1학기 계"
+},
+{
+"col": 3,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 3,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 4,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 1266,
+"borderFill": 9,
+"header": false,
+"hasMargin": true,
+"paraPr": 5,
+"charPr": 11,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 5,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 5,
+"charPr": 11,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 6,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 5,
+"charPr": 11,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 7,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 5,
+"charPr": 11,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 8,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 5,
+"charPr": 11,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 9,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 1266,
+"borderFill": 21,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 11,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 10,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 9,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 11,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 12,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 13,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 14,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 15,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 16,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 17,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 18,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 19,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 20,
+"colSpan": 2,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 22,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 12,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 23,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 1266,
+"borderFill": 9,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 24,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 25,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 26,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 1266,
+"borderFill": 12,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 27,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 2000,
+"height": 1266,
+"borderFill": 11,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 8,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 28,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 8337,
+"height": 1266,
+"borderFill": 3,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 10,
+"wrap": "BREAK",
+"margin": [
+227,
+57,
+283,
+283
+],
+"text": ""
+}
+],
+[
+{
+"col": 0,
+"colSpan": 3,
+"rowSpan": 1,
+"width": 7139,
+"height": 1266,
+"borderFill": 11,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": "연간 계"
+},
+{
+"col": 3,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 3,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 4,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 1266,
+"borderFill": 9,
+"header": false,
+"hasMargin": true,
+"paraPr": 5,
+"charPr": 11,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 5,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 5,
+"charPr": 11,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 6,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 5,
+"charPr": 11,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 7,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 5,
+"charPr": 11,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 8,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 5,
+"charPr": 11,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 9,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1142,
+"height": 1266,
+"borderFill": 21,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 11,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 10,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 9,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 11,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 12,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 13,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 14,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 15,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 16,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 17,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 18,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 19,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 20,
+"colSpan": 2,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 22,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 12,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 23,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 1266,
+"borderFill": 9,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 24,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 25,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 26,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1572,
+"height": 1266,
+"borderFill": 12,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 27,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 2000,
+"height": 1266,
+"borderFill": 11,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 8,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 28,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 8337,
+"height": 1266,
+"borderFill": 3,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 10,
+"wrap": "BREAK",
+"margin": [
+227,
+57,
+283,
+283
+],
+"text": ""
+}
+],
+[
+{
+"col": 0,
+"colSpan": 3,
+"rowSpan": 1,
+"width": 7139,
+"height": 1266,
+"borderFill": 11,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": "본교 편제 시수"
+},
+{
+"col": 3,
+"colSpan": 7,
+"rowSpan": 1,
+"width": 8437,
+"height": 1266,
+"borderFill": 3,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 10,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 9,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 11,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 12,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 13,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 14,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 15,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 16,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 17,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 18,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 19,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 20,
+"colSpan": 2,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 22,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 12,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 23,
+"colSpan": 4,
+"rowSpan": 1,
+"width": 6288,
+"height": 1266,
+"borderFill": 3,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 27,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 2000,
+"height": 1266,
+"borderFill": 11,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 8,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 28,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 8337,
+"height": 1266,
+"borderFill": 3,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 10,
+"wrap": "BREAK",
+"margin": [
+227,
+57,
+283,
+283
+],
+"text": ""
+}
+],
+[
+{
+"col": 0,
+"colSpan": 3,
+"rowSpan": 1,
+"width": 7139,
+"height": 566,
+"borderFill": 11,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": "증감 현황"
+},
+{
+"col": 3,
+"colSpan": 7,
+"rowSpan": 1,
+"width": 8437,
+"height": 1266,
+"borderFill": 3,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 10,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 9,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 11,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 12,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 13,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 14,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 15,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 16,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 17,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 18,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 19,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 20,
+"colSpan": 2,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 10,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 22,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 1585,
+"height": 1266,
+"borderFill": 12,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 23,
+"colSpan": 4,
+"rowSpan": 1,
+"width": 6288,
+"height": 1266,
+"borderFill": 3,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 3,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 27,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 2000,
+"height": 1266,
+"borderFill": 11,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 8,
+"wrap": "SQUEEZE",
+"margin": [
+28,
+28,
+283,
+283
+],
+"text": ""
+},
+{
+"col": 28,
+"colSpan": 1,
+"rowSpan": 1,
+"width": 8337,
+"height": 1266,
+"borderFill": 3,
+"header": false,
+"hasMargin": true,
+"paraPr": 3,
+"charPr": 10,
+"wrap": "BREAK",
+"margin": [
+227,
+57,
+283,
+283
+],
+"text": ""
+}
+]
+]
+}
+]

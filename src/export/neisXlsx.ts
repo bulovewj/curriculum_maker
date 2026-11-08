@@ -1,7 +1,6 @@
 import JSZip from 'jszip';
 import { computeGrid } from '../engine/grid';
-import { placeLessons } from '../engine/placeLessons';
-import { bySlot } from '../engine/slots';
+import { lessonOrder } from '../engine/placeLessons';
 import type { PlanRow, Project, Semester, Subject } from '../model/types';
 import { writeXlsx } from './xlsxWrite';
 
@@ -27,12 +26,8 @@ export function neisRows(ordered: PlanRow[], subject: Subject, grade: number, se
 }
 
 /** 대표 학급 배치 순서의 행들: 배치된 행(칸 순서) → 못 놓은 행 → 메모 행. */
-export function orderedLessons(p: Project, subjectId: string, semester: Semester): PlanRow[] {
-  const rows = (p.lessonPlans[subjectId] ?? []).filter((r) => r.semester === semester || r.semester === undefined);
-  const res = placeLessons(computeGrid(p).slots, rows, subjectId);
-  const placed = res.placed.filter((x) => x.row.semester === semester || x.row.semester === undefined).sort((a, b) => bySlot(a.slot, b.slot));
-  return [...placed.map((x) => x.row), ...res.surplusRows, ...rows.filter((r) => r.kind === 'memo')];
-}
+export const orderedLessons = (p: Project, subjectId: string, semester: Semester): PlanRow[] =>
+  lessonOrder(computeGrid(p).slots, p.lessonPlans[subjectId] ?? [], subjectId, semester).map((x) => x.row);
 
 export const neisFileName = (p: Project, s: Subject, semester: Semester) => `${p.grade}학년_${semester}학기_${s.neisName ?? s.name}_진도표.xlsx`;
 

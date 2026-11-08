@@ -52,3 +52,11 @@ export function placeAll(slots: Slot[], lessonPlans: Record<SubjectId, PlanRow[]
 
 /** 교과 필요량: 행 − 칸. 양수 = 감축 필요, 음수 = 증배 필요, 0 = 맞음 */
 export const needOf = (r: PlaceResult): number => r.surplusRows.length - r.freeSlots.length;
+
+/** 한 교과·학기의 표 순서: 배치된 행(칸 순서) → 못 놓은 행 → 메모 행. 칸이 있으면 함께 돌려준다. */
+export function lessonOrder(slots: Slot[], rows: PlanRow[], subjectId: SubjectId, semester: 1 | 2): { row: PlanRow; slot?: Slot }[] {
+  const mine = rows.filter((r) => r.subjectId === subjectId && (r.semester === semester || r.semester === undefined));
+  const res = placeLessons(slots, mine, subjectId);
+  const placed = res.placed.filter((x) => x.slot.semester === semester).sort((a, b) => bySlot(a.slot, b.slot));
+  return [...placed, ...res.surplusRows.map((row) => ({ row })), ...mine.filter((r) => r.kind === 'memo').map((row) => ({ row }))];
+}
