@@ -25,4 +25,14 @@ describe('API 키 비밀 지키기', () => {
     const bad = files('dist', /\.(js|html|css)$/).filter((f) => /ANTHROPIC_API_KEY|sk-ant-/.test(text(f)));
     expect(bad).toEqual([]);
   });
+  it('접속 비밀번호 값이 코드·문서·설정 파일에 없다(서버 환경변수에만 있다)', () => {
+    const pw = ['06', '01'].join(''); // 이 파일에도 값이 글자 그대로 남지 않게 나눠 쓴다
+    const re = new RegExp(`\\b${pw}\\b`);
+    const list = [...files('src', /\.(ts|tsx|css)$/), ...files('api', /\.ts$/), ...files('.github', /\.ya?ml$/), ...files('scripts', /\.ts$/), 'README.md', 'CLAUDE.md', '.env.example', 'vite.config.ts'].filter(existsSync);
+    expect(list.filter((f) => re.test(text(f)))).toEqual([]);
+  });
+  it('빌드 결과 dist에 접속 비밀번호 값이 없다(빌드한 뒤라면)', () => {
+    const re = new RegExp(`\\b${['06', '01'].join('')}\\b`);
+    expect(files('dist', /\.(js|html)$/).filter((f) => re.test(text(f)))).toEqual([]);
+  });
 });

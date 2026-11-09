@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { AI_OFF, aiAvailable, callAi } from './client';
+import { AI_OFF, aiAvailable, callAi, checkPassword, savePassword, savedPassword } from './client';
 import { filterCandidates } from './filterOutput';
 import { maskNames, maskText } from './maskNames';
 import type { Adjustment } from '../model/types';
@@ -96,5 +96,23 @@ describe('문장·활동명', () => {
     const after = applyAdjustTexts(before, f.items);
     expect(after[0]).toMatchObject({ content: '유사 내용을 통합함', aiDraft: true });
     expect(before[0].aiDraft).toBeUndefined();
+  });
+});
+
+describe('접속 비밀번호', () => {
+  const mk = (data: unknown, status = 200) => (async () => Response.json(data, { status })) as typeof fetch;
+  it('서버가 맞다고 하면 ok, 아니면 wrong, 못 닿으면 down', async () => {
+    expect(await checkPassword('a', mk({ ok: true, authed: true }))).toBe('ok');
+    expect(await checkPassword('a', mk({ ok: true, authed: false }))).toBe('wrong');
+    expect(await checkPassword('a', (async () => { throw new Error('x'); }) as typeof fetch)).toBe('down');
+  });
+  it('AI를 부를 때 저장된 비밀번호를 헤더로 보내고, 401이면 지운다', async () => {
+    const store = new Map<string, string>();
+    (globalThis as unknown as { sessionStorage: Storage }).sessionStorage = { getItem: (k) => store.get(k) ?? null, setItem: (k, v) => void store.set(k, v), removeItem: (k) => void store.delete(k) } as Storage;
+    savePassword('pw1');
+    let sent = '';
+    await callAi('adjustText', { items: [] }, [], (async (_u: string, o?: RequestInit) => { sent = (o?.headers as Record<string, string>)['x-app-password']; return Response.json({ ok: false, error: '비밀번호가 맞지 않습니다.' }, { status: 401 }); }) as typeof fetch);
+    expect(sent).toBe('pw1'); // 영문·숫자는 그대로
+    expect(savedPassword()).toBe('');
   });
 });

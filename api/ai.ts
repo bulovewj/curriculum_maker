@@ -1,7 +1,8 @@
+import { accessOf, corsHeaders, denied, type AuthEnv } from './_lib/auth';
 import { handleAi, providerOf, type Env } from './_lib/handler';
 import type { CallModel } from './_lib/types';
 
-declare const process: { env: Env };
+declare const process: { env: Env & AuthEnv };
 
 /** 실제 Claude 호출(Anthropic Messages API). 키는 서버 환경변수에만 있다. */
 const callClaude: CallModel = async ({ model, system, user }) => {
@@ -46,11 +47,35 @@ const callGpt: CallModel = async ({ model, system, user }) => {
 
 export const maxDuration = 60; // Vercel 함수 최대 실행 시간(초)
 
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+/** 응답에 CORS 헤더를 덧붙인다 */
+const withCors = (res: Response, headers: Record<string, string>): Response => {
+  Object.entries(headers).forEach(([k, v]) => res.headers.set(k, v));
+  return res;
+};
+
 export async function POST(request: Request): Promise<Response> {
-  return handleAi(request, process.env, providerOf(process.env) === 'openai' ? callGpt : callClaude);
+  const cors = corsHeaders(request, process.env);
+  const access = accessOf(request, process.env);
+  if (access !== 'ok') {
+    if (access === 'wrong') await sleep(800); // 비밀번호를 연달아 시도하는 것을 늦춘다
+    return denied(access, cors);
+  }
+  return withCors(await handleAi(request, process.env, providerOf(process.env) === 'openai' ? callGpt : callClaude), cors);
 }
 
-/** 연결 확인용: 브라우저가 서버가 살아 있는지 본다(키 값은 알려 주지 않는다). */
-export function GET(): Response {
-  return Response.json({ ok: true, keyConfigured: Boolean(process.env.ANTHROPIC_API_KEY || process.env.OPENAI_API_KEY) });
+/** 다른 주소(GitHub Pages)에서 부르기 전에 브라우저가 보내는 확인 요청 */
+export function OPTIONS(request: Request): Response {
+  return new Response(null, { status: 204, headers: corsHeaders(request, process.env) });
+}
+
+/** 연결 확인·비밀번호 확인용: 서버가 살아 있는지, 비밀번호가 필요한지, 보낸 비밀번호가 맞는지(키 값은 알려 주지 않는다). */
+export async function GET(request: Request): Promise<Response> {
+  const access = accessOf(request, process.env);
+  if (access === 'wrong' && request.headers.get('x-app-password')) await sleep(800);
+  return Response.json(
+    { ok: true, keyConfigured: Boolean(process.env.ANTHROPIC_API_KEY || process.env.OPENAI_API_KEY), passwordRequired: Boolean(process.env.APP_PASSWORD) || Boolean(process.env.VERCEL), authed: access === 'ok' },
+    { headers: corsHeaders(request, process.env) },
+  );
 }

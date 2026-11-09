@@ -23,6 +23,15 @@ npm run dev        # http://127.0.0.1:5173 (이미 켜져 있으면 그 창을 �
 ## AI (선택)
 `.env.example`을 `.env.local`로 복사하고 키를 **한 가지**만 넣으세요(`ANTHROPIC_API_KEY` 또는 `OPENAI_API_KEY`). 모델 이름은 같은 파일의 `AI_MODEL_*`. 서버를 껐다 켜면 적용됩니다. S1의 "AI 도우미 사용"을 체크하면 S2·S6에 AI 단추가 보입니다. 키는 `.env.local`에만 두세요(git에 올라가지 않습니다). 키를 `.env.example`에 넣으면 안 됩니다.
 
+## 협업자와 같이 쓰는 배포(AI 포함, 접속 비밀번호)
+앱 화면은 GitHub Pages(정적 파일)로도 올라가지만, AI는 키가 필요한 서버가 있어야 해서 **Vercel**에 올립니다. 접속 비밀번호와 API 키는 **Vercel 환경변수에만** 넣습니다(코드·git·README에는 쓰지 않습니다).
+1. [vercel.com](https://vercel.com) → Add New → Project → 이 GitHub 저장소 가져오기(프레임워크는 Vite로 자동 인식).
+2. Environment Variables에 넣기: `OPENAI_API_KEY`(또는 `ANTHROPIC_API_KEY`), `AI_MODEL_FAST`·`AI_MODEL_SMART`(예: gpt-4o-mini), `APP_PASSWORD`(접속 비밀번호), `VITE_REQUIRE_PASSWORD`=`1`, GitHub Pages에서도 부르려면 `ALLOWED_ORIGIN`=`https://bulovewj.github.io`.
+3. Deploy → 나온 주소(예: https://○○.vercel.app)를 협업자에게 알려 주면, 처음 접속 때 비밀번호를 묻고 AI도 됩니다.
+4. (선택) GitHub Pages 쪽에서도 AI를 쓰려면 저장소 Settings → Secrets and variables → Actions → Variables에 `API_BASE`=Vercel 주소를 넣습니다.
+- 비밀번호는 서버가 확인합니다(틀리면 AI 호출이 막힘). 화면 파일 자체는 정적 파일이라 비밀번호 앞에서도 내려받을 수 있으니, 비밀번호는 AI 사용량을 지키는 용도입니다. **숫자 4자리는 짧습니다.** 더 긴 값으로 바꾸려면 Vercel의 `APP_PASSWORD`만 고치고 다시 배포하세요.
+- OpenAI 대시보드에서 프로젝트 월 사용 한도(Budget)를 꼭 걸어 두세요.
+
 ## 매년 할 일
 - 새 학년도 프로젝트를 만들고(S0), 학사일정·전담 시간표·편제·진도를 새 파일로 넣습니다.
 - 기준 숫자(교육부 기준 시수, ±20% 등)는 `data/standards/*.json`에서 바꿉니다. 코드에는 숫자를 넣지 않습니다.

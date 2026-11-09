@@ -15,7 +15,9 @@ export function Start() {
   }, [store]);
 
   async function create() {
-    const p = newProject(crypto.randomUUID(), new Date().getFullYear() + 1);
+    const fresh = newProject(crypto.randomUUID(), new Date().getFullYear() + 1);
+    // 서버(비밀번호 있는 배포)에 연결돼 있으면 AI 도우미를 처음부터 켠다
+    const p = import.meta.env.VITE_REQUIRE_PASSWORD === '1' ? { ...fresh, settings: { ...fresh.settings, aiEnabled: true } } : fresh;
     await store.save(p, new Date().toISOString()).catch(() => setError('저장이 안 됩니다. 내보내기로 파일을 보관하세요.'));
     open(p);
   }

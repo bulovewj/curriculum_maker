@@ -24,6 +24,10 @@ jobs:
       - run: npm ci
       - run: npm run typecheck
       - run: npm run build
+        env:
+          # 저장소 Settings → Secrets and variables → Actions → Variables 에 API_BASE(Vercel 주소)를 넣으면 AI·비밀번호가 켜진다
+          VITE_API_BASE: ${{ vars.API_BASE }}
+          VITE_REQUIRE_PASSWORD: ${{ vars.API_BASE != '' && '1' || '' }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

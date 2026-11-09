@@ -4,7 +4,7 @@ import { loadEnv, type Plugin } from 'vite';
 
 // @types/node 없이 쓰는 최소 선언
 declare const process: { env: Record<string, string | undefined>; cwd(): string };
-interface Req { method?: string; url?: string; on(ev: 'data', f: (c: Uint8Array) => void): void; on(ev: 'end', f: () => void): void }
+interface Req { method?: string; url?: string; headers: Record<string, string | string[] | undefined>; on(ev: 'data', f: (c: Uint8Array) => void): void; on(ev: 'end', f: () => void): void }
 interface Res { statusCode: number; setHeader(k: string, v: string): void; end(s: string | Uint8Array): void }
 
 /** 개발 서버(npm run dev)에서도 /api/ai 가 동작하게 한다. .env.local 의 키는 서버 쪽에서만 읽는다(브라우저로 안 나감). */
@@ -34,8 +34,9 @@ export function devApi(): Plugin {
           req.on('data', (c) => { text += dec.decode(c, { stream: true }); });
           req.on('end', () => done(text));
         });
-        const mod = (await server.ssrLoadModule('/api/ai.ts')) as { POST: (r: Request) => Promise<Response>; GET: () => Response };
-        const out = req.method === 'POST' ? await mod.POST(new Request('http://localhost/api/ai', { method: 'POST', body })) : mod.GET();
+        const mod = (await server.ssrLoadModule('/api/ai.ts')) as { POST: (r: Request) => Promise<Response>; GET: (r: Request) => Promise<Response> };
+        const headers = { 'x-app-password': String(req.headers['x-app-password'] ?? '') };
+        const out = req.method === 'POST' ? await mod.POST(new Request('http://localhost/api/ai', { method: 'POST', body, headers })) : await mod.GET(new Request('http://localhost/api/ai', { headers }));
         res.statusCode = out.status;
         res.setHeader('content-type', 'application/json');
         res.end(await out.text());

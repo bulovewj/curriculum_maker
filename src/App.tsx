@@ -1,3 +1,4 @@
+import { PasswordGate } from './components/PasswordGate';
 import { Shell } from './components/Shell';
 import { Start } from './screens/Start/Start';
 import { ProjectProvider, useProject } from './state/ProjectContext';
@@ -8,8 +9,10 @@ function Screen() {
 
 export function App() {
   return (
-    <ProjectProvider>
-      <Screen />
-    </ProjectProvider>
+    <PasswordGate>
+      <ProjectProvider>
+        <Screen />
+      </ProjectProvider>
+    </PasswordGate>
   );
 }
