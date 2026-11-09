@@ -22,12 +22,12 @@ const callGpt: CallModel = async ({ model, system, user }) => {
     method: 'POST',
     headers: { 'content-type': 'application/json', authorization: `Bearer ${process.env.OPENAI_API_KEY ?? ''}` },
     body: JSON.stringify({ model, max_completion_tokens: 4000, messages: [{ role: 'system', content: system }, { role: 'user', content: user }] }),
-    signal: AbortSignal.timeout(18000), // 가끔 답이 안 오고 멈추는 요청이 있어서 18초에서 끊고 다시 보낸다
+    signal: AbortSignal.timeout(28000), // 가끔 답이 안 오고 멈추는 요청이 있어서 28초에서 끊고 다시 보낸다(큰 요청은 고급 모델로 13초쯤 걸린다)
   });
-  // 권한을 막 바꾸면 OpenAI 서버마다 반영이 달라 403이 섞여 나오고, 가끔 답이 안 오고 멈춘다. 세 번까지 시도한다(전체 약 1분 안, Vercel 함수 한도 60초 가정).
+  // 권한을 막 바꾸면 OpenAI 서버마다 반영이 달라 403이 섞여 나오고, 가끔 답이 안 오고 멈춘다. 두 번까지 시도한다(전체 약 1분 안, Vercel 함수 한도 60초 가정).
   let res: Response | undefined;
   let last = '';
-  for (let k = 0; k < 3 && !(res && res.status !== 403); k++) {
+  for (let k = 0; k < 2 && !(res && res.status !== 403); k++) {
     if (k > 0) await new Promise((r) => setTimeout(r, 1000));
     try {
       res = await send();
