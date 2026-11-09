@@ -56,10 +56,10 @@ src/ model engine import export storage state ai lib screens components dev
 - `?dev` 화면 = 진도 xlsx·hwpx 읽기 결과 확인용(개발 전용). hwpx 원본 안내 표(안건 표)에 교사 이름이 있으니 테스트·기대값에 옮기지 말 것
 - `npm run expected`(tsx) = 정답지 기대값 JSON 다시 만들기 + totals.json 대조. 기대값 JSON은 손으로 고치지 말 것. `curriculum.json`은 계획에 없던 추가 파일(CUR 읽은 값)
 - M16 관문(`v0.9-gate`)은 아직 안 찍음: 형이 ① 한글(맥)에서 `templates/*.hwpx`와 S7에서 받은 hwpx 5종이 열리는지(긴 표 쪽 이어짐·머리 줄 반복·시간 운영계획 학기마다 한 쪽) ② 2026 원본과 나란히 눈으로 비교 ③ AI 끈 채 S0→S7 처음부터 끝까지 확인해야 함. `templates/*.hwpx`는 `npm run templates`가 정답지(d)(c)에서 본문만 지워 만든 것(형이 한글에서 직접 만든 양식으로 바꿔도 됨)
-- M17 AI: `api/ai.ts`는 SDK 없이 fetch로 Anthropic API를 부른다(새 라이브러리 없음). 실제 호출은 형이 `.env.local`에 키를 넣고 `vercel dev`로 확인해야 함(테스트는 전부 가짜 모델). `npm run dev`만 켜면 S6에 'AI 꺼짐(서버 연결 안 됨)'
+- M17 AI: `api/ai.ts`는 SDK 없이 fetch로 부른다(새 라이브러리 없음). `npm run dev`면 `scripts/devApi.ts`가 /api/ai를 중계(키는 `.env.local`). 테스트는 전부 가짜 모델. `api/` 안 상대 import는 `.js` 확장자 필수(Vercel ESM, 없으면 ERR_MODULE_NOT_FOUND)
 - S2 [2026 샘플 넣기(개발용)] = `scripts/devApi.ts`가 fixtures·reference의 2026 파일을 개발 서버에서만 내준다(빌드·git 제외). 파일이 다 읽힌 뒤 [읽은 파일 모두 확정]
-- AI는 GPT 키도 가능(`api/ai.ts` callGpt, 기본 gpt-4o-mini). 실제 호출은 아직 한 번도 검증 안 됨
-- R9 빨강(편제 학기 배분 ≠ 주별 시수표)은 교육과정 담당자와 같이 확인할 때까지 그대로 둔다(S4가 학기 배분을 추정으로 나누는 것이 원인으로 의심)
+- AI는 GPT 키도 가능(`api/ai.ts` callGpt). GPT 기본 모델 gpt-4o(`DEFAULT_GPT`), S6 [모델 변경하기]에서 비밀번호(3430, 형 요청으로 코드에 둠 — 화면 잠금일 뿐) 넘으면 gpt-6-luna. 환경변수 AI_MODEL_*가 있으면 그게 우선
+- R9 원인 확인(2026-11-09): S4 학기 기본 나누기(칸 비율)가 학교 실제 배분(국어 83/109, 신명똑디 32/0 등)과 달라서. 반올림 오차(학기 합 ≠ 칸 수)는 고침. S4에 학교가 정한 학기 값을 넣고 S5 [자동 맞추기]를 하면 R8·R9 통과(`tests/golden/ui-flow.test.ts`). 학기 배분 기본값을 진도 행 수로 잡을지는 담당자와 확인
 - 배포: `.github/workflows/pages.yml`이 main push마다 빌드해 GitHub Pages(`/curriculum_maker/`)로 올린다. 저장소 Settings → Pages → Source를 'GitHub Actions'로 한 번 바꿔야 함. 빌드는 `base: '/curriculum_maker/'`(vite.config.ts). Pages에는 /api/ai가 없어 AI는 꺼짐 표시
 - 협업자 배포: 서버는 Vercel(`api/ai.ts`), 비밀번호는 서버 환경변수 `APP_PASSWORD`만(코드·git에 값 금지, 테스트가 검사). 프런트는 `VITE_REQUIRE_PASSWORD=1`이면 비밀번호 화면(PasswordGate), Pages에서 부를 땐 `VITE_API_BASE`. 배포 절차는 README. Vercel 계정 연결·환경변수는 형이 직접 한다(로그인 안 돼 있음)
 - `@types/node` 없음 → 테스트용 Node 함수는 `tests/node.d.ts`에 직접 선언

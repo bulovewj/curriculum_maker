@@ -23,6 +23,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run typecheck
+      - run: npm test # 원본(git 제외)이 필요한 정답지 테스트는 스스로 건너뜀
       - run: npm run build
         env:
           # 저장소 Settings → Secrets and variables → Actions → Variables 에 API_BASE(Vercel 주소)를 넣으면 AI·비밀번호가 켜진다
