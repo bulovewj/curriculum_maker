@@ -31,3 +31,14 @@ describe('effectiveSchool: 편제를 다시 넣어 연간이 바뀌면', () => {
     expect(effectiveSchool(p, slots)[id]).toEqual({ s1: 70, s2: 70 });
   });
 });
+
+describe('fillEstimated: 정한 값은 두고 추정 교과만 채움', () => {
+  it('국어를 3/1로 정해 두면 그대로, 나머지로 1학기 칸 수를 맞춘다', async () => {
+    const { fillEstimated } = await import('./plan');
+    const p0 = newProject('x', 2027);
+    const [a, b] = p0.subjects.map((s) => s.id);
+    const c = { ...p0.curriculumPlan, schoolAnnual: { [a]: 4, [b]: 4 }, school: { [a]: { s1: 3, s2: 1 } } };
+    const slots = [...many(a, 1, 4), ...many(a, 2, 4)]; // 1학기 4칸, 2학기 4칸
+    expect(fillEstimated(c, slots, [], false)).toEqual({ [a]: { s1: 3, s2: 1 }, [b]: { s1: 1, s2: 3 } });
+  });
+});

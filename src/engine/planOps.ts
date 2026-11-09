@@ -48,7 +48,7 @@ function apply(s: OpState, subjectId: SubjectId, beforeIds: string[], after: Pla
     id: `op-adj-${nextNo(s.adjustments.map((a) => a.id), /^op-adj-(\d+)$/)}`,
     semester: (first.semester ?? 1) as Semester, subjectId, area: first.area ?? '', standards: first.standards, unit: first.unit,
     content, hours, planRowIds: afterRows.map((r) => r.id),
-    undo: { subjectId, beforeRows: before, afterIds: after.map((r) => r.id), numbers, prevId: pos > 0 ? list[pos - 1].id : null, at: pos },
+    undo: { subjectId, beforeRows: before, afterIds: after.map((r) => r.id), afterRows, numbers, prevId: pos > 0 ? list[pos - 1].id : null, at: pos },
   }];
   return { lessonPlans: { ...s.lessonPlans, [subjectId]: rows }, adjustments: [...s.adjustments, ...adj] };
 }
@@ -134,6 +134,10 @@ export function undoAdjustment(s: OpState, adjustmentId: string): OpState {
   // 뒤 작업이 이 작업의 결과 행을 다시 바꿨으면(같은 id를 남기는 합치기 포함) 먼저 취소하면 순서가 꼬인다
   const later = s.adjustments.slice(s.adjustments.indexOf(a) + 1).filter((x) => x.undo?.subjectId === subjectId);
   const touchedLater = later.some((x) => x.undo!.beforeRows.some((r) => afterIds.includes(r.id)) || x.undo!.afterIds.some((id) => afterIds.includes(id)));
+  // 작업 뒤에 그 행의 글·태그·주 고정 등을 고쳤으면(증감 기록이 안 남는 변경) 되돌리면 그 고침이 사라진다
+  const same = (a: PlanRow, b: PlanRow) => JSON.stringify({ ...a, n: 0, total: 0 }) === JSON.stringify({ ...b, n: 0, total: 0 });
+  const editedLater = (a.undo.afterRows ?? []).some((r) => { const now = list.find((x) => x.id === r.id); return now !== undefined && !same(now, r); });
+  if (editedLater) throw new Error('이 작업 뒤에 그 행의 글·태그·주 고정을 고쳤습니다. 취소하면 그 고침이 사라지므로 막았습니다. 행 관리에서 직접 고치세요.');
   if (touchedLater || afterIds.some((id) => !list.some((r) => r.id === id))) {
     throw new Error('이 작업으로 바뀐 행을 그 뒤 작업이 다시 바꿨습니다. 나중에 한 작업부터 차례로 취소하세요.');
   }

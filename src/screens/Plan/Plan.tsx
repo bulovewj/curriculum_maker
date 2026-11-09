@@ -1,9 +1,10 @@
 import { useMemo } from 'react';
 import { defaultDonors } from '../../engine/autoBalance';
 import { computeGrid } from '../../engine/grid';
-import { effectiveSchool, splitSemesters } from '../../engine/plan';
+import { effectiveSchool, fillEstimated } from '../../engine/plan';
 import type { Project, SubjectId } from '../../model/types';
 import { PlanChecks } from '../../components/PlanChecks';
+import { EstimatedNotice } from '../../components/PlanGapNotice';
 import { useProject } from '../../state/ProjectContext';
 
 /** S4 편제: 교과 × (기준, 본교 학기별·연간, 증감, 작년, 2년 계), 학기 나누기, 가져올 교과 순서 */
@@ -24,8 +25,7 @@ export function Plan() {
   const fill = (inFirst: boolean) => {
     const auto = p.subjects.filter((s) => s.kind === 'autonomy').map((s) => s.id);
     setPlan((c) => {
-      const sp = splitSemesters(c.schoolAnnual, slots, auto, inFirst);
-      return { ...c, school: sp };
+      return { ...c, school: fillEstimated(c, slots, auto, inFirst) };
     });
   };
   const move = (id: SubjectId, i: number, d: -1 | 1) => {
@@ -56,9 +56,10 @@ export function Plan() {
     <section>
       <h2>편제</h2>
       <div className="row">
-        <button onClick={() => fill(false)}>학기 나누기 기본값(칸 수 비율)</button>
-        <button onClick={() => fill(true)}>학교자율시간 1학기로 몰기</button>
+        <button onClick={() => fill(false)}>칸 비율로 채우기(확정)</button>
+        <button onClick={() => fill(true)}>칸 비율로 채우기 + 학교자율시간 1학기로 몰기</button>
       </div>
+      <EstimatedNotice project={p} />
       <table className="dev-table">
         <thead><tr><th>교과·영역</th><th>교육부 기준</th><th>1학기</th><th>2학기</th><th>연간</th><th>증감</th><th>±%</th><th>작년</th><th>2년 계</th></tr></thead>
         <tbody>

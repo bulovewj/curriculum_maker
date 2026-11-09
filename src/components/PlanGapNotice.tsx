@@ -1,4 +1,4 @@
-import { planGaps } from '../engine/plan';
+import { estimatedSubjects, planGaps } from '../engine/plan';
 import type { Project, Slot } from '../model/types';
 import { BalancePanel } from './BalancePanel';
 
@@ -15,5 +15,17 @@ export function PlanGapNotice({ project: p, slots, update }: { project: Project;
       <p className="muted">{gaps.map((g) => `${name(g.subjectId)} ${g.semester}학기 칸 ${g.slots}·편제 ${g.plan}`).join(' · ')}</p>
       <BalancePanel project={p} update={update} />
     </div>
+  );
+}
+
+/** 학기 값이 칸 비율 추정값인 교과가 있으면 알린다(S4·S5). 문서에 추정값이 나가지 않게 */
+export function EstimatedNotice({ project: p }: { project: Project }) {
+  const est = estimatedSubjects(p);
+  if (est.length === 0) return null;
+  const name = (id: string) => p.subjects.find((s) => s.id === id)?.name ?? id;
+  return (
+    <p className="yellow">
+      학기 값이 아직 추정값입니다(칸 비율로 자동 계산): {est.map(name).join(', ')}. S4 편제에서 학교가 정한 1·2학기 값을 넣거나, 추정값이 맞으면 [칸 비율로 채우기]를 눌러 확정하세요.
+    </p>
   );
 }

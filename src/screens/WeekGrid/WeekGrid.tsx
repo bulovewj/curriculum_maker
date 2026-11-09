@@ -7,6 +7,7 @@ import { semesterTotals } from '../../engine/weekGrid';
 import { readHwpx } from '../../import/hwpx/readHwpx';
 import { readTimePlan } from '../../import/mappers/timePlanHwpx';
 import { BalancePanel } from '../../components/BalancePanel';
+import { EstimatedNotice } from '../../components/PlanGapNotice';
 import { MoveForm, type MoveTarget } from '../../components/MoveForm';
 import { moveHours, unlockWeek } from '../../engine/moveHours';
 import { useProject } from '../../state/ProjectContext';
@@ -66,6 +67,7 @@ export function WeekGrid() {
         <input type="file" accept=".hwpx" hidden onChange={(e) => importPlan(e.target.files?.[0])} />
       </label>
       {msg.map((m) => <p key={m} className="muted">{m}</p>)}
+      <EstimatedNotice project={p} />
       <BalancePanel project={p} update={update} />
       {target && (
         <MoveForm target={target} subjects={p.subjects} onCancel={() => setTarget(null)} onMove={(to, n) => {

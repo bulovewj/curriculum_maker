@@ -1,3 +1,4 @@
+import { estimatedSubjects } from '../plan';
 import { semesterTotals } from '../weekGrid';
 import { res, type Rule } from './common';
 
@@ -9,6 +10,9 @@ export const r9: Rule = (c) => {
     const got = total[n - 1][s.id] ?? 0;
     return plan === got ? [] : [{ s, n, plan, got }];
   }));
-  if (bad.length === 0) return [res('R9', 'pass', '편제 학기 계와 주별 시수표 학기 계가 같음', '작업지시서 F7')];
-  return bad.map(({ s, n, plan, got }) => res('R9', 'fail', `${n}학기 ${s.name}: 편제 ${plan} / 주별 시수표 ${got}`, '작업지시서 F7', [{ semester: n as 1 | 2, subjectId: s.id, hours: got - plan }]));
+  // 교사가 학기 값을 정하지 않은 교과는 칸 비율 추정값이라 문서에 그대로 나가면 안 된다
+  const est = estimatedSubjects(c.p).map((id) => c.p.subjects.find((s) => s.id === id)?.name ?? id);
+  const estLine = est.length ? [res('R9', 'warn', `학기 값이 추정값인 교과 ${est.length}개(${est.join(', ')}). S4에서 학교가 정한 학기 값을 넣거나 [칸 비율로 채우기]로 확정하세요.`, '작업지시서 F4')] : [];
+  if (bad.length === 0) return [...estLine, res('R9', 'pass', '편제 학기 계와 주별 시수표 학기 계가 같음', '작업지시서 F7')];
+  return [...estLine, ...bad.map(({ s, n, plan, got }) => res('R9', 'fail', `${n}학기 ${s.name}: 편제 ${plan} / 주별 시수표 ${got}`, '작업지시서 F7', [{ semester: n as 1 | 2, subjectId: s.id, hours: got - plan }]))];
 };

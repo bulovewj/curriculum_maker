@@ -178,3 +178,12 @@ describe('GPT 검토 반영: 취소 순서·학기 경계·메모·차시 다시
     expect(mv.lessonPlans.kor.map((r) => `${r.id}${r.n}/${r.total}`)).toEqual(['a1/2', 'b2/2', 'c1/2', 'd2/2']);
   });
 });
+
+describe('취소가 뒤에 고친 글을 지우지 않게', () => {
+  it('합친 행의 주제를 고친 뒤 그 합치기를 취소하면 막는다(고치기 전이면 취소됨)', () => {
+    const s1 = mergeRows(start(), 'kor', 'a');
+    expect(ids(undoAdjustment(s1, s1.adjustments[0].id))).toEqual(['a', 'b', 'c', 'd']);
+    const s2 = setRowText(s1, 'kor', 'a', { topic: '새 주제' });
+    expect(() => undoAdjustment(s2, s2.adjustments[0].id)).toThrow('고침이 사라지므로');
+  });
+});
