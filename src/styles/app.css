@@ -106,9 +106,12 @@ fieldset { display: grid; gap: var(--space-2); border: 1px solid var(--color-bor
 .ai-box-body { max-height: 38vh; overflow: auto; padding: 0 var(--space-3) var(--space-2); }
 
 /* 단계 안내 창 */
-.guide { max-width: min(560px, calc(100vw - 32px)); border: none; border-radius: var(--radius); padding: var(--space-4) var(--space-4) var(--space-3); background: var(--color-background); color: var(--color-text); box-shadow: var(--shadow-2); }
+.guide { max-width: min(640px, calc(100vw - 32px)); max-height: 85vh; overflow-y: auto; border: none; border-radius: var(--radius); padding: var(--space-4) var(--space-4) var(--space-3); background: var(--color-background); color: var(--color-text); box-shadow: var(--shadow-2); }
 .guide::backdrop { background: var(--color-backdrop); }
 .guide h2 { margin-top: 0; }
+.guide h3 { margin: var(--space-4) 0 var(--space-2); font-size: 1rem; }
+.guide ol, .guide-checks { margin: 0; padding-left: 1.4em; display: grid; gap: var(--space-1); }
+.guide-checks { list-style: '☐ '; }
 .guide dl { margin: var(--space-3) 0; display: grid; gap: var(--space-2); }
 .guide dt { font-weight: 600; }
 .guide dd { margin: 0; color: var(--color-muted); }
