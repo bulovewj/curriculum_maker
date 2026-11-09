@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { EXTRACTED, ORIGINAL, findFile, listFiles, readBuffer } from '../files';
+import JSZip from 'jszip';
 import { readWorkbook } from '../../src/import/xlsx/readWorkbook';
 
 // 교사 이름은 1차에서 읽지 않는다(CLAUDE.md). P02의 이름 목록을 실행 중에 읽어서
@@ -24,6 +25,21 @@ describe.skipIf(!p02)('개인정보: 정답지 JSON에 교사 이름이 없다',
       const text = new TextDecoder().decode(readFileSync(f));
       return [...names].filter((n) => text.includes(n)).map((n) => `${f}: 이름 ${n.length}글자`); // 이름은 출력하지 않는다
     });
+    expect(hits).toEqual([]);
+  });
+
+  it('공개되는 빈 양식(templates/*.hwpx)과 기준 데이터에도 교사 이름이 없다', async () => {
+    const sheets = await readWorkbook(readBuffer(p02!));
+    const names = new Set(sheets.flatMap((s) => s.rows.flat()).flatMap((t) => { const m = t.match(/^\s*([가-힣]{2,4})\s*[:：]/); return m ? [m[1]] : []; }));
+    const hits: string[] = [];
+    for (const f of listFiles('templates', '.hwpx')) {
+      const zip = await JSZip.loadAsync(readFileSync(f));
+      for (const [name, entry] of Object.entries(zip.files)) {
+        if (entry.dir || !/\.(xml|hpf|txt)$/.test(name)) continue;
+        const text = await entry.async('string');
+        for (const n of names) if (text.includes(n)) hits.push(`${f}/${name}: 이름 ${n.length}글자`);
+      }
+    }
     expect(hits).toEqual([]);
   });
 });
