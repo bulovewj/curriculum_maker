@@ -94,3 +94,13 @@ fieldset { display: grid; gap: var(--space-2); border: 1px solid var(--color-bor
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
 }
+
+/* 진도 행 메뉴·행 관리 창·AI 창 */
+.row-menu { position: fixed; z-index: 10; display: grid; min-width: 210px; padding: var(--space-1); background: var(--color-background); border: 1px solid var(--color-border-strong); border-radius: var(--radius); box-shadow: var(--shadow-2); }
+.row-menu button { text-align: left; border: none; background: none; min-height: 32px; border-radius: 6px; }
+.row-menu-title { padding: var(--space-1) var(--space-2); border-bottom: 1px solid var(--color-border); margin-bottom: var(--space-1); }
+.row-manager { width: min(960px, 94vw); border: 1px solid var(--color-border-strong); border-radius: var(--radius); padding: var(--space-4); box-shadow: var(--shadow-2); }
+.row-manager::backdrop { background: var(--color-backdrop); }
+.ai-box { border: 1px solid var(--color-border); border-radius: var(--radius); background: var(--color-surface); margin: var(--space-2) 0; }
+.ai-box > summary { cursor: pointer; padding: var(--space-2) var(--space-3); font-weight: 600; }
+.ai-box-body { max-height: 38vh; overflow: auto; padding: 0 var(--space-3) var(--space-2); }

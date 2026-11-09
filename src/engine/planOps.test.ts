@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { PlanRow } from '../model/types';
-import { addRow, insertEvent, mergeRows, removeRow, setFixedWeek, setTags, splitRow, swapRows, undoAdjustment, type OpState } from './planOps';
+import { addRow, insertEvent, mergeRows, removeRow, setFixedWeek, setRowText, setTags, splitRow, swapRows, undoAdjustment, type OpState } from './planOps';
 import { needOf, placeLessons } from './placeLessons';
 import type { Slot } from '../model/types';
 
@@ -132,5 +132,18 @@ describe('작업마다 행 수·표시·증감 기록·취소', () => {
     const copy = JSON.stringify(s0);
     splitRow(mergeRows(s0, 'kor', 'a'), 'kor', 'd');
     expect(JSON.stringify(s0)).toBe(copy);
+  });
+});
+
+describe('행 글 고치기', () => {
+  it('글만 바뀌고 행 수·증감 기록은 그대로, 같은 글이면 같은 객체', () => {
+    const s0 = start();
+    const s1 = setRowText(s0, 'kor', 'b', { topic: '새 주제', unit: '새 단원' });
+    expect(s1.lessonPlans.kor[1]).toMatchObject({ id: 'b', topic: '새 주제', unit: '새 단원' });
+    expect(s1.lessonPlans.kor).toHaveLength(4);
+    expect(s1.adjustments).toEqual([]);
+    expect(s0.lessonPlans.kor[1].topic).toBe('B');
+    expect(setRowText(s1, 'kor', 'b', { topic: '새 주제' })).toBe(s1);
+    expect(() => setRowText(s0, 'kor', 'zz', { topic: 'x' })).toThrow('행을 찾지');
   });
 });

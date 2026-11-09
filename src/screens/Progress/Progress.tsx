@@ -1,14 +1,20 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, type ReactNode } from 'react';
 import { computeGrid } from '../../engine/grid';
 import { needOf, placeAll } from '../../engine/placeLessons';
 import { AdjustmentList } from '../../components/AdjustmentList';
 import { applyPicked, type Picked } from '../../ai/applyCandidates';
 import { AiPanel } from '../../components/AiPanel';
 import { AiTextPanel } from '../../components/AiTextPanel';
-import { PlanOpsBar } from '../../components/PlanOpsBar';
-import { swapRows, undoAdjustment, type OpState } from '../../engine/planOps';
+import { RowManager } from '../../components/RowManager';
+import { RowMenu } from '../../components/RowMenu';
+import { mergeRows, removeRow, setFixedWeek, splitRow, swapRows, undoAdjustment, type OpState } from '../../engine/planOps';
 import type { Semester } from '../../model/types';
 import { useProject } from '../../state/ProjectContext';
+
+/** AI 창 묶음: 위에 그대로 두고, 길어지면 안에서만 스크롤. 접어 둘 수 있다. */
+function AiBox({ children }: { children: ReactNode }) {
+  return <details open className="ai-box"><summary>AI 도우미</summary><div className="ai-box-body">{children}</div></details>;
+}
 
 /** S6 진도(읽기 전용): 교과 탭, 배치된 주·기간, 칸·행·필요량 */
 export function Progress() {
@@ -16,6 +22,8 @@ export function Progress() {
   const [tab, setTab] = useState('kor');
   const [sel, setSel] = useState<string | null>(null);
   const [err, setErr] = useState('');
+  const [menu, setMenu] = useState<{ x: number; y: number } | null>(null); // 행을 누르면 뜨는 메뉴 자리
+  const [manager, setManager] = useState<{ after: string | null } | null>(null); // 행 관리 창
   const [view, setView] = useState<'all' | 1 | 2>('all'); // 표에 보일 학기
   const calc = useMemo(() => {
     if (!p) return null;
@@ -76,11 +84,12 @@ export function Progress() {
             <b className={need === 0 ? 'ok' : 'need'}>{need === 0 ? '필요량 0' : need > 0 ? `감축 필요 ${need}` : `증배 필요 ${-need}`}</b>
           </p>
           {err && <p className="error">{err}</p>}
-          <AiPanel key={subject.id} project={p} subject={subject} needs={needs} onApply={applyMany} />
-          <AiTextPanel key={subject.id} project={p} subject={subject} update={update} />
-          <PlanOpsBar subjectId={subject.id} row={row} semester={(row?.semester ?? 1) as Semester} onOp={run}
-            onMove={(dir) => { const i = shown.findIndex((r) => r.id === sel); const mate = shown[i + dir]; if (row && mate) run((s) => swapRows(s, subject.id, row.id, mate.id)); }} />
+          {p.settings.aiEnabled && <AiBox>
+            <AiPanel key={subject.id} project={p} subject={subject} needs={needs} onApply={applyMany} />
+            <AiTextPanel key={subject.id} project={p} subject={subject} update={update} />
+          </AiBox>}
           <div className="row">
+            <button onClick={() => setManager({ after: sel })}>행 관리(추가·삭제·글 쓰기)</button>
             보기:{' '}
             {([['all', '전체'], [1, '1학기'], [2, '2학기']] as const).map(([v, label]) => (
               <button key={v} className={v === view ? 'step on' : 'step'} onClick={() => setView(v)}>
@@ -95,7 +104,7 @@ export function Progress() {
               {shown.map((r) => {
                 const s = at.get(r);
                 return (
-                  <tr key={r.id} className={r.id === sel ? 'is-selected' : r.kind === 'memo' || !s ? 'is-warn' : undefined} onClick={() => setSel(r.id)}>
+                  <tr key={r.id} className={`clickable ${r.id === sel ? 'is-selected' : r.kind === 'memo' || !s ? 'is-warn' : ''}`} onClick={(e) => { setSel(r.id); setMenu({ x: e.clientX, y: e.clientY }); }}>
                     <td>{s ? s.week : '—'}</td>
                     <td>{s ? calc.period.get(`${s.semester}#${s.week}`) : r.kind === 'memo' ? '메모' : '칸 없음'}</td>
                     <td>{r.unit}</td><td className={r.aiDraft ? 'is-warn' : undefined}>{r.topic}</td><td>{r.n ? `${r.n}/${r.total ?? ''}` : ''}</td><td>{r.pages ?? ''}</td><td>{r.rawNote ?? ''}</td>
@@ -109,6 +118,19 @@ export function Progress() {
             onEdit={(id, change) => update((q) => ({ ...q, adjustments: q.adjustments.map((a) => (a.id === id ? { ...a, ...change } : a)) }))} />
         </>
       )}
+      {menu && row && (
+        <RowMenu x={menu.x} y={menu.y} row={row} onClose={() => setMenu(null)} onAction={(a) => {
+          const i = shown.findIndex((r) => r.id === row.id);
+          const slot = at.get(row);
+          if (a === 'merge') run((s) => mergeRows(s, subject.id, row.id));
+          else if (a === 'remove') run((s) => removeRow(s, subject.id, row.id));
+          else if (a === 'split') run((s) => splitRow(s, subject.id, row.id));
+          else if (a === 'up' || a === 'down') { const mate = shown[i + (a === 'up' ? -1 : 1)]; if (mate) run((s) => swapRows(s, subject.id, row.id, mate.id)); }
+          else if (a === 'fix') run((s) => setFixedWeek(s, subject.id, row.id, row.fixedWeek ? null : slot ? { semester: slot.semester as Semester, week: slot.week } : null));
+          else setManager({ after: a === 'add' ? row.id : null });
+        }} />
+      )}
+      <RowManager open={manager !== null} subjectId={subject.id} rows={shown} afterId={manager?.after ?? null} onOp={run} onClose={() => setManager(null)} />
     </section>
   );
 }

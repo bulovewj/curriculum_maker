@@ -138,6 +138,14 @@ export function undoAdjustment(s: OpState, adjustmentId: string): OpState {
   return { lessonPlans: { ...s.lessonPlans, [subjectId]: rows }, adjustments };
 }
 
+/** 행의 글(단원·학습 주제) 고치기. 시수가 안 바뀌므로 증감 기록은 없다. 같은 글이면 그대로. */
+export function setRowText(s: OpState, subjectId: SubjectId, rowId: string, change: { unit?: string; topic?: string }): OpState {
+  const { list, i, row } = find(s, subjectId, rowId);
+  const next = { ...row, ...change };
+  if (next.unit === row.unit && next.topic === row.topic) return s;
+  return { ...s, lessonPlans: { ...s.lessonPlans, [subjectId]: list.map((r, k) => (k === i ? next : r)) } };
+}
+
 /** 두 행 자리 바꾸기(화면에 보이는 이웃과). 증감 기록 없음 */
 export function swapRows(s: OpState, subjectId: SubjectId, idA: string, idB: string): OpState {
   const list = [...(s.lessonPlans[subjectId] ?? [])];
