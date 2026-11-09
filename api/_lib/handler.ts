@@ -1,5 +1,5 @@
-import * as adjust from '../_prompts/adjustCandidates';
-import * as texts from '../_prompts/texts';
+import * as adjust from '../_prompts/adjustCandidates.js';
+import * as texts from '../_prompts/texts.js';
 import type { AdjustInput, AiResponse, AiTask, CallModel, MapColumnsInput } from './types';
 
 export interface Env {

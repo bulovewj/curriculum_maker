@@ -1,5 +1,5 @@
-import { accessOf, corsHeaders, denied, type AuthEnv } from './_lib/auth';
-import { handleAi, providerOf, type Env } from './_lib/handler';
+import { accessOf, corsHeaders, denied, type AuthEnv } from './_lib/auth.js';
+import { handleAi, providerOf, type Env } from './_lib/handler.js';
 import type { CallModel } from './_lib/types';
 
 declare const process: { env: Env & AuthEnv };
