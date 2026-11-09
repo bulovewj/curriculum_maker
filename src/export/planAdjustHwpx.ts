@@ -1,4 +1,4 @@
-import type { Project, SubjectId } from '../model/types';
+import type { Adjustment, Project, SubjectId } from '../model/types';
 import { fillTemplate } from './hwpx/package';
 import { tableXml, type CellSpec } from './hwpx/xml';
 
@@ -58,13 +58,26 @@ export function table1(p: Project, id: number): string {
   return tableXml({ id, rows, colCnt: totalCol + 1, width: WIDTH, height: 5 * 3400 });
 }
 
+/** 표2에 쓸 행: 기본은 기록 그대로(한 시간에 한 행), 설정 'merged'면 학기·교과·영역·단원·내용이 같은 것끼리 시수를 더한다 */
+export function adjustRowsOf(p: Project): Adjustment[] {
+  if (p.settings.adjustRows !== 'merged') return p.adjustments;
+  const groups = new Map<string, Adjustment>();
+  for (const a of p.adjustments) {
+    const key = [a.semester, a.subjectId, a.area, a.unit, a.content, Math.sign(a.hours)].join('|');
+    const g = groups.get(key);
+    groups.set(key, g ? { ...g, hours: g.hours + a.hours, standards: [...new Set([...g.standards, ...a.standards])] } : a);
+  }
+  return [...groups.values()];
+}
+
 /** 표2: 증감 기록(한 시간에 한 행). 창체는 3칸 병합 칸 하나가 주요 내용. 쪽이 넘어가면 머리 줄이 반복된다. */
 export function table2(p: Project, id: number): string {
   const colW = [1600, 2200, 5200, 9500, 9500, 20115, 3000];
   const w = (c: number, n = 1) => sum(colW.slice(c, c + n));
   const heads = ['학기', '교과', '영역', '관련 성취기준', '관련 단원', '주요 내용', '시수'];
   const rows: CellSpec[][] = [heads.map((t, c) => ({ row: 0, col: c, width: w(c), height: 2275, text: t, ...HEAD }))];
-  p.adjustments.forEach((a, i) => {
+  const list = adjustRowsOf(p);
+  list.forEach((a, i) => {
     const row = i + 1;
     const s = p.subjects.find((x) => x.id === a.subjectId);
     const creative = s?.kind === 'creative';
@@ -76,7 +89,7 @@ export function table2(p: Project, id: number): string {
       c(6, signed(a.hours), BODY),
     ]);
   });
-  return tableXml({ id, rows, colCnt: 7, width: WIDTH, height: 2275 + p.adjustments.length * 1766, repeatHeader: true });
+  return tableXml({ id, rows, colCnt: 7, width: WIDTH, height: 2275 + list.length * 1766, repeatHeader: true });
 }
 
 /** 시수증감 운영계획 hwpx: 표1(편제) + 표2(증감 기록). template = templates/progress.hwpx */

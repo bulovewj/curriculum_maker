@@ -1,4 +1,4 @@
-import type { CalendarDay, Project, Semester, Slot, SubjectId, WeekGridRow } from '../model/types';
+import type { CalendarDay, Project, SchoolEvent, Semester, Slot, SubjectId, WeekGridRow } from '../model/types';
 import { semesterWeeks } from './calendar';
 
 const DOW = ['월', '화', '수', '목', '금', '토', '일'];
@@ -11,12 +11,20 @@ function noteOf(days: CalendarDay[]): string {
     .join('\n');
 }
 
+/** 비고에 넣기로 한 행사(showInPlanNote) 중 그 주에 걸친 것. 예 '4.23.~4.24. 수학여행' */
+function eventNotes(events: SchoolEvent[], from: string, to: string): string[] {
+  const md = (d: string) => `${Number(d.slice(5, 7))}.${Number(d.slice(8))}.`;
+  return events.filter((e) => e.showInPlanNote && e.start <= to && e.end >= from)
+    .map((e) => `${md(e.start)}${e.end !== e.start ? `~${md(e.end)}` : ''} ${e.name}`);
+}
+
 /**
  * 칸을 (주, 교과)로 센 주별 시수표. 시간 운영계획(c)과 같은 모양의 한 줄씩.
  * 수업일이 하루라도 있는 주만 나온다(방학 주는 번호만 건너뜀).
  */
 export function weekGrid(
   calendar: CalendarDay[], slots: Slot[], semesters: Project['semesters'], monthRule: 'weekStart' | 'majority', subjectIds: SubjectId[],
+  events: SchoolEvent[] = [],
 ): WeekGridRow[] {
   const rows: WeekGridRow[] = [];
   for (const sem of semesters) {
@@ -27,7 +35,7 @@ export function weekGrid(
       rows.push({
         semester: sem.no, week: w.no, period: w.text, month: w.month, schoolDays: w.days.length,
         dayPeriods: [1, 2, 3, 4, 5, 6].map((wd) => w.days.find((d) => d.weekday === wd)?.periods ?? 0),
-        hours, note: noteOf(inWeek),
+        hours, note: [noteOf(inWeek), ...eventNotes(events, w.monday, w.end)].filter(Boolean).join('\n'),
       });
     }
   }

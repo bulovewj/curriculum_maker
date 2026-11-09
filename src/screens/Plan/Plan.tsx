@@ -3,6 +3,7 @@ import { defaultDonors } from '../../engine/autoBalance';
 import { computeGrid } from '../../engine/grid';
 import { effectiveSchool, splitSemesters } from '../../engine/plan';
 import type { Project, SubjectId } from '../../model/types';
+import { PlanChecks } from '../../components/PlanChecks';
 import { useProject } from '../../state/ProjectContext';
 
 /** S4 편제: 교과 × (기준, 본교 학기별·연간, 증감, 작년, 2년 계), 학기 나누기, 가져올 교과 순서 */
@@ -33,7 +34,20 @@ export function Plan() {
     setPlan((c) => ({ ...c, donors: { ...donors, [id]: list } }));
   };
 
-  const ids = p.subjects.map((s) => s.id).filter((id) => annual[id] !== undefined);
+  // 창체 영역은 파일에 없어도 직접 채울 수 있게 늘 보인다
+  const ids = p.subjects.filter((s) => annual[s.id] !== undefined || s.kind === 'creative').map((s) => s.id);
+  /** 작년 시수 직접 입력(편제표에 없거나 틀렸을 때). 합계는 다시 센다 */
+  const setPrior = (id: SubjectId | 'informatics', v: number) => update((q) => {
+    const py = q.priorYear ?? { year: q.year - 1, grade: q.grade - 1, school: {}, creativeTotal: 0, total: 0 };
+    if (id === 'informatics') return { ...q, priorYear: { ...py, informatics: v } };
+    const school = { ...py.school, [id]: v };
+    const crea = q.subjects.filter((s) => s.kind === 'creative').map((s) => s.id);
+    const creativeTotal = crea.some((c) => school[c] !== undefined) ? crea.reduce((a, c) => a + (school[c] ?? 0), 0) : py.creativeTotal;
+    const total = Object.entries(school).filter(([k]) => !crea.includes(k)).reduce((a, [, n]) => a + n, 0) + creativeTotal;
+    return { ...q, priorYear: { ...py, school, creativeTotal, total } };
+  });
+  const n1 = slots.filter((x) => x.semester === 1).length;
+  const n2 = slots.filter((x) => x.semester === 2).length;
   const sum = (f: (id: SubjectId) => number) => ids.reduce((a, id) => a + f(id), 0);
   const prior = p.priorYear?.school ?? {};
   const pct = (a: number, b: number | undefined) => (b ? `${(((a - b) / b) * 100).toFixed(1)}%` : '–');
@@ -49,7 +63,7 @@ export function Plan() {
         <thead><tr><th>교과·영역</th><th>교육부 기준</th><th>1학기</th><th>2학기</th><th>연간</th><th>증감</th><th>±%</th><th>작년</th><th>2년 계</th></tr></thead>
         <tbody>
           {ids.map((id) => {
-            const s = school[id] ?? { s1: 0, s2: annual[id] };
+            const s = school[id] ?? { s1: 0, s2: annual[id] ?? 0 };
             const a = s.s1 + s.s2;
             return (
               <tr key={id}>
@@ -57,14 +71,24 @@ export function Plan() {
                 <td><input type="number" min={0} style={{ width: 56 }} value={s.s1} onChange={(e) => setSem(id, Math.max(0, Number(e.target.value) || 0), s.s2)} /></td>
                 <td><input type="number" min={0} style={{ width: 56 }} value={s.s2} onChange={(e) => setSem(id, s.s1, Math.max(0, Number(e.target.value) || 0))} /></td>
                 <td>{a}</td><td>{std[id] !== undefined ? a - std[id] : id === ids.find((x) => p.subjects.find((y) => y.id === x)?.kind === 'autonomy') ? `+${a}` : '–'}</td>
-                <td>{pct(a, std[id])}</td><td>{prior[id] ?? '–'}</td><td>{prior[id] !== undefined ? prior[id] + a : '–'}</td>
+                <td>{pct(a, std[id])}</td>
+                <td><input type="number" min={0} style={{ width: 56 }} value={prior[id] ?? ''} placeholder="–" onChange={(e) => setPrior(id, Math.max(0, Number(e.target.value) || 0))} /></td><td>{prior[id] !== undefined ? prior[id] + a : '–'}</td>
               </tr>
             );
           })}
           <tr><td><b>합계</b></td><td>{p.curriculumPlan.creative.standard + Object.values(std).reduce((a, b) => a + b, 0)}</td>
-            <td>{sum((id) => school[id]?.s1 ?? 0)}</td><td>{sum((id) => school[id]?.s2 ?? 0)}</td><td>{sum((id) => annual[id])}</td><td colSpan={2} /><td>{p.priorYear?.total ?? '–'}</td><td /></tr>
+            <td>{sum((id) => school[id]?.s1 ?? 0)}</td><td>{sum((id) => school[id]?.s2 ?? 0)}</td><td>{sum((id) => annual[id] ?? 0)}</td><td colSpan={2} /><td>{p.priorYear?.total ?? '–'}</td><td /></tr>
         </tbody>
       </table>
+      {(sum((id) => school[id]?.s1 ?? 0) !== n1 || sum((id) => school[id]?.s2 ?? 0) !== n2) && (
+        <p className="yellow">1학기 칸 {n1}개 · 편제 1학기 합 {sum((id) => school[id]?.s1 ?? 0)}, 2학기 칸 {n2}개 · 편제 2학기 합 {sum((id) => school[id]?.s2 ?? 0)} — S5 [자동 맞추기]로는 학기 합이 같아야 맞출 수 있습니다.</p>
+      )}
+      <p>
+        <label>작년 정보교육 시수(규정 검사 R5){' '}
+          <input type="number" min={0} style={{ width: 56 }} value={p.priorYear?.informatics ?? ''} placeholder="–" onChange={(e) => setPrior('informatics', Math.max(0, Number(e.target.value) || 0))} />
+        </label>
+      </p>
+      <PlanChecks project={p} />
       <h3>가져올 교과 순서</h3>
       {Object.entries(donors).filter(([id]) => annual[id] !== undefined).map(([id, list]) => (
         <p key={id}>{name(id)} ← {list.map((d, i) => (

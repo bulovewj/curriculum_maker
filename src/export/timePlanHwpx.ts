@@ -108,7 +108,7 @@ export function timePlanTable(p: Project, semester: Semester, id: number): strin
 
 /** 학기 하나의 시간 운영계획 hwpx. template = templates/timeplan.hwpx */
 export async function timePlanHwpx(p: Project, semester: Semester, template: ArrayBuffer): Promise<ArrayBuffer> {
-  return fillTemplate(template, [timePlanTable(p, semester, 1_825_309_614)]);
+  return fillTemplate(template, [timePlanTable(p, semester, 1_825_309_614)], p.settings.planFontSize); // 글자 크기(%) 설정
 }
 
 export const timePlanFileName = (p: Project, semester: Semester) => `${p.year}학년도 ${p.grade}학년 ${semester}학기 교육과정 시간 운영계획.hwpx`;

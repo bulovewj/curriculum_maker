@@ -1,5 +1,6 @@
 import { reassignSemesters } from '../../engine/calendar';
 import { NumField } from '../../components/NumField';
+import { SettingsPanel } from '../../components/SettingsPanel';
 import { shiftSemesters } from '../../model/newProject';
 import { renameAutonomy } from '../../model/subjects';
 import type { Project } from '../../model/types';
@@ -60,6 +61,7 @@ export function Basic() {
           </fieldset>
         ))}
       </div>
+      <SettingsPanel project={p} update={update} />
     </section>
   );
 }
