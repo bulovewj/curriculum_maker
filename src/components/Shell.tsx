@@ -7,6 +7,7 @@ import { Plan } from '../screens/Plan/Plan';
 import { Progress } from '../screens/Progress/Progress';
 import { Review } from '../screens/Review/Review';
 import { WeekGrid } from '../screens/WeekGrid/WeekGrid';
+import { StepGuideModal, markSeen, seenSteps } from './StepGuideModal';
 import { download } from '../lib/download';
 import { useProject } from '../state/ProjectContext';
 import { projectFileName, toProjectFile } from '../storage/projectFile';
@@ -17,7 +18,13 @@ const steps = ['기본 정보', '파일 넣기', '학사력·시간표', '편제
 export function Shell() {
   const { project, open, saveError, undo, canUndo } = useProject();
   const [step, setStep] = useState(0);
+  const [guide, setGuide] = useState<number | null>(() => (seenSteps().includes(0) ? null : 0)); // 처음 들어온 단계면 안내 창
   if (!project) return null;
+
+  function go(i: number) {
+    setStep(i);
+    if (!seenSteps().includes(i)) setGuide(i);
+  }
 
   function exportFile() {
     if (!project) return;
@@ -44,12 +51,13 @@ export function Shell() {
         <strong>{project.school.name || '학교명 없음'} · {projectTitle(project)}</strong>
         <span className="spacer" />
         <button onClick={undo} disabled={!canUndo} title="방금 한 작업을 취소합니다(최근 30개까지)">↶ 되돌리기</button>
+        <button onClick={() => setGuide(step)} title="이 단계에서 무엇을 하는지 다시 봅니다">도움말</button>
         <button onClick={exportFile}>내보내기</button>
       </header>
       {saveError && <p className="error-bar">저장이 안 됩니다. 내보내기로 파일을 보관하세요.</p>}
       <nav className="steps">
         {steps.map((name, i) => (
-          <button key={name} className={i === step ? 'step on' : 'step'} onClick={() => setStep(i)}>
+          <button key={name} className={i === step ? 'step on' : 'step'} onClick={() => go(i)}>
             <span className={`dot ${done[i] ? 'done' : i === 6 ? '' : 'todo'}`} /> S{i + 1} {name}
           </button>
         ))}
@@ -58,8 +66,9 @@ export function Shell() {
         {/* ponytail: S2~S7은 해당 마일스톤에서 화면 폴더를 만든다 */}
         {/* S2는 화면을 옮겨도 넣은 파일 카드가 남도록 계속 켜 둔다(숨기기만) */}
         <div hidden={step !== 1}><Files key={project.id} /></div>
-        {step === 0 ? <Basic /> : step === 1 ? null : step === 2 ? <Calendar /> : step === 3 ? <Plan /> : step === 4 ? <WeekGrid /> : step === 5 ? <Progress /> : step === 6 ? <Review onGo={setStep} /> : <div className="placeholder">S{step + 1} {steps[step]} — 준비 중</div>}
+        {step === 0 ? <Basic /> : step === 1 ? null : step === 2 ? <Calendar /> : step === 3 ? <Plan /> : step === 4 ? <WeekGrid /> : step === 5 ? <Progress /> : step === 6 ? <Review onGo={go} /> : <div className="placeholder">S{step + 1} {steps[step]} — 준비 중</div>}
       </div>
+      {guide !== null && <StepGuideModal key={guide} step={guide} onClose={() => { markSeen(guide); setGuide(null); }} />}
     </div>
   );
 }
