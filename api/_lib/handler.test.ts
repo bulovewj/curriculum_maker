@@ -33,6 +33,15 @@ describe('서버 함수(가짜 모델)', () => {
     expect(f.seen.map((c) => c.model)).toEqual(['gpt-4o', 'gpt-6-luna', 'gpt-4o']);
   });
 
+  it('JSON null·rows:[null] 같은 이상한 모양도 400 JSON으로 답한다', async () => {
+    const f = fake('[]');
+    const r1 = await handleAi(post('null'), env, f.call);
+    expect(r1.status).toBe(400);
+    const r2 = await handleAi(post({ task: 'adjustCandidates', input: { ...input, rows: [null] } }), env, f.call);
+    expect(r2.status).toBe(400);
+    expect(f.seen).toHaveLength(0);
+  });
+
   it('오류 문장은 한국어: 알 수 없는 작업·키 없음·깨진 입력·깨진 답·모델 오류', async () => {
     const f = fake('[]');
     const msg = async (body: unknown, e = env, c: CallModel = f.call) => ((await (await handleAi(post(body), e, c)).json()) as { error: string }).error;

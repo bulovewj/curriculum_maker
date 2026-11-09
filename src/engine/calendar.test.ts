@@ -61,3 +61,12 @@ describe.skipIf(!file)('2026 학사력으로', () => {
     expect(defaultShape(await load())).toEqual([6, 6, 5, 6, 6]);
   });
 });
+
+describe('reassignSemesters', () => {
+  it('학기 범위가 바뀌면 그 날짜의 학기도 바뀌고, 범위 밖은 null', async () => {
+    const { reassignSemesters } = await import('./calendar');
+    const day = (date: string, semester: 1 | 2 | null) => ({ date, weekday: 2 as const, semester, schoolDay: true, periods: 6, notes: [] });
+    const out = reassignSemesters([day('2027-03-03', 1), day('2027-07-30', 1)], [{ no: 1, start: '2027-03-04', end: '2027-07-20' }, { no: 2, start: '2027-08-20', end: '2028-02-28' }]);
+    expect(out.map((d) => d.semester)).toEqual([null, null]);
+  });
+});

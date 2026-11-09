@@ -68,3 +68,12 @@ export function semesterWeeks(
   });
 }
 
+
+/** S1에서 학기 날짜를 고치면 학사력 날짜의 학기도 그 범위로 다시 정한다(범위 밖 = 학기 없음). 새 배열을 돌려준다. */
+export function reassignSemesters(calendar: CalendarDay[], semesters: { no: Semester; start: DateStr; end: DateStr }[]): CalendarDay[] {
+  return calendar.map((d) => {
+    const s = semesters.find((x) => x.start <= d.date && d.date <= x.end);
+    const semester = s ? s.no : null;
+    return semester === d.semester ? d : { ...d, semester };
+  });
+}

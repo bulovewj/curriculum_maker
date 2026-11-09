@@ -24,3 +24,10 @@ export function maskNames<T>(value: T, names: string[] = []): T {
   if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).map(([k, v]) => [k, maskNames(v, names)])) as T;
   return value;
 }
+
+/** 사람 이름이 들 법한 열(교사·강사·담당·이름 등)의 표본 값을 비운다. 이름만 따로 든 칸은 위 문장 규칙으로 못 잡기 때문 */
+const NAME_HEADER = /교사|강사|담당|담임|이름|성명|작성|제안|교원|선생/;
+export function blankNameColumns(headers: string[], sample: string[][]): string[][] {
+  const hide = headers.map((h) => NAME_HEADER.test(h));
+  return sample.map((row) => row.map((v, i) => (hide[i] ? '' : v)));
+}

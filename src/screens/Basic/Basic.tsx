@@ -1,3 +1,4 @@
+import { reassignSemesters } from '../../engine/calendar';
 import { NumField } from '../../components/NumField';
 import { shiftSemesters } from '../../model/newProject';
 import { renameAutonomy } from '../../model/subjects';
@@ -21,6 +22,7 @@ export function Basic() {
         <NumField label="학년" value={p.grade} min={1} max={6} onChange={(grade) => set({ grade })} />
         <NumField label="학급 수" value={p.classCount} min={1} max={60} onChange={(classCount) => set({ classCount })} />
         <NumField label="대표 학급" value={p.representativeClass} min={1} max={60} onChange={(representativeClass) => set({ representativeClass })} />
+        {p.specialistCells.length > 0 && <p className="muted">대표 학급을 바꾸면 S2에서 전담·학급 시간표 파일을 다시 넣어야 새 반의 시간표가 읽힙니다.</p>}
         {p.calendar.length > 0 && Number(p.calendar[0].date.slice(0, 4)) !== p.year && (
           <p className="error">학사력이 {p.calendar[0].date.slice(0, 4)}학년도 것입니다. S2에서 학사일정을 다시 넣으세요.</p>
         )}
@@ -48,7 +50,10 @@ export function Basic() {
                 <input
                   type="date"
                   value={s[k]}
-                  onChange={(e) => set({ semesters: p.semesters.map((x, j) => (j === i ? { ...x, [k]: e.target.value } : x)) })}
+                  onChange={(e) => {
+                    const semesters = p.semesters.map((x, j) => (j === i ? { ...x, [k]: e.target.value } : x));
+                    set({ semesters, calendar: reassignSemesters(p.calendar, semesters) }); // 학사력 날짜의 학기도 함께 바꾼다
+                  }}
                 />
               </label>
             ))}

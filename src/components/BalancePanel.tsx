@@ -6,7 +6,8 @@ import type { Project, SlotOverride } from '../model/types';
 
 /** [자동 맞추기]: 바뀔 칸을 미리 보여 주고 [적용]/[취소] */
 export function BalancePanel({ project: p, update }: { project: Project; update: (f: (q: Project) => Project) => void }) {
-  const [res, setRes] = useState<{ result: BalanceResult; keep: Record<string, SlotOverride> } | null>(null);
+  const [res, setRes] = useState<{ result: BalanceResult; keep: Record<string, SlotOverride>; base: Record<string, SlotOverride> } | null>(null);
+  const [stale, setStale] = useState(false);
   const name = (id: string) => p.subjects.find((s) => s.id === id)?.name ?? id;
   // 경고 문장 속 교과 id를 교과 이름으로 바꿔 보여 준다
   const named = (w: string) => [...p.subjects].sort((a, b) => b.id.length - a.id.length).reduce((t, s) => t.replace(new RegExp(`(?<![\\w-])${s.id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\w-])`, 'g'), s.name), w);
@@ -16,7 +17,8 @@ export function BalancePanel({ project: p, update }: { project: Project; update:
     const keep = Object.fromEntries(Object.entries(p.slotOverrides).filter(([, o]) => o.kind !== 'auto' || o.locked));
     const slots = applyOverrides(generateSlots(p.calendar, p.baseTimetable, p.settings), keep);
     const school = effectiveSchool(p, slots);
-    setRes({ result: autoBalance(slots, school, p.subjects.map((s) => s.id), { ...defaultDonors(p.subjects), ...p.curriculumPlan.donors }), keep });
+    setRes({ result: autoBalance(slots, school, p.subjects.map((s) => s.id), { ...defaultDonors(p.subjects), ...p.curriculumPlan.donors }), keep, base: p.slotOverrides });
+    setStale(false);
   }
 
   const per: Record<string, number> = {};
@@ -26,6 +28,7 @@ export function BalancePanel({ project: p, update }: { project: Project; update:
     <div>
       <button onClick={preview} disabled={Object.keys(p.curriculumPlan.schoolAnnual).length === 0}>자동 맞추기</button>
       {Object.keys(p.curriculumPlan.schoolAnnual).length === 0 && <span className="muted"> 편제가 필요합니다(S2에서 편제 파일을 넣으세요).</span>}
+      {stale && <span className="error"> 미리보기 뒤에 칸이 바뀌었습니다. [자동 맞추기]를 다시 누르세요.</span>}
       {res && (
         <div className="file-card">
           <p>바뀔 칸 {res.result.changes.length}개: {Object.entries(per).map(([k, v]) => `${k} ${v}`).join(' · ') || '없음'}</p>
@@ -34,7 +37,11 @@ export function BalancePanel({ project: p, update }: { project: Project; update:
               <ul>{res.result.specialistWarnings.map((w) => <li key={w}>{w}</li>)}</ul></details>
           )}
           {res.result.warnings.map((w) => <p key={w} className="error">{named(w)}</p>)}
-          <button className="primary" onClick={() => { update((q) => ({ ...q, slotOverrides: { ...res.keep, ...res.result.overrides } })); setRes(null); }}>적용</button>{' '}
+          <button className="primary" onClick={() => {
+            // 미리보기 뒤에 칸을 고쳤으면 옛 계산으로 덮어쓰지 않는다
+            if (p.slotOverrides !== res.base) { setStale(true); setRes(null); return; }
+            update((q) => ({ ...q, slotOverrides: { ...res.keep, ...res.result.overrides } })); setRes(null);
+          }}>적용</button>{' '}
           <button onClick={() => setRes(null)}>취소</button>
         </div>
       )}

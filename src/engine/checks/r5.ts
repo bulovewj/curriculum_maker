@@ -6,7 +6,7 @@ export const r5: Rule = (c) => {
   const rule = key ? c.std.informatics[key] : undefined;
   const band = key ? c.std.gradeBands[key] : undefined;
   if (!rule || !band) return [];
-  const now = tagCount(c.p.lessonPlans, [rule.tag]);
+  const now = tagCount(c.p.lessonPlans, [rule.tag], rule.subjects); // 기준 데이터가 정한 교과에서만 센다
   const prior = c.p.priorYear?.informatics;
   if (prior === undefined) {
     const share = rule.min / band.years;

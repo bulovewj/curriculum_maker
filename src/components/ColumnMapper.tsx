@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { blankNameColumns } from '../ai/maskNames';
 import { callAi } from '../ai/client';
 import { writeXlsx } from '../export/xlsxWrite';
 import { TARGETS, buildStandardRows, findHeaderRow, guessColumns, mappingFromAi, type Mapping, type Target } from '../import/columnMap';
@@ -42,7 +43,8 @@ export function ColumnMapper({ buffer, subjects, aiEnabled, onDone }: Props) {
 
   async function askAi() {
     setBusy(true);
-    const res = await callAi('mapColumns', { headers, sample: sheet!.rows.slice(at + 1, at + 6).map((r) => headers.map((_, i) => r[i] ?? '')), targets: [...TARGETS] });
+    const sample = blankNameColumns(headers, sheet!.rows.slice(at + 1, at + 4).map((r) => headers.map((_, i) => r[i] ?? ''))); // 표본은 3줄, 이름 열은 비움
+    const res = await callAi('mapColumns', { headers, sample, targets: [...TARGETS] });
     setBusy(false);
     if (!res.ok) return setNotes([res.error]);
     const r = mappingFromAi(res.output, headers.length);

@@ -51,7 +51,7 @@ export function Files() {
   }
 
   function confirm(item: Item) {
-    if (!item.interp) return;
+    if (!item.interp || item.interp.unknown.length > 0) return; // 노란 칸(모르는 이름·약자)이 남으면 확정하지 않는다
     const apply = item.interp.apply;
     update((q) => apply(q, new Date().toISOString()));
     patch(item.id, { confirmed: true });
@@ -66,7 +66,8 @@ export function Files() {
     update((q) => ({ ...q, year: next.year, semesters: next.semesters, subjects: next.subjects }));
     await add(files, next);
   }
-  const pending = items.filter((x) => x.interp && !x.confirmed);
+  const pending = items.filter((x) => x.interp && !x.confirmed && x.interp.unknown.length === 0);
+  const blocked = items.filter((x) => x.interp && !x.confirmed && x.interp.unknown.length > 0).length;
 
   const onDrop = (e: DragEvent) => { e.preventDefault(); void add(e.dataTransfer.files); };
   const got = (...kinds: ImportKind[]) => p.imports.some((r) => kinds.includes(r.kind));
@@ -86,7 +87,7 @@ export function Files() {
         <input type="file" multiple accept=".xlsx,.hwpx,.hwp,.pdf" hidden onChange={(e) => e.target.files && add(e.target.files)} />
       </label>
       {import.meta.env.DEV && <div className="row"><button onClick={() => void loadSample()}>2026 샘플 넣기(개발용)</button></div>}
-      {pending.length > 1 && <div className="row"><button onClick={() => pending.forEach(confirm)}>읽은 파일 모두 확정({pending.length})</button></div>}
+      {pending.length > 1 && <div className="row"><button onClick={() => pending.forEach(confirm)}>읽은 파일 모두 확정({pending.length})</button>{blocked > 0 && <span className="yellow"> 노란 칸이 남은 {blocked}개는 빼고 확정합니다</span>}</div>}
       <ul className="cards-list">
         {items.map((item) => (
           <div key={item.id}>

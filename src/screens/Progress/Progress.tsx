@@ -5,6 +5,7 @@ import { AdjustmentList } from '../../components/AdjustmentList';
 import { applyPicked, type Picked } from '../../ai/applyCandidates';
 import { AiPanel } from '../../components/AiPanel';
 import { AiTextPanel } from '../../components/AiTextPanel';
+import { assembleRemark } from '../../export/remark';
 import { PlanGapNotice } from '../../components/PlanGapNotice';
 import { ModelSwitch } from '../../components/ModelSwitch';
 import { RowManager } from '../../components/RowManager';
@@ -50,7 +51,7 @@ export function Progress() {
     }
   };
   // 교과·학기별 필요량(+ 감축, − 증배): AI 패널이 쓴다
-  const needs = Object.fromEntries(p.subjects.map((s) => [s.id, Object.fromEntries([1, 2].map((n) => [n, calc.placed[s.id].surplusRows.filter((x) => x.semester === n).length - calc.placed[s.id].freeSlots.filter((x) => x.semester === n).length]))]));
+  const needs = Object.fromEntries(p.subjects.map((s) => [s.id, Object.fromEntries([1, 2].map((n) => [n, calc.placed[s.id].surplusRows.filter((x) => (x.semester ?? 2) === n).length - calc.placed[s.id].freeSlots.filter((x) => x.semester === n).length]))]));
   const applyMany = (picks: Picked[]) => {
     const r = applyPicked({ lessonPlans: p.lessonPlans, adjustments: p.adjustments }, picks);
     update((q) => ({ ...q, ...r.state }));
@@ -73,13 +74,16 @@ export function Progress() {
           const has = (p.lessonPlans[s.id] ?? []).length > 0;
           return (
             <button key={s.id} className={s.id === subject.id ? 'step on' : 'step'} onClick={() => setTab(s.id)}>
-              {s.name} {has ? (n === 0 ? '✓' : n > 0 ? `감${n}` : `증${-n}`) : '–'}
+              {s.name} {has ? (n === 0 ? (calc.placed[s.id].surplusRows.length ? '!' : '✓') : n > 0 ? `감${n}` : `증${-n}`) : '–'}
             </button>
           );
         })}
       </div>
       {rows.length === 0 ? (
-        <p className="empty">이 교과는 아직 진도가 없습니다(칸 {slotCount}개가 비어 있음). S2 [파일 넣기]에서 진도 파일을 넣으세요.</p>
+        <div className="empty">
+          <p>이 교과는 아직 진도가 없습니다(칸 {slotCount}개가 비어 있음). S2 [파일 넣기]에서 진도 파일을 넣거나, 직접 행을 쓰세요.</p>
+          <button onClick={() => setManager({ after: null })}>행 직접 추가</button>
+        </div>
       ) : (
         <>
           <p>
@@ -110,7 +114,7 @@ export function Progress() {
                   <tr key={r.id} className={`clickable ${r.id === sel ? 'is-selected' : r.kind === 'memo' || !s ? 'is-warn' : ''}`} onClick={(e) => { setSel(r.id); setMenu({ x: e.clientX, y: e.clientY }); }}>
                     <td>{s ? s.week : '—'}</td>
                     <td>{s ? calc.period.get(`${s.semester}#${s.week}`) : r.kind === 'memo' ? '메모' : '칸 없음'}</td>
-                    <td>{r.unit}</td><td className={r.aiDraft ? 'is-warn' : undefined}>{r.topic}</td><td>{r.n ? `${r.n}/${r.total ?? ''}` : ''}</td><td>{r.pages ?? ''}</td><td>{r.rawNote ?? ''}</td>
+                    <td>{r.unit}</td><td className={r.aiDraft ? 'is-warn' : undefined}>{r.topic}</td><td>{r.n ? `${r.n}/${r.total ?? ''}` : ''}</td><td>{r.pages ?? ''}</td><td title={r.rawNote ? `원문: ${r.rawNote}` : undefined}>{assembleRemark(r)}</td>
                   </tr>
                 );
               })}
@@ -125,7 +129,7 @@ export function Progress() {
         <RowMenu x={menu.x} y={menu.y} row={row} onClose={() => setMenu(null)} onAction={(a) => {
           const i = shown.findIndex((r) => r.id === row.id);
           const slot = at.get(row);
-          if (a === 'merge') run((s) => mergeRows(s, subject.id, row.id));
+          if (a === 'merge') run((s) => mergeRows(s, subject.id, row.id, shown[i + 1]?.id));
           else if (a === 'remove') run((s) => removeRow(s, subject.id, row.id));
           else if (a === 'split') run((s) => splitRow(s, subject.id, row.id));
           else if (a === 'up' || a === 'down') { const mate = shown[i + (a === 'up' ? -1 : 1)]; if (mate) run((s) => swapRows(s, subject.id, row.id, mate.id)); }

@@ -20,3 +20,14 @@ describe('planGaps: 칸 수 ≠ 편제', () => {
     ]);
   });
 });
+
+describe('effectiveSchool: 편제를 다시 넣어 연간이 바뀌면', () => {
+  it('연간과 맞지 않는 옛 학기 값은 버리고 기본 나누기를 쓴다', async () => {
+    const { effectiveSchool } = await import('./plan');
+    const p0 = newProject('x', 2027);
+    const id = p0.subjects[0].id;
+    const p = { ...p0, curriculumPlan: { ...p0.curriculumPlan, schoolAnnual: { [id]: 140 }, school: { [id]: { s1: 10, s2: 10 } } } };
+    const slots = [...many(id, 1, 1), ...many(id, 2, 1)];
+    expect(effectiveSchool(p, slots)[id]).toEqual({ s1: 70, s2: 70 });
+  });
+});

@@ -18,10 +18,15 @@ export function splitSemesters(annual: Record<SubjectId, number>, slots: Slot[],
   );
 }
 
-/** 저장된 학기 값이 없는 교과는 기본 나누기로 채운 편제 */
+/**
+ * 저장된 학기 값이 없거나 연간과 맞지 않는(편제를 다시 넣어 연간만 바뀐) 교과는 기본 나누기로 채운 편제.
+ * 연간이 없는 교과의 학기 값은 그대로 둔다.
+ */
 export function effectiveSchool(p: Project, slots: Slot[]): Split {
-  const defaults = splitSemesters(p.curriculumPlan.schoolAnnual, slots);
-  return { ...defaults, ...p.curriculumPlan.school };
+  const annual = p.curriculumPlan.schoolAnnual;
+  const defaults = splitSemesters(annual, slots);
+  const valid = Object.entries(p.curriculumPlan.school).filter(([id, h]) => annual[id] === undefined || h.s1 + h.s2 === annual[id]);
+  return { ...defaults, ...Object.fromEntries(valid) };
 }
 
 export interface PlanGap {

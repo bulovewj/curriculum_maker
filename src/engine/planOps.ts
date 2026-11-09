@@ -61,17 +61,19 @@ const find = (s: OpState, subjectId: SubjectId, rowId: string) => {
 };
 const reduceMark = (r: PlanRow): PlanRow => ({ ...r, mark: { type: 'reduce', ...(r.mark?.reason ? { reason: r.mark.reason } : {}) } });
 
-/** 합치기: 이 행과 다음 행을 한 행으로(−1). 남는 행에 ◆재구성(감축) */
-export function mergeRows(s: OpState, subjectId: SubjectId, rowId: string): OpState {
+/** 합치기: 이 행과 다음 행(nextId를 주면 그 행 = 화면의 다음 행)을 한 행으로(−1). 남는 행에 ◆재구성(감축). 같은 학기 수업 행끼리만 */
+export function mergeRows(s: OpState, subjectId: SubjectId, rowId: string, nextId?: string): OpState {
   const { list, i, row } = find(s, subjectId, rowId);
-  const next = list[i + 1];
-  if (!next || next.kind === 'memo') throw new Error('합칠 다음 행이 없습니다.');
+  const next = nextId ? list.find((r) => r.id === nextId) : list[i + 1];
+  if (!next || next.id === row.id || next.kind === 'memo' || row.kind === 'memo') throw new Error('합칠 다음 행이 없습니다.');
+  if (next.semester !== row.semester) throw new Error('다른 학기의 행과는 합칠 수 없습니다.');
   return apply(s, subjectId, [row.id, next.id], [reduceMark(row)], -1, `${row.topic}, ${next.topic}`);
 }
 
 /** 빼기: 행 삭제(−1). 같은 단원 앞 행(없으면 뒤 행)에 ◆재구성(감축) */
 export function removeRow(s: OpState, subjectId: SubjectId, rowId: string): OpState {
   const { list, i, row } = find(s, subjectId, rowId);
+  if (row.kind === 'memo') return apply(s, subjectId, [row.id], [], 0, row.topic); // 메모는 수업이 아니라 시수 기록 없음
   const sameUnit = (r?: PlanRow) => r !== undefined && r.kind !== 'memo' && r.unit === row.unit && r.semester === row.semester;
   const mate = sameUnit(list[i - 1]) ? list[i - 1] : sameUnit(list[i + 1]) ? list[i + 1] : undefined;
   return apply(s, subjectId, mate ? [row.id, mate.id] : [row.id], mate ? [reduceMark(mate)] : [], -1, row.topic);
@@ -80,6 +82,7 @@ export function removeRow(s: OpState, subjectId: SubjectId, rowId: string): OpSt
 /** 나누기: 한 행을 ' -1-', ' -2-' 두 행으로(+1). 두 행에 ◆재구성(증배) */
 export function splitRow(s: OpState, subjectId: SubjectId, rowId: string): OpState {
   const { row } = find(s, subjectId, rowId);
+  if (row.kind === 'memo') throw new Error('메모 행은 나눌 수 없습니다(수업 시수가 아님).');
   const mark = { type: 'increase' as const };
   const two = [1, 2].map((k) => ({ ...row, id: `${row.id}-${k}`, topic: `${row.topic} -${k}-`, mark, fixedWeek: k === 1 ? row.fixedWeek : undefined }));
   return apply(s, subjectId, [row.id], two, 1, row.topic);
@@ -128,7 +131,10 @@ export function undoAdjustment(s: OpState, adjustmentId: string): OpState {
   if (!a?.undo) return { ...s, adjustments };
   const { subjectId, beforeRows, afterIds, numbers, prevId } = a.undo;
   const list = s.lessonPlans[subjectId] ?? [];
-  if (afterIds.some((id) => !list.some((r) => r.id === id))) {
+  // 뒤 작업이 이 작업의 결과 행을 다시 바꿨으면(같은 id를 남기는 합치기 포함) 먼저 취소하면 순서가 꼬인다
+  const later = s.adjustments.slice(s.adjustments.indexOf(a) + 1).filter((x) => x.undo?.subjectId === subjectId);
+  const touchedLater = later.some((x) => x.undo!.beforeRows.some((r) => afterIds.includes(r.id)) || x.undo!.afterIds.some((id) => afterIds.includes(id)));
+  if (touchedLater || afterIds.some((id) => !list.some((r) => r.id === id))) {
     throw new Error('이 작업으로 바뀐 행을 그 뒤 작업이 다시 바꿨습니다. 나중에 한 작업부터 차례로 취소하세요.');
   }
   // 되돌릴 자리(작업 뒤 행이 없을 때만 쓰임): 작업 전에 바로 앞에 있던 행 뒤. 그 행이 사라졌으면 기록해 둔 위치
@@ -143,7 +149,9 @@ export function setRowText(s: OpState, subjectId: SubjectId, rowId: string, chan
   const { list, i, row } = find(s, subjectId, rowId);
   const next = { ...row, ...change };
   if (next.unit === row.unit && next.topic === row.topic) return s;
-  return { ...s, lessonPlans: { ...s.lessonPlans, [subjectId]: list.map((r, k) => (k === i ? next : r)) } };
+  const rows = list.map((r, k) => (k === i ? next : r));
+  // 단원을 옮기면 옛 단원·새 단원의 차시를 다시 센다
+  return { ...s, lessonPlans: { ...s.lessonPlans, [subjectId]: next.unit === row.unit ? rows : renumber(rows, new Set([unitKey(row), unitKey(next)])) } };
 }
 
 /** 두 행 자리 바꾸기(화면에 보이는 이웃과). 증감 기록 없음 */
@@ -153,5 +161,5 @@ export function swapRows(s: OpState, subjectId: SubjectId, idA: string, idB: str
   const j = list.findIndex((r) => r.id === idB);
   if (i < 0 || j < 0) return s;
   [list[i], list[j]] = [list[j], list[i]];
-  return { ...s, lessonPlans: { ...s.lessonPlans, [subjectId]: list } };
+  return { ...s, lessonPlans: { ...s.lessonPlans, [subjectId]: renumber(list, new Set([unitKey(list[i]), unitKey(list[j])])) } };
 }

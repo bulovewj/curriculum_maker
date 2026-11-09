@@ -147,3 +147,34 @@ describe('행 글 고치기', () => {
     expect(() => setRowText(s0, 'kor', 'zz', { topic: 'x' })).toThrow('행을 찾지');
   });
 });
+
+describe('GPT 검토 반영: 취소 순서·학기 경계·메모·차시 다시 세기', () => {
+  it('같은 행을 다시 합친 뒤 앞 작업부터 취소하면 막는다', () => {
+    const s1 = mergeRows(start(), 'kor', 'a');
+    const s2 = mergeRows(s1, 'kor', 'a');
+    expect(() => undoAdjustment(s2, s2.adjustments[0].id)).toThrow('나중에 한 작업부터');
+    const back = undoAdjustment(undoAdjustment(s2, s2.adjustments[1].id), s2.adjustments[0].id);
+    expect(ids(back)).toEqual(['a', 'b', 'c', 'd']);
+  });
+
+  it('다른 학기 행과는 합치지 않고, 화면의 다음 행(nextId)과 합친다', () => {
+    const s0 = start();
+    const s = { ...s0, lessonPlans: { kor: s0.lessonPlans.kor.map((r) => (r.id === 'd' ? { ...r, semester: 2 as const } : r)) } };
+    expect(() => mergeRows(s, 'kor', 'c')).toThrow('다른 학기');
+    expect(ids(mergeRows(s, 'kor', 'a', 'c'))).toEqual(['a', 'b', 'd']);
+  });
+
+  it('메모 빼기는 증감 기록 없음, 메모 나누기는 막음', () => {
+    const s0 = start();
+    const s = { ...s0, lessonPlans: { kor: [...s0.lessonPlans.kor, { ...row('m', 'U2', '메모', 0, 0), kind: 'memo' as const }] } };
+    expect(removeRow(s, 'kor', 'm').adjustments).toEqual([]);
+    expect(() => splitRow(s, 'kor', 'm')).toThrow('메모');
+  });
+
+  it('순서 바꾸기·단원 옮기기 뒤 차시를 다시 센다', () => {
+    const sw = swapRows(start(), 'kor', 'a', 'b');
+    expect(sw.lessonPlans.kor.map((r) => `${r.id}${r.n}/${r.total}`)).toEqual(['b1/3', 'a2/3', 'c3/3', 'd1/1']);
+    const mv = setRowText(start(), 'kor', 'c', { unit: 'U2' });
+    expect(mv.lessonPlans.kor.map((r) => `${r.id}${r.n}/${r.total}`)).toEqual(['a1/2', 'b2/2', 'c1/2', 'd2/2']);
+  });
+});

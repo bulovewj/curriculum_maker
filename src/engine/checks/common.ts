@@ -33,6 +33,7 @@ export const annualOf = (c: CheckCtx, group: string): number => members(c.p, gro
 export const res = (ruleId: string, level: CheckResult['level'], message: string, source: string, where: CheckResult['where'] = []): CheckResult =>
   ({ ruleId, level, message, where, source });
 
-/** 진도 행 전체에서 태그 이름들에 걸린 행 수 */
-export const tagCount = (lessonPlans: Record<SubjectId, PlanRow[]>, names: string[]): number =>
-  Object.values(lessonPlans).flat().filter((r) => r.tags.some((t) => names.includes(t))).length;
+/** 진도 행에서 태그 이름들에 걸린 행 수(메모 행은 수업이 아니라 뺀다). subjects를 주면 그 교과만 */
+export const tagCount = (lessonPlans: Record<SubjectId, PlanRow[]>, names: string[], subjects?: SubjectId[]): number =>
+  Object.entries(lessonPlans).filter(([id]) => !subjects || subjects.includes(id)).flatMap(([, rows]) => rows)
+    .filter((r) => r.kind !== 'memo' && r.tags.some((t) => names.includes(t))).length;

@@ -116,3 +116,10 @@ describe('접속 비밀번호', () => {
     expect(savedPassword()).toBe('');
   });
 });
+
+describe('이름 열 비우기', () => {
+  it('교사·담당 같은 머리글 열의 표본은 비운다', async () => {
+    const { blankNameColumns } = await import('./maskNames');
+    expect(blankNameColumns(['단원', '교사'], [['곱셈', '홍길동']])).toEqual([['곱셈', '']]);
+  });
+});

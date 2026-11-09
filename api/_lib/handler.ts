@@ -25,11 +25,11 @@ const fail = (error: string, status = 400): Response => Response.json({ ok: fals
 /** 보낸 진도 정보를 검사한다. 문제가 있으면 어느 한도인지 알려 주는 문장, 괜찮으면 null. */
 function adjustInputError(x: unknown): string | null {
   const i = x as AdjustInput;
-  if (!i || typeof i.need !== 'number' || !Array.isArray(i.rows) || !Array.isArray(i.standards) || typeof i.subject?.id !== 'string') return '보낸 진도 정보의 모양이 올바르지 않습니다.';
+  if (!isObj(i) || typeof i.need !== 'number' || !Array.isArray(i.rows) || !Array.isArray(i.standards) || typeof i.subject?.id !== 'string') return '보낸 진도 정보의 모양이 올바르지 않습니다.';
   if (i.rows.length > MAX_ROWS) return `진도 행이 ${MAX_ROWS}개를 넘습니다(${i.rows.length}개).`;
   if (i.standards.length > MAX_STANDARDS) return `성취기준이 ${MAX_STANDARDS}개를 넘습니다(${i.standards.length}개).`;
   if (!i.standards.every((s) => typeof s === 'string' && s.length <= MAX_TEXT)) return `성취기준 글이 너무 깁니다(${MAX_TEXT}자 이하).`;
-  if (!i.rows.every((r) => typeof r.id === 'string' && typeof r.topic === 'string' && r.id.length <= MAX_TEXT && r.topic.length <= MAX_TEXT)) return `행 하나의 주제·번호가 너무 깁니다(${MAX_TEXT}자 이하).`;
+  if (!i.rows.every((r) => isObj(r) && typeof r.id === 'string' && typeof r.topic === 'string' && r.id.length <= MAX_TEXT && r.topic.length <= MAX_TEXT)) return `행 하나의 주제·번호가 너무 깁니다(${MAX_TEXT}자 이하).`;
   return null;
 }
 
@@ -70,11 +70,17 @@ export async function handleAi(request: Request, env: Env, callModel: CallModel)
   } catch {
     return fail('요청 형식이 올바르지 않습니다.');
   }
+  if (!isObj(body)) return fail('요청 형식이 올바르지 않습니다.');
   const task = body.task as AiTask;
   if (!['adjustCandidates', 'adjustText', 'activityNames', 'mapColumns'].includes(task)) return fail('알 수 없는 AI 작업입니다.');
   const def = TASKS[task]!;
   if (!env.ANTHROPIC_API_KEY && !env.OPENAI_API_KEY) return fail('서버에 AI 키가 설정되지 않았습니다(.env.local의 ANTHROPIC_API_KEY 또는 OPENAI_API_KEY).', 503);
-  const bad = def.check(body.input);
+  let bad: string | null;
+  try {
+    bad = def.check(body.input);
+  } catch {
+    bad = '보낸 정보의 모양이 올바르지 않습니다.'; // 검사 중 예상 못 한 모양을 만나도 400으로 답한다
+  }
   if (bad) return fail(bad);
   const openai = providerOf(env) === 'openai';
   const model = openai && body.model === LUNA_MODEL ? LUNA_MODEL : (SMART_TASKS.includes(task) ? env.AI_MODEL_SMART : env.AI_MODEL_FAST) || (openai ? DEFAULT_GPT : 'claude-sonnet-5-5');

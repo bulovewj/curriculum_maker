@@ -26,10 +26,12 @@ export function WeekGrid() {
       const plan = readTimePlan(await readHwpx(await file.arrayBuffer()), p.subjects);
       const base = generateSlots(p.calendar, p.baseTimetable, p.settings);
       const r = importWeekGrid(base, plan.tables.flatMap((t) => t.rows), p.subjects.map((s) => s.id));
-      update((q) => ({
-        ...q,
-        slotOverrides: { ...Object.fromEntries(Object.entries(q.slotOverrides).filter(([, o]) => o.kind !== 'imported')), ...r.overrides },
-      }));
+      update((q) => {
+        const kept = Object.fromEntries(Object.entries(q.slotOverrides).filter(([, o]) => o.kind !== 'imported'));
+        // 교사가 직접 고치거나 잠근 칸은 가져오기로 덮어쓰지 않는다
+        const mine = (k: string) => kept[k] !== undefined && (kept[k].locked || kept[k].kind === 'edited');
+        return { ...q, slotOverrides: { ...kept, ...Object.fromEntries(Object.entries(r.overrides).filter(([k]) => !mine(k))) } };
+      });
       setMsg([`가져온 칸 ${Object.keys(r.overrides).length}개`, ...plan.warnings, ...r.warnings]);
     } catch (e) {
       setMsg([e instanceof Error ? e.message : '파일을 읽지 못했습니다.']);

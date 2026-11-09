@@ -2,10 +2,12 @@ import type { ImportKind, Subject } from '../model/types';
 import type { Unknown } from '../import/interpret';
 import type { Interpretation } from '../import/interpret';
 
+// 준비물(입력) 먼저, 출력 문서·받지 않는 문서는 [참고]로 뒤에
 export const KIND_LABEL: Record<ImportKind, string> = {
-  scheduleP04: '학사일정', timetableP02: '전담·학급 시간표', neisLessons: 'NEIS형 진도(학교)', publisherLessons: '출판사 진도(나이스 업로드용)',
-  progressHwpx: '학교 진도표(hwpx)', timePlanHwpx: '시간 운영계획(hwpx)', planAdjustHwpx: '시수증감 운영계획(hwpx)',
-  curriculumHwpx: '학년군 편제(hwpx)', autonomyHwpx: '학교자율시간 운영(안)', unknown: '알 수 없음',
+  scheduleP04: '학사일정', timetableP02: '전담·학급 시간표', curriculumHwpx: '학년군 편제(hwpx)',
+  neisLessons: '진도: NEIS형 엑셀(학교)', publisherLessons: '진도: 출판사 나이스 업로드용 엑셀', progressHwpx: '진도: 작년 진도표(hwpx)',
+  timePlanHwpx: '[참고] 시간 운영계획(hwpx) — 출력 문서', planAdjustHwpx: '[참고] 시수증감 운영계획(hwpx) — 출력 문서',
+  autonomyHwpx: '[참고] 학교자율시간 운영(안) — 받지 않음', unknown: '알 수 없음',
 };
 
 export interface Item {

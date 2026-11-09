@@ -60,7 +60,7 @@ export function AiPanel({ project: p, subject, needs, onApply }: Props) {
       let broke = false;
       for (let round = 1; round <= 3 && left > 0; round++) {
         setBusy(`${i + 1}/${jobs.length} ${name(j.subjectId)} ${j.semester}학기${round > 1 ? ` (${round}번째, ${left}시간 남음)` : ''}`);
-        const mine = (sim.lessonPlans[j.subjectId] ?? []).filter((r) => r.semester === j.semester && r.kind !== 'memo');
+        const mine = (sim.lessonPlans[j.subjectId] ?? []).filter((r) => (r.semester === j.semester || r.semester === undefined) && r.kind !== 'memo'); // 학기 없는 연간 행도 후보 대상
         const input = { subject: { id: j.subjectId, name: name(j.subjectId) }, semester: j.semester, need: Math.sign(j.need) * left, standards: [...new Set(mine.flatMap((r) => r.standards))], rows: mine.map((r) => ({ id: r.id, unit: r.unit, topic: r.topic, n: r.n, total: r.total, standards: r.standards })) };
         const res = await callAi('adjustCandidates', input);
         if (!res.ok) { msgs.push(`${name(j.subjectId)} ${j.semester}학기: ${res.error}`); broke = true; break; }

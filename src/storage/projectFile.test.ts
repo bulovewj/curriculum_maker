@@ -31,3 +31,13 @@ describe('깨진 파일 거르기', () => {
     expect(() => parseProjectFile(JSON.stringify(p))).toThrow('events 없음');
   });
 });
+
+describe('안쪽 칸 검사(GPT 검토 반영)', () => {
+  it('편제 안쪽이 비면 거절, 옛 파일에 없는 설정 칸은 기본값으로 채움', () => {
+    const p = JSON.parse(toProjectFile(newProject('x', 2027), '2027-01-01T00:00:00Z'));
+    p.project.settings = {};
+    expect(parseProjectFile(JSON.stringify(p)).settings.extraPeriodSubject).toBe('ca-self');
+    p.project.curriculumPlan = {};
+    expect(() => parseProjectFile(JSON.stringify(p))).toThrow('curriculumPlan.standard 없음');
+  });
+});
