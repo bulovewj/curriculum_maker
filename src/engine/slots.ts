@@ -41,3 +41,9 @@ export function applyOverrides(slots: Slot[], overrides: Record<string, SlotOver
   });
 }
 
+
+/** 학사력이 바뀌어 칸이 없어진 덮어쓰기(키 '날짜#교시'). 계산에서는 무시되므로 화면에서 목록으로 알린다 */
+export function orphanOverrides(slots: Slot[], overrides: Record<string, SlotOverride>): string[] {
+  const keys = new Set(slots.map((s) => `${s.date}#${s.period}`));
+  return Object.keys(overrides).filter((k) => !keys.has(k)).sort();
+}

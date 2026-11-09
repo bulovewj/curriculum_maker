@@ -54,6 +54,21 @@ export function Calendar() {
           </details>
         );
       })}
+      {p.events.length > 0 && (
+        <details className="file-card">
+          <summary>학년 행사 {p.events.length}개 — 시간 운영계획 비고에 넣을 행사 고르기({p.events.filter((e) => e.showInPlanNote).length}개 고름)</summary>
+          <ul className="plain">
+            {p.events.map((e) => (
+              <li key={e.id}>
+                <label>
+                  <input type="checkbox" checked={e.showInPlanNote} onChange={(x) => update((q) => ({ ...q, events: q.events.map((y) => (y.id === e.id ? { ...y, showInPlanNote: x.target.checked } : y)) }))} />{' '}
+                  {e.start}{e.end !== e.start ? `~${e.end}` : ''} {e.name}
+                </label>
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
       <h3>기초 시간표</h3>
       <TimetableMaker project={p} update={update} />
       <TimetableGrid project={p} onChange={(cells) => update((q) => ({ ...q, baseTimetable: cells }))} />

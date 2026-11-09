@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useDeferredValue, useMemo } from 'react';
 import { runChecks } from '../engine/checks';
 import { standardsOf } from '../lib/standards';
 import type { Project } from '../model/types';
@@ -8,7 +8,8 @@ const LABEL = { fail: '빨강', warn: '노랑', pass: '통과' } as const;
 
 /** S4 편제 옆 규정 검사 미리 보기: 편제를 고치면 바로 다시 계산 */
 export function PlanChecks({ project: p }: { project: Project }) {
-  const results = useMemo(() => runChecks(p, standardsOf(p.standardsVersion)).filter((r) => PLAN_RULES.includes(r.ruleId)), [p]);
+  const q = useDeferredValue(p); // 숫자를 칠 때마다 검사가 입력을 막지 않게 늦춰 계산
+  const results = useMemo(() => runChecks(q, standardsOf(q.standardsVersion)).filter((r) => PLAN_RULES.includes(r.ruleId)), [q]);
   return (
     <div className="file-card">
       <h3>편제 규정 검사 미리 보기</h3>

@@ -18,19 +18,24 @@ const callClaude: CallModel = async ({ model, system, user }) => {
 
 /** 실제 GPT 호출(OpenAI Chat Completions). 키는 서버 환경변수에만 있다. */
 const callGpt: CallModel = async ({ model, system, user }) => {
-  const send = () => fetch('https://api.openai.com/v1/chat/completions', {
+  // Vercel 함수 한도(60초) 안에서 끝나게 전체 55초 예산을 두고, 첫 시도에 길게(최대 45초) 준다.
+  // 행이 많은 교과(국어 2학기 109행 등)는 고급 모델이 30초 넘게 걸려 예전 28초 끊기에 걸렸다.
+  const deadline = Date.now() + 55_000;
+  const send = (ms: number) => fetch('https://api.openai.com/v1/chat/completions', {
     method: 'POST',
     headers: { 'content-type': 'application/json', authorization: `Bearer ${process.env.OPENAI_API_KEY ?? ''}` },
     body: JSON.stringify({ model, max_completion_tokens: 4000, messages: [{ role: 'system', content: system }, { role: 'user', content: user }] }),
-    signal: AbortSignal.timeout(28000), // 가끔 답이 안 오고 멈추는 요청이 있어서 28초에서 끊고 다시 보낸다(큰 요청은 고급 모델로 13초쯤 걸린다)
+    signal: AbortSignal.timeout(ms),
   });
-  // 권한을 막 바꾸면 OpenAI 서버마다 반영이 달라 403이 섞여 나오고, 가끔 답이 안 오고 멈춘다. 두 번까지 시도한다(전체 약 1분 안, Vercel 함수 한도 60초 가정).
+  // 권한을 막 바꾸면 OpenAI 서버마다 반영이 달라 403이 섞여 나오고, 가끔 답이 안 오고 멈춘다. 두 번까지 시도한다(남은 시간이 있을 때만).
   let res: Response | undefined;
   let last = '';
   for (let k = 0; k < 2 && !(res && res.status !== 403); k++) {
     if (k > 0) await new Promise((r) => setTimeout(r, 1000));
+    const left = Math.min(45_000, deadline - Date.now());
+    if (left < 5_000) break; // 다시 보낼 시간이 없다
     try {
-      res = await send();
+      res = await send(left);
     } catch (e) {
       res = undefined; // 시간 초과·연결 끊김
       last = e instanceof Error && e.name !== 'TimeoutError' ? e.message : '';

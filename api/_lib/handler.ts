@@ -17,7 +17,9 @@ const MAX_TEXT = 300; // 글 한 칸 최대 글자
 const MAX_STANDARDS = 400;
 const MAX_BODY = 200_000; // 요청 전체 최대 글자
 export const DEFAULT_GPT = 'gpt-4o'; // GPT 키일 때 기본 모델
-export const LUNA_MODEL = 'gpt-6-luna'; // 화면에서 비밀번호를 넘으면 고를 수 있는 모델(이 목록에 있는 것만 허용)
+export const LUNA_MODEL = 'gpt-6-luna'; // 비밀번호를 넘으면 고를 수 있는 모델(이것만 허용)
+/** 모델 변경 비밀번호. 형 요청으로 코드에 둔다(서버 코드라 브라우저 파일에는 안 들어간다). 바꾸려면 여기만 */
+const LUNA_PASSWORD = '3430';
 const SMART_TASKS: AiTask[] = ['adjustCandidates', 'adjustText', 'activityNames'];
 
 const fail = (error: string, status = 400): Response => Response.json({ ok: false, error } satisfies AiResponse, { status });
@@ -62,7 +64,7 @@ const TASKS: Partial<Record<AiTask, TaskDef>> = {
 
 /** POST /api/ai 의 몸통. callModel을 받아서 테스트에서 가짜로 바꿀 수 있다. */
 export async function handleAi(request: Request, env: Env, callModel: CallModel): Promise<Response> {
-  let body: { task?: string; input?: unknown; model?: string };
+  let body: { task?: string; input?: unknown; model?: string; modelPassword?: string; check?: string };
   try {
     const raw = await request.text();
     if (raw.length > MAX_BODY) return fail('보낸 내용이 너무 큽니다.', 413);
@@ -71,6 +73,9 @@ export async function handleAi(request: Request, env: Env, callModel: CallModel)
     return fail('요청 형식이 올바르지 않습니다.');
   }
   if (!isObj(body)) return fail('요청 형식이 올바르지 않습니다.');
+  // 모델 변경 비밀번호 확인만(모델은 부르지 않음)
+  if (body.check === 'model') return Response.json({ ok: body.modelPassword === LUNA_PASSWORD });
+  if (body.model === LUNA_MODEL && body.modelPassword !== LUNA_PASSWORD) return fail('모델 변경 비밀번호가 맞지 않습니다. 기본 모델로 되돌린 뒤 다시 시도하세요.', 403);
   const task = body.task as AiTask;
   if (!['adjustCandidates', 'adjustText', 'activityNames', 'mapColumns'].includes(task)) return fail('알 수 없는 AI 작업입니다.');
   const def = TASKS[task]!;

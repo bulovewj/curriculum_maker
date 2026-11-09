@@ -38,7 +38,7 @@
 | `npm run typecheck` | `tsc --noEmit` | M1 |
 | `npm run build` | 배포용 빌드 | M1 |
 | `npm run expected` | 정답지 기대값 JSON 다시 만들기 | M7 |
-| `vercel dev` | 앱 + AI 서버 함수 함께 실행 | M17 |
+| `vercel dev` | (선택) Vercel과 똑같이 실행. 평소엔 `npm run dev`가 /api/ai를 중계 | M17 |
 
 ### 테스트
 
@@ -366,8 +366,8 @@
   - 설정: AI 켜기/끄기, 사용량 표시
 - 라이브러리: @anthropic-ai/sdk. 전역 도구: vercel CLI(형이 설치)
 - 완료 조건
-  - [ ] `vercel dev`로 실행하면 [AI 후보]가 동작, `npm run dev`만 켜면 'AI 꺼짐(서버 연결 안 됨)'
-  - [ ] 서버 함수 테스트는 SDK를 가짜로 바꿔 실제 호출 없이 돈다
+  - [ ] `npm run dev`(개발 서버가 /api/ai 중계)나 Vercel 배포에서 [AI 후보]가 동작, 서버가 없으면(GitHub Pages) 'AI 꺼짐(서버 연결 안 됨)'
+  - [ ] 서버 함수 테스트는 모델 호출 함수(fetch)를 가짜로 바꿔 실제 호출 없이 돈다(SDK 없음)
   - [ ] 목록 밖 id가 섞인 응답이 걸러진다(테스트), maskNames 테스트
   - [ ] 브라우저 빌드 결과(`dist/`)에 키 글자가 없다(빌드 후 검색)
 

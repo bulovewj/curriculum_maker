@@ -28,9 +28,15 @@ describe('서버 함수(가짜 모델)', () => {
     const gpt = { OPENAI_API_KEY: 'k' };
     const f = fake('[]');
     await handleAi(post({ task: 'adjustCandidates', input }), gpt, f.call);
-    await handleAi(post({ task: 'adjustCandidates', input, model: 'gpt-6-luna' }), gpt, f.call);
+    await handleAi(post({ task: 'adjustCandidates', input, model: 'gpt-6-luna', modelPassword: '3430' }), gpt, f.call);
     await handleAi(post({ task: 'adjustCandidates', input, model: 'evil-model' }), gpt, f.call);
     expect(f.seen.map((c) => c.model)).toEqual(['gpt-4o', 'gpt-6-luna', 'gpt-4o']);
+    // 비밀번호 없이 luna를 고르면 403, 모델은 부르지 않음
+    expect((await handleAi(post({ task: 'adjustCandidates', input, model: 'gpt-6-luna' }), gpt, f.call)).status).toBe(403);
+    expect(f.seen).toHaveLength(3);
+    // 비밀번호 확인만
+    expect(await (await handleAi(post({ check: 'model', modelPassword: '3430' }), gpt, f.call)).json()).toEqual({ ok: true });
+    expect(await (await handleAi(post({ check: 'model', modelPassword: '0000' }), gpt, f.call)).json()).toEqual({ ok: false });
   });
 
   it('JSON null·rows:[null] 같은 이상한 모양도 400 JSON으로 답한다', async () => {

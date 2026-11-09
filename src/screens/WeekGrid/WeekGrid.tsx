@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import { schoolDaysByMonth } from '../../engine/calendar';
 import { computeGrid } from '../../engine/grid';
 import { importWeekGrid } from '../../engine/importWeekGrid';
-import { generateSlots } from '../../engine/slots';
+import { generateSlots, orphanOverrides } from '../../engine/slots';
 import { semesterTotals } from '../../engine/weekGrid';
 import { readHwpx } from '../../import/hwpx/readHwpx';
 import { readTimePlan } from '../../import/mappers/timePlanHwpx';
@@ -68,6 +68,16 @@ export function WeekGrid() {
       </label>
       {msg.map((m) => <p key={m} className="muted">{m}</p>)}
       <EstimatedNotice project={p} />
+      {(() => {
+        const lost = orphanOverrides(grid.slots, p.slotOverrides); // 학사력이 바뀌어 사라진 칸에 있던 고침
+        if (lost.length === 0) return null;
+        return (
+          <p className="yellow">
+            학사력이 바뀌어 없어진 칸의 고침 {lost.length}개: {lost.map((k) => k.replace('#', ' ') + '교시').join(', ')}{' '}
+            <button onClick={() => update((q) => ({ ...q, slotOverrides: Object.fromEntries(Object.entries(q.slotOverrides).filter(([k]) => !lost.includes(k))) }))}>목록에서 지우기</button>
+          </p>
+        );
+      })()}
       <BalancePanel project={p} update={update} />
       {target && (
         <MoveForm target={target} subjects={p.subjects} onCancel={() => setTarget(null)} onMove={(to, n) => {

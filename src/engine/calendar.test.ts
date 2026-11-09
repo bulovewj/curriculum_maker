@@ -70,3 +70,12 @@ describe('reassignSemesters', () => {
     expect(out.map((d) => d.semester)).toEqual([null, null]);
   });
 });
+
+describe('orphanOverrides', () => {
+  it('칸이 없어진 덮어쓰기만 돌려준다', async () => {
+    const { orphanOverrides } = await import('./slots');
+    const slot = { date: '2027-03-02', period: 1, semester: 1 as const, week: 1, subjectId: 'kor', specialist: false, origin: 'base' as const, locked: false };
+    const o = { subjectId: 'math', kind: 'edited' as const, locked: true };
+    expect(orphanOverrides([slot], { '2027-03-02#1': o, '2027-03-03#2': o })).toEqual(['2027-03-03#2']);
+  });
+});
