@@ -5,6 +5,7 @@ import { AdjustmentList } from '../../components/AdjustmentList';
 import { applyPicked, type Picked } from '../../ai/applyCandidates';
 import { AiPanel } from '../../components/AiPanel';
 import { AiTextPanel } from '../../components/AiTextPanel';
+import { PlanGapNotice } from '../../components/PlanGapNotice';
 import { ModelSwitch } from '../../components/ModelSwitch';
 import { RowManager } from '../../components/RowManager';
 import { RowMenu } from '../../components/RowMenu';
@@ -30,7 +31,7 @@ export function Progress() {
     if (!p) return null;
     const grid = computeGrid(p);
     const period = new Map(grid.rows.map((r) => [`${r.semester}#${r.week}`, r.period]));
-    return { period, placed: placeAll(grid.slots, p.lessonPlans, p.subjects) };
+    return { period, slots: grid.slots, placed: placeAll(grid.slots, p.lessonPlans, p.subjects) };
   }, [p]);
   if (!p || !calc) return null;
 
@@ -65,6 +66,7 @@ export function Progress() {
   return (
     <section>
       <h2>진도</h2>
+      <PlanGapNotice project={p} slots={calc.slots} update={update} />
       <div className="row tabs">
         {p.subjects.map((s) => {
           const n = needOf(calc.placed[s.id]);

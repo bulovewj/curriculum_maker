@@ -23,3 +23,24 @@ export function effectiveSchool(p: Project, slots: Slot[]): Split {
   const defaults = splitSemesters(p.curriculumPlan.schoolAnnual, slots);
   return { ...defaults, ...p.curriculumPlan.school };
 }
+
+export interface PlanGap {
+  subjectId: SubjectId;
+  semester: 1 | 2;
+  slots: number; // 주별 시수표 칸 수
+  plan: number; // 편제 학기 시수
+}
+
+/** 학기마다 칸 수 ≠ 편제인 교과(편제가 있는 교과만). S5 [자동 맞추기]를 안 했거나 덜 맞춘 것. */
+export function planGaps(p: Project, slots: Slot[]): PlanGap[] {
+  const school = effectiveSchool(p, slots);
+  return p.subjects.flatMap((s) => {
+    const h = school[s.id];
+    if (!h) return [];
+    return ([1, 2] as const).flatMap((sem) => {
+      const n = slots.filter((x) => x.semester === sem && x.subjectId === s.id).length;
+      const want = sem === 1 ? h.s1 : h.s2;
+      return n === want ? [] : [{ subjectId: s.id, semester: sem, slots: n, plan: want }];
+    });
+  });
+}
