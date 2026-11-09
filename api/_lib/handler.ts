@@ -16,6 +16,8 @@ const MAX_ROWS = 400;
 const MAX_TEXT = 300; // 글 한 칸 최대 글자
 const MAX_STANDARDS = 400;
 const MAX_BODY = 200_000; // 요청 전체 최대 글자
+export const DEFAULT_GPT = 'gpt-4o'; // GPT 키일 때 기본 모델
+export const LUNA_MODEL = 'gpt-6-luna'; // 화면에서 비밀번호를 넘으면 고를 수 있는 모델(이 목록에 있는 것만 허용)
 const SMART_TASKS: AiTask[] = ['adjustCandidates', 'adjustText', 'activityNames'];
 
 const fail = (error: string, status = 400): Response => Response.json({ ok: false, error } satisfies AiResponse, { status });
@@ -60,7 +62,7 @@ const TASKS: Partial<Record<AiTask, TaskDef>> = {
 
 /** POST /api/ai 의 몸통. callModel을 받아서 테스트에서 가짜로 바꿀 수 있다. */
 export async function handleAi(request: Request, env: Env, callModel: CallModel): Promise<Response> {
-  let body: { task?: string; input?: unknown };
+  let body: { task?: string; input?: unknown; model?: string };
   try {
     const raw = await request.text();
     if (raw.length > MAX_BODY) return fail('보낸 내용이 너무 큽니다.', 413);
@@ -74,7 +76,8 @@ export async function handleAi(request: Request, env: Env, callModel: CallModel)
   if (!env.ANTHROPIC_API_KEY && !env.OPENAI_API_KEY) return fail('서버에 AI 키가 설정되지 않았습니다(.env.local의 ANTHROPIC_API_KEY 또는 OPENAI_API_KEY).', 503);
   const bad = def.check(body.input);
   if (bad) return fail(bad);
-  const model = (SMART_TASKS.includes(task) ? env.AI_MODEL_SMART : env.AI_MODEL_FAST) || (providerOf(env) === 'openai' ? 'gpt-4o-mini' : 'claude-sonnet-5-5');
+  const openai = providerOf(env) === 'openai';
+  const model = openai && body.model === LUNA_MODEL ? LUNA_MODEL : (SMART_TASKS.includes(task) ? env.AI_MODEL_SMART : env.AI_MODEL_FAST) || (openai ? DEFAULT_GPT : 'claude-sonnet-5-5');
   try {
     const { text, usage } = await callModel({ model, system: def.system, user: def.user(body.input as never) });
     return Response.json({ ok: true, output: parseJson(text), usage } satisfies AiResponse);

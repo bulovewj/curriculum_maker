@@ -5,6 +5,7 @@ import { AdjustmentList } from '../../components/AdjustmentList';
 import { applyPicked, type Picked } from '../../ai/applyCandidates';
 import { AiPanel } from '../../components/AiPanel';
 import { AiTextPanel } from '../../components/AiTextPanel';
+import { ModelSwitch } from '../../components/ModelSwitch';
 import { RowManager } from '../../components/RowManager';
 import { RowMenu } from '../../components/RowMenu';
 import { mergeRows, removeRow, setFixedWeek, splitRow, swapRows, undoAdjustment, type OpState } from '../../engine/planOps';
@@ -13,7 +14,7 @@ import { useProject } from '../../state/ProjectContext';
 
 /** AI 창 묶음: 위에 그대로 두고, 길어지면 안에서만 스크롤. 접어 둘 수 있다. */
 function AiBox({ children }: { children: ReactNode }) {
-  return <details open className="ai-box"><summary>AI 도우미</summary><div className="ai-box-body">{children}</div></details>;
+  return <details open className="ai-box"><summary>AI 도우미 <ModelSwitch /></summary><div className="ai-box-body">{children}</div></details>;
 }
 
 /** S6 진도(읽기 전용): 교과 탭, 배치된 주·기간, 칸·행·필요량 */

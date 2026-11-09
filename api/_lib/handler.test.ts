@@ -24,6 +24,15 @@ describe('서버 함수(가짜 모델)', () => {
     expect(JSON.parse(f.seen[0].user).rows[0].id).toBe('a');
   });
 
+  it('GPT 키: 기본은 gpt-4o, model 로 gpt-6-luna를 고르면 그 모델, 다른 이름은 무시', async () => {
+    const gpt = { OPENAI_API_KEY: 'k' };
+    const f = fake('[]');
+    await handleAi(post({ task: 'adjustCandidates', input }), gpt, f.call);
+    await handleAi(post({ task: 'adjustCandidates', input, model: 'gpt-6-luna' }), gpt, f.call);
+    await handleAi(post({ task: 'adjustCandidates', input, model: 'evil-model' }), gpt, f.call);
+    expect(f.seen.map((c) => c.model)).toEqual(['gpt-4o', 'gpt-6-luna', 'gpt-4o']);
+  });
+
   it('오류 문장은 한국어: 알 수 없는 작업·키 없음·깨진 입력·깨진 답·모델 오류', async () => {
     const f = fake('[]');
     const msg = async (body: unknown, e = env, c: CallModel = f.call) => ((await (await handleAi(post(body), e, c)).json()) as { error: string }).error;
